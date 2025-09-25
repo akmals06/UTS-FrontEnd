@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budaya Papua – Beranda</title>
+  <!-- FIX: tanpa ../ -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- ================= NAVIGASI ================= -->
+  <nav class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">BUDAYA PAPUA</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navList">
+  <li><a class="is-active" href="/index.html">Beranda</a></li>
+  <li><a href="/pages/rumah-adat.html">Rumah Adat</a></li>
+  <li><a href="/pages/pakaian.html">Pakaian</a></li>
+  <li><a href="/pages/makanan.html">Makanan</a></li>
+  <li><a href="/pages/seni.html">Seni & Budaya</a></li>
+  <li><a href="/pages/alam.html">Alam</a></li>
+  <li><a href="/pages/suku.html">Ragam Suku</a></li>
+  <li><a href="/pages/tradisi.html">Tradisi</a></li>
+</ul>
+
+
+      <!-- Search global -->
+      <div class="site-search">
+        <input id="siteSearch" type="text" placeholder="Search.."/>
+        <div class="search-panel" id="searchPanel" hidden></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <video class="hero-video" src="/assets/vid/papua_cinematic_vid.mp4" autoplay loop playsinline muted></video>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal-on-scroll">
+      <h1 class="hero-title">Papua, Surga Kecil Dari Timur Indonesia</h1>
+      <p class="hero-subtitle">
+        Menjelajahi kekayaan bahasa, seni, musik, dan keindahan alam dari Raja Ampat hingga Puncak Jaya.
+      </p>
+      <button id="muteToggle" class="btn-mute">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-x"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= PENGANTAR ================= -->
+  <main>
+    <section class="essay" id="pengantar">
+      <article class="essay-inner">
+        <h2 class="section-title">Mengenal Papua, Kawasan Ujung Negara yang Punya Daya Tarik Maksimal</h2>
+
+        <p>
+          Papua adalah wilayah paling timur Indonesia yang unik dan kompleks. 
+          Berbeda dari wilayah barat yang lebih sering terekspos, Papua kerap luput dari sorotan 
+          karena jauhnya jarak dari pusat pemerintahan. Padahal, kekhasan Papua—mulai dari 
+          sejarah panjang hunian manusia sejak <strong>±50.000 tahun lalu (Paleolitik akhir)</strong> di daratan 
+          Sahul, kedatangan penutur Austronesia sekitar <strong>±1500–1000 SM</strong>, hingga interaksi 
+          dagang dengan Maluku dan pesisir utara sejak <strong>abad ke-15–17</strong>—membentuk mosaik budaya 
+          yang tidak ada duanya di Nusantara.
+        </p>
+
+        <p>
+          Dalam perjalanan modern, pesisir utara Papua sempat berada di bawah pengaruh kesultanan 
+          Maluku (<strong>abad ke-16–17</strong>), lalu masuk orbit kolonial Belanda sebagai Nieuw-Guinea 
+          (<strong>abad ke-19–20</strong>). Periode ini membawa misi zending, sekolah, dan jaringan pelabuhan yang 
+          turut memengaruhi seni, arsitektur, dan pola permukiman. Meski demikian, inti budaya 
+          masyarakat adat—dari <em>barapen</em> (pesta bakar batu) di Lembah Baliem hingga ukiran <em>mbis</em> 
+          Asmat—tetap bertahan sebagai penanda identitas.
+        </p>
+
+        <p>
+          Daya tarik Papua tidak hanya pada sejarahnya, melainkan pada <strong>keragaman etnolinguistik</strong> 
+          (ratusan bahasa daerah), <strong>arsitektur vernakular</strong> yang adaptif terhadap lingkungan 
+          (Honai, Rumah Pohon, Kariwari), <strong>musik & tarian</strong> (tifa, Yospan, Sajojo), serta 
+          <strong>kuliner berbasis sagu</strong> (Papeda, ulat sagu) sebagai simbol relasi manusia-alam. 
+          Semua itu berkelindan di dalam lanskap ekologi dari <strong>pesisir, rawa, danau, hingga pegunungan tinggi</strong>.
+        </p>
+
+        <aside class="quote">
+          “Burung cenderawasih—dijuluki <em>birds of paradise</em> sejak abad ke-16—menjadi metafora 
+          keindahan Papua: warna yang berlapis, gerak yang ritmis, dan makna yang disampaikan 
+          lewat tarian.”
+        </aside>
+
+        <p>
+          Situs ini mengajakmu menyusuri Papua secara <em>journey</em>: bukan katalog kotak-kotak, 
+          melainkan alur cerita yang mengalir. Mulai dari peta untuk memahami letak geografi, 
+          lalu jelajah topik—rumah adat, pakaian, makanan, seni, alam, dan ragam suku—dengan 
+          <strong>filter pencarian front-end</strong>, <strong>interaksi event</strong> sederhana (tambah/centang/bersih favorit), 
+          dan <strong>tampilan responsif</strong> agar enak dibaca di layar mana pun.
+        </p>
+      </article>
+    </section>
+
+    <!-- ================= PETA PAPUA ================= -->
+    <section class="map-block">
+      <div class="map-inner">
+        <div class="map-text reveal-on-scroll">
+          <h3>Letak Geografis Papua</h3>
+          <p>
+            Papua berada di ujung timur Indonesia, berbatasan langsung dengan Papua Nugini. 
+            Peta membantu melihat sebaran budaya: Asmat &amp; Kamoro di rawa selatan, 
+            Korowai di hutan lahan rendah, komunitas pesisir Biak–Numfor–Manokwari di utara, 
+            dan masyarakat pegunungan seperti Dani &amp; Yali di Lembah Baliem.
+          </p>
+          <ul class="map-notes">
+            <li><span class="dot"></span>Raja Ampat – bentang karst & tradisi <em>sasi</em> laut</li>
+            <li><span class="dot"></span>Puncak Jaya – salju tropis & jalur ekspedisi abad-20</li>
+            <li><span class="dot"></span>Danau Sentani – pusat seni kulit kayu & festival danau</li>
+          </ul>
+        </div>
+
+        <!-- iframe map -->
+        <div class="map-frame reveal-on-scroll">
+          <iframe
+            title="Peta Papua"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Papua%20Indonesia&z=5&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAUTAN JELAJAH ================= -->
+    <section class="paths" id="jelajah">
+      <h3 class="paths-title">Jelajah Topik</h3>
+
+      <ol class="path-list" id="topicList">
+        <li class="path-item reveal-on-scroll" data-tags="rumah adat arsitektur honai korowai kariwari jew eme">
+          <a href="pages/rumah-adat.html"><span class="path-line"></span><span class="path-text">Arsitektur Vernakular: Honai, Rumah Pohon, Kariwari, dst.</span></a>
+          <button class="mark-btn" data-mark="rumah">Tandai</button>
+        </li>
+        <li class="path-item reveal-on-scroll" data-tags="pakaian noken koteka hias kepala lukis tubuh">
+          <a href="pages/pakaian.html"><span class="path-line"></span><span class="path-text">Pakaian & Identitas: Koteka, Noken (UNESCO 2012), Hias Kepala</span></a>
+          <button class="mark-btn" data-mark="pakaian">Tandai</button>
+        </li>
+        <li class="path-item reveal-on-scroll" data-tags="makanan kuliner sagu papeda ulat sagu ikan manokwari petatas">
+          <a href="pages/makanan.html"><span class="path-line"></span><span class="path-text">Kuliner Sagu: Papeda, Ulat Sagu, Ikan Bakar Manokwari, Petatas</span></a>
+          <button class="mark-btn" data-mark="makanan">Tandai</button>
+        </li>
+        <li class="path-item reveal-on-scroll" data-tags="seni budaya tifa yospan sajojo ukir asmat kamoro sentani">
+          <a href="pages/seni.html"><span class="path-line"></span><span class="path-text">Seni & Upacara: Tifa, Yospan, Ukiran Asmat & Kamoro, Kulit Kayu Sentani</span></a>
+          <button class="mark-btn" data-mark="seni">Tandai</button>
+        </li>
+        <li class="path-item reveal-on-scroll" data-tags="alam raja ampat puncak jaya lorentz danau sentani">
+          <a href="pages/alam.html"><span class="path-line"></span><span class="path-text">Alam: Raja Ampat, Puncak Jaya, Lorentz, Danau Sentani</span></a>
+          <button class="mark-btn" data-mark="alam">Tandai</button>
+        </li>
+        <li class="path-item reveal-on-scroll" data-tags="suku d unsur budaya dani yali mee ekari asmat korowai biak sentani kamoro">
+          <a href="pages/suku.html"><span class="path-line"></span><span class="path-text">Ragam Suku: Dani, Yali, Mee/Ekari, Asmat, Korowai, Biak, Sentani, Kamoro</span></a>
+          <button class="mark-btn" data-mark="suku">Tandai</button>
+        </li>
+      </ol>
+
+      <div class="paths-actions">
+        <button class="btn-ghost" id="clearMarks">Bersihkan Tanda</button>
+      </div>
+    </section>
+
+    <!-- ================= CATATAN PRIBADI ================= -->
+    <section class="essay" id="catatan-pribadi">
+      <article class="essay-inner">
+        <h2 class="section-title">Catatan Pribadi</h2>
+        <p>Tambahkan catatan atau hal-hal menarik yang ingin Anda ingat tentang budaya Papua.</p>
+        <form id="formCatatan">
+          <input type="text" id="isiCatatan" placeholder="Tulis catatan Anda di sini..." class="catatan-input"/>
+          <button type="submit" class="btn-primary catatan-btn-submit">Tambah Catatan</button>
+        </form>
+        <ul id="daftarCatatan" class="daftar-catatan">
+          <!-- Catatan akan ditambahkan di sini oleh JavaScript -->
+        </ul>
+      </article>
+    </section>
+
+    <!-- ================= FOOTNOTE ================= -->
+    <section class="footnote reveal-on-scroll">
+      <p>
+        Gaya visual mengadopsi nuansa motif Papua (aksen emas & biru tua) dengan tipografi layar 
+        yang nyaman. Interaktivitas berbasis <strong>event</strong> (klik, input, scroll) dan 
+        <strong>filter/search</strong> murni di sisi klien (front-end only). Layout responsif agar 
+        nyaman di ponsel, tablet, maupun desktop.
+      </p>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 Budaya Papua • Dibuat untuk memperkenalkan warisan budaya Nusantara (Papua)</p>
+      <a href="#" id="toTop" class="to-top" title="Kembali ke atas">↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

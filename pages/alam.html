@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alam Papua</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- ================= NAVIGASI ================= -->
+  <nav class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <a href="../index.html" class="brand">Budaya Papua</a>
+      <button id="navToggle" class="nav-toggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navList">
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="rumah-adat.html">Rumah Adat</a></li>
+        <li><a href="pakaian.html">Pakaian</a></li>
+        <li><a href="makanan.html">Makanan</a></li>
+        <li><a href="seni.html">Seni & Budaya</a></li>
+        <li><a class="is-active" href="alam.html">Alam</a></li>
+        <li><a href="suku.html">Ragam Suku</a></li>
+        <li><a href="tradisi.html">Tradisi</a></li>
+      </ul>
+      <div class="site-search">
+        <input id="siteSearch" type="text" placeholder="Cari: raja ampat / puncak jaya…"/>
+        <div id="searchPanel" class="search-panel" hidden></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Alam Papua</h1>
+      <p class="hero-subtitle">Dari laut Raja Ampat hingga puncak bersalju tropis.</p>
+    </div>
+  </header>
+
+  <!-- ================= KONTEN ================= -->
+  <main class="essay">
+    <div class="essay-inner">
+
+      <!-- RAJA AMPAT -->
+      <section id="raja-ampat" class="blok-zigzag reveal-on-scroll" data-tags="raja ampat laut karst sasi diving">
+        <div class="gambar-samping" style="background-image:url('../assets/img/raja-ampat.jpg');"></div>
+        <div class="teks-samping">
+          <h2>Raja Ampat</h2>
+          <p>Kepulauan karst dengan biodiversitas laut terkaya di dunia. 
+            Tradisi lokal <em>sasi</em> menjaga keberlanjutan sumber daya laut.</p>
+        </div>
+      </section>
+
+      <!-- PUNCAK JAYA -->
+      <section id="puncak-jaya" class="blok-zigzag kanan reveal-on-scroll" data-tags="puncak jaya cartenz piramid salju tropis">
+        <div class="gambar-samping" style="background-image:url('../assets/img/puncak-jaya.jpg');"></div>
+        <div class="teks-samping">
+          <h2>Puncak Jaya (Carstensz Pyramid)</h2>
+          <p>Puncak tertinggi Indonesia (4.884 m) dengan salju tropis. 
+            Jadi jalur ekspedisi gunung terkenal sejak abad ke-20.</p>
+        </div>
+      </section>
+
+      <!-- LORENTZ -->
+      <section id="lorentz" class="blok-zigzag reveal-on-scroll" data-tags="lorentz taman nasional warisan dunia unesco">
+        <div class="gambar-samping" style="background-image:url('../assets/img/lorentz.jpg');"></div>
+        <div class="teks-samping">
+          <h2>Taman Nasional Lorentz</h2>
+          <p>Situs warisan dunia UNESCO, mencakup ekosistem dari pantai hingga pegunungan bersalju. 
+            Habitat burung cenderawasih dan berbagai flora-fauna endemik.</p>
+        </div>
+      </section>
+
+      <!-- DANAU SENTANI -->
+      <section id="danau-sentani" class="blok-zigzag kanan reveal-on-scroll" data-tags="danau sentani festival seni kulit kayu">
+        <div class="gambar-samping" style="background-image:url('../assets/img/danau-sentani.jpg');"></div>
+        <div class="teks-samping">
+          <h2>Danau Sentani</h2>
+          <p>Danau terbesar di Papua, terkenal dengan festival budaya tahunan. 
+            Sentra seni lukis kulit kayu & musik khas daerah.</p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- CATATAN -->
+    <section class="blok-catatan">
+      <h3>Catatan Halaman “Alam”</h3>
+      <form id="formCatatan" class="form-catatan">
+        <input id="isiCatatan" type="text" placeholder="Contoh: Cari info diving Raja Ampat…"/>
+        <button class="btn-primary kecil" type="submit">Tambah</button>
+      </form>
+      <ul id="daftarCatatan" class="daftar-catatan"></ul>
+      <div class="catatan-petunjuk">Klik catatan untuk tandai • klik (×) untuk hapus</div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 Budaya Papua</p>
+      <a href="#" id="toTop" class="to-top">↑ Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
