@@ -2,113 +2,69 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Makanan Papua</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Makanan Khas Papua</title>
   <link rel="stylesheet" href="../assets/css/style.css"/>
 </head>
 <body>
-
-  <!-- ================= NAVIGASI ================= -->
-  <nav class="site-nav" id="siteNav">
+  <nav class="site-nav">
     <div class="nav-inner">
       <a href="../index.html" class="brand">Budaya Papua</a>
-      <button id="navToggle" class="nav-toggle"><span></span><span></span><span></span></button>
-      <ul class="nav-links" id="navList">
+      <ul class="nav-links">
         <li><a href="../index.html">Beranda</a></li>
-        <li><a href="rumah-adat.html">Rumah Adat</a></li>
-        <li><a href="pakaian.html">Pakaian</a></li>
         <li><a class="is-active" href="makanan.html">Makanan</a></li>
-        <li><a href="seni.html">Seni & Budaya</a></li>
-        <li><a href="alam.html">Alam</a></li>
-        <li><a href="suku.html">Ragam Suku</a></li>
-        <li><a href="tradisi.html">Tradisi</a></li>
       </ul>
-      <div class="site-search">
-        <input id="siteSearch" type="text" placeholder="Cari: papeda / ulat sagu…"/>
-        <div id="searchPanel" class="search-panel" hidden></div>
-      </div>
     </div>
   </nav>
 
-  <!-- ================= HERO ================= -->
   <header class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg" style="background-image:url('../assets/img/makanan/header.jpg');"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="hero-title">Makanan Papua</h1>
-      <p class="hero-subtitle">Kuliner berbasis sagu, laut, dan hasil alam.</p>
+      <h1 class="hero-title">Makanan Khas Papua</h1>
+      <p class="hero-subtitle">Warisan kuliner dari tanah Papua yang sarat makna budaya</p>
     </div>
   </header>
 
-  <!-- ================= KONTEN ================= -->
   <main class="essay">
-    <div class="essay-inner">
-
-      <!-- PAPEDA -->
-      <section id="papeda" class="blok-zigzag reveal-on-scroll" data-tags="papeda sagu kuah kuning ikan tongkol">
-        <div class="gambar-samping" style="background-image:url('../assets/img/papeda.jpg');"></div>
-        <div class="teks-samping">
-          <h2>Papeda</h2>
-          <p><strong>Papeda</strong> adalah bubur sagu kental yang disajikan dengan kuah kuning ikan tongkol atau mubara. 
-            Teksturnya kenyal, dikonsumsi bersama sayuran dan sambal. 
-            Simbol keterikatan masyarakat Papua dengan pohon sagu.</p>
-        </div>
+    <article class="essay-inner grid-cards">
+      <section class="card">
+        <img src="../assets/img/makanan/papeda.jpg" alt="Papeda"/>
+        <h3>Papeda</h3>
+        <p>Bubur sagu khas Papua, simbol kebersamaan & identitas budaya.</p>
+        <a href="makanan/papeda.html" class="btn-primary">Baca Selengkapnya</a>
       </section>
 
-      <!-- ULAT SAGU -->
-      <section id="ulat-sagu" class="blok-zigzag kanan reveal-on-scroll" data-tags="ulat sagu protein bakar goreng">
-        <div class="gambar-samping" style="background-image:url('../assets/img/ulat-sagu.jpg');"></div>
-        <div class="teks-samping">
-          <h2>Ulat Sagu</h2>
-          <p>Ulat sagu adalah larva kumbang merah yang hidup di batang sagu. 
-            Mengandung protein tinggi, biasanya dimakan mentah segar, dibakar, atau digoreng. 
-            Jadi hidangan istimewa dalam pesta adat <em>barapen</em>.</p>
-        </div>
+      <section class="card">
+        <img src="../assets/img/makanan/ulat-sagu.jpg" alt="Ulat Sagu"/>
+        <h3>Ulat Sagu</h3>
+        <p>Sumber protein tradisional Papua Selatan, dikonsumsi mentah atau dibakar.</p>
+        <a href="makanan/ulat-sagu.html" class="btn-primary">Baca Selengkapnya</a>
       </section>
 
-      <!-- IKAN BAKAR MANOKWARI -->
-      <section id="ikan-manokwari" class="blok-zigzag reveal-on-scroll" data-tags="ikan bakar manokwari tongkol cabai merah">
-        <div class="gambar-samping" style="background-image:url('../assets/img/ikan-manokwari.jpg');"></div>
-        <div class="teks-samping">
-          <h2>Ikan Bakar Manokwari</h2>
-          <p>Ikan tongkol dibakar lalu diberi sambal khas Manokwari (cabe rawit + bawang). 
-            Rasa pedas segar berpadu dengan aroma asap, populer di pesisir utara Papua Barat.</p>
-        </div>
+      <section class="card">
+        <img src="../assets/img/makanan/ubi-jalar.jpg" alt="Ubi Jalar"/>
+        <h3>Ubi Jalar</h3>
+        <p>Makanan pokok masyarakat pegunungan Papua, terutama suku Dani.</p>
+        <a href="makanan/ubi-jalar.html" class="btn-primary">Baca Selengkapnya</a>
       </section>
 
-      <!-- PETATAS -->
-      <section id="petatas" class="blok-zigzag kanan reveal-on-scroll" data-tags="petatas ubi jalar staple food pegunungan">
-        <div class="gambar-samping" style="background-image:url('../assets/img/petatas.jpg');"></div>
-        <div class="teks-samping">
-          <h2>Petatas (Ubi Jalar)</h2>
-          <p>Ubi jalar adalah makanan pokok di wilayah pegunungan. 
-            Ditanam dengan sistem kebun berpindah, kaya karbohidrat, jadi sumber energi utama. 
-            Sering diolah dalam pesta bakar batu bersama sayur dan daging.</p>
-        </div>
+      <section class="card">
+        <img src="../assets/img/makanan/bakar-batu.jpg" alt="Bakar Batu"/>
+        <h3>Bakar Batu</h3>
+        <p>Tradisi kuliner kolektif penuh makna sosial dan adat istiadat.</p>
+        <a href="makanan/bakar-batu.html" class="btn-primary">Baca Selengkapnya</a>
       </section>
-
-    </div>
-
-    <!-- CATATAN -->
-    <section class="blok-catatan">
-      <h3>Catatan Halaman “Makanan”</h3>
-      <form id="formCatatan" class="form-catatan">
-        <input id="isiCatatan" type="text" placeholder="Contoh: Cari resep papeda…"/>
-        <button class="btn-primary kecil" type="submit">Tambah</button>
-      </form>
-      <ul id="daftarCatatan" class="daftar-catatan"></ul>
-      <div class="catatan-petunjuk">Klik catatan untuk tandai • klik (×) untuk hapus</div>
-    </section>
+    </article>
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="footer-inner">
       <p>© 2025 Budaya Papua</p>
-      <a href="#" id="toTop" class="to-top">↑ Kembali ke atas</a>
+      <a href="#" class="to-top" id="toTop">↑ Kembali ke atas</a>
     </div>
   </footer>
 
-  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
