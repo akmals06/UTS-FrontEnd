@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wisata Alam NTT — Keajaiban Nusantara</title>
+  <meta name="description" content="Eksplorasi keindahan alam NTT: Danau Kelimutu, Pulau Komodo, Wae Rebo, dan Labuan Bajo.">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/page/alam/alam.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body id="top">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="nav visible" id="mainNav">
+    <div class="nav__inner">
+      
+      <!-- Brand -->
+      <a href="../../index.html" class="nav__brand">
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
+        <span class="nav__brand-subtitle">Warisan Nusantara</span>
+      </a>
+
+      <!-- Menu -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../../index.html" class="nav__link">Beranda</a></li>
+        <li class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-toggle">Explore</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../rumah-adat/index.html">Rumah Adat</a></li>
+            <li><a href="../pakaian/index.html">Tenun & Kain Adat</a></li>
+            <li><a href="../suku/index.html">Suku & Adat</a></li>
+            <li><a href="../tradisi/index.html">Tradisi</a></li>
+            <li><a href="../seni/index.html">Seni Tradisional</a></li>
+            <li><a href="../makanan/index.html">Kuliner</a></li>
+            <li><a href="../alam/index.html" class="nav__link--active">Wisata Alam</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search -->
+      <div class="search">
+        <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT...">
+        <div class="search__panel hidden" id="searchPanel"></div>
+      </div>
+
+      <!-- Toggle Mobile -->
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="alam-hero">
+    <div class="alam-hero__bg" style="background-image: url('../../assets/img/alam/kalimutu.jpg');"></div>
+    <div class="alam-hero__overlay"></div>
+
+    <div class="alam-hero__content">
+      <p class="alam-hero__eyebrow">KEAJAIBAN ALAM</p>
+      <h1 class="alam-hero__title">Wisata Alam Nusa Tenggara Timur</h1>
+      <p class="alam-hero__subtitle">
+        Dari danau tiga warna hingga habitat komodo, NTT menawarkan 
+        keindahan alam yang menyatu dengan spiritualitas dan budaya lokal
+      </p>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="content">
+
+    <!-- INTRO -->
+    <section class="alam-intro">
+      <div class="container">
+        <h2 class="heading-secondary">Mengapa Alam NTT Begitu Istimewa?</h2>
+        <div class="alam-intro__content">
+          <p>
+            Nusa Tenggara Timur memiliki <strong>lanskap geografis unik</strong> yang membentang dari 
+            pegunungan vulkanik hingga kepulauan tropis. Setiap destinasi alam di NTT tidak hanya 
+            menawarkan keindahan visual, tetapi juga <strong>makna spiritual</strong> yang mendalam 
+            bagi masyarakat lokal.
+          </p>
+          <div class="alam-intro__quote">
+            "Danau Kelimutu bukan sekadar fenomena geologis—ia adalah tempat suci di mana arwah leluhur 
+            Lio dipercaya bersemayam, menciptakan hubungan sakral antara alam dan manusia."
+          </div>
+          <p>
+            Dari <strong>Danau Kelimutu</strong> yang berubah warna hingga <strong>Taman Nasional Komodo</strong> 
+            sebagai satu-satunya habitat komodo di dunia, NTT menawarkan pengalaman yang tidak bisa 
+            ditemukan di tempat lain.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & SEARCH -->
+    <section class="alam-filter">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-group">
+            <label for="regionFilter" class="filter-label">Filter Wilayah:</label>
+            <select id="regionFilter" class="filter-select">
+              <option value="all">Semua Wilayah</option>
+              <option value="flores">Flores</option>
+              <option value="sumba">Sumba</option>
+              <option value="timor">Timor</option>
+              <option value="komodo">Komodo</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <input 
+              type="search" 
+              id="pageSearch" 
+              class="filter-search"
+              placeholder="Cari destinasi alam..."
+            />
+          </div>
+
+          <div id="filterStats" class="filter-stats">Menampilkan 4 item</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID WISATA ALAM -->
+    <section class="alam-showcase">
+      <div class="container">
+        <div class="alam-grid">
+          
+          <!-- Danau Kelimutu -->
+          <article class="alam-card" data-id="danau-kelimutu" data-region="flores" data-tags="danau kelimutu tiga warna ende flores vulkanik">
+            <button class="alam-card__bookmark" aria-label="Bookmark" data-id="danau-kelimutu">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="alam-card__img-wrapper">
+              <img src="../../assets/img/alam/kalimutu.jpg" alt="Danau Kelimutu" class="alam-card__img">
+              <div class="alam-card__badge">Flores</div>
+            </div>
+            <div class="alam-card__body">
+              <h3 class="alam-card__title">Danau Kelimutu</h3>
+              <p class="alam-card__location">Ende, Flores Tengah</p>
+              <p class="alam-card__desc">
+                Danau vulkanik dengan tiga warna berbeda yang berubah-ubah, dipercaya 
+                sebagai tempat arwah leluhur suku Lio.
+              </p>
+              <a href="danau-kelimutu.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Pulau Komodo -->
+          <article class="alam-card" data-id="pulau-komodo" data-region="komodo" data-tags="komodo dragon naga purba taman nasional flores">
+            <button class="alam-card__bookmark" aria-label="Bookmark" data-id="pulau-komodo">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="alam-card__img-wrapper">
+              <img src="../../assets/img/alam/kodomo.jpg" alt="Pulau Komodo" class="alam-card__img">
+              <div class="alam-card__badge">Komodo</div>
+            </div>
+            <div class="alam-card__body">
+              <h3 class="alam-card__title">Pulau Komodo</h3>
+              <p class="alam-card__location">Taman Nasional Komodo</p>
+              <p class="alam-card__desc">
+                Habitat asli komodo (Varanus komodoensis), kadal terbesar di dunia 
+                yang hanya ada di Indonesia.
+              </p>
+              <a href="pulau-komodo.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Wae Rebo -->
+          <article class="alam-card" data-id="wae-rebo" data-region="flores" data-tags="wae rebo desa awan manggarai mbaru niang">
+            <button class="alam-card__bookmark" aria-label="Bookmark" data-id="wae-rebo">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="alam-card__img-wrapper">
+              <img src="../../assets/img/alam/Potraits waerebo.jpg" alt="Wae Rebo" class="alam-card__img">
+              <div class="alam-card__badge">Flores</div>
+            </div>
+            <div class="alam-card__body">
+              <h3 class="alam-card__title">Desa Wae Rebo</h3>
+              <p class="alam-card__location">Manggarai, Flores Barat</p>
+              <p class="alam-card__desc">
+                Desa tradisional di ketinggian 1.200 mdpl dengan rumah adat Mbaru Niang 
+                yang dikelilingi kabut pegunungan.
+              </p>
+              <a href="wae-rebo.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Labuan Bajo -->
+          <article class="alam-card" data-id="labuan-bajo" data-region="flores" data-tags="labuan bajo gerbang komodo pelabuhan manggarai">
+            <button class="alam-card__bookmark" aria-label="Bookmark" data-id="labuan-bajo">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="alam-card__img-wrapper">
+              <img src="../../assets/img/alam/💕 - Labuan bajo.jpg" alt="Labuan Bajo" class="alam-card__img">
+              <div class="alam-card__badge">Flores</div>
+            </div>
+            <div class="alam-card__body">
+              <h3 class="alam-card__title">Labuan Bajo</h3>
+              <p class="alam-card__location">Manggarai Barat, Flores</p>
+              <p class="alam-card__desc">
+                Gerbang menuju Taman Nasional Komodo dengan panorama sunset, 
+                diving spots, dan island hopping kelas dunia.
+              </p>
+              <a href="labuan-bajo.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="no-results" style="display: none;">
+          <p>Tidak ada destinasi yang sesuai dengan pencarian Anda.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 East Nusa Tenggara Cultural Heritage</p>
+      <a href="#top" class="footer__back" id="backToTop">↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== JS ===================== -->
+   <script src="../../assets/js/bookmark-manager.js"></script>
+  <script src="../../assets/js/localStorage.js"></script>
+  <script src="../../assets/js/search.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

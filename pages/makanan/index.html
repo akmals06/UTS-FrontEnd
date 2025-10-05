@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuliner NTT — Cita Rasa Nusantara</title>
+  <meta name="description" content="Eksplorasi kuliner khas NTT: Jagung Bose, Kolo, Se'i, dan hidangan tradisional lainnya.">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/page/makanan/makanan.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body id="top">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="nav visible" id="mainNav">
+    <div class="nav__inner">
+      
+      <!-- Brand -->
+      <a href="../../index.html" class="nav__brand">
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
+        <span class="nav__brand-subtitle">Warisan Nusantara</span>
+      </a>
+
+      <!-- Menu -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../../index.html" class="nav__link">Beranda</a></li>
+        <li class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-toggle">Explore</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../rumah-adat/index.html">Rumah Adat</a></li>
+            <li><a href="../pakaian/index.html">Tenun & Kain Adat</a></li>
+            <li><a href="../suku/index.html">Suku & Adat</a></li>
+            <li><a href="../tradisi/index.html">Tradisi</a></li>
+            <li><a href="../seni/index.html">Seni Tradisional</a></li>
+            <li><a href="../makanan/index.html" class="nav__link--active">Kuliner</a></li>
+            <li><a href="../alam/index.html">Wisata Alam</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search -->
+      <div class="search">
+        <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT...">
+        <div class="search__panel hidden" id="searchPanel"></div>
+      </div>
+
+      <!-- Toggle Mobile -->
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="makanan-hero">
+    <div class="makanan-hero__bg" style="background-image: url('../../assets/img/makanan/sei1.jpg');"></div>
+    <div class="makanan-hero__overlay"></div>
+
+    <div class="makanan-hero__content">
+      <p class="makanan-hero__eyebrow">CITA RASA NUSANTARA</p>
+      <h1 class="makanan-hero__title">Kuliner Khas Nusa Tenggara Timur</h1>
+      <p class="makanan-hero__subtitle">
+        Dari jagung bose ritual hingga se'i yang harum asap, 
+        kuliner NTT menyimpan cerita budaya dalam setiap gigitannya
+      </p>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="content">
+
+    <!-- INTRO -->
+    <section class="makanan-intro">
+      <div class="container">
+        <h2 class="heading-secondary">Filosofi Makanan Tradisional NTT</h2>
+        <div class="makanan-intro__content">
+          <p>
+            Makanan tradisional NTT tidak hanya berfungsi sebagai sumber energi, tetapi juga memiliki 
+            <strong>makna ritual dan spiritual</strong> yang dalam. Setiap hidangan sering dikaitkan 
+            dengan upacara adat, syukuran panen, dan perayaan penting dalam kehidupan masyarakat NTT.
+          </p>
+          <div class="makanan-intro__quote">
+            "Jagung Bose bukan sekadar makanan—ia adalah simbol kesuburan dan persembahan kepada 
+            Mori Kraeng (Tuhan) dalam tradisi Manggarai, mengikat masyarakat dengan leluhur dan tanah."
+          </div>
+          <p>
+            Dari <strong>Jagung Bose</strong> yang sakral hingga <strong>Se'i</strong> dengan teknik 
+            pengasapan khas, kuliner NTT mencerminkan kearifan lokal dalam mengolah hasil bumi 
+            menjadi hidangan yang kaya rasa dan makna.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & SEARCH -->
+    <section class="makanan-filter">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-group">
+            <label for="regionFilter" class="filter-label">Filter Wilayah:</label>
+            <select id="regionFilter" class="filter-select">
+              <option value="all">Semua Wilayah</option>
+              <option value="flores">Flores</option>
+              <option value="sumba">Sumba</option>
+              <option value="timor">Timor</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <input 
+              type="search" 
+              id="pageSearch" 
+              class="filter-search"
+              placeholder="Cari makanan khas..."
+            />
+          </div>
+
+          <div id="filterStats" class="filter-stats">Menampilkan 3 item</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID MAKANAN -->
+    <section class="makanan-showcase">
+      <div class="container">
+        <div class="makanan-grid">
+          
+          <!-- Jagung Bose -->
+          <article class="makanan-card" data-id="jagung-bose" data-region="flores" data-tags="jagung bose makanan ritual manggarai labu">
+            <button class="makanan-card__bookmark" aria-label="Bookmark" data-id="jagung-bose">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="makanan-card__img-wrapper">
+              <img src="../../assets/img/makanan/jagung_bose1.webp" alt="Jagung Bose" class="makanan-card__img">
+              <div class="makanan-card__badge">Flores</div>
+            </div>
+            <div class="makanan-card__body">
+              <h3 class="makanan-card__title">Jagung Bose</h3>
+              <p class="makanan-card__location">Manggarai, Flores Barat</p>
+              <p class="makanan-card__desc">
+                Makanan ritual dari jagung dan labu yang dimasak dengan santan, 
+                disajikan dalam upacara adat dan syukuran panen Manggarai.
+              </p>
+              <a href="jagung-bose.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Kolo -->
+          <article class="makanan-card" data-id="kolo" data-region="flores" data-tags="kolo upacara penti ngada bajawa">
+            <button class="makanan-card__bookmark" aria-label="Bookmark" data-id="kolo">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="makanan-card__img-wrapper">
+              <img src="../../assets/img/makanan/Kolo1.jpeg" alt="Kolo" class="makanan-card__img">
+              <div class="makanan-card__badge">Flores</div>
+            </div>
+            <div class="makanan-card__body">
+              <h3 class="makanan-card__title">Kolo</h3>
+              <p class="makanan-card__location">Bajawa, Ngada</p>
+              <p class="makanan-card__desc">
+                Makanan khas upacara Penti suku Ngada, terbuat dari ubi dan kelapa, 
+                melambangkan syukur atas hasil panen.
+              </p>
+              <a href="kolo.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Se'i -->
+          <article class="makanan-card" data-id="sei" data-region="all" data-tags="sei daging asap tradisional ntt">
+            <button class="makanan-card__bookmark" aria-label="Bookmark" data-id="sei">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="makanan-card__img-wrapper">
+              <img src="../../assets/img/makanan/sei1.jpg" alt="Se'i" class="makanan-card__img">
+              <div class="makanan-card__badge">NTT</div>
+            </div>
+            <div class="makanan-card__body">
+              <h3 class="makanan-card__title">Se'i</h3>
+              <p class="makanan-card__location">Seluruh NTT</p>
+              <p class="makanan-card__desc">
+                Daging asap tradisional dengan teknik pengasapan khas menggunakan 
+                kayu kosambi, menghasilkan aroma dan cita rasa yang unik.
+              </p>
+              <a href="sei.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="no-results" style="display: none;">
+          <p>Tidak ada makanan yang sesuai dengan pencarian Anda.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 East Nusa Tenggara Cultural Heritage</p>
+      <a href="#top" class="footer__back" id="backToTop">↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== JS ===================== -->
+  <script src="../../assets/js/bookmark-manager.js"></script>
+  <script src="../../assets/js/localStorage.js"></script>
+  <script src="../../assets/js/search.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumah Adat NTT — Arsitektur Vernakular Nusantara</title>
+  <meta name="description" content="Eksplorasi rumah adat khas NTT: Mbaru Niang Wae Rebo, Mbaru Gendang, Sa'o Ngada, dan Lopo Atoni.">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/page/rumah-adat/rumah-adat.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body id="top">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="nav visible" id="mainNav">
+    <div class="nav__inner">
+      
+      <!-- Brand -->
+      <a href="../../index.html" class="nav__brand">
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
+        <span class="nav__brand-subtitle">Warisan Nusantara</span>
+      </a>
+
+      <!-- Menu -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../../index.html" class="nav__link">Beranda</a></li>
+        <li class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-toggle">Explore</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../rumah-adat/index.html" class="nav__link--active">Rumah Adat</a></li>
+            <li><a href="../pakaian/index.html">Tenun & Kain Adat</a></li>
+            <li><a href="../suku/index.html">Suku & Adat</a></li>
+            <li><a href="../tradisi/index.html">Tradisi</a></li>
+            <li><a href="../seni/index.html">Seni Tradisional</a></li>
+            <li><a href="../makanan/index.html">Kuliner</a></li>
+            <li><a href="../alam/index.html">Wisata Alam</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search -->
+      <div class="search">
+        <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT...">
+        <div class="search__panel hidden" id="searchPanel"></div>
+      </div>
+
+      <!-- Toggle Mobile -->
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="rumahadat-hero">
+    <div class="rumahadat-hero__bg" style="background-image: url('../../assets/img/rumahadat/Wae Rebo Village, Flores Island, Indonesia.jpg');"></div>
+    <div class="rumahadat-hero__overlay"></div>
+
+    <div class="rumahadat-hero__content">
+      <p class="rumahadat-hero__eyebrow">ARSITEKTUR VERNAKULAR</p>
+      <h1 class="rumahadat-hero__title">Rumah Adat Nusa Tenggara Timur</h1>
+      <p class="rumahadat-hero__subtitle">
+        Eksplorasi arsitektur tradisional yang mencerminkan kosmologi, 
+        sistem sosial, dan kearifan lokal masyarakat NTT
+      </p>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="content">
+
+    <!-- INTRO -->
+    <section class="rumahadat-intro">
+      <div class="rumahadat-container">
+        <h2 class="rumahadat-heading">Filosofi Rumah Adat NTT</h2>
+        <div class="rumahadat-intro__content">
+          <p>
+            Rumah adat di Nusa Tenggara Timur bukan sekadar tempat tinggal, melainkan representasi 
+            <strong>mikrokosmos</strong> yang mencerminkan hubungan manusia dengan alam semesta. 
+            Setiap elemen—dari bentuk atap hingga tiang penyangga—memiliki makna spiritual dan sosial yang mendalam.
+          </p>
+          <div class="rumahadat-intro__quote">
+            "Arsitektur rumah adat NTT adalah manifestasi fisik dari kepercayaan Marapu dan sistem 
+            kekerabatan patrilineal, di mana rumah menjadi pusat ritual dan penanda identitas klan."
+          </div>
+          <p>
+            Dari <strong>Mbaru Niang</strong> yang menjulang tinggi di Wae Rebo hingga <strong>Lopo</strong> 
+            berbentuk bulat di Timor, setiap rumah adat memiliki keunikan yang disesuaikan dengan kondisi 
+            geografis dan iklim setempat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & SEARCH -->
+    <section class="rumahadat-filter">
+      <div class="rumahadat-container">
+        <div class="rumahadat-filter-bar">
+          <div class="rumahadat-filter-group">
+            <label for="regionFilter" class="rumahadat-filter-label">Wilayah:</label>
+            <select id="regionFilter" class="rumahadat-filter-select">
+              <option value="all">Semua Wilayah</option>
+              <option value="flores">Flores</option>
+              <option value="sumba">Sumba</option>
+              <option value="timor">Timor</option>
+              <option value="alor">Alor</option>
+            </select>
+          </div>
+          
+          <div class="rumahadat-filter-group">
+            <input 
+              type="search" 
+              id="pageSearch" 
+              class="rumahadat-filter-search"
+              placeholder="Cari rumah adat..."
+            />
+          </div>
+
+          <div id="filterStats" class="rumahadat-filter-stats">Menampilkan 4 item</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID RUMAH ADAT -->
+    <section class="rumahadat-showcase">
+      <div class="rumahadat-grid" id="adatGrid">
+        
+        <!-- Mbaru Niang -->
+        <article class="rumahadat-card" data-id="mbaru-niang" data-region="flores" data-tags="mbaru niang wae rebo manggarai kerucut">
+          <button class="rumahadat-card__bookmark" aria-label="Bookmark" data-id="mbaru-niang">
+            <span class="bookmark-icon">☆</span>
+          </button>
+          <div class="rumahadat-card__img-wrapper">
+            <img src="../../assets/img/rumahadat/Wae Rebo Village, Flores Island, Indonesia.jpg" alt="Mbaru Niang" class="rumahadat-card__img">
+            <div class="rumahadat-card__badge">Flores</div>
+          </div>
+          <div class="rumahadat-card__body">
+            <h3 class="rumahadat-card__title">Mbaru Niang</h3>
+            <p class="rumahadat-card__location">Wae Rebo, Manggarai</p>
+            <p class="rumahadat-card__desc">
+              Rumah kerucut ikonik setinggi 15 meter dengan 5 lantai yang melambangkan 
+              struktur sosial dan kosmologi masyarakat Manggarai.
+            </p>
+            <a href="mbaru-niang.html" class="rumahadat-btn">Selengkapnya</a>
+          </div>
+        </article>
+
+        <!-- Mbaru Gendang -->
+        <article class="rumahadat-card" data-id="mbaru-gendang" data-region="flores" data-tags="mbaru gendang manggarai drum">
+          <button class="rumahadat-card__bookmark" aria-label="Bookmark" data-id="mbaru-gendang">
+            <span class="bookmark-icon">☆</span>
+          </button>
+          <div class="rumahadat-card__img-wrapper">
+            <img src="../../assets/img/rumahadat/mbaru-gendang.jpeg" alt="Mbaru Gendang" class="rumahadat-card__img">
+            <div class="rumahadat-card__badge">Flores</div>
+          </div>
+          <div class="rumahadat-card__body">
+            <h3 class="rumahadat-card__title">Mbaru Gendang</h3>
+            <p class="rumahadat-card__location">Manggarai, Flores Barat</p>
+            <p class="rumahadat-card__desc">
+              Rumah drum tradisional dengan 5 lantai yang berfungsi sebagai pusat ritual 
+              dan rumah ketua adat di kampung Manggarai.
+            </p>
+            <a href="mbaru-gendang.html" class="rumahadat-btn">Selengkapnya</a>
+          </div>
+        </article>
+
+        <!-- Sa'o -->
+        <article class="rumahadat-card" data-id="sao-ngada" data-region="flores" data-tags="sao ngada bajawa panggung">
+          <button class="rumahadat-card__bookmark" aria-label="Bookmark" data-id="sao-ngada">
+            <span class="bookmark-icon">☆</span>
+          </button>
+          <div class="rumahadat-card__img-wrapper">
+            <img src="../../assets/img/rumahadat/Rumah-adat-Sao-Ata-Mosa-Lakitana-sebagai-salah-satu-rumah-adat-NTT.jpg" alt="Sa'o Ngada" class="rumahadat-card__img">
+            <div class="rumahadat-card__badge">Flores</div>
+          </div>
+          <div class="rumahadat-card__body">
+            <h3 class="rumahadat-card__title">Sa'o</h3>
+            <p class="rumahadat-card__location">Bajawa, Ngada</p>
+            <p class="rumahadat-card__desc">
+              Rumah panggung adat Suku Ngada dengan atap tinggi berbentuk limas, 
+              dilengkapi dengan ngadhu dan bhaga di halaman depan.
+            </p>
+            <a href="sao.html" class="rumahadat-btn">Selengkapnya</a>
+          </div>
+        </article>
+
+        <!-- Lopo -->
+        <article class="rumahadat-card" data-id="lopo-timor" data-region="timor" data-tags="lopo ume kbubu atoni dawan bulat">
+          <button class="rumahadat-card__bookmark" aria-label="Bookmark" data-id="lopo-timor">
+            <span class="bookmark-icon">☆</span>
+          </button>
+          <div class="rumahadat-card__img-wrapper">
+            <img src="../../assets/img/rumahadat/lopo2.jpg" alt="Lopo" class="rumahadat-card__img">
+            <div class="rumahadat-card__badge">Timor</div>
+          </div>
+          <div class="rumahadat-card__body">
+            <h3 class="rumahadat-card__title">Lopo</h3>
+            <p class="rumahadat-card__location">Timor, Atoni Meto</p>
+            <p class="rumahadat-card__desc">
+              Rumah bulat (ume kbubu) tradisional Suku Atoni dengan atap kerucut dari alang-alang, 
+              simbol persatuan dan kesetaraan komunal.
+            </p>
+            <a href="lopo.html" class="rumahadat-btn">Selengkapnya</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- No Results -->
+      <div id="noResults" class="rumahadat-no-results" style="display: none;">
+        <p>Tidak ada rumah adat yang sesuai dengan pencarian Anda.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 East Nusa Tenggara Cultural Heritage</p>
+      <a href="#top" class="footer__back" id="backToTop">↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== JS ===================== -->
+  <script src="../../assets/js/bookmark-manager.js"></script>
+  <script src="../../assets/js/localStorage.js"></script>
+  <script src="../../assets/js/search.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
