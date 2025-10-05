@@ -1,0 +1,341 @@
+/* =====================================================
+   ALAM-WAEREBO.CSS - Cultural Earthy Tones
+   For: wae-rebo.html
+   Theme: Mountain village, warm earth, tradition
+   ===================================================== */
+
+/* ===================== WAEREBO MAIN WRAPPER ===================== */
+.waerebo-main {
+  background: linear-gradient(to bottom,
+    #0f0805 0%,
+    #0a0604 100%);
+  color: rgba(255, 255, 255, 0.9);
+  min-height: 100vh;
+}
+
+.waerebo-section {
+  padding: 120px 0;
+  background: linear-gradient(to bottom,
+    rgba(15, 8, 5, 0.5) 0%,
+    rgba(10, 6, 4, 0.3) 100%);
+}
+
+/* ===================== HEADING ===================== */
+.waerebo-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #ff9d5c;
+  margin-bottom: 64px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.waerebo-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff9d5c, transparent);
+  border-radius: 2px;
+}
+
+.waerebo-location {
+  display: block;
+  color: rgba(255, 157, 92, 0.6);
+  font-size: 0.35em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 16px;
+}
+
+/* ===================== ROW LAYOUT ===================== */
+.waerebo-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  margin-bottom: 96px;
+  align-items: center;
+}
+
+.waerebo-image figure {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 157, 92, 0.15);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.waerebo-image figure:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 157, 92, 0.3);
+}
+
+.waerebo-image img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.95) contrast(1.05) saturate(1.1);
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.waerebo-image figure:hover img {
+  transform: scale(1.06);
+}
+
+.waerebo-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6), transparent);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+/* ===================== TEXT CONTENT ===================== */
+.waerebo-text p {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+}
+
+.waerebo-dropcap {
+  float: left;
+  font-size: 5.5rem;
+  line-height: 0.85;
+  font-weight: 900;
+  margin: 0.1rem 0.6rem 0 0;
+  color: #ff9d5c;
+  font-family: Georgia, serif;
+  text-shadow: 0 4px 20px rgba(255, 157, 92, 0.4);
+}
+
+.waerebo-text strong {
+  color: #ff9d5c;
+  font-weight: 700;
+}
+
+.waerebo-text em {
+  color: #ffa366;
+  font-style: italic;
+}
+
+/* ===================== BLOCKQUOTE ===================== */
+.waerebo-quote {
+  margin: 96px auto;
+  padding: 48px;
+  max-width: 900px;
+  background: linear-gradient(135deg,
+    rgba(255, 157, 92, 0.1) 0%,
+    rgba(255, 157, 92, 0.04) 100%);
+  border-left: 5px solid #ff9d5c;
+  border-radius: 0 20px 20px 0;
+  font-size: 1.35rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.95);
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.waerebo-quote::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-size: 6rem;
+  color: rgba(255, 157, 92, 0.2);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.waerebo-quote-highlight {
+  color: #ff9d5c;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 0 0 20px rgba(255, 157, 92, 0.3);
+}
+
+/* ===================== CONTENT BLOCKS ===================== */
+.waerebo-block {
+  margin-bottom: 80px;
+  padding: 48px;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 157, 92, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.waerebo-block:hover {
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(255, 157, 92, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.waerebo-block h3 {
+  font-size: 2rem;
+  color: #ff9d5c;
+  font-weight: 900;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid rgba(255, 157, 92, 0.2);
+  letter-spacing: -0.3px;
+}
+
+.waerebo-block p {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+}
+
+/* ===================== LISTS ===================== */
+.waerebo-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 40px;
+}
+
+.waerebo-list li {
+  padding: 8px 0 8px 48px;
+  margin-bottom: 16px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.9;
+  border-left: 2px solid rgba(255, 157, 92, 0.15);
+  transition: all 0.25s ease;
+}
+
+.waerebo-list li:hover {
+  border-left-color: rgba(255, 157, 92, 0.5);
+  padding-left: 56px;
+}
+
+.waerebo-list li::before {
+  content: '●';
+  position: absolute;
+  left: 16px;
+  top: 8px;
+  color: #ff9d5c;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.waerebo-list li strong {
+  color: #ff9d5c;
+  font-weight: 700;
+}
+
+/* ===================== FILOSOFI ROW ===================== */
+.waerebo-filosofi {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 157, 92, 0.1);
+}
+
+/* ===================== BACK CTA ===================== */
+.waerebo-back-cta {
+  text-align: center;
+  margin-top: 96px;
+  padding-top: 64px;
+  border-top: 1px solid rgba(255, 157, 92, 0.15);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991px) {
+  .waerebo-row,
+  .waerebo-filosofi {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .waerebo-heading {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .waerebo-quote {
+    font-size: 1.2rem;
+    padding: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .waerebo-section {
+    padding: 80px 0;
+  }
+
+  .waerebo-heading {
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+  }
+
+  .waerebo-row {
+    margin-bottom: 64px;
+  }
+
+  .waerebo-dropcap {
+    font-size: 4rem;
+    margin: 0.1rem 0.4rem 0 0;
+  }
+  
+  .waerebo-block {
+    padding: 32px;
+    margin-bottom: 64px;
+  }
+
+  .waerebo-block h3 {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
+
+  .waerebo-quote {
+    font-size: 1.1rem;
+    padding: 32px;
+    margin: 64px auto;
+  }
+
+  .waerebo-quote::before {
+    font-size: 4rem;
+    top: -10px;
+    left: 20px;
+  }
+
+  .waerebo-list li {
+    padding-left: 32px;
+  }
+
+  .waerebo-list li:hover {
+    padding-left: 40px;
+  }
+
+  .waerebo-filosofi {
+    padding: 32px;
+  }
+
+  .waerebo-back-cta {
+    margin-top: 64px;
+    padding-top: 48px;
+  }
+}

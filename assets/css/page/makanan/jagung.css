@@ -1,0 +1,332 @@
+/* =====================================================
+   JAGUNG.CSS - Golden Corn Theme
+   For: jagung-bose.html
+   Theme: Warm, appetizing, homey comfort food
+   ===================================================== */
+
+/* ===================== JAGUNG MAIN WRAPPER ===================== */
+.jagung-main {
+  background: linear-gradient(to bottom,
+    #1a1510 0%,
+    #0f0c08 100%);
+  color: rgba(255, 255, 255, 0.9);
+  min-height: 100vh;
+}
+
+.jagung-section {
+  padding: 100px 0;
+  background: radial-gradient(ellipse at center, rgba(244, 196, 48, 0.05) 0%, transparent 60%);
+}
+
+/* ===================== HEADING ===================== */
+.jagung-heading {
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  color: #f4c430;
+  margin-bottom: 72px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: -1px;
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.jagung-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #f4c430, transparent);
+  border-radius: 2px;
+}
+
+.jagung-location {
+  display: block;
+  color: rgba(244, 196, 48, 0.55);
+  font-size: 0.32em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 16px;
+}
+
+/* ===================== HERO SECTION ===================== */
+.jagung-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 72px;
+  margin-bottom: 100px;
+  align-items: center;
+}
+
+.jagung-hero-image {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(244, 196, 48, 0.15);
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jagung-hero-image:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 35px 100px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(244, 196, 48, 0.3);
+}
+
+.jagung-hero-image img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.92) contrast(1.08) saturate(1.15);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jagung-hero-image:hover img {
+  transform: scale(1.05);
+}
+
+.jagung-hero-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5), transparent);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+}
+
+/* ===================== TEXT CONTENT ===================== */
+.jagung-text p {
+  font-size: 1.15rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+}
+
+.jagung-text p:first-of-type::first-letter {
+  float: left;
+  font-size: 6rem;
+  line-height: 0.82;
+  font-weight: 900;
+  margin: 0.08em 0.12em 0 0;
+  color: #f4c430;
+  font-family: Georgia, serif;
+  text-shadow: 0 4px 20px rgba(244, 196, 48, 0.4);
+}
+
+.jagung-text strong {
+  color: #f4c430;
+  font-weight: 700;
+}
+
+.jagung-text em {
+  color: #e6b32d;
+  font-style: italic;
+}
+
+/* ===================== QUOTE ===================== */
+.jagung-quote {
+  margin: 100px auto;
+  padding: 56px 64px;
+  max-width: 1000px;
+  background: linear-gradient(135deg,
+    rgba(244, 196, 48, 0.1) 0%,
+    rgba(244, 196, 48, 0.04) 100%);
+  border: 2px solid rgba(244, 196, 48, 0.2);
+  border-radius: 16px;
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.95);
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  box-shadow: 
+    0 15px 60px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(244, 196, 48, 0.1);
+}
+
+.jagung-quote::before {
+  content: '"';
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  font-size: 7rem;
+  color: rgba(244, 196, 48, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.jagung-quote-highlight {
+  color: #f4c430;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 0 0 25px rgba(244, 196, 48, 0.25);
+}
+
+/* ===================== CONTENT CARD ===================== */
+.jagung-card {
+  margin-bottom: 88px;
+  padding: 56px;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(244, 196, 48, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.jagung-card:hover {
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(244, 196, 48, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.jagung-card h3 {
+  font-size: 2.2rem;
+  color: #f4c430;
+  font-weight: 900;
+  margin-bottom: 36px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(244, 196, 48, 0.2);
+  letter-spacing: -0.5px;
+}
+
+.jagung-card p {
+  font-size: 1.14rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+/* ===================== SPLIT LAYOUT ===================== */
+.jagung-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  margin-bottom: 88px;
+  align-items: center;
+  padding: 56px;
+  background: rgba(244, 196, 48, 0.03);
+  border: 1px solid rgba(244, 196, 48, 0.12);
+  border-radius: 20px;
+}
+
+.jagung-split-text p {
+  font-size: 1.14rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+.jagung-split-image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.jagung-split-image img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.92) contrast(1.08);
+  transition: transform 0.6s ease;
+}
+
+.jagung-split-image:hover img {
+  transform: scale(1.06);
+}
+
+.jagung-split-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92), transparent);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===================== BACK CTA ===================== */
+.jagung-back-cta {
+  text-align: center;
+  margin-top: 100px;
+  padding-top: 72px;
+  border-top: 2px solid rgba(244, 196, 48, 0.15);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991px) {
+  .jagung-hero,
+  .jagung-split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .jagung-heading {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+  }
+
+  .jagung-quote {
+    font-size: 1.25rem;
+    padding: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .jagung-section {
+    padding: 80px 0;
+  }
+
+  .jagung-heading {
+    margin-bottom: 56px;
+    padding-bottom: 20px;
+  }
+
+  .jagung-hero {
+    margin-bottom: 72px;
+  }
+
+  .jagung-text p:first-of-type::first-letter {
+    font-size: 4.5rem;
+  }
+
+  .jagung-card,
+  .jagung-split {
+    padding: 36px;
+    margin-bottom: 64px;
+  }
+
+  .jagung-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+  }
+
+  .jagung-quote {
+    font-size: 1.15rem;
+    padding: 36px;
+    margin: 72px auto;
+  }
+
+  .jagung-quote::before {
+    font-size: 5rem;
+    top: -10px;
+    left: 24px;
+  }
+
+  .jagung-back-cta {
+    margin-top: 72px;
+    padding-top: 56px;
+  }
+}

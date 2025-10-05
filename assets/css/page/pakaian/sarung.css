@@ -1,0 +1,388 @@
+/* =====================================================
+   SARUNG-SABU.CSS - Structured Maritime Design
+   For: sarung-sabu.html
+   Theme: Professional, ocean-inspired, structured
+   ===================================================== */
+
+/* ===================== SABU MAIN WRAPPER ===================== */
+.sabu-main {
+  background: #050911;
+  color: rgba(255, 255, 255, 0.92);
+  min-height: 100vh;
+  position: relative;
+}
+
+.sabu-main::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(41, 128, 185, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sabu-section {
+  padding: 110px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================== STRUCTURED HEADING ===================== */
+.sabu-header {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  text-align: center;
+  position: relative;
+}
+
+.sabu-header::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #3498db, transparent);
+}
+
+.sabu-heading {
+  font-size: clamp(3.8rem, 7vw, 6rem);
+  color: #3498db;
+  margin-bottom: 20px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sabu-subtitle {
+  font-size: 1.1rem;
+  color: rgba(52, 152, 219, 0.6);
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+/* ===================== FEATURED SPLIT ===================== */
+.sabu-featured {
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.sabu-featured-image {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 30px 90px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(52, 152, 219, 0.2);
+}
+
+.sabu-featured-image img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.88) contrast(1.12);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sabu-featured:hover .sabu-featured-image img {
+  transform: scale(1.06);
+}
+
+.sabu-featured-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.sabu-featured-text p {
+  font-size: 1.18rem;
+  line-height: 2.1;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+.sabu-featured-text p:first-of-type::first-letter {
+  float: left;
+  font-size: 7rem;
+  line-height: 0.75;
+  font-weight: 900;
+  margin: 0.05em 0.1em 0 0;
+  color: #3498db;
+  font-family: Georgia, serif;
+}
+
+.sabu-featured-text strong {
+  color: #3498db;
+  font-weight: 700;
+}
+
+.sabu-featured-text em {
+  color: #5dade2;
+  font-style: italic;
+}
+
+/* ===================== QUOTE STYLED ===================== */
+.sabu-quote {
+  max-width: 1000px;
+  margin: 120px auto;
+  padding: 0;
+  position: relative;
+}
+
+.sabu-quote::before,
+.sabu-quote::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(52, 152, 219, 0.4), transparent);
+}
+
+.sabu-quote::before {
+  top: 0;
+}
+
+.sabu-quote::after {
+  bottom: 0;
+}
+
+.sabu-quote-text {
+  padding: 64px 80px;
+  font-size: 1.65rem;
+  line-height: 1.95;
+  color: rgba(255, 255, 255, 0.95);
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+}
+
+.sabu-quote-highlight {
+  color: #3498db;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ===================== CONTENT MODULE ===================== */
+.sabu-module {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 80px;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.01) 100%);
+  border-top: 3px solid rgba(52, 152, 219, 0.3);
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.sabu-module h3 {
+  font-size: 2.8rem;
+  color: #3498db;
+  font-weight: 900;
+  margin-bottom: 48px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.sabu-module h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #3498db;
+}
+
+.sabu-module h4 {
+  font-size: 1.7rem;
+  color: #5dade2;
+  font-weight: 700;
+  margin: 56px 0 32px 0;
+  letter-spacing: -0.3px;
+}
+
+.sabu-module p {
+  font-size: 1.18rem;
+  line-height: 2.1;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+}
+
+.sabu-module strong {
+  color: #3498db;
+  font-weight: 700;
+}
+
+.sabu-module em {
+  color: #5dade2;
+  font-style: italic;
+}
+
+/* ===================== TWO COLUMN LAYOUT ===================== */
+.sabu-two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 72px;
+  margin: 56px 0;
+  align-items: start;
+}
+
+.sabu-two-col-image {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+.sabu-two-col-image img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.88) contrast(1.1);
+  transition: transform 0.8s ease;
+}
+
+.sabu-two-col-image:hover img {
+  transform: scale(1.05);
+}
+
+.sabu-two-col-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===================== STRUCTURED LIST ===================== */
+.sabu-module ul {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0;
+}
+
+.sabu-module ul li {
+  padding: 20px 0 20px 52px;
+  margin-bottom: 20px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 2;
+  border-left: 3px solid rgba(52, 152, 219, 0.2);
+  transition: all 0.3s ease;
+}
+
+.sabu-module ul li:hover {
+  border-left-color: rgba(52, 152, 219, 0.6);
+  padding-left: 60px;
+  background: rgba(52, 152, 219, 0.04);
+}
+
+.sabu-module ul li::before {
+  content: '→';
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  color: #3498db;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.sabu-module ul li strong {
+  color: #3498db;
+  font-weight: 700;
+}
+
+/* ===================== BACK CTA ===================== */
+.sabu-back-cta {
+  text-align: center;
+  margin-top: 120px;
+  padding-top: 80px;
+  border-top: 2px solid rgba(52, 152, 219, 0.2);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991px) {
+  .sabu-featured,
+  .sabu-two-col {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .sabu-heading {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+  }
+
+  .sabu-quote-text {
+    padding: 56px 56px;
+    font-size: 1.45rem;
+  }
+
+  .sabu-module {
+    padding: 64px 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sabu-section {
+    padding: 80px 0;
+  }
+
+  .sabu-header {
+    margin-bottom: 72px;
+  }
+
+  .sabu-featured-text p:first-of-type::first-letter {
+    font-size: 5.5rem;
+  }
+
+  .sabu-module {
+    padding: 48px 36px;
+    margin-bottom: 72px;
+  }
+
+  .sabu-module h3 {
+    font-size: 2.2rem;
+    margin-bottom: 36px;
+  }
+
+  .sabu-module h4 {
+    font-size: 1.5rem;
+    margin: 44px 0 28px 0;
+  }
+
+  .sabu-quote-text {
+    padding: 48px 32px;
+    font-size: 1.25rem;
+  }
+
+  .sabu-module ul li {
+    padding-left: 44px;
+  }
+
+  .sabu-module ul li:hover {
+    padding-left: 52px;
+  }
+
+  .sabu-back-cta {
+    margin-top: 88px;
+    padding-top: 64px;
+  }
+}

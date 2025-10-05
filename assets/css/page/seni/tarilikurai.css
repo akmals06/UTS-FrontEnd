@@ -1,0 +1,717 @@
+/* ========================================
+   TARI LIKURAI - VIBRANT & ENERGETIC STYLES
+   ======================================== */
+
+/* Container */
+.seni-tarilikurai__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section - Split Layout */
+.seni-tarilikurai__hero {
+  min-height: 90vh;
+  background: linear-gradient(135deg, #e8b4b8 0%, #f4d9c6 50%, #d4c5b9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.seni-tarilikurai__hero-split {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 0 3rem;
+}
+
+.seni-tarilikurai__hero-content {
+  z-index: 2;
+  animation: slideInLeft 1s ease-out;
+}
+
+.seni-tarilikurai__hero-label {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(184,134,123,0.3);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #8b6f5c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.seni-tarilikurai__hero-title {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #5d4e37;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+}
+
+.seni-tarilikurai__hero-desc {
+  font-size: 1.3rem;
+  color: #6b5d52;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.seni-tarilikurai__hero-meta {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.seni-tarilikurai__hero-location {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.8rem;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(184,134,123,0.3);
+  border-radius: 30px;
+  font-weight: 600;
+  color: #8b6f5c;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.seni-tarilikurai__hero-visual {
+  position: relative;
+  height: 600px;
+  animation: slideInRight 1s ease-out;
+}
+
+.seni-tarilikurai__hero-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../img/seni/likurai1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.seni-tarilikurai__hero-image::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+/* Introduction with Card Style */
+.seni-tarilikurai__intro {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.seni-tarilikurai__intro-wrapper {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 24px;
+  padding: 4rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.seni-tarilikurai__intro-badge {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(135deg, #b8867b, #c9a690);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(184,134,123,0.25);
+}
+
+.seni-tarilikurai__intro-content {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 3rem;
+}
+
+.seni-tarilikurai__intro-content p {
+  margin-bottom: 1.5rem;
+}
+
+.seni-tarilikurai__intro-content strong {
+  color: #8b6f5c;
+  font-weight: 600;
+}
+
+.seni-tarilikurai__intro-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  margin-top: 2rem;
+}
+
+.seni-tarilikurai__intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.seni-tarilikurai__intro-image:hover img {
+  transform: scale(1.05);
+}
+
+.seni-tarilikurai__intro-pattern {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #b8867b 0%, #c9a690 100%);
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(40px);
+}
+
+/* Quote with Modern Style */
+.seni-tarilikurai__quote {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #b8867b 0%, #8b6f5c 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.seni-tarilikurai__quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: 50px 50px;
+  opacity: 0.3;
+}
+
+.seni-tarilikurai__quote-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem;
+}
+
+.seni-tarilikurai__quote-mark {
+  font-size: 10rem;
+  color: rgba(255,255,255,0.2);
+  font-family: Georgia, serif;
+  line-height: 0.8;
+  margin-bottom: 1rem;
+}
+
+.seni-tarilikurai__quote-text {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.seni-tarilikurai__quote-source {
+  display: block;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* History Section with Timeline Feel */
+.seni-tarilikurai__history {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.seni-tarilikurai__section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.seni-tarilikurai__title-accent {
+  background: linear-gradient(135deg, #b8867b, #8b6f5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.seni-tarilikurai__history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.seni-tarilikurai__history-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-left: 5px solid #b8867b;
+  transition: all 0.4s ease;
+}
+
+.seni-tarilikurai__history-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.seni-tarilikurai__history-era {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(135deg, #b8867b, #c9a690);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 12px rgba(184,134,123,0.25);
+}
+
+.seni-tarilikurai__history-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.seni-tarilikurai__history-card strong {
+  color: #8b6f5c;
+}
+
+/* Philosophy Section with Icon Grid */
+.seni-tarilikurai__philosophy {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.seni-tarilikurai__philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.seni-tarilikurai__philosophy-card {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.seni-tarilikurai__philosophy-card:hover {
+  transform: translateY(-10px);
+  border-color: #b8867b;
+  box-shadow: 0 20px 40px rgba(184,134,123,0.2);
+}
+
+.seni-tarilikurai__philosophy-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.seni-tarilikurai__philosophy-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.seni-tarilikurai__philosophy-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Costume Section */
+.seni-tarilikurai__costume {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.seni-tarilikurai__costume-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.seni-tarilikurai__costume-visual {
+  position: sticky;
+  top: 2rem;
+}
+
+.seni-tarilikurai__costume-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.seni-tarilikurai__costume-visual:hover img {
+  transform: scale(1.03);
+}
+
+.seni-tarilikurai__costume-caption {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+}
+
+.seni-tarilikurai__costume-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+}
+
+.seni-tarilikurai__costume-list li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.seni-tarilikurai__costume-list li:last-child {
+  border-bottom: none;
+}
+
+.seni-tarilikurai__costume-list strong {
+  color: #8b6f5c;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Movement Section */
+.seni-tarilikurai__movement {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.seni-tarilikurai__movement-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seni-tarilikurai__movement-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.seni-tarilikurai__movement-step {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.seni-tarilikurai__movement-step:hover {
+  transform: translateX(10px);
+  box-shadow: 0 12px 35px rgba(184,134,123,0.15);
+}
+
+.seni-tarilikurai__step-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #b8867b, #c9a690);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgba(184,134,123,0.25);
+}
+
+.seni-tarilikurai__step-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.8rem;
+}
+
+.seni-tarilikurai__step-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+.seni-tarilikurai__movement-highlight {
+  background: linear-gradient(135deg, #b8867b, #8b6f5c);
+  padding: 3rem;
+  border-radius: 20px;
+  margin-top: 3rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(184,134,123,0.25);
+}
+
+.seni-tarilikurai__movement-highlight p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Music Section */
+.seni-tarilikurai__music {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.seni-tarilikurai__music-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.seni-tarilikurai__music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.seni-tarilikurai__music-card {
+  background: linear-gradient(135deg, #f8f9fa, #fff);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border-left: 5px solid #b8867b;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.seni-tarilikurai__music-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(184,134,123,0.2);
+  border-left-width: 8px;
+}
+
+.seni-tarilikurai__music-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #8b6f5c;
+  margin-bottom: 1rem;
+}
+
+.seni-tarilikurai__music-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.seni-tarilikurai__music-lyric {
+  margin-top: 3rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(184,134,123,0.1), rgba(201,166,144,0.1));
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(184,134,123,0.2);
+}
+
+.seni-tarilikurai__lyric-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #8b6f5c;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.seni-tarilikurai__lyric-trans {
+  font-size: 1.05rem;
+  color: #666;
+}
+
+/* Back Link */
+.seni-tarilikurai__back {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  text-align: center;
+}
+
+.seni-tarilikurai__back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #b8867b, #8b6f5c);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 25px rgba(184,134,123,0.3);
+  transition: all 0.4s ease;
+}
+
+.seni-tarilikurai__back-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(184,134,123,0.4);
+}
+
+.seni-tarilikurai__back-arrow {
+  font-size: 1.5rem;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .seni-tarilikurai__hero-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+  }
+
+  .seni-tarilikurai__hero-visual {
+    height: 400px;
+  }
+
+  .seni-tarilikurai__costume-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .seni-tarilikurai__costume-visual {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .seni-tarilikurai__container {
+    padding: 0 1.5rem;
+  }
+
+  .seni-tarilikurai__hero {
+    min-height: 70vh;
+  }
+
+  .seni-tarilikurai__hero-title {
+    font-size: 3.5rem;
+  }
+
+  .seni-tarilikurai__hero-desc {
+    font-size: 1.1rem;
+  }
+
+  .seni-tarilikurai__section-title {
+    font-size: 2.2rem;
+  }
+
+  .seni-tarilikurai__history-grid,
+  .seni-tarilikurai__philosophy-grid,
+  .seni-tarilikurai__movement-steps,
+  .seni-tarilikurai__music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seni-tarilikurai__quote-text {
+    font-size: 1.5rem;
+  }
+
+  .seni-tarilikurai__intro-wrapper {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seni-tarilikurai__hero-title {
+    font-size: 2.5rem;
+  }
+
+  .seni-tarilikurai__hero-desc {
+    font-size: 1rem;
+  }
+
+  .seni-tarilikurai__section-title {
+    font-size: 1.8rem;
+  }
+
+  .seni-tarilikurai__movement-step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .seni-tarilikurai__step-number {
+    margin: 0 auto 1rem;
+  }
+}

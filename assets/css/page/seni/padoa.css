@@ -1,0 +1,648 @@
+/* ========================================
+   TARI PADOA - SPIRITUAL & SACRED STYLES
+   ======================================== */
+
+/* Container */
+.seni-padoa__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section - Minimal & Sacred */
+.seni-padoa__hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #2a2520 0%, #3d3530 100%);
+  overflow: hidden;
+}
+
+.seni-padoa__hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../../img/seni/padoa.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  filter: grayscale(30%);
+}
+
+.seni-padoa__hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.seni-padoa__hero-label {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(212,175,137,0.5);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d4af89;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.seni-padoa__hero-title {
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: #f5f0eb;
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.seni-padoa__hero-subtitle {
+  font-size: 1.3rem;
+  color: rgba(245,240,235,0.8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.seni-padoa__hero-location {
+  font-size: 1rem;
+  color: #d4af89;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Introduction */
+.seni-padoa__intro {
+  padding: 6rem 0;
+  background: #f5f0eb;
+}
+
+.seni-padoa__intro .seni-padoa__container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.seni-padoa__intro-content {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #4a4033;
+}
+
+.seni-padoa__intro-content p {
+  margin-bottom: 1.5rem;
+}
+
+.seni-padoa__intro-content strong {
+  color: #6b5638;
+  font-weight: 600;
+}
+
+.seni-padoa__intro-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.seni-padoa__intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.seni-padoa__intro-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Quote */
+.seni-padoa__quote {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #3d3530 0%, #2a2520 100%);
+}
+
+.seni-padoa__blockquote {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(212,175,137,0.3);
+  border-bottom: 1px solid rgba(212,175,137,0.3);
+  padding: 3rem 2rem;
+}
+
+.seni-padoa__quote-text {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #f5f0eb;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.seni-padoa__quote-source {
+  display: block;
+  font-size: 1.05rem;
+  color: #d4af89;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Section Title */
+.seni-padoa__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.seni-padoa__title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #d4af89;
+}
+
+/* History */
+.seni-padoa__history {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.seni-padoa__history-content {
+  max-width: 900px;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #4a4033;
+}
+
+.seni-padoa__history-content p {
+  margin-bottom: 1.5rem;
+}
+
+.seni-padoa__history-content strong {
+  color: #6b5638;
+  font-weight: 600;
+}
+
+.seni-padoa__history-content em {
+  font-style: italic;
+  color: #8b7355;
+}
+
+/* Philosophy */
+.seni-padoa__philosophy {
+  padding: 6rem 0;
+  background: #f5f0eb;
+}
+
+.seni-padoa__philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.seni-padoa__philosophy-item {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #d4af89;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.seni-padoa__philosophy-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  border-left-width: 6px;
+}
+
+.seni-padoa__philosophy-item h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin-bottom: 1rem;
+}
+
+.seni-padoa__philosophy-item p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #6b5638;
+}
+
+/* Feature Section */
+.seni-padoa__feature {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0;
+  background: #fff;
+}
+
+.seni-padoa__feature-image {
+  position: relative;
+  min-height: 600px;
+}
+
+.seni-padoa__feature-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seni-padoa__feature-content {
+  padding: 6rem 4rem;
+  background: linear-gradient(135deg, #f5f0eb 0%, #fff 100%);
+}
+
+.seni-padoa__feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+}
+
+.seni-padoa__feature-list li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(212,175,137,0.2);
+  transition: padding-left 0.3s ease;
+}
+
+.seni-padoa__feature-list li:hover {
+  padding-left: 1rem;
+}
+
+.seni-padoa__feature-list strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin-bottom: 0.5rem;
+}
+
+.seni-padoa__feature-list span {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #6b5638;
+}
+
+/* Structure */
+.seni-padoa__structure {
+  padding: 6rem 0;
+  background: #f5f0eb;
+}
+
+.seni-padoa__structure-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6b5638;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seni-padoa__structure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.seni-padoa__structure-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-top: 3px solid transparent;
+}
+
+.seni-padoa__structure-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  border-top-color: #d4af89;
+}
+
+.seni-padoa__structure-number {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #d4af89, #b8967d);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.seni-padoa__structure-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin-bottom: 1rem;
+}
+
+.seni-padoa__structure-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #6b5638;
+}
+
+.seni-padoa__structure-note {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 8px;
+  border-left: 4px solid #d4af89;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.seni-padoa__structure-note p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4033;
+  margin: 0;
+}
+
+/* Lyrics Section */
+.seni-padoa__lyrics {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.seni-padoa__lyrics-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6b5638;
+  margin-bottom: 3rem;
+}
+
+.seni-padoa__lyrics-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.seni-padoa__lyrics-type {
+  padding: 2rem;
+  background: #f5f0eb;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.seni-padoa__lyrics-type:hover {
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.seni-padoa__lyrics-type h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin-bottom: 1rem;
+}
+
+.seni-padoa__lyrics-type p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #6b5638;
+}
+
+.seni-padoa__lyrics-example {
+  margin: 3rem 0;
+  padding: 3rem;
+  background: linear-gradient(135deg, #3d3530, #2a2520);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.seni-padoa__lyrics-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #d4af89;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.seni-padoa__lyrics-translation {
+  font-size: 1.1rem;
+  color: rgba(245,240,235,0.8);
+  font-weight: 300;
+}
+
+.seni-padoa__lyrics-note {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #6b5638;
+  font-style: italic;
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+/* Preservation */
+.seni-padoa__preservation {
+  padding: 6rem 0;
+  background: #f5f0eb;
+}
+
+.seni-padoa__preservation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.seni-padoa__preservation-challenges,
+.seni-padoa__preservation-efforts {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.seni-padoa__preservation-challenges h3,
+.seni-padoa__preservation-efforts h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin-bottom: 1.5rem;
+}
+
+.seni-padoa__preservation-challenges ul,
+.seni-padoa__preservation-efforts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seni-padoa__preservation-challenges li,
+.seni-padoa__preservation-efforts li {
+  padding: 1rem 0 1rem 2rem;
+  border-bottom: 1px solid rgba(212,175,137,0.2);
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4a4033;
+}
+
+.seni-padoa__preservation-challenges li::before,
+.seni-padoa__preservation-efforts li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #d4af89;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.seni-padoa__preservation-challenges li:last-child,
+.seni-padoa__preservation-efforts li:last-child {
+  border-bottom: none;
+}
+
+.seni-padoa__preservation-note {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #4a4033;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Back Link */
+.seni-padoa__back {
+  padding: 4rem 0;
+  background: #fff;
+  text-align: center;
+}
+
+.seni-padoa__back-link {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #d4af89, #b8967d);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 25px rgba(212,175,137,0.3);
+  transition: all 0.3s ease;
+}
+
+.seni-padoa__back-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(212,175,137,0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .seni-padoa__intro .seni-padoa__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .seni-padoa__feature {
+    grid-template-columns: 1fr;
+  }
+
+  .seni-padoa__feature-image {
+    min-height: 400px;
+  }
+
+  .seni-padoa__feature-content {
+    padding: 4rem 3rem;
+  }
+
+  .seni-padoa__preservation-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .seni-padoa__container {
+    padding: 0 1.5rem;
+  }
+
+  .seni-padoa__hero {
+    min-height: 70vh;
+  }
+
+  .seni-padoa__hero-title {
+    font-size: 3.5rem;
+  }
+
+  .seni-padoa__hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .seni-padoa__title {
+    font-size: 2.2rem;
+  }
+
+  .seni-padoa__quote-text {
+    font-size: 1.5rem;
+  }
+
+  .seni-padoa__structure-grid,
+  .seni-padoa__lyrics-types {
+    grid-template-columns: 1fr;
+  }
+
+  .seni-padoa__feature-content {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seni-padoa__hero-title {
+    font-size: 2.5rem;
+  }
+
+  .seni-padoa__hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .seni-padoa__title {
+    font-size: 1.8rem;
+  }
+
+  .seni-padoa__intro,
+  .seni-padoa__history,
+  .seni-padoa__philosophy,
+  .seni-padoa__structure,
+  .seni-padoa__lyrics,
+  .seni-padoa__preservation {
+    padding: 3rem 0;
+  }
+
+  .seni-padoa__quote {
+    padding: 3rem 0;
+  }
+
+  .seni-padoa__blockquote {
+    padding: 2rem 1rem;
+  }
+
+  .seni-padoa__quote-text {
+    font-size: 1.3rem;
+  }
+}

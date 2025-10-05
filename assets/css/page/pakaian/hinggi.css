@@ -1,0 +1,386 @@
+/* =====================================================
+   HINGGI.CSS - Sacred Textile Heritage
+   For: hinggi.html
+   Theme: Elegant, artistic, museum-quality
+   ===================================================== */
+
+/* ===================== HINGGI MAIN WRAPPER ===================== */
+.hinggi-main {
+  background: #0a0b0e;
+  color: rgba(255, 255, 255, 0.92);
+  min-height: 100vh;
+}
+
+.hinggi-section {
+  padding: 110px 0;
+  background: 
+    radial-gradient(ellipse at 15% 25%, rgba(75, 85, 120, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 75%, rgba(60, 70, 100, 0.04) 0%, transparent 50%);
+}
+
+/* ===================== HEADING ===================== */
+.hinggi-heading {
+  font-size: clamp(3.2rem, 6vw, 5rem);
+  color: #6b7eb8;
+  margin-bottom: 90px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  position: relative;
+  padding: 0 40px;
+}
+
+.hinggi-heading::before,
+.hinggi-heading::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(107, 126, 184, 0.3);
+  font-size: 1.5rem;
+}
+
+.hinggi-heading::before {
+  left: 0;
+}
+
+.hinggi-heading::after {
+  right: 0;
+}
+
+.hinggi-location {
+  display: block;
+  color: rgba(107, 126, 184, 0.55);
+  font-size: 0.32em;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* ===================== HERO SPREAD ===================== */
+.hinggi-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 88px;
+  margin-bottom: 120px;
+  align-items: center;
+}
+
+.hinggi-hero-image {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 
+    0 30px 90px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(107, 126, 184, 0.2);
+}
+
+.hinggi-hero-image img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.88) contrast(1.12) saturate(1.05);
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hinggi-hero-image:hover img {
+  transform: scale(1.06);
+}
+
+.hinggi-hero-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 32px;
+  background: linear-gradient(to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.7),
+    transparent);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* ===================== TEXT CONTENT ===================== */
+.hinggi-text p {
+  font-size: 1.16rem;
+  line-height: 2.05;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+}
+
+.hinggi-text p:first-of-type::first-letter {
+  float: left;
+  font-size: 6.5rem;
+  line-height: 0.8;
+  font-weight: 900;
+  margin: 0.05em 0.12em 0 0;
+  color: #6b7eb8;
+  font-family: Georgia, serif;
+}
+
+.hinggi-text strong {
+  color: #6b7eb8;
+  font-weight: 700;
+}
+
+.hinggi-text em {
+  color: #8a9cd4;
+  font-style: italic;
+}
+
+/* ===================== QUOTE SACRED ===================== */
+.hinggi-quote {
+  margin: 120px auto;
+  padding: 64px 88px;
+  max-width: 1100px;
+  background: linear-gradient(135deg,
+    rgba(107, 126, 184, 0.08) 0%,
+    rgba(75, 85, 120, 0.04) 100%);
+  border: 1px solid rgba(107, 126, 184, 0.2);
+  border-radius: 12px;
+  font-size: 1.4rem;
+  line-height: 2.1;
+  color: rgba(255, 255, 255, 0.95);
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  box-shadow: 
+    0 20px 70px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(107, 126, 184, 0.1);
+}
+
+.hinggi-quote::before {
+  content: '◆';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  color: #6b7eb8;
+  background: #0a0b0e;
+  padding: 0 20px;
+}
+
+.hinggi-quote-highlight {
+  color: #6b7eb8;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ===================== CONTENT SECTION ===================== */
+.hinggi-content {
+  margin-bottom: 100px;
+  padding: 72px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(107, 126, 184, 0.15);
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+.hinggi-content:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(107, 126, 184, 0.25);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.hinggi-content h3 {
+  font-size: 2.3rem;
+  color: #6b7eb8;
+  font-weight: 900;
+  margin-bottom: 44px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid rgba(107, 126, 184, 0.2);
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.hinggi-content h4 {
+  font-size: 1.4rem;
+  color: #8a9cd4;
+  font-weight: 700;
+  margin: 48px 0 24px 0;
+}
+
+.hinggi-content p {
+  font-size: 1.16rem;
+  line-height: 2.05;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+  text-align: justify;
+}
+
+.hinggi-content strong {
+  color: #6b7eb8;
+  font-weight: 700;
+}
+
+.hinggi-content em {
+  color: #8a9cd4;
+  font-style: italic;
+}
+
+/* ===================== SPLIT WITH IMAGE ===================== */
+.hinggi-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  margin-top: 56px;
+  align-items: start;
+}
+
+.hinggi-split-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+.hinggi-split-image img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.88) contrast(1.1);
+  transition: transform 0.8s ease;
+}
+
+.hinggi-split-image:hover img {
+  transform: scale(1.05);
+}
+
+.hinggi-split-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* ===================== LIST STYLE ===================== */
+.hinggi-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+}
+
+.hinggi-content ul li {
+  padding: 16px 0 16px 48px;
+  margin-bottom: 16px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.95;
+  border-left: 2px solid rgba(107, 126, 184, 0.2);
+  transition: all 0.25s ease;
+}
+
+.hinggi-content ul li:hover {
+  border-left-color: rgba(107, 126, 184, 0.5);
+  padding-left: 56px;
+  background: rgba(107, 126, 184, 0.04);
+}
+
+.hinggi-content ul li::before {
+  content: '◆';
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #6b7eb8;
+  font-size: 1rem;
+}
+
+.hinggi-content ul li strong {
+  color: #6b7eb8;
+  font-weight: 700;
+}
+
+/* ===================== BACK CTA ===================== */
+.hinggi-back-cta {
+  text-align: center;
+  margin-top: 120px;
+  padding-top: 80px;
+  border-top: 1px solid rgba(107, 126, 184, 0.2);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991px) {
+  .hinggi-hero,
+  .hinggi-split {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .hinggi-heading {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    margin-bottom: 72px;
+    padding: 0 56px;
+  }
+
+  .hinggi-quote {
+    font-size: 1.25rem;
+    padding: 56px 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hinggi-section {
+    padding: 80px 0;
+  }
+
+  .hinggi-heading {
+    margin-bottom: 56px;
+    padding: 0 48px;
+  }
+
+  .hinggi-heading::before,
+  .hinggi-heading::after {
+    font-size: 1.2rem;
+  }
+
+  .hinggi-hero {
+    margin-bottom: 88px;
+  }
+
+  .hinggi-text p:first-of-type::first-letter {
+    font-size: 5rem;
+  }
+
+  .hinggi-content {
+    padding: 44px 36px;
+    margin-bottom: 72px;
+  }
+
+  .hinggi-content h3 {
+    font-size: 2rem;
+    margin-bottom: 36px;
+  }
+
+  .hinggi-content h4 {
+    font-size: 1.25rem;
+    margin: 36px 0 20px 0;
+  }
+
+  .hinggi-quote {
+    font-size: 1.15rem;
+    padding: 44px 32px;
+    margin: 88px auto;
+  }
+
+  .hinggi-content ul li {
+    padding-left: 40px;
+  }
+
+  .hinggi-content ul li:hover {
+    padding-left: 48px;
+  }
+
+  .hinggi-back-cta {
+    margin-top: 88px;
+    padding-top: 64px;
+  }
+}

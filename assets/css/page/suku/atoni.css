@@ -1,0 +1,841 @@
+/* ========================================
+   SUKU ATONI - CIRCULAR ORGANIC (LOPO-INSPIRED)
+   ======================================== */
+
+/* Hero - Circular Radial Design */
+.suku-atoni__hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #2d2416 0%, #1a1510 100%);
+  overflow: hidden;
+}
+
+.suku-atoni__hero-circles {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suku-atoni__hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(218,165,32,0.15);
+}
+
+.suku-atoni__hero-circle--1 {
+  width: 300px;
+  height: 300px;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.suku-atoni__hero-circle--2 {
+  width: 500px;
+  height: 500px;
+  animation: pulse 10s ease-in-out infinite;
+}
+
+.suku-atoni__hero-circle--3 {
+  width: 700px;
+  height: 700px;
+  animation: pulse 12s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.6; }
+}
+
+.suku-atoni__hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.suku-atoni__hero-label {
+  display: inline-block;
+  padding: 0.6rem 1.8rem;
+  background: rgba(218,165,32,0.15);
+  border: 1px solid rgba(218,165,32,0.3);
+  border-radius: 50px;
+  color: #daa520;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.suku-atoni__hero-title {
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 30px rgba(218,165,32,0.3);
+}
+
+.suku-atoni__hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Intro - Circular Text Wrap */
+.suku-atoni__intro {
+  padding: 8rem 0;
+  background: #f8f5f0;
+}
+
+.suku-atoni__intro-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.suku-atoni__intro-circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.suku-atoni__intro-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../img/rumahadat/lopo2.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.suku-atoni__intro-circle:hover .suku-atoni__intro-image {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.suku-atoni__intro-text h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2d2416;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.suku-atoni__intro-text p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #5a4d3e;
+  margin-bottom: 1.5rem;
+}
+
+.suku-atoni__intro-text strong {
+  color: #8b6f1b;
+  font-weight: 600;
+}
+
+.suku-atoni__intro-text em {
+  font-style: italic;
+  color: #a67c38;
+}
+
+/* Philosophy Quote - Circular */
+.suku-atoni__philosophy {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
+}
+
+.suku-atoni__philosophy-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.suku-atoni__philosophy-circle {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 3px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  text-align: center;
+  box-shadow: 0 0 60px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+.suku-atoni__philosophy-circle:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.suku-atoni__philosophy-quote {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.suku-atoni__philosophy-meaning {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 400;
+}
+
+/* History - Orbital Timeline */
+.suku-atoni__history {
+  padding: 10rem 0;
+  background: #2d2416;
+  position: relative;
+}
+
+.suku-atoni__history-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.suku-atoni__history-center {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #daa520, #b8860b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.suku-atoni__history-center h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.suku-atoni__history-orbit {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin-top: -125px;
+}
+
+.suku-atoni__history-node {
+  position: absolute;
+}
+
+.suku-atoni__history-node--1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.suku-atoni__history-node--2 {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.suku-atoni__history-node--3 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.suku-atoni__history-node--4 {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.suku-atoni__history-dot {
+  width: 20px;
+  height: 20px;
+  background: #daa520;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 0 20px rgba(218,165,32,0.6);
+}
+
+.suku-atoni__history-content {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(218,165,32,0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 250px;
+  text-align: center;
+}
+
+.suku-atoni__history-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #daa520;
+  margin-bottom: 0.8rem;
+}
+
+.suku-atoni__history-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Social Structure - Concentric Rings */
+.suku-atoni__structure {
+  padding: 10rem 0;
+  background: #f8f5f0;
+}
+
+.suku-atoni__structure-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-atoni__structure-container h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #2d2416;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.suku-atoni__structure-rings {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.suku-atoni__structure-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #daa520;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.suku-atoni__structure-ring--1 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #daa520, #b8860b);
+  z-index: 4;
+}
+
+.suku-atoni__structure-ring--2 {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(218,165,32,0.15);
+  z-index: 3;
+}
+
+.suku-atoni__structure-ring--3 {
+  width: 450px;
+  height: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(218,165,32,0.1);
+  z-index: 2;
+}
+
+.suku-atoni__structure-ring--4 {
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(218,165,32,0.05);
+  z-index: 1;
+}
+
+.suku-atoni__structure-ring:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  border-width: 3px;
+}
+
+.suku-atoni__structure-label {
+  text-align: center;
+}
+
+.suku-atoni__structure-ring--1 .suku-atoni__structure-label h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.suku-atoni__structure-ring--1 .suku-atoni__structure-label p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.suku-atoni__structure-ring--2 .suku-atoni__structure-label,
+.suku-atoni__structure-ring--3 .suku-atoni__structure-label,
+.suku-atoni__structure-ring--4 .suku-atoni__structure-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.suku-atoni__structure-ring--2 .suku-atoni__structure-label {
+  top: 20%;
+}
+
+.suku-atoni__structure-ring--3 .suku-atoni__structure-label {
+  top: 10%;
+}
+
+.suku-atoni__structure-ring--4 .suku-atoni__structure-label {
+  top: 5%;
+}
+
+.suku-atoni__structure-label h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d2416;
+  margin-bottom: 0.5rem;
+}
+
+.suku-atoni__structure-label p {
+  font-size: 1rem;
+  color: #8b6f1b;
+}
+
+/* Culture - Radial Cards */
+.suku-atoni__culture {
+  padding: 8rem 0;
+  background: #fff;
+}
+
+.suku-atoni__culture-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-atoni__culture-container h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #2d2416;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.suku-atoni__culture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.suku-atoni__culture-card {
+  background: #f8f5f0;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.suku-atoni__culture-card:hover {
+  background: #fff;
+  border-color: #daa520;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(218,165,32,0.2);
+}
+
+.suku-atoni__culture-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.suku-atoni__culture-shape {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #daa520, #b8860b);
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.suku-atoni__culture-card:hover .suku-atoni__culture-shape {
+  transform: scale(1.2);
+}
+
+.suku-atoni__culture-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d2416;
+  margin-bottom: 1rem;
+}
+
+.suku-atoni__culture-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5a4d3e;
+}
+
+.suku-atoni__culture-card em {
+  font-style: italic;
+  color: #a67c38;
+}
+
+.suku-atoni__culture-card strong {
+  color: #8b6f1b;
+  font-weight: 600;
+}
+
+/* Language - Flowing Design */
+.suku-atoni__language {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #2d2416 0%, #1a1510 100%);
+}
+
+.suku-atoni__language-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.suku-atoni__language-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #daa520;
+  margin-bottom: 2rem;
+}
+
+.suku-atoni__language-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 1.5rem;
+}
+
+.suku-atoni__language-content strong {
+  color: #daa520;
+  font-weight: 600;
+}
+
+.suku-atoni__language-content em {
+  font-style: italic;
+  color: rgba(218,165,32,0.8);
+}
+
+.suku-atoni__language-visual {
+  position: relative;
+  height: 400px;
+}
+
+.suku-atoni__language-circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 3px solid rgba(218,165,32,0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 20s linear infinite;
+}
+
+.suku-atoni__language-circle::before,
+.suku-atoni__language-circle::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(218,165,32,0.2);
+}
+
+.suku-atoni__language-circle::before {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.suku-atoni__language-circle::after {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Back Link */
+.suku-atoni__back {
+  padding: 5rem 0;
+  background: #f8f5f0;
+  text-align: center;
+}
+
+.suku-atoni__back-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-atoni__back-link {
+  display: inline-block;
+  padding: 1.3rem 3.5rem;
+  background: linear-gradient(135deg, #daa520, #b8860b);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(218,165,32,0.3);
+}
+
+.suku-atoni__back-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(218,165,32,0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .suku-atoni__intro-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .suku-atoni__intro-circle {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .suku-atoni__language-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .suku-atoni__language-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .suku-atoni__hero {
+    height: 80vh;
+    min-height: 600px;
+  }
+
+  .suku-atoni__hero-title {
+    font-size: 4rem;
+  }
+
+  .suku-atoni__hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .suku-atoni__intro,
+  .suku-atoni__philosophy,
+  .suku-atoni__history,
+  .suku-atoni__structure,
+  .suku-atoni__culture,
+  .suku-atoni__language {
+    padding: 5rem 0;
+  }
+
+  .suku-atoni__intro-container,
+  .suku-atoni__philosophy-container,
+  .suku-atoni__history-container,
+  .suku-atoni__structure-container,
+  .suku-atoni__culture-container,
+  .suku-atoni__language-container,
+  .suku-atoni__back-container {
+    padding: 0 2rem;
+  }
+
+  .suku-atoni__intro-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .suku-atoni__intro-text h2,
+  .suku-atoni__structure-container h2,
+  .suku-atoni__culture-container h2,
+  .suku-atoni__language-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .suku-atoni__philosophy-circle {
+    width: 350px;
+    height: 350px;
+    padding: 3rem;
+  }
+
+  .suku-atoni__philosophy-quote {
+    font-size: 1.8rem;
+  }
+
+  .suku-atoni__philosophy-meaning {
+    font-size: 1rem;
+  }
+
+  .suku-atoni__history-orbit {
+    height: auto;
+    position: static;
+    margin-top: 3rem;
+  }
+
+  .suku-atoni__history-node {
+    position: static;
+    transform: none;
+    margin-bottom: 2rem;
+  }
+
+  .suku-atoni__history-content {
+    max-width: 100%;
+  }
+
+  .suku-atoni__structure-rings {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+  }
+
+  .suku-atoni__structure-ring--1 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .suku-atoni__structure-ring--2 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .suku-atoni__structure-ring--3 {
+    width: 320px;
+    height: 320px;
+  }
+
+  .suku-atoni__structure-ring--4 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .suku-atoni__structure-label h3 {
+    font-size: 1rem;
+  }
+
+  .suku-atoni__structure-label p {
+    font-size: 0.85rem;
+  }
+
+  .suku-atoni__culture-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .suku-atoni__culture-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .suku-atoni__hero-title {
+    font-size: 3rem;
+  }
+
+  .suku-atoni__hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .suku-atoni__intro-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .suku-atoni__intro-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .suku-atoni__philosophy-circle {
+    width: 280px;
+    height: 280px;
+    padding: 2rem;
+  }
+
+  .suku-atoni__philosophy-quote {
+    font-size: 1.5rem;
+  }
+
+  .suku-atoni__structure-container h2,
+  .suku-atoni__culture-container h2,
+  .suku-atoni__language-content h2 {
+    font-size: 2rem;
+  }
+
+  .suku-atoni__structure-rings {
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .suku-atoni__structure-ring--1 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .suku-atoni__structure-ring--2 {
+    width: 170px;
+    height: 170px;
+  }
+
+  .suku-atoni__structure-ring--3 {
+    width: 240px;
+    height: 240px;
+  }
+
+  .suku-atoni__structure-ring--4 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .suku-atoni__back-link {
+    padding: 1.1rem 2.5rem;
+    font-size: 1rem;
+  }
+}

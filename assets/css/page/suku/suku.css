@@ -1,0 +1,240 @@
+/* =====================================================
+   SUKU NAMESPACE - CLEAN CARD LAYOUT
+   ===================================================== */
+
+.suku-hero {
+  position: relative;
+  height: 75vh;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #0a0805;
+}
+
+.suku-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.6;
+  filter: brightness(0.9) contrast(1.15);
+}
+
+.suku-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,8,5,0.5) 0%, rgba(10,8,5,0.9) 100%);
+  z-index: 2;
+}
+
+.suku-hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-2xl);
+  text-align: center;
+}
+
+.suku-hero__eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #c9a873;
+  margin-bottom: var(--space-md);
+  font-weight: 900;
+}
+
+.suku-hero__title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -2px;
+}
+
+.suku-hero__subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.suku-intro {
+  padding: calc(var(--space-2xl) * 2) 0;
+  background: linear-gradient(to bottom, rgba(10,8,5,0.9) 0%, rgba(15,12,10,0.8) 100%);
+}
+
+.suku-intro__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.suku-intro__quote {
+  margin: calc(var(--space-2xl) * 1.5) 0;
+  padding: var(--space-xl);
+  border-left: 4px solid #c9a873;
+  background: rgba(201,168,115,0.08);
+  font-style: italic;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  border-radius: 0 10px 10px 0;
+}
+
+.suku-filter {
+  padding: var(--space-xl) 0;
+  background: rgba(15,12,10,0.7);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(201,168,115,0.2);
+  border-bottom: 1px solid rgba(201,168,115,0.15);
+}
+
+.suku-showcase {
+  padding: var(--space-2xl) 0 calc(var(--space-2xl) * 2);
+  background: linear-gradient(to bottom, rgba(15,12,10,0.8) 0%, transparent 60%);
+}
+
+/* SUKU GRID - SIMPLE 3-COLUMN */
+.suku-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-2xl);
+}
+
+.suku-card {
+  position: relative;
+  background: 
+    linear-gradient(to bottom,
+      rgba(20,16,13,0.7) 0%,
+      rgba(25,20,16,0.5) 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,115,0.2);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+}
+
+.suku-card:hover {
+  transform: translateY(-12px);
+  border-color: #c9a873;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.6),
+    0 0 40px rgba(201,168,115,0.15);
+}
+
+.suku-card__img-wrapper {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(201,168,115,0.1);
+}
+
+.suku-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.4s ease;
+  filter: brightness(0.9) contrast(1.1) saturate(0.95);
+}
+
+.suku-card:hover .suku-card__img {
+  transform: scale(1.08);
+  filter: brightness(0.95) contrast(1.15) saturate(1);
+}
+
+.suku-card__badge {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  background: #c9a873;
+  color: #000;
+  padding: 6px 14px;
+  font-size: 0.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 6px;
+  z-index: 5;
+}
+
+.suku-card__body {
+  padding: var(--space-xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.suku-card__title {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+.suku-card__location {
+  font-size: 0.7rem;
+  color: #c9a873;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-md);
+}
+
+.suku-card__desc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+  flex: 1;
+}
+
+.suku-card__bookmark {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: rgba(0,0,0,0.7);
+  border: 1px solid rgba(201,168,115,0.3);
+  color: #c9a873;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.suku-card__bookmark:hover {
+  background: rgba(201,168,115,0.2);
+  border-color: #c9a873;
+  transform: scale(1.12);
+}
+
+.suku-card__bookmark.bookmarked {
+  background: #c9a873;
+  border-color: #c9a873;
+  color: #000;
+}
+
+.suku-card__bookmark.bookmarked .bookmark-icon::before {
+  content: '★';
+}
+
+.suku-card .btn {
+  align-self: flex-start;
+}

@@ -1,0 +1,653 @@
+/* ========================================
+   SUKU MANGGARAI - BOLD GEOMETRIC WARRIOR
+   ======================================== */
+
+/* Hero - Asymmetric Split with Overlay */
+.suku-manggarai__hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  background: #1a1612;
+}
+
+.suku-manggarai__hero-visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-image: url('../../img/rumahadat/Wae Rebo Village, Flores Island, Indonesia.jpg');
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.suku-manggarai__hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #1a1612 0%, transparent 30%);
+}
+
+.suku-manggarai__hero-overlay {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.suku-manggarai__hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  width: 100%;
+}
+
+.suku-manggarai__hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c8986b;
+}
+
+.suku-manggarai__hero-divider {
+  color: #c8986b;
+}
+
+.suku-manggarai__hero-title {
+  max-width: 700px;
+}
+
+.suku-manggarai__hero-title-main {
+  display: block;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.suku-manggarai__hero-title-sub {
+  display: block;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.4;
+}
+
+/* Introduction - Diagonal Layout */
+.suku-manggarai__intro {
+  position: relative;
+  padding: 8rem 0;
+  background: #faf8f5;
+  overflow: hidden;
+}
+
+.suku-manggarai__intro-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(135deg, #c8986b 0%, #a67c52 100%);
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  opacity: 0.05;
+}
+
+.suku-manggarai__intro-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.suku-manggarai__intro-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c8986b;
+  margin-bottom: 2rem;
+}
+
+.suku-manggarai__intro-content h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1612;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.suku-manggarai__intro-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #4a403a;
+  margin-bottom: 1.5rem;
+}
+
+.suku-manggarai__intro-content strong {
+  color: #8a6f47;
+  font-weight: 600;
+}
+
+.suku-manggarai__intro-content em {
+  font-style: italic;
+  color: #a67c52;
+}
+
+.suku-manggarai__intro-image {
+  position: sticky;
+  top: 2rem;
+}
+
+.suku-manggarai__intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.suku-manggarai__intro-caption {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #8a6f47;
+  font-style: italic;
+}
+
+/* Philosophy - Grid Cards with Geometric Shapes */
+.suku-manggarai__philosophy {
+  padding: 8rem 0;
+  background: linear-gradient(180deg, #1a1612 0%, #2a2220 100%);
+}
+
+.suku-manggarai__philosophy-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-manggarai__philosophy-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.suku-manggarai__philosophy-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.suku-manggarai__philosophy-header p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.suku-manggarai__philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.suku-manggarai__philosophy-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(200,152,107,0.2);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.suku-manggarai__philosophy-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(200,152,107,0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.suku-manggarai__philosophy-card:hover {
+  background: rgba(200,152,107,0.08);
+  border-color: #c8986b;
+  transform: translateY(-10px);
+}
+
+.suku-manggarai__philosophy-card:hover::before {
+  opacity: 1;
+}
+
+.suku-manggarai__philosophy-icon {
+  margin: 0 auto 2rem;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.suku-manggarai__philosophy-shape {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #c8986b, #a67c52);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform 0.4s ease;
+}
+
+.suku-manggarai__philosophy-card:hover .suku-manggarai__philosophy-shape {
+  transform: rotate(60deg) scale(1.1);
+}
+
+.suku-manggarai__philosophy-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #c8986b;
+  margin-bottom: 1rem;
+}
+
+.suku-manggarai__philosophy-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Culture - Alternating Content Blocks */
+.suku-manggarai__culture {
+  padding: 8rem 0;
+  background: #faf8f5;
+}
+
+.suku-manggarai__culture-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.suku-manggarai__culture-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 6rem;
+  align-items: center;
+}
+
+.suku-manggarai__culture-block:last-child {
+  margin-bottom: 0;
+}
+
+.suku-manggarai__culture-block--reverse {
+  direction: rtl;
+}
+
+.suku-manggarai__culture-block--reverse > * {
+  direction: ltr;
+}
+
+.suku-manggarai__culture-content {
+  padding: 4rem;
+  position: relative;
+}
+
+.suku-manggarai__culture-number {
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(200,152,107,0.1);
+  line-height: 1;
+  z-index: 0;
+}
+
+.suku-manggarai__culture-content h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1612;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.suku-manggarai__culture-content p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #4a403a;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.suku-manggarai__culture-content em {
+  font-style: italic;
+  color: #a67c52;
+}
+
+.suku-manggarai__culture-visual {
+  height: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.suku-manggarai__culture-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.suku-manggarai__culture-block:hover .suku-manggarai__culture-visual img {
+  transform: scale(1.05);
+}
+
+/* Social Structure - Timeline */
+.suku-manggarai__structure {
+  padding: 8rem 0;
+  background: #fff;
+}
+
+.suku-manggarai__structure-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-manggarai__structure-container h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1612;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.suku-manggarai__structure-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #8a6f47;
+  margin-bottom: 4rem;
+}
+
+.suku-manggarai__structure-timeline {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.suku-manggarai__structure-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #c8986b, #a67c52);
+}
+
+.suku-manggarai__structure-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.suku-manggarai__structure-item:last-child {
+  margin-bottom: 0;
+}
+
+.suku-manggarai__structure-marker {
+  position: absolute;
+  left: -3.5rem;
+  top: 0.5rem;
+  width: 20px;
+  height: 20px;
+  background: #c8986b;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 2px #c8986b;
+}
+
+.suku-manggarai__structure-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1612;
+  margin-bottom: 0.8rem;
+}
+
+.suku-manggarai__structure-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #6a5d52;
+}
+
+/* Preservation - Full Width Feature */
+.suku-manggarai__preservation {
+  position: relative;
+  padding: 10rem 0;
+  overflow: hidden;
+}
+
+.suku-manggarai__preservation-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../../img/rumahadat/Wae Rebo Village, Flores Island, Indonesia.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.4) grayscale(20%);
+}
+
+.suku-manggarai__preservation-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-manggarai__preservation-content {
+  background: rgba(26,22,18,0.85);
+  backdrop-filter: blur(10px);
+  padding: 4rem;
+  border-left: 5px solid #c8986b;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.suku-manggarai__preservation-content h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.suku-manggarai__preservation-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 1.5rem;
+}
+
+.suku-manggarai__preservation-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Back Link */
+.suku-manggarai__back {
+  padding: 5rem 0;
+  background: #faf8f5;
+  text-align: center;
+}
+
+.suku-manggarai__back-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-manggarai__back-link {
+  display: inline-block;
+  padding: 1.3rem 3.5rem;
+  background: linear-gradient(135deg, #c8986b, #a67c52);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(200,152,107,0.3);
+}
+
+.suku-manggarai__back-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(200,152,107,0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .suku-manggarai__hero-visual {
+    width: 50%;
+  }
+
+  .suku-manggarai__intro-container,
+  .suku-manggarai__culture-block {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .suku-manggarai__intro-image {
+    position: static;
+  }
+
+  .suku-manggarai__culture-visual {
+    min-height: 400px;
+  }
+
+  .suku-manggarai__philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .suku-manggarai__hero {
+    height: 80vh;
+  }
+
+  .suku-manggarai__hero-visual {
+    width: 100%;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .suku-manggarai__hero-container {
+    padding: 0 2rem;
+  }
+
+  .suku-manggarai__hero-title-main {
+    font-size: 3.5rem;
+  }
+
+  .suku-manggarai__hero-title-sub {
+    font-size: 1.2rem;
+  }
+
+  .suku-manggarai__intro,
+  .suku-manggarai__philosophy,
+  .suku-manggarai__culture,
+  .suku-manggarai__structure {
+    padding: 5rem 0;
+  }
+
+  .suku-manggarai__intro-container,
+  .suku-manggarai__philosophy-container,
+  .suku-manggarai__structure-container,
+  .suku-manggarai__preservation-container,
+  .suku-manggarai__back-container {
+    padding: 0 2rem;
+  }
+
+  .suku-manggarai__culture-container {
+    padding: 0 1rem;
+  }
+
+  .suku-manggarai__intro-content h2,
+  .suku-manggarai__philosophy-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .suku-manggarai__culture-content {
+    padding: 2.5rem 2rem;
+  }
+
+  .suku-manggarai__culture-number {
+    font-size: 5rem;
+    top: 1rem;
+    left: 2rem;
+  }
+
+  .suku-manggarai__culture-content h3 {
+    font-size: 2rem;
+  }
+
+  .suku-manggarai__preservation {
+    padding: 6rem 0;
+  }
+
+  .suku-manggarai__preservation-bg {
+    background-attachment: scroll;
+  }
+
+  .suku-manggarai__preservation-content {
+    padding: 3rem 2rem;
+  }
+
+  .suku-manggarai__preservation-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .suku-manggarai__hero-title-main {
+    font-size: 2.8rem;
+  }
+
+  .suku-manggarai__hero-title-sub {
+    font-size: 1rem;
+  }
+
+  .suku-manggarai__intro-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .suku-manggarai__philosophy-header h2 {
+    font-size: 2rem;
+  }
+
+  .suku-manggarai__culture-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .suku-manggarai__structure-container h2 {
+    font-size: 2rem;
+  }
+
+  .suku-manggarai__preservation-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .suku-manggarai__back-link {
+    padding: 1.1rem 2.5rem;
+    font-size: 1rem;
+  }
+}

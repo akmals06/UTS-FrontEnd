@@ -1,0 +1,272 @@
+/* =====================================================
+   TRADISI NAMESPACE - DOCUMENTARY STYLE
+   ===================================================== */
+
+.tradisi-hero {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #0d0a08;
+}
+
+.tradisi-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.65;
+  filter: sepia(0.25) brightness(0.9) contrast(1.15);
+}
+
+.tradisi-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(13,10,8,0.95) 0%, rgba(13,10,8,0.7) 40%, transparent 70%),
+    linear-gradient(to bottom, rgba(13,10,8,0.5) 0%, rgba(13,10,8,0.9) 100%);
+  z-index: 2;
+}
+
+.tradisi-hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-2xl);
+}
+
+.tradisi-hero__eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #d4a574;
+  margin-bottom: var(--space-lg);
+  font-weight: 900;
+  position: relative;
+  padding-left: 30px;
+}
+
+.tradisi-hero__eyebrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #d4a574;
+}
+
+.tradisi-hero__title {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: var(--space-xl);
+  letter-spacing: -2px;
+  max-width: 800px;
+}
+
+.tradisi-hero__subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  max-width: 650px;
+  border-left: 3px solid #d4a574;
+  padding-left: var(--space-lg);
+}
+
+.tradisi-intro {
+  padding: calc(var(--space-2xl) * 2) 0;
+  background: 
+    linear-gradient(to bottom,
+      rgba(13,10,8,0.9) 0%,
+      rgba(20,15,12,0.8) 50%,
+      rgba(25,20,15,0.7) 100%);
+}
+
+.tradisi-intro__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tradisi-intro__quote {
+  margin: calc(var(--space-2xl) + var(--space-lg)) 0;
+  padding: var(--space-2xl);
+  border-left: 5px solid #d4a574;
+  background: rgba(212,165,116,0.08);
+  font-style: italic;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.3rem;
+  line-height: 1.9;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+.tradisi-intro__quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 5px;
+  height: 60px;
+  background: linear-gradient(to bottom, #d4a574 0%, transparent 100%);
+}
+
+.tradisi-filter {
+  padding: var(--space-xl) 0;
+  background: rgba(20,15,12,0.7);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(212,165,116,0.2);
+  border-bottom: 1px solid rgba(212,165,116,0.15);
+}
+
+.tradisi-showcase {
+  padding: var(--space-2xl) 0 calc(var(--space-2xl) * 2);
+  background: 
+    radial-gradient(ellipse at 50% 30%, rgba(212,165,116,0.04) 0%, transparent 60%),
+    linear-gradient(to bottom, rgba(25,20,15,0.7) 0%, transparent 70%);
+}
+
+/* TRADISI GRID - CLEAN 2-COLUMN LAYOUT */
+.tradisi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 var(--space-2xl);
+}
+
+.tradisi-card {
+  position: relative;
+  background: 
+    linear-gradient(135deg,
+      rgba(25,20,15,0.8) 0%,
+      rgba(30,25,20,0.6) 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(212,165,116,0.2);
+  transition: all 0.45s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+}
+
+.tradisi-card:hover {
+  transform: translateY(-12px);
+  border-color: #d4a574;
+  box-shadow:
+    0 25px 50px rgba(0,0,0,0.6),
+    0 0 40px rgba(212,165,116,0.2);
+}
+
+.tradisi-card__img-wrapper {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.tradisi-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.4s ease;
+  filter: sepia(0.2) brightness(0.9) contrast(1.1);
+}
+
+.tradisi-card:hover .tradisi-card__img {
+  transform: scale(1.08);
+  filter: sepia(0.15) brightness(0.95) contrast(1.15);
+}
+
+.tradisi-card__badge {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  background: #d4a574;
+  color: #000;
+  padding: 6px 14px;
+  font-size: 0.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 6px;
+  z-index: 5;
+}
+
+.tradisi-card__body {
+  padding: var(--space-xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tradisi-card__title {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.tradisi-card__location {
+  font-size: 0.7rem;
+  color: #d4a574;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-md);
+}
+
+.tradisi-card__desc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+  flex: 1;
+}
+
+.tradisi-card__bookmark {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: rgba(0,0,0,0.7);
+  border: 1px solid rgba(212,165,116,0.3);
+  color: #d4a574;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.tradisi-card__bookmark:hover {
+  background: rgba(212,165,116,0.2);
+  border-color: #d4a574;
+  transform: scale(1.12);
+}
+
+.tradisi-card__bookmark.bookmarked {
+  background: #d4a574;
+  border-color: #d4a574;
+  color: #000;
+}
+
+.tradisi-card__bookmark.bookmarked .bookmark-icon::before {
+  content: '★';
+}
+
+.tradisi-card .btn {
+  align-self: flex-start;
+}

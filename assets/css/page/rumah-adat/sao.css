@@ -1,0 +1,711 @@
+/* =====================================================
+   SAO - EDITORIAL MODERN DESIGN
+   Theme: Navy Blue + Terracotta Accents
+   File: /assets/css/page/rumah-adat/sao.css
+   ===================================================== */
+
+/* ==================== CONTAINER ==================== */
+.rumahadat-sao__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+}
+
+/* ==================== HERO SECTION ==================== */
+.rumahadat-sao__hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0e13 0%, #141821 100%);
+}
+
+.rumahadat-sao__hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../../../assets/img/rumahadat/Rumah-adat-Sao-Ata-Mosa-Lakitana-sebagai-salah-satu-rumah-adat-NTT.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  filter: brightness(0.5) contrast(1.2);
+}
+
+.rumahadat-sao__hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(90deg,
+      rgba(10, 14, 19, 0.98) 0%,
+      rgba(20, 24, 33, 0.85) 40%,
+      transparent 80%);
+}
+
+/* Decorative Shapes */
+.rumahadat-sao__hero-shape {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.rumahadat-sao__hero-shape--1 {
+  top: 15%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(198, 93, 50, 0.2);
+  transform: rotate(45deg);
+}
+
+.rumahadat-sao__hero-shape--2 {
+  bottom: 20%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(198, 93, 50, 0.15);
+  transform: rotate(15deg);
+}
+
+.rumahadat-sao__hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  max-width: 60%;
+}
+
+.rumahadat-sao__hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #c65d32;
+  margin-bottom: 2rem;
+  display: block;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards 0.2s;
+}
+
+.rumahadat-sao__hero-title {
+  margin-bottom: 2rem;
+}
+
+.rumahadat-sao__hero-title-main {
+  display: block;
+  font-size: clamp(6rem, 16vw, 14rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -8px;
+  text-transform: uppercase;
+  color: #fafaf9;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards 0.4s;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+}
+
+.rumahadat-sao__hero-title-sub {
+  display: block;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: rgba(198, 93, 50, 0.9);
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards 0.6s;
+}
+
+.rumahadat-sao__hero-location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: rgba(250, 250, 249, 0.7);
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards 0.8s;
+}
+
+.rumahadat-sao__hero-location svg {
+  width: 20px;
+  height: 20px;
+  color: #c65d32;
+}
+
+/* ==================== INTRO SECTION ==================== */
+.rumahadat-sao__intro {
+  padding: clamp(5rem, 12vh, 9rem) 0 clamp(4rem, 10vh, 7rem);
+  background: 
+    linear-gradient(to bottom,
+      rgba(10, 14, 19, 1) 0%,
+      rgba(15, 20, 25, 0.95) 100%);
+}
+
+.rumahadat-sao__intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.rumahadat-sao__intro-visual {
+  position: relative;
+}
+
+.rumahadat-sao__intro-image {
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-2deg);
+  transition: transform 0.5s ease;
+}
+
+.rumahadat-sao__intro-image:hover {
+  transform: rotate(0deg);
+}
+
+.rumahadat-sao__intro-image::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border: 3px solid #c65d32;
+  z-index: -1;
+}
+
+.rumahadat-sao__intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.1);
+}
+
+.rumahadat-sao__intro-text {
+  padding-left: 3rem;
+  border-left: 4px solid #c65d32;
+}
+
+.rumahadat-sao__lead {
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  line-height: 2;
+  color: rgba(250, 250, 249, 0.9);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.rumahadat-sao__lead strong {
+  color: #c65d32;
+  font-weight: 700;
+}
+
+.rumahadat-sao__intro-text p {
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 2;
+  color: rgba(250, 250, 249, 0.75);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+/* ==================== SECTION COMMON STYLES ==================== */
+.rumahadat-sao__section-header {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.rumahadat-sao__section-number {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #c65d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #c65d32;
+  flex-shrink: 0;
+}
+
+.rumahadat-sao__section-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: #fafaf9;
+  line-height: 1;
+}
+
+/* ==================== BENTUK SECTION ==================== */
+.rumahadat-sao__bentuk {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    linear-gradient(to bottom,
+      rgba(15, 20, 25, 0.95) 0%,
+      rgba(10, 14, 19, 1) 100%);
+}
+
+.rumahadat-sao__bentuk-intro {
+  max-width: 1000px;
+  margin-bottom: 4rem;
+}
+
+.rumahadat-sao__bentuk-intro p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 2.1;
+  color: rgba(250, 250, 249, 0.8);
+  font-weight: 300;
+}
+
+.rumahadat-sao__bentuk-intro strong {
+  color: #c65d32;
+  font-weight: 700;
+}
+
+.rumahadat-sao__bentuk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.rumahadat-sao__bentuk-card {
+  padding: 3rem 2.5rem;
+  background: rgba(20, 24, 33, 0.5);
+  border: 2px solid rgba(198, 93, 50, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.rumahadat-sao__bentuk-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #c65d32, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.rumahadat-sao__bentuk-card:hover {
+  border-color: rgba(198, 93, 50, 0.5);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.rumahadat-sao__bentuk-card:hover::before {
+  opacity: 1;
+}
+
+.rumahadat-sao__bentuk-card--highlight {
+  background: rgba(198, 93, 50, 0.1);
+  border-color: rgba(198, 93, 50, 0.4);
+}
+
+.rumahadat-sao__bentuk-icon {
+  width: 60px;
+  height: 60px;
+  color: #c65d32;
+  margin-bottom: 2rem;
+}
+
+.rumahadat-sao__bentuk-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.rumahadat-sao__bentuk-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fafaf9;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.rumahadat-sao__bentuk-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(250, 250, 249, 0.7);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.rumahadat-sao__bentuk-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c65d32;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(198, 93, 50, 0.3);
+}
+
+.rumahadat-sao__bentuk-note {
+  max-width: 1000px;
+  padding: 2.5rem 3rem;
+  background: rgba(198, 93, 50, 0.05);
+  border-left: 4px solid #c65d32;
+}
+
+.rumahadat-sao__bentuk-note p {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: rgba(250, 250, 249, 0.8);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ==================== STRUKTUR SECTION ==================== */
+.rumahadat-sao__struktur {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    radial-gradient(ellipse at 70% 50%, rgba(198, 93, 50, 0.03) 0%, transparent 60%),
+    linear-gradient(to bottom,
+      rgba(10, 14, 19, 1) 0%,
+      rgba(15, 20, 25, 0.95) 100%);
+}
+
+.rumahadat-sao__struktur-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.rumahadat-sao__struktur-text p {
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 2;
+  color: rgba(250, 250, 249, 0.8);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.rumahadat-sao__struktur-text strong {
+  color: #c65d32;
+  font-weight: 700;
+}
+
+.rumahadat-sao__struktur-text em {
+  color: rgba(198, 93, 50, 0.9);
+  font-style: italic;
+}
+
+.rumahadat-sao__struktur-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.rumahadat-sao__struktur-list li {
+  padding: 1.5rem 2rem;
+  background: rgba(20, 24, 33, 0.5);
+  border-left: 3px solid #c65d32;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(250, 250, 249, 0.75);
+}
+
+.rumahadat-sao__struktur-list strong {
+  color: #c65d32;
+  font-weight: 800;
+}
+
+.rumahadat-sao__struktur-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rumahadat-sao__struktur-feature {
+  padding: 2rem;
+  background: 
+    linear-gradient(135deg,
+      rgba(20, 24, 33, 0.6) 0%,
+      rgba(30, 34, 43, 0.4) 100%);
+  border: 2px solid rgba(198, 93, 50, 0.2);
+  transition: all 0.4s ease;
+}
+
+.rumahadat-sao__struktur-feature:hover {
+  border-color: rgba(198, 93, 50, 0.5);
+  transform: translateX(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.rumahadat-sao__struktur-feature-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(198, 93, 50, 0.3);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.rumahadat-sao__struktur-feature h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fafaf9;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.rumahadat-sao__struktur-feature p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(250, 250, 249, 0.7);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ==================== FILOSOFI SECTION ==================== */
+.rumahadat-sao__filosofi {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    linear-gradient(to bottom,
+      rgba(15, 20, 25, 0.95) 0%,
+      rgba(10, 14, 19, 1) 100%);
+}
+
+.rumahadat-sao__filosofi-layout {
+  max-width: 1200px;
+}
+
+.rumahadat-sao__filosofi-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.rumahadat-sao__filosofi-card {
+  padding: 3rem;
+  background: rgba(20, 24, 33, 0.4);
+  border: 2px solid rgba(198, 93, 50, 0.15);
+  transition: all 0.4s ease;
+}
+
+.rumahadat-sao__filosofi-card:hover {
+  border-color: rgba(198, 93, 50, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.rumahadat-sao__filosofi-card--primary {
+  grid-column: 1 / -1;
+  background: 
+    linear-gradient(135deg,
+      rgba(198, 93, 50, 0.1) 0%,
+      rgba(20, 24, 33, 0.4) 100%);
+  border-color: rgba(198, 93, 50, 0.3);
+}
+
+.rumahadat-sao__filosofi-icon {
+  font-size: 3rem;
+  color: #c65d32;
+  margin-bottom: 1.5rem;
+  display: block;
+  line-height: 1;
+}
+
+.rumahadat-sao__filosofi-card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fafaf9;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.rumahadat-sao__filosofi-card p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(250, 250, 249, 0.75);
+  font-weight: 300;
+  margin: 0;
+}
+
+.rumahadat-sao__filosofi-card strong {
+  color: #c65d32;
+  font-weight: 700;
+}
+
+/* ==================== NAVIGATION OTHER ==================== */
+.rumahadat-sao__nav-other {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    linear-gradient(to bottom,
+      rgba(10, 14, 19, 1) 0%,
+      rgba(10, 14, 19, 1) 100%);
+}
+
+.rumahadat-sao__nav-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #fafaf9;
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: -1px;
+}
+
+.rumahadat-sao__nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.rumahadat-sao__nav-card {
+  padding: 2.5rem;
+  background: rgba(20, 24, 33, 0.5);
+  border: 2px solid rgba(198, 93, 50, 0.2);
+  text-decoration: none;
+  transition: all 0.4s ease;
+  display: block;
+}
+
+.rumahadat-sao__nav-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(198, 93, 50, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.rumahadat-sao__nav-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(198, 93, 50, 0.7);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.rumahadat-sao__nav-name {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fafaf9;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.rumahadat-sao__nav-location {
+  font-size: 0.95rem;
+  color: rgba(250, 250, 249, 0.6);
+  font-weight: 300;
+}
+
+.rumahadat-sao__back-link {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1.25rem 3rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #c65d32;
+  text-decoration: none;
+  border: 2px solid rgba(198, 93, 50, 0.4);
+  background: rgba(198, 93, 50, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  display: block;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rumahadat-sao__back-link:hover {
+  background: rgba(198, 93, 50, 0.15);
+  border-color: #c65d32;
+  transform: translateX(-5px);
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .rumahadat-sao__intro-grid,
+  .rumahadat-sao__struktur-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .rumahadat-sao__bentuk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rumahadat-sao__filosofi-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .rumahadat-sao__hero {
+    height: 80vh;
+    min-height: 600px;
+  }
+
+  .rumahadat-sao__hero-content {
+    max-width: 100%;
+  }
+
+  .rumahadat-sao__hero-title-main {
+    font-size: clamp(4rem, 12vw, 8rem);
+  }
+
+  .rumahadat-sao__section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .rumahadat-sao__section-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .rumahadat-sao__intro-text {
+    padding-left: 0;
+    border-left: none;
+    border-top: 4px solid #c65d32;
+    padding-top: 2rem;
+  }
+
+  .rumahadat-sao__intro-image {
+    transform: rotate(0deg);
+  }
+
+  .rumahadat-sao__nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .rumahadat-sao__hero {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .rumahadat-sao__hero-title-main {
+    letter-spacing: -4px;
+  }
+
+  .rumahadat-sao__bentuk-card,
+  .rumahadat-sao__struktur-feature,
+  .rumahadat-sao__filosofi-card,
+  .rumahadat-sao__nav-card {
+    padding: 2rem;
+  }
+}

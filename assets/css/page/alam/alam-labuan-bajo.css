@@ -1,0 +1,425 @@
+/* =====================================================
+   ALAM-LABUAN-BAJO.CSS - Magazine Editorial Layout
+   For: labuan-bajo.html
+   Theme: Premium travel destination
+   ===================================================== */
+
+/* ===================== FULLSCREEN HERO ===================== */
+.labuan-hero-full {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.labuan-hero-full__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  filter: brightness(0.7) saturate(1.2);
+  transition: transform 15s ease;
+}
+
+.labuan-hero-full:hover .labuan-hero-full__bg {
+  transform: scale(1.1);
+}
+
+.labuan-hero-full__overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(77, 208, 225, 0.1) 0%, transparent 60%),
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 100%);
+  z-index: 2;
+}
+
+.labuan-hero-full__content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 var(--space-2xl);
+}
+
+.labuan-hero-full__tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4dd0e1;
+  padding: 8px 20px;
+  border: 1px solid rgba(77, 208, 225, 0.4);
+  border-radius: 20px;
+  margin-bottom: var(--space-xl);
+  backdrop-filter: blur(10px);
+  background: rgba(77, 208, 225, 0.1);
+}
+
+.labuan-hero-full__title {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  line-height: 0.9;
+  color: #fff;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -4px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.labuan-hero-full__subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: calc(var(--space-2xl) * 2);
+}
+
+.labuan-hero-full__scroll {
+  display: inline-block;
+  color: #4dd0e1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 2px solid rgba(77, 208, 225, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.labuan-hero-full__scroll:hover {
+  background: rgba(77, 208, 225, 0.2);
+  border-color: #4dd0e1;
+  transform: translateY(-4px);
+}
+
+/* ===================== MAIN CONTENT ===================== */
+.labuan-main {
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(5, 10, 15, 0.95) 50%,
+    rgba(10, 15, 20, 0.9) 100%);
+  padding: calc(var(--space-2xl) * 3) 0;
+}
+
+/* ===================== ARTICLE CONTAINER ===================== */
+.labuan-article {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-2xl);
+}
+
+/* Lead Section */
+.labuan-article__lead {
+  max-width: 800px;
+  margin: 0 auto calc(var(--space-2xl) * 2);
+  text-align: center;
+}
+
+.labuan-article__lead h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: var(--space-xl);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.lead-large {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+}
+
+/* Full Width Image */
+.labuan-figure-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin: calc(var(--space-2xl) * 2) auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(77, 208, 225, 0.2);
+}
+
+.labuan-figure-wide img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.9) saturate(1.1);
+  transition: transform 0.6s ease;
+}
+
+.labuan-figure-wide:hover img {
+  transform: scale(1.03);
+}
+
+.labuan-figure-wide figcaption {
+  padding: var(--space-lg);
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Text Block */
+.labuan-text-block {
+  max-width: 750px;
+  margin: calc(var(--space-2xl) * 2) auto;
+}
+
+.labuan-text-block p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-xl);
+}
+
+.labuan-text-block strong {
+  color: #4dd0e1;
+  font-weight: 600;
+}
+
+/* Highlight Box */
+.labuan-highlight-box {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  background: linear-gradient(135deg,
+    rgba(77, 208, 225, 0.12) 0%,
+    rgba(38, 198, 218, 0.06) 100%);
+  border-left: 4px solid #4dd0e1;
+  border-radius: 0 12px 12px 0;
+  margin: var(--space-2xl) 0;
+}
+
+.labuan-highlight-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.labuan-highlight-box strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: var(--space-sm);
+}
+
+.labuan-highlight-box p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===================== SPLIT GRID ===================== */
+.labuan-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--space-2xl) * 2);
+  margin: calc(var(--space-2xl) * 2) 0;
+  align-items: center;
+}
+
+.labuan-split-content h3 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: var(--space-xl);
+}
+
+/* Simple Timeline */
+.labuan-timeline-simple {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.timeline-dot {
+  display: inline-block;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #4dd0e1 0%, #26c6da 100%);
+  color: #000;
+  font-weight: 900;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  margin-bottom: var(--space-sm);
+}
+
+.labuan-timeline-simple p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: var(--space-lg);
+}
+
+.labuan-split-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(77, 208, 225, 0.2);
+}
+
+.labuan-split-image img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.9) saturate(1.1);
+}
+
+/* ===================== HIGHLIGHTS SECTION ===================== */
+.labuan-highlights {
+  margin: calc(var(--space-2xl) * 3) 0;
+}
+
+.labuan-section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  margin-bottom: calc(var(--space-2xl) * 1.5);
+  letter-spacing: -1px;
+}
+
+.labuan-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.labuan-feature-card {
+  padding: var(--space-2xl);
+  background: linear-gradient(135deg,
+    rgba(10, 20, 30, 0.7) 0%,
+    rgba(15, 25, 35, 0.5) 100%);
+  border: 1px solid rgba(77, 208, 225, 0.2);
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.labuan-feature-card:hover {
+  transform: translateY(-8px);
+  border-color: #4dd0e1;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg,
+    rgba(15, 25, 35, 0.8) 0%,
+    rgba(20, 30, 40, 0.6) 100%);
+}
+
+.labuan-feature-card__icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+.labuan-feature-card h4 {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+}
+
+.labuan-feature-card p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===================== LARGE QUOTE ===================== */
+.labuan-quote-large {
+  max-width: 900px;
+  margin: calc(var(--space-2xl) * 3) auto;
+  padding: calc(var(--space-2xl) * 2);
+  background: linear-gradient(135deg,
+    rgba(77, 208, 225, 0.15) 0%,
+    rgba(38, 198, 218, 0.08) 100%);
+  border-left: 6px solid #4dd0e1;
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.labuan-quote-mark {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  font-size: 8rem;
+  color: rgba(77, 208, 225, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.labuan-quote-large p {
+  font-size: 1.4rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================== BACK CTA ===================== */
+.labuan-back-cta {
+  text-align: center;
+  margin-top: calc(var(--space-2xl) * 3);
+  padding-top: calc(var(--space-2xl) * 2);
+  border-top: 1px solid rgba(77, 208, 225, 0.1);
+}
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991px) {
+  .labuan-split-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .labuan-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .labuan-hero-full__title {
+    font-size: clamp(3rem, 10vw, 5rem);
+  }
+  
+  .labuan-text-block,
+  .labuan-article__lead {
+    padding: 0 var(--space-lg);
+  }
+  
+  .labuan-highlight-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .labuan-quote-mark {
+    font-size: 5rem;
+    top: -20px;
+    left: 20px;
+  }
+  
+  .labuan-quote-large p {
+    font-size: 1.1rem;
+  }
+}

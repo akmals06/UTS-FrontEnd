@@ -1,0 +1,757 @@
+/* =====================================================
+   GONG WANING - RHYTHMIC & SOPHISTICATED
+   Theme: Bronze + Deep Navy
+   File: /assets/css/page/seni/gong.css
+   ===================================================== */
+
+/* ==================== CONTAINER ==================== */
+.seni-gong__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+}
+
+/* ==================== HERO SECTION ==================== */
+.seni-gong__hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0e13 0%, #1a1f26 100%);
+}
+
+.seni-gong__hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../../../assets/img/seni/gong.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  filter: brightness(0.4) contrast(1.2);
+}
+
+.seni-gong__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 50% 50%, transparent 0%, rgba(10, 14, 19, 0.7) 70%),
+    linear-gradient(to top,
+      rgba(10, 14, 19, 0.95) 0%,
+      rgba(26, 31, 38, 0.6) 50%,
+      transparent 100%);
+  z-index: 2;
+}
+
+/* Sound Wave Decoration */
+.seni-gong__hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 3;
+  background: 
+    repeating-linear-gradient(90deg,
+      transparent 0px,
+      rgba(184, 132, 71, 0.1) 50px,
+      transparent 100px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.seni-gong__hero-content {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.seni-gong__hero-category {
+  font-size: 0.7rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #b88447;
+  margin-bottom: 2rem;
+  display: block;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.2s;
+}
+
+.seni-gong__hero-title {
+  font-size: clamp(5rem, 15vw, 12rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -6px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #f5f3f0 0%, #b88447 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.4s;
+}
+
+.seni-gong__hero-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.9;
+  color: rgba(245, 243, 240, 0.75);
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+
+.seni-gong__hero-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: rgba(184, 132, 71, 0.8);
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.8s;
+}
+
+/* ==================== INTRO SECTION ==================== */
+.seni-gong__intro {
+  padding: clamp(5rem, 12vh, 9rem) 0 clamp(4rem, 10vh, 7rem);
+  background: 
+    radial-gradient(ellipse at 70% 30%, rgba(184, 132, 71, 0.04) 0%, transparent 60%),
+    linear-gradient(to bottom,
+      rgba(10, 14, 19, 1) 0%,
+      rgba(15, 20, 25, 0.95) 100%);
+}
+
+.seni-gong__intro-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.seni-gong__lead {
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  line-height: 2.1;
+  color: rgba(245, 243, 240, 0.9);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.seni-gong__intro-text p {
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 2;
+  color: rgba(245, 243, 240, 0.75);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.seni-gong__intro-text strong {
+  color: #b88447;
+  font-weight: 700;
+}
+
+.seni-gong__intro-quote {
+  padding: 3rem;
+  background: 
+    linear-gradient(135deg,
+      rgba(184, 132, 71, 0.1) 0%,
+      rgba(26, 31, 38, 0.6) 100%);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(184, 132, 71, 0.3);
+  border-radius: 20px;
+  position: relative;
+}
+
+.seni-gong__intro-quote-icon {
+  font-size: 4rem;
+  color: rgba(184, 132, 71, 0.3);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.seni-gong__intro-quote blockquote p {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  line-height: 1.9;
+  color: rgba(245, 243, 240, 0.9);
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.seni-gong__intro-quote cite {
+  font-size: 0.9rem;
+  color: rgba(184, 132, 71, 0.8);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ==================== SECTION COMMON STYLES ==================== */
+.seni-gong__section-header {
+  margin-bottom: 4rem;
+}
+
+.seni-gong__section-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: #f5f3f0;
+  margin-bottom: 1rem;
+}
+
+.seni-gong__section-line {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #b88447, transparent);
+}
+
+/* ==================== SEJARAH SECTION ==================== */
+.seni-gong__sejarah {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    linear-gradient(to bottom,
+      rgba(15, 20, 25, 0.95) 0%,
+      rgba(10, 14, 19, 1) 100%);
+}
+
+.seni-gong__sejarah-timeline {
+  max-width: 1000px;
+  position: relative;
+}
+
+.seni-gong__sejarah-timeline::before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #b88447, transparent);
+}
+
+.seni-gong__timeline-item {
+  display: flex;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.seni-gong__timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 119px;
+  top: 1rem;
+  width: 12px;
+  height: 12px;
+  background: #b88447;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(184, 132, 71, 0.5);
+}
+
+.seni-gong__timeline-year {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #b88447;
+  min-width: 120px;
+  text-align: right;
+  padding-right: 3rem;
+}
+
+.seni-gong__timeline-content h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f5f3f0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.seni-gong__timeline-content p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(245, 243, 240, 0.75);
+  font-weight: 300;
+}
+
+/* ==================== FUNGSI SECTION ==================== */
+.seni-gong__fungsi {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    radial-gradient(ellipse at 30% 60%, rgba(184, 132, 71, 0.03) 0%, transparent 60%),
+    linear-gradient(to bottom,
+      rgba(10, 14, 19, 1) 0%,
+      rgba(15, 20, 25, 0.95) 100%);
+}
+
+.seni-gong__fungsi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.seni-gong__fungsi-card {
+  padding: 2.5rem;
+  background: rgba(26, 31, 38, 0.4);
+  border: 1px solid rgba(184, 132, 71, 0.2);
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+.seni-gong__fungsi-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(184, 132, 71, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.seni-gong__fungsi-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(184, 132, 71, 0.3);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.seni-gong__fungsi-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #f5f3f0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.seni-gong__fungsi-card p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(245, 243, 240, 0.7);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ==================== KOMPOSISI SECTION ==================== */
+.seni-gong__komposisi {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    linear-gradient(to bottom,
+      rgba(15, 20, 25, 0.95) 0%,
+      rgba(10, 14, 19, 1) 100%);
+}
+
+.seni-gong__komposisi-intro {
+  max-width: 900px;
+  margin-bottom: 3rem;
+}
+
+.seni-gong__komposisi-intro p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 2.1;
+  color: rgba(245, 243, 240, 0.8);
+  font-weight: 300;
+}
+
+.seni-gong__komposisi-list {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.seni-gong__instrument {
+  display: flex;
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem;
+  background: rgba(26, 31, 38, 0.3);
+  border-left: 3px solid #b88447;
+  border-radius: 0 12px 12px 0;
+  transition: all 0.3s ease;
+}
+
+.seni-gong__instrument:hover {
+  transform: translateX(10px);
+  background: rgba(26, 31, 38, 0.5);
+}
+
+.seni-gong__instrument-icon {
+  font-size: 2rem;
+  color: #b88447;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.seni-gong__instrument-content h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #f5f3f0;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.seni-gong__instrument-content h3 span {
+  font-weight: 300;
+  color: rgba(184, 132, 71, 0.8);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.seni-gong__instrument-content p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(245, 243, 240, 0.7);
+  font-weight: 300;
+  margin: 0;
+}
+
+.seni-gong__komposisi-note {
+  margin-top: 3rem;
+  max-width: 900px;
+  padding: 2rem 2.5rem;
+  background: rgba(184, 132, 71, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(184, 132, 71, 0.2);
+}
+
+.seni-gong__komposisi-note p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(245, 243, 240, 0.8);
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+}
+
+.seni-gong__komposisi-note em {
+  color: #b88447;
+}
+
+/* ==================== TEKNIK SECTION ==================== */
+.seni-gong__teknik {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    linear-gradient(to bottom,
+      rgba(10, 14, 19, 1) 0%,
+      rgba(15, 20, 25, 0.95) 100%);
+}
+
+.seni-gong__teknik-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.seni-gong__teknik-visual {
+  position: sticky;
+  top: 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.seni-gong__teknik-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.1);
+}
+
+.seni-gong__teknik-caption {
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(10, 14, 19, 0.95), transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0.85rem;
+  color: rgba(245, 243, 240, 0.9);
+  font-style: italic;
+}
+
+.seni-gong__teknik-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.seni-gong__teknik-step {
+  display: flex;
+  gap: 2rem;
+  align-items: start;
+}
+
+.seni-gong__teknik-step-number {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(184, 132, 71, 0.2), rgba(184, 132, 71, 0.1));
+  border: 2px solid rgba(184, 132, 71, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #b88447;
+}
+
+.seni-gong__teknik-step-content h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #f5f3f0;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.seni-gong__teknik-step-content p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(245, 243, 240, 0.7);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ==================== PELESTARIAN SECTION ==================== */
+.seni-gong__pelestarian {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(184, 132, 71, 0.04) 0%, transparent 70%),
+    linear-gradient(to bottom,
+      rgba(15, 20, 25, 0.95) 0%,
+      rgba(10, 14, 19, 1) 100%);
+}
+
+.seni-gong__pelestarian-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.seni-gong__challenges,
+.seni-gong__preservation {
+  padding: 3rem;
+  background: rgba(26, 31, 38, 0.4);
+  border: 1px solid rgba(184, 132, 71, 0.2);
+  border-radius: 16px;
+}
+
+.seni-gong__challenges {
+  border-top: 4px solid rgba(255, 87, 51, 0.5);
+}
+
+.seni-gong__preservation {
+  border-top: 4px solid rgba(76, 175, 80, 0.5);
+}
+
+.seni-gong__challenges h3,
+.seni-gong__preservation h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f5f3f0;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.seni-gong__challenges ul,
+.seni-gong__preservation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seni-gong__challenges li,
+.seni-gong__preservation li {
+  padding: 1rem 0 1rem 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(245, 243, 240, 0.75);
+  font-weight: 300;
+  position: relative;
+  border-bottom: 1px solid rgba(184, 132, 71, 0.1);
+}
+
+.seni-gong__challenges li::before,
+.seni-gong__preservation li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #b88447;
+}
+
+/* ==================== NAVIGATION ==================== */
+.seni-gong__nav {
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: 
+    linear-gradient(to bottom,
+      rgba(10, 14, 19, 1) 0%,
+      rgba(10, 14, 19, 1) 100%);
+}
+
+.seni-gong__nav-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #f5f3f0;
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: -1px;
+}
+
+.seni-gong__nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.seni-gong__nav-card {
+  padding: 2.5rem;
+  background: rgba(26, 31, 38, 0.5);
+  border: 2px solid rgba(184, 132, 71, 0.15);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  display: block;
+}
+
+.seni-gong__nav-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(184, 132, 71, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.seni-gong__nav-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(184, 132, 71, 0.6);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.seni-gong__nav-card h3 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #f5f3f0;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.seni-gong__nav-card p {
+  font-size: 0.9rem;
+  color: rgba(245, 243, 240, 0.6);
+  font-weight: 300;
+}
+
+.seni-gong__back-link {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1.25rem 3rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #b88447;
+  text-decoration: none;
+  border: 2px solid rgba(184, 132, 71, 0.3);
+  border-radius: 50px;
+  background: rgba(184, 132, 71, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  display: block;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seni-gong__back-link:hover {
+  background: rgba(184, 132, 71, 0.1);
+  border-color: #b88447;
+  transform: translateX(-5px);
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .seni-gong__intro-layout,
+  .seni-gong__teknik-content,
+  .seni-gong__pelestarian-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .seni-gong__teknik-visual {
+    position: static;
+  }
+
+  .seni-gong__sejarah-timeline::before {
+    display: none;
+  }
+
+  .seni-gong__timeline-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .seni-gong__timeline-item::before {
+    display: none;
+  }
+
+  .seni-gong__timeline-year {
+    text-align: left;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .seni-gong__hero {
+    height: 80vh;
+    min-height: 600px;
+  }
+
+  .seni-gong__hero-title {
+    font-size: clamp(4rem, 12vw, 8rem);
+  }
+
+  .seni-gong__fungsi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seni-gong__nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .seni-gong__hero {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .seni-gong__hero-title {
+    letter-spacing: -3px;
+  }
+
+  .seni-gong__fungsi-card,
+  .seni-gong__nav-card {
+    padding: 2rem;
+  }
+}

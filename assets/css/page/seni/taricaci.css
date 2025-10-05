@@ -1,0 +1,465 @@
+/* ========================================
+   TARI CACI - STYLES
+   ======================================== */
+
+/* Container */
+.seni-taricaci__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.seni-taricaci__hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+  background-image: url('../../img/seni/Caci_Dance.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.seni-taricaci__hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(139,69,19,0.7));
+  z-index: 1;
+}
+
+.seni-taricaci__hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  animation: fadeInUp 1s ease-out;
+}
+
+.seni-taricaci__hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+
+.seni-taricaci__hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.seni-taricaci__hero-location {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Introduction Section */
+.seni-taricaci__intro {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.seni-taricaci__intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.seni-taricaci__intro-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.seni-taricaci__intro-image:hover {
+  transform: scale(1.03);
+}
+
+.seni-taricaci__intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.seni-taricaci__intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.seni-taricaci__intro-text p {
+  margin-bottom: 1.5rem;
+}
+
+.seni-taricaci__intro-text strong {
+  color: #8B4513;
+  font-weight: 600;
+}
+
+.seni-taricaci__intro-text em {
+  font-style: italic;
+  color: #666;
+}
+
+.seni-taricaci__dropcap {
+  font-size: 4rem;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  margin: 0 0.1em 0 0;
+  color: #8B4513;
+}
+
+/* Quote Section */
+.seni-taricaci__quote {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.seni-taricaci__blockquote {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-left: 4px solid #8B4513;
+  background: rgba(255,255,255,0.6);
+  border-radius: 8px;
+}
+
+.seni-taricaci__quote-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #8B4513;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.seni-taricaci__quote-caption {
+  display: block;
+  font-size: 1rem;
+  color: #666;
+  font-style: normal;
+}
+
+/* Section Styles */
+.seni-taricaci__section {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.seni-taricaci__section--alt {
+  background: #f9f9f9;
+}
+
+.seni-taricaci__section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #8B4513;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.seni-taricaci__section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #8B4513, #D2691E);
+  border-radius: 2px;
+}
+
+.seni-taricaci__section-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.seni-taricaci__section-content p {
+  margin-bottom: 1.5rem;
+}
+
+.seni-taricaci__section-content strong {
+  color: #8B4513;
+  font-weight: 600;
+}
+
+.seni-taricaci__section-content em {
+  font-style: italic;
+  color: #666;
+}
+
+/* Philosophy Section */
+.seni-taricaci__philosophy {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.seni-taricaci__philosophy-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.seni-taricaci__philosophy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seni-taricaci__philosophy-list li {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  transition: padding-left 0.3s ease;
+}
+
+.seni-taricaci__philosophy-list li:hover {
+  padding-left: 1rem;
+  background: rgba(139,69,19,0.03);
+}
+
+.seni-taricaci__philosophy-list li:last-child {
+  border-bottom: none;
+}
+
+.seni-taricaci__philosophy-list strong {
+  color: #8B4513;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.seni-taricaci__philosophy-image {
+  position: sticky;
+  top: 2rem;
+}
+
+.seni-taricaci__figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.seni-taricaci__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.seni-taricaci__figure:hover img {
+  transform: scale(1.05);
+}
+
+.seni-taricaci__figcaption {
+  padding: 1rem;
+  background: rgba(139,69,19,0.1);
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Lists */
+.seni-taricaci__equipment-list,
+.seni-taricaci__rules-list,
+.seni-taricaci__music-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.seni-taricaci__equipment-list li,
+.seni-taricaci__rules-list li,
+.seni-taricaci__music-list li {
+  padding: 1.2rem 0 1.2rem 2.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.seni-taricaci__equipment-list li::before,
+.seni-taricaci__rules-list li::before,
+.seni-taricaci__music-list li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: #8B4513;
+  font-size: 1.2rem;
+}
+
+.seni-taricaci__equipment-list li:hover,
+.seni-taricaci__rules-list li:hover,
+.seni-taricaci__music-list li:hover {
+  background: rgba(139,69,19,0.03);
+  padding-left: 3rem;
+}
+
+.seni-taricaci__equipment-list li strong,
+.seni-taricaci__rules-list li strong,
+.seni-taricaci__music-list li strong {
+  color: #8B4513;
+  font-weight: 600;
+}
+
+/* Back Link */
+.seni-taricaci__back {
+  padding: 3rem 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.seni-taricaci__back-link {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #8B4513;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139,69,19,0.3);
+}
+
+.seni-taricaci__back-link:hover {
+  background: #A0522D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139,69,19,0.4);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .seni-taricaci__hero-title {
+    font-size: 3rem;
+  }
+
+  .seni-taricaci__hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .seni-taricaci__intro-grid,
+  .seni-taricaci__philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .seni-taricaci__philosophy-image {
+    position: static;
+  }
+
+  .seni-taricaci__section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .seni-taricaci__container {
+    padding: 0 1rem;
+  }
+
+  .seni-taricaci__hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .seni-taricaci__hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .seni-taricaci__hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .seni-taricaci__hero-location {
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+  }
+
+  .seni-taricaci__intro,
+  .seni-taricaci__section,
+  .seni-taricaci__philosophy {
+    padding: 3rem 0;
+  }
+
+  .seni-taricaci__quote {
+    padding: 2.5rem 0;
+  }
+
+  .seni-taricaci__quote-text {
+    font-size: 1.2rem;
+  }
+
+  .seni-taricaci__section-title {
+    font-size: 1.8rem;
+  }
+
+  .seni-taricaci__intro-text,
+  .seni-taricaci__section-content {
+    font-size: 1rem;
+  }
+
+  .seni-taricaci__dropcap {
+    font-size: 3rem;
+  }
+
+  .seni-taricaci__equipment-list li,
+  .seni-taricaci__rules-list li,
+  .seni-taricaci__music-list li {
+    padding: 1rem 0 1rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .seni-taricaci__philosophy-list li {
+    padding: 1rem 0;
+    font-size: 0.95rem;
+  }
+
+  .seni-taricaci__back-link {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+  }
+}
