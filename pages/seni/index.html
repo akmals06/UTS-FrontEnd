@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seni Tradisional NTT — Musik & Tari</title>
+  <meta name="description" content="Eksplorasi seni tradisional NTT: Sasando, Tari Caci, Tari Likurai, Gong Waning, dan Tari Padoa.">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/page/seni/seni.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body id="top">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="nav visible" id="mainNav">
+    <div class="nav__inner">
+      
+      <!-- Brand -->
+      <a href="../../index.html" class="nav__brand">
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
+        <span class="nav__brand-subtitle">Warisan Nusantara</span>
+      </a>
+
+      <!-- Menu -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../../index.html" class="nav__link">Beranda</a></li>
+        <li class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-toggle">Explore</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../rumah-adat/index.html">Rumah Adat</a></li>
+            <li><a href="../pakaian/index.html">Tenun & Kain Adat</a></li>
+            <li><a href="../suku/index.html">Suku & Adat</a></li>
+            <li><a href="../tradisi/index.html">Tradisi</a></li>
+            <li><a href="../seni/index.html" class="nav__link--active">Seni Tradisional</a></li>
+            <li><a href="../makanan/index.html">Kuliner</a></li>
+            <li><a href="../alam/index.html">Wisata Alam</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search -->
+      <div class="search">
+        <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT...">
+        <div class="search__panel hidden" id="searchPanel"></div>
+      </div>
+
+      <!-- Toggle Mobile -->
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="seni-hero">
+    <div class="seni-hero__bg" style="background-image: url('../../assets/img/seni/Caci_Dance.jpg');"></div>
+    <div class="seni-hero__overlay"></div>
+
+    <div class="seni-hero__content">
+      <p class="seni-hero__eyebrow">MUSIK & TARI</p>
+      <h1 class="seni-hero__title">Seni Tradisional Nusa Tenggara Timur</h1>
+      <p class="seni-hero__subtitle">
+        Dari dentingan sasando hingga dinamika tari caci, 
+        seni NTT adalah ekspresi filosofi dan spiritualitas yang hidup
+      </p>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="content">
+
+    <!-- INTRO -->
+    <section class="seni-intro">
+      <div class="container">
+        <h2 class="heading-secondary">Filosofi Seni Tradisional NTT</h2>
+        <div class="seni-intro__content">
+          <p>
+            NTT memiliki kekayaan <strong>seni dan musik tradisional</strong> yang unik, mencerminkan 
+            filosofi dan spiritualitas masyarakat setempat. Dari alat musik sasando yang indah hingga 
+            tarian perang caci yang dinamis, setiap seni di NTT memiliki makna mendalam.
+          </p>
+          <div class="seni-intro__quote">
+            "Sasando bukan sekadar alat musik—ia adalah suara alam Rote yang ditangkap dalam 
+            daun lontar, mengalirkan melodi yang menenangkan jiwa dan menghubungkan manusia dengan kosmos."
+          </div>
+          <p>
+            Setiap pertunjukan seni tradisional NTT <strong>terhubung dengan upacara adat</strong>, 
+            syukuran panen, dan ritual spiritual, menjadikannya bagian integral dari kehidupan 
+            sosial dan spiritual masyarakat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & SEARCH -->
+    <section class="seni-filter">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-group">
+            <label for="regionFilter" class="filter-label">Filter Wilayah:</label>
+            <select id="regionFilter" class="filter-select">
+              <option value="all">Semua Wilayah</option>
+              <option value="rote">Rote</option>
+              <option value="flores">Flores</option>
+              <option value="sumba">Sumba</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <input 
+              type="search" 
+              id="pageSearch" 
+              class="filter-search"
+              placeholder="Cari seni & musik..."
+            />
+          </div>
+
+          <div id="filterStats" class="filter-stats">Menampilkan 5 item</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID SENI -->
+    <section class="seni-showcase">
+      <div class="container">
+        <div class="seni-grid">
+          
+          <!-- Sasando -->
+          <article class="seni-card" data-id="sasando" data-region="rote" data-tags="sasando alat musik lontar rote petik">
+            <button class="seni-card__bookmark" aria-label="Bookmark" data-id="sasando">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="seni-card__img-wrapper">
+              <img src="../../assets/img/seni/sasando1.jpg" alt="Sasando" class="seni-card__img">
+              <div class="seni-card__badge">Rote</div>
+            </div>
+            <div class="seni-card__body">
+              <h3 class="seni-card__title">Sasando</h3>
+              <p class="seni-card__location">Rote Ndao</p>
+              <p class="seni-card__desc">
+                Alat musik petik khas Rote yang terbuat dari daun lontar dengan 
+                suara melodi yang unik dan menenangkan.
+              </p>
+              <a href="sasando.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Tari Caci -->
+          <article class="seni-card" data-id="tari-caci" data-region="flores" data-tags="tari caci perang cambuk manggarai flores">
+            <button class="seni-card__bookmark" aria-label="Bookmark" data-id="tari-caci">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="seni-card__img-wrapper">
+              <img src="../../assets/img/seni/Caci_Dance.jpg" alt="Tari Caci" class="seni-card__img">
+              <div class="seni-card__badge">Flores</div>
+            </div>
+            <div class="seni-card__body">
+              <h3 class="seni-card__title">Tari Caci</h3>
+              <p class="seni-card__location">Manggarai, Flores Barat</p>
+              <p class="seni-card__desc">
+                Tarian perang cambuk yang menampilkan duel satu lawan satu dengan 
+                ketegangan dan keberanian tinggi.
+              </p>
+              <a href="tari-caci.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Tari Likurai -->
+          <article class="seni-card" data-id="tari-likurai" data-region="flores" data-tags="tari likurai panen manggarai perempuan">
+            <button class="seni-card__bookmark" aria-label="Bookmark" data-id="tari-likurai">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="seni-card__img-wrapper">
+              <img src="../../assets/img/seni/likurai1.jpg" alt="Tari Likurai" class="seni-card__img">
+              <div class="seni-card__badge">Flores</div>
+            </div>
+            <div class="seni-card__body">
+              <h3 class="seni-card__title">Tari Likurai</h3>
+              <p class="seni-card__location">Manggarai, Flores</p>
+              <p class="seni-card__desc">
+                Tarian panen yang dibawakan perempuan Manggarai dengan gerakan 
+                gemulai dan penuh kegembiraan.
+              </p>
+              <a href="tari-likurai.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Gong Waning -->
+          <article class="seni-card" data-id="gong-waning" data-region="flores" data-tags="gong waning gamelan manggarai">
+            <button class="seni-card__bookmark" aria-label="Bookmark" data-id="gong-waning">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="seni-card__img-wrapper">
+              <img src="../../assets/img/seni/gong.jpg" alt="Gong Waning" class="seni-card__img">
+              <div class="seni-card__badge">Flores</div>
+            </div>
+            <div class="seni-card__body">
+              <h3 class="seni-card__title">Gong Waning</h3>
+              <p class="seni-card__location">Manggarai, Flores Barat</p>
+              <p class="seni-card__desc">
+                Gamelan tradisional Manggarai dengan nada khas yang digunakan 
+                dalam upacara adat dan ritual penting.
+              </p>
+              <a href="gong-waning.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Tari Padoa -->
+          <article class="seni-card" data-id="tari-padoa" data-region="flores" data-tags="tari padoa gembira ngada flores">
+            <button class="seni-card__bookmark" aria-label="Bookmark" data-id="tari-padoa">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="seni-card__img-wrapper">
+              <img src="../../assets/img/seni/padoa.jpg" alt="Tari Padoa" class="seni-card__img">
+              <div class="seni-card__badge">Flores</div>
+            </div>
+            <div class="seni-card__body">
+              <h3 class="seni-card__title">Tari Padoa</h3>
+              <p class="seni-card__location">Bajawa, Ngada</p>
+              <p class="seni-card__desc">
+                Tarian gembira khas suku Ngada yang energik, dibawakan secara 
+                berkelompok dalam perayaan adat.
+              </p>
+              <a href="tari-padoa.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="no-results" style="display: none;">
+          <p>Tidak ada seni yang sesuai dengan pencarian Anda.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 East Nusa Tenggara Cultural Heritage</p>
+      <a href="#top" class="footer__back" id="backToTop">↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== JS ===================== -->
+  <script src="../../assets/js/bookmark-manager.js"></script>
+  <script src="../../assets/js/localStorage.js"></script>
+  <script src="../../assets/js/search.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

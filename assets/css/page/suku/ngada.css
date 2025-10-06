@@ -1,0 +1,825 @@
+/* ========================================
+   SUKU NGADA - SYMMETRICAL CEREMONIAL
+   ======================================== */
+
+/* Hero - Vertical Symmetry with Center Split */
+.suku-ngada__hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background: linear-gradient(180deg, #3a2d1f 0%, #2a1f15 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.suku-ngada__hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, #cd7f32 50%, transparent 100%);
+  opacity: 0.3;
+}
+
+.suku-ngada__hero-left,
+.suku-ngada__hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.suku-ngada__hero-pillar {
+  width: 120px;
+  height: 300px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.suku-ngada__hero-pillar--ngadhu {
+  background: linear-gradient(180deg, #cd7f32 0%, #8b5a3c 100%);
+  clip-path: polygon(40% 0%, 60% 0%, 55% 80%, 50% 100%, 45% 80%);
+  box-shadow: 0 10px 40px rgba(205,127,50,0.3);
+}
+
+.suku-ngada__hero-pillar--bhaga {
+  background: linear-gradient(180deg, #b8860b 0%, #6d5020 100%);
+  clip-path: polygon(20% 0%, 80% 0%, 90% 60%, 70% 100%, 30% 100%, 10% 60%);
+  box-shadow: 0 10px 40px rgba(184,134,11,0.3);
+}
+
+.suku-ngada__hero-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #cd7f32;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.suku-ngada__hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+
+.suku-ngada__hero-title {
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 2rem;
+  letter-spacing: 8px;
+  text-shadow: 0 4px 30px rgba(205,127,50,0.4);
+}
+
+.suku-ngada__hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: rgba(255,255,255,0.8);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.suku-ngada__hero-location {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 2px solid #cd7f32;
+  border-radius: 50px;
+  color: #cd7f32;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Intro - Mirror Layout */
+.suku-ngada__intro {
+  padding: 8rem 0;
+  background: #f5f0ea;
+  position: relative;
+}
+
+.suku-ngada__intro-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.suku-ngada__intro-decoration {
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(180deg, #cd7f32 0%, transparent 100%);
+  opacity: 0.1;
+}
+
+.suku-ngada__intro-decoration--left {
+  left: 0;
+}
+
+.suku-ngada__intro-decoration--right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.suku-ngada__intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.suku-ngada__intro-content h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #3a2d1f;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+}
+
+.suku-ngada__intro-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #5a4633;
+  margin-bottom: 1.5rem;
+}
+
+.suku-ngada__intro-content strong {
+  color: #8b5a3c;
+  font-weight: 600;
+}
+
+.suku-ngada__intro-content em {
+  font-style: italic;
+  color: #a67c52;
+}
+
+/* Philosophy - Centered Quote with Symmetric Elements */
+.suku-ngada__philosophy {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #cd7f32 0%, #8b5a3c 100%);
+}
+
+.suku-ngada__philosophy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.suku-ngada__philosophy-line {
+  flex: 1;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  position: relative;
+}
+
+.suku-ngada__philosophy-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.suku-ngada__philosophy-line--left::before {
+  right: 0;
+}
+
+.suku-ngada__philosophy-line--right::before {
+  left: 0;
+}
+
+.suku-ngada__philosophy-content {
+  text-align: center;
+}
+
+.suku-ngada__philosophy-quote {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+  max-width: 700px;
+}
+
+/* Origins - Dual Column */
+.suku-ngada__origins {
+  padding: 8rem 0;
+  background: #fff;
+}
+
+.suku-ngada__origins-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-ngada__origins-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.suku-ngada__origins-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #3a2d1f;
+}
+
+.suku-ngada__origins-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.suku-ngada__origins-grid:last-child {
+  margin-bottom: 0;
+}
+
+.suku-ngada__origins-block {
+  background: #f5f0ea;
+  padding: 3rem;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.suku-ngada__origins-block:hover {
+  background: #fff;
+  box-shadow: 0 15px 40px rgba(205,127,50,0.15);
+  transform: translateY(-5px);
+}
+
+.suku-ngada__origins-marker {
+  width: 40px;
+  height: 4px;
+  background: #cd7f32;
+  margin-bottom: 1.5rem;
+}
+
+.suku-ngada__origins-block h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3a2d1f;
+  margin-bottom: 1rem;
+}
+
+.suku-ngada__origins-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5a4633;
+}
+
+.suku-ngada__origins-block strong {
+  color: #8b5a3c;
+  font-weight: 600;
+}
+
+.suku-ngada__origins-block em {
+  font-style: italic;
+  color: #a67c52;
+}
+
+/* Ngadhu Bhaga - Visual Split Screen */
+.suku-ngada__symbols {
+  background: #f5f0ea;
+}
+
+.suku-ngada__symbols-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.suku-ngada__symbols-item {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem;
+}
+
+.suku-ngada__symbols-item--ngadhu {
+  background: linear-gradient(135deg, #cd7f32 0%, #8b5a3c 100%);
+}
+
+.suku-ngada__symbols-item--bhaga {
+  background: linear-gradient(135deg, #b8860b 0%, #6d5020 100%);
+}
+
+.suku-ngada__symbols-visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-size: cover;
+  background-position: center;
+}
+
+.suku-ngada__symbols-item--ngadhu .suku-ngada__symbols-visual {
+  background-image: url('../../img/suku/ngadhu.jpg');
+}
+
+.suku-ngada__symbols-item--bhaga .suku-ngada__symbols-visual {
+  background-image: url('../../img/suku/bhaga.jpg');
+}
+
+.suku-ngada__symbols-content {
+  position: relative;
+  z-index: 2;
+}
+
+.suku-ngada__symbols-content h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.suku-ngada__symbols-content p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Structure - Hierarchical Pyramid */
+.suku-ngada__structure {
+  padding: 8rem 0;
+  background: #fff;
+}
+
+.suku-ngada__structure-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-ngada__structure-container h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #3a2d1f;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.suku-ngada__structure-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.suku-ngada__structure-level {
+  background: #f5f0ea;
+  border: 2px solid #cd7f32;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.suku-ngada__structure-level--1 {
+  width: 280px;
+  background: linear-gradient(135deg, #cd7f32, #8b5a3c);
+  border: none;
+}
+
+.suku-ngada__structure-level--2 {
+  width: 400px;
+}
+
+.suku-ngada__structure-level--3 {
+  width: 520px;
+}
+
+.suku-ngada__structure-level:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(205,127,50,0.2);
+}
+
+.suku-ngada__structure-level--1 h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.suku-ngada__structure-level--1 p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.suku-ngada__structure-level h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3a2d1f;
+  margin-bottom: 0.8rem;
+}
+
+.suku-ngada__structure-level p {
+  font-size: 1.05rem;
+  color: #5a4633;
+}
+
+/* Reba Ceremony - Timeline Visual */
+.suku-ngada__reba {
+  padding: 8rem 0;
+  background: #f5f0ea;
+}
+
+.suku-ngada__reba-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-ngada__reba-container h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #3a2d1f;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.suku-ngada__reba-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #5a4633;
+  margin-bottom: 5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.suku-ngada__reba-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.suku-ngada__reba-step {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  width: 220px;
+  border: 2px solid #cd7f32;
+  transition: all 0.3s ease;
+}
+
+.suku-ngada__reba-step:hover {
+  background: #f5f0ea;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(205,127,50,0.2);
+}
+
+.suku-ngada__reba-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #cd7f32, #8b5a3c);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 auto 1.5rem;
+}
+
+.suku-ngada__reba-step h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #3a2d1f;
+  margin-bottom: 1rem;
+}
+
+.suku-ngada__reba-step p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5a4633;
+}
+
+.suku-ngada__reba-connector {
+  width: 60px;
+  height: 2px;
+  background: #cd7f32;
+  flex-shrink: 0;
+}
+
+/* Culture - Grid Cards */
+.suku-ngada__culture {
+  padding: 8rem 0;
+  background: #fff;
+}
+
+.suku-ngada__culture-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-ngada__culture-container h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #3a2d1f;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.suku-ngada__culture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.suku-ngada__culture-card {
+  background: #f5f0ea;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.suku-ngada__culture-card:hover {
+  background: #fff;
+  border-color: #cd7f32;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(205,127,50,0.15);
+}
+
+.suku-ngada__culture-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #cd7f32, #8b5a3c);
+  margin: 0 auto 2rem;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transition: transform 0.3s ease;
+}
+
+.suku-ngada__culture-card:hover .suku-ngada__culture-icon {
+  transform: rotate(45deg);
+}
+
+.suku-ngada__culture-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3a2d1f;
+  margin-bottom: 1rem;
+}
+
+.suku-ngada__culture-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5a4633;
+}
+
+.suku-ngada__culture-card em {
+  font-style: italic;
+  color: #a67c52;
+}
+
+/* Language - Symmetric Content */
+.suku-ngada__language {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #3a2d1f 0%, #2a1f15 100%);
+  position: relative;
+}
+
+.suku-ngada__language-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.suku-ngada__language-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent 0%, #cd7f32 50%, transparent 100%);
+  margin-bottom: 4rem;
+}
+
+.suku-ngada__language-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #cd7f32;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.suku-ngada__language-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.suku-ngada__language-block {
+  background: rgba(255,255,255,0.05);
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid rgba(205,127,50,0.3);
+}
+
+.suku-ngada__language-block h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #cd7f32;
+  margin-bottom: 1.5rem;
+}
+
+.suku-ngada__language-block p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+}
+
+.suku-ngada__language-block strong {
+  color: #cd7f32;
+  font-weight: 600;
+}
+
+/* Back Link */
+.suku-ngada__back {
+  padding: 5rem 0;
+  background: #f5f0ea;
+  text-align: center;
+}
+
+.suku-ngada__back-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.suku-ngada__back-link {
+  display: inline-block;
+  padding: 1.3rem 3.5rem;
+  background: linear-gradient(135deg, #cd7f32, #8b5a3c);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(205,127,50,0.3);
+}
+
+.suku-ngada__back-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(205,127,50,0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .suku-ngada__hero {
+    grid-template-columns: 1fr;
+  }
+
+  .suku-ngada__hero-left,
+  .suku-ngada__hero-right {
+    display: none;
+  }
+
+  .suku-ngada__symbols-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .suku-ngada__origins-grid,
+  .suku-ngada__culture-grid,
+  .suku-ngada__language-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .suku-ngada__reba-timeline {
+    flex-direction: column;
+  }
+
+  .suku-ngada__reba-step {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .suku-ngada__reba-connector {
+    width: 2px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .suku-ngada__hero {
+    min-height: 70vh;
+  }
+
+  .suku-ngada__hero-title {
+    font-size: 4.5rem;
+  }
+
+  .suku-ngada__hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .suku-ngada__intro,
+  .suku-ngada__philosophy,
+  .suku-ngada__origins,
+  .suku-ngada__structure,
+  .suku-ngada__reba,
+  .suku-ngada__culture,
+  .suku-ngada__language {
+    padding: 5rem 0;
+  }
+
+  .suku-ngada__intro-container,
+  .suku-ngada__origins-container,
+  .suku-ngada__structure-container,
+  .suku-ngada__reba-container,
+  .suku-ngada__culture-container,
+  .suku-ngada__language-container,
+  .suku-ngada__back-container {
+    padding: 0 2rem;
+  }
+
+  .suku-ngada__intro-content h2,
+  .suku-ngada__origins-header h2,
+  .suku-ngada__structure-container h2,
+  .suku-ngada__reba-container h2,
+  .suku-ngada__culture-container h2,
+  .suku-ngada__language-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .suku-ngada__philosophy-quote {
+    font-size: 1.5rem;
+  }
+
+  .suku-ngada__symbols-item {
+    min-height: 400px;
+    padding: 3rem 2rem;
+  }
+
+  .suku-ngada__symbols-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .suku-ngada__structure-level--1 {
+    width: 100%;
+  }
+
+  .suku-ngada__structure-level--2,
+  .suku-ngada__structure-level--3 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .suku-ngada__hero-title {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  .suku-ngada__hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .suku-ngada__intro-content h2 {
+    font-size: 2rem;
+  }
+
+  .suku-ngada__philosophy-quote {
+    font-size: 1.3rem;
+  }
+
+  .suku-ngada__origins-header h2,
+  .suku-ngada__structure-container h2,
+  .suku-ngada__reba-container h2,
+  .suku-ngada__culture-container h2,
+  .suku-ngada__language-content h2 {
+    font-size: 2rem;
+  }
+
+  .suku-ngada__symbols-content h2 {
+    font-size: 2rem;
+  }
+
+  .suku-ngada__back-link {
+    padding: 1.1rem 2.5rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenun & Kain Adat NTT — Warisan UNESCO</title>
+  <meta name="description" content="Eksplorasi tenun ikat khas NTT: Hinggi, Lau Pahudu, dan Sarung Sabu yang diakui UNESCO.">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/page/pakaian/pakaian.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body id="top">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="nav visible" id="mainNav">
+    <div class="nav__inner">
+      
+      <!-- Brand -->
+      <a href="../../index.html" class="nav__brand">
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
+        <span class="nav__brand-subtitle">Warisan Nusantara</span>
+      </a>
+
+      <!-- Menu -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../../index.html" class="nav__link">Beranda</a></li>
+        <li class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-toggle">Explore</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../rumah-adat/index.html">Rumah Adat</a></li>
+            <li><a href="../pakaian/index.html" class="nav__link--active">Tenun & Kain Adat</a></li>
+            <li><a href="../suku/index.html">Suku & Adat</a></li>
+            <li><a href="../tradisi/index.html">Tradisi</a></li>
+            <li><a href="../seni/index.html">Seni Tradisional</a></li>
+            <li><a href="../makanan/index.html">Kuliner</a></li>
+            <li><a href="../alam/index.html">Wisata Alam</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search -->
+      <div class="search">
+        <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT...">
+        <div class="search__panel hidden" id="searchPanel"></div>
+      </div>
+
+      <!-- Toggle Mobile -->
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="pakaian-hero">
+    <div class="pakaian-hero__bg" style="background-image: url('../../assets/img/pakaian/hinggi1.webp');"></div>
+    <div class="pakaian-hero__overlay"></div>
+
+    <div class="pakaian-hero__content">
+      <p class="pakaian-hero__eyebrow">WARISAN UNESCO</p>
+      <h1 class="pakaian-hero__title">Tenun & Kain Adat Nusa Tenggara Timur</h1>
+      <p class="pakaian-hero__subtitle">
+        Setiap motif adalah bahasa visual yang menceritakan kosmologi, 
+        status sosial, dan hubungan sakral dengan leluhur Marapu
+      </p>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="content">
+
+    <!-- INTRO -->
+    <section class="pakaian-intro">
+      <div class="pakaian-container">
+        <h2 class="pakaian-heading">Filosofi Tenun Ikat NTT</h2>
+        <div class="pakaian-intro__content">
+          <p>
+            Tenun ikat NTT merupakan <strong>warisan budaya yang diakui UNESCO</strong> sebagai masterpiece 
+            of oral and intangible heritage. Setiap motif memiliki makna filosofis yang menceritakan kosmologi, 
+            status sosial, dan hubungan dengan leluhur.
+          </p>
+          <div class="pakaian-intro__quote">
+            "Hinggi Sumba bukan sekadar kain—ia adalah media komunikasi spiritual yang menghubungkan 
+            manusia dengan Marapu (leluhur), di mana setiap motif adalah doa dan identitas klan."
+          </div>
+          <p>
+            Proses pembuatan tenun dilakukan secara <strong>turun-temurun</strong> dengan teknik ikat dan 
+            pewarnaan alami yang kompleks, membutuhkan waktu berbulan-bulan hingga bertahun-tahun untuk 
+            satu kain berkualitas tinggi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & SEARCH -->
+    <section class="pakaian-filter">
+      <div class="pakaian-container">
+        <div class="pakaian-filter-bar">
+          <div class="pakaian-filter-group">
+            <label for="regionFilter" class="pakaian-filter-label">Wilayah:</label>
+            <select id="regionFilter" class="pakaian-filter-select">
+              <option value="all">Semua Wilayah</option>
+              <option value="sumba">Sumba</option>
+              <option value="rote">Rote</option>
+              <option value="flores">Flores</option>
+            </select>
+          </div>
+          
+          <div class="pakaian-filter-group">
+            <input 
+              type="search" 
+              id="pageSearch" 
+              class="pakaian-filter-search"
+              placeholder="Cari tenun & kain adat..."
+            />
+          </div>
+
+          <div id="filterStats" class="pakaian-filter-stats">Menampilkan 3 item</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID PAKAIAN -->
+    <section class="pakaian-showcase">
+      <div class="pakaian-container">
+        <div class="pakaian-grid">
+          
+          <!-- Hinggi -->
+          <article class="pakaian-card" data-id="hinggi" data-region="sumba" data-tags="hinggi kain pria sumba tenun ikat motif tradisional marapu">
+            <button class="pakaian-card__bookmark" aria-label="Bookmark" data-id="hinggi">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="pakaian-card__img-wrapper">
+              <img src="../../assets/img/pakaian/hinggi1.webp" alt="Hinggi" class="pakaian-card__img">
+              <div class="pakaian-card__badge">Sumba</div>
+            </div>
+            <div class="pakaian-card__body">
+              <h3 class="pakaian-card__title">Hinggi</h3>
+              <p class="pakaian-card__location">Sumba Timur & Barat</p>
+              <p class="pakaian-card__desc">
+                Kain tenun ikat khas pria Sumba dengan motif geometris sakral yang 
+                mencerminkan status sosial dan koneksi spiritual dengan Marapu.
+              </p>
+              <a href="hinggi.html" class="pakaian-btn">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Lau Pahudu -->
+          <article class="pakaian-card" data-id="lau-pahudu" data-region="sumba" data-tags="lau pahudu selendang perempuan sumba tenun ikat">
+            <button class="pakaian-card__bookmark" aria-label="Bookmark" data-id="lau-pahudu">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="pakaian-card__img-wrapper">
+              <img src="../../assets/img/pakaian/lauPahudu.jpg" alt="Lau Pahudu" class="pakaian-card__img">
+              <div class="pakaian-card__badge">Sumba</div>
+            </div>
+            <div class="pakaian-card__body">
+              <h3 class="pakaian-card__title">Lau Pahudu</h3>
+              <p class="pakaian-card__location">Sumba Timur</p>
+              <p class="pakaian-card__desc">
+                Selendang tenun ikat khas perempuan Sumba dengan motif elegan, 
+                dipakai dalam upacara adat dan acara resmi.
+              </p>
+              <a href="lau-pahudu.html" class="pakaian-btn">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Sarung Sabu -->
+          <article class="pakaian-card" data-id="sarung-sabu" data-region="rote" data-tags="sarung sabu kain adat rote tenun tradisional geometris">
+            <button class="pakaian-card__bookmark" aria-label="Bookmark" data-id="sarung-sabu">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="pakaian-card__img-wrapper">
+              <img src="../../assets/img/pakaian/sarung-sabu.jpg" alt="Sarung Sabu" class="pakaian-card__img">
+              <div class="pakaian-card__badge">Rote</div>
+            </div>
+            <div class="pakaian-card__body">
+              <h3 class="pakaian-card__title">Sarung Sabu</h3>
+              <p class="pakaian-card__location">Pulau Sabu, Rote Ndao</p>
+              <p class="pakaian-card__desc">
+                Sarung tenun khas Pulau Sabu dengan motif geometris unik dan 
+                warna-warna cerah yang khas.
+              </p>
+              <a href="sarung-sabu.html" class="pakaian-btn">Selengkapnya</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="pakaian-no-results" style="display: none;">
+          <p>Tidak ada tenun yang sesuai dengan pencarian Anda.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 East Nusa Tenggara Cultural Heritage</p>
+      <a href="#top" class="footer__back" id="backToTop">↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== JS ===================== -->
+  <script src="../../assets/js/bookmark-manager.js"></script>
+  <script src="../../assets/js/localStorage.js"></script>
+  <script src="../../assets/js/search.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

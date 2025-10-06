@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suku & Adat NTT — Keragaman Etnis Nusantara</title>
+  <meta name="description" content="Eksplorasi suku dan adat istiadat khas NTT: Manggarai, Sumba, Ngada, Atoni Meto, dan Rote.">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/page/suku/suku.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body id="top">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="nav visible" id="mainNav">
+    <div class="nav__inner">
+      
+      <!-- Brand -->
+      <a href="../../index.html" class="nav__brand">
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
+        <span class="nav__brand-subtitle">Warisan Nusantara</span>
+      </a>
+
+      <!-- Menu -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../../index.html" class="nav__link">Beranda</a></li>
+        <li class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-toggle">Explore</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../rumah-adat/index.html">Rumah Adat</a></li>
+            <li><a href="../pakaian/index.html">Tenun & Kain Adat</a></li>
+            <li><a href="../suku/index.html" class="nav__link--active">Suku & Adat</a></li>
+            <li><a href="../tradisi/index.html">Tradisi</a></li>
+            <li><a href="../seni/index.html">Seni Tradisional</a></li>
+            <li><a href="../makanan/index.html">Kuliner</a></li>
+            <li><a href="../alam/index.html">Wisata Alam</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search -->
+      <div class="search">
+        <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT...">
+        <div class="search__panel hidden" id="searchPanel"></div>
+      </div>
+
+      <!-- Toggle Mobile -->
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="suku-hero">
+    <div class="suku-hero__bg" style="background-image: url('../../assets/img/alam/waerebo.jpg');"></div>
+    <div class="suku-hero__overlay"></div>
+
+    <div class="suku-hero__content">
+      <p class="suku-hero__eyebrow">KERAGAMAN ETNIS</p>
+      <h1 class="suku-hero__title">Suku & Adat Nusa Tenggara Timur</h1>
+      <p class="suku-hero__subtitle">
+        Dari Manggarai hingga Sumba, setiap suku memiliki sistem adat, 
+        bahasa, dan kepercayaan yang membentuk identitas budaya NTT
+      </p>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="content">
+
+    <!-- INTRO -->
+    <section class="suku-intro">
+      <div class="container">
+        <h2 class="heading-secondary">Keragaman Etnis NTT</h2>
+        <div class="suku-intro__content">
+          <p>
+            Nusa Tenggara Timur adalah rumah bagi <strong>lebih dari 40 suku</strong> dengan bahasa, 
+            sistem adat, dan kepercayaan yang beragam. Setiap suku memiliki <strong>identitas budaya unik</strong> 
+            yang terwujud dalam arsitektur, tenun, musik, dan ritual spiritual mereka.
+          </p>
+          <div class="suku-intro__quote">
+            "Keragaman suku di NTT bukan sekadar perbedaan—ia adalah kekayaan yang saling melengkapi, 
+            di mana setiap suku menjaga warisan leluhur sambil hidup berdampingan dalam harmoni."
+          </div>
+          <p>
+            Dari <strong>Manggarai</strong> dengan filosofi Todo hingga <strong>Sumba</strong> dengan 
+            kepercayaan Marapu, setiap suku di NTT memiliki <strong>sistem kekerabatan</strong> dan 
+            <strong>struktur sosial</strong> yang kompleks dan masih terjaga hingga kini.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & SEARCH -->
+    <section class="suku-filter">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-group">
+            <label for="regionFilter" class="filter-label">Filter Wilayah:</label>
+            <select id="regionFilter" class="filter-select">
+              <option value="all">Semua Wilayah</option>
+              <option value="flores">Flores</option>
+              <option value="sumba">Sumba</option>
+              <option value="timor">Timor</option>
+              <option value="rote">Rote</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <input 
+              type="search" 
+              id="pageSearch" 
+              class="filter-search"
+              placeholder="Cari suku & adat..."
+            />
+          </div>
+
+          <div id="filterStats" class="filter-stats">Menampilkan 5 item</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID SUKU -->
+    <section class="suku-showcase">
+      <div class="container">
+        <div class="suku-grid">
+          
+          <!-- Manggarai -->
+          <article class="suku-card" data-id="manggarai" data-region="flores" data-tags="manggarai flores barat todo mbaru niang caci">
+            <button class="suku-card__bookmark" aria-label="Bookmark" data-id="manggarai">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="suku-card__img-wrapper">
+              <img src="../../assets/img/rumahadat/Wae Rebo Village, Flores Island, Indonesia.jpg" alt="Suku Manggarai" class="suku-card__img">
+              <div class="suku-card__badge">Flores</div>
+            </div>
+            <div class="suku-card__body">
+              <h3 class="suku-card__title">Manggarai</h3>
+              <p class="suku-card__location">Flores Barat</p>
+              <p class="suku-card__desc">
+                Suku terbesar di Flores Barat dengan filosofi Todo dan rumah adat 
+                Mbaru Niang ikonik, serta tarian Caci yang dinamis.
+              </p>
+              <a href="manggarai.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Sumba -->
+          <article class="suku-card" data-id="sumba" data-region="sumba" data-tags="sumba marapu pasola hinggi megalit">
+            <button class="suku-card__bookmark" aria-label="Bookmark" data-id="sumba">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="suku-card__img-wrapper">
+              <img src="../../assets/img/pakaian/hinggi1.webp" alt="Suku Sumba" class="suku-card__img">
+              <div class="suku-card__badge">Sumba</div>
+            </div>
+            <div class="suku-card__body">
+              <h3 class="suku-card__title">Sumba</h3>
+              <p class="suku-card__location">Sumba Timur & Barat</p>
+              <p class="suku-card__desc">
+                Suku dengan kepercayaan Marapu yang kuat, tradisi megalitikum, 
+                tenun ikat hinggi, dan ritual Pasola yang spektakuler.
+              </p>
+              <a href="sumba.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Ngada -->
+          <article class="suku-card" data-id="ngada" data-region="flores" data-tags="ngada bajawa ngadhu bhaga reba sao">
+            <button class="suku-card__bookmark" aria-label="Bookmark" data-id="ngada">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="suku-card__img-wrapper">
+              <img src="../../assets/img/rumahadat/Rumah-adat-Sao-Ata-Mosa-Lakitana-sebagai-salah-satu-rumah-adat-NTT.jpg" alt="Suku Ngada" class="suku-card__img">
+              <div class="suku-card__badge">Flores</div>
+            </div>
+            <div class="suku-card__body">
+              <h3 class="suku-card__title">Ngada</h3>
+              <p class="suku-card__location">Bajawa, Flores Tengah</p>
+              <p class="suku-card__desc">
+                Suku dengan arsitektur Sa'o yang unik, ngadhu dan bhaga sebagai 
+                simbol leluhur, serta upacara Reba yang sakral.
+              </p>
+              <a href="ngada.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Atoni Meto -->
+          <article class="suku-card" data-id="atoni" data-region="timor" data-tags="atoni meto timor lopo ume kbubu">
+            <button class="suku-card__bookmark" aria-label="Bookmark" data-id="atoni">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="suku-card__img-wrapper">
+              <img src="../../assets/img/rumahadat/lopo2.jpg" alt="Suku Atoni Meto" class="suku-card__img">
+              <div class="suku-card__badge">Timor</div>
+            </div>
+            <div class="suku-card__body">
+              <h3 class="suku-card__title">Atoni Meto</h3>
+              <p class="suku-card__location">Timor Tengah</p>
+              <p class="suku-card__desc">
+                Suku terbesar di Timor dengan rumah bulat Lopo (ume kbubu) dan 
+                sistem adat yang kompleks berbasis kerajaan.
+              </p>
+              <a href="atoni.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- Rote -->
+          <article class="suku-card" data-id="rote" data-region="rote" data-tags="rote sasando lontar musik">
+            <button class="suku-card__bookmark" aria-label="Bookmark" data-id="rote">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            <div class="suku-card__img-wrapper">
+              <img src="../../assets/img/seni/sasando1.jpg" alt="Suku Rote" class="suku-card__img">
+              <div class="suku-card__badge">Rote</div>
+            </div>
+            <div class="suku-card__body">
+              <h3 class="suku-card__title">Rote</h3>
+              <p class="suku-card__location">Rote Ndao</p>
+              <p class="suku-card__desc">
+                Suku di pulau paling selatan Indonesia dengan alat musik sasando 
+                khas dan budaya lontar yang unik.
+              </p>
+              <a href="rote.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="no-results" style="display: none;">
+          <p>Tidak ada suku yang sesuai dengan pencarian Anda.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 East Nusa Tenggara Cultural Heritage</p>
+      <a href="#top" class="footer__back" id="backToTop">↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== JS ===================== -->
+  <script src="../../assets/js/bookmark-manager.js"></script>
+  <script src="../../assets/js/localStorage.js"></script>
+  <script src="../../assets/js/search.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

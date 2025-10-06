@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradisi & Ritual NTT — Upacara Adat Sakral</title>
+  <meta name="description" content="Eksplorasi upacara adat khas NTT: Pasola, Penti, Reba, Wulla Poddu, dan Nyale.">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/page/tradisi/tradisi.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body id="top">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="nav visible" id="mainNav">
+    <div class="nav__inner">
+      
+      <!-- Brand -->
+      <a href="../../index.html" class="nav__brand">
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
+        <span class="nav__brand-subtitle">Warisan Nusantara</span>
+      </a>
+
+      <!-- Menu -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../../index.html" class="nav__link">Beranda</a></li>
+        <li class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-toggle">Explore</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../rumah-adat/index.html">Rumah Adat</a></li>
+            <li><a href="../pakaian/index.html">Tenun & Kain Adat</a></li>
+            <li><a href="../suku/index.html">Suku & Adat</a></li>
+            <li><a href="../tradisi/index.html" class="nav__link--active">Tradisi</a></li>
+            <li><a href="../seni/index.html">Seni Tradisional</a></li>
+            <li><a href="../makanan/index.html">Kuliner</a></li>
+            <li><a href="../alam/index.html">Wisata Alam</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search -->
+      <div class="search">
+        <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT...">
+        <div class="search__panel hidden" id="searchPanel"></div>
+      </div>
+
+      <!-- Toggle Mobile -->
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="tradisi-hero">
+    <div class="tradisi-hero__bg" style="background-image: url('../../assets/img/tradisi/pasola1.jpg');"></div>
+    <div class="tradisi-hero__overlay"></div>
+
+    <div class="tradisi-hero__content">
+      <p class="tradisi-hero__eyebrow">UPACARA ADAT SAKRAL</p>
+      <h1 class="tradisi-hero__title">Tradisi & Ritual Nusa Tenggara Timur</h1>
+      <p class="tradisi-hero__subtitle">
+        Dari perang tombak Pasola hingga ritual Penti di compang, 
+        setiap upacara adalah jantung kehidupan spiritual masyarakat NTT
+      </p>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="content">
+
+    <!-- INTRO SECTION -->
+    <section class="tradisi-intro">
+      <div class="container">
+        <h2 class="heading-secondary">Filosofi Upacara Adat NTT</h2>
+        <div class="tradisi-intro__content">
+          <p>
+            NTT memiliki berbagai <strong>upacara adat sakral</strong> yang mencerminkan kepercayaan Marapu, 
+            filosofi Todo, dan hubungan spiritual dengan leluhur. Upacara-upacara ini bukan sekadar ritual, 
+            tetapi <strong>jantung kehidupan sosial dan spiritual</strong> masyarakat NTT yang masih terjaga hingga kini.
+          </p>
+          <div class="tradisi-intro__quote">
+            "Pasola bukan sekadar perang tombak—ia adalah ritual sakral untuk memohon kesuburan tanah 
+            dan panen melimpah, di mana tumpahan darah menjadi persembahan bagi Marapu dan tanah Sumba."
+          </div>
+          <p>
+            Setiap upacara adat di NTT memiliki <strong>makna kosmologis</strong> yang kompleks, menghubungkan 
+            dunia manusia (ate dawan) dengan dunia atas (ume kbubu) dan dunia bawah (dasi mutin), 
+            menjaga keseimbangan semesta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & SEARCH SECTION -->
+    <section class="tradisi-filter">
+      <div class="container">
+        <div class="tradisi-filter__bar">
+          
+          <!-- Region Filter -->
+          <div class="tradisi-filter__group">
+            <label for="regionFilter" class="tradisi-filter__label">Filter Wilayah:</label>
+            <select id="regionFilter" class="tradisi-filter__select">
+              <option value="all">Semua Wilayah</option>
+              <option value="sumba">Sumba</option>
+              <option value="flores">Flores</option>
+              <option value="timor">Timor</option>
+            </select>
+          </div>
+          
+          <!-- Local Search -->
+          <div class="tradisi-filter__group">
+            <input 
+              type="search" 
+              id="pageSearch" 
+              class="tradisi-filter__search"
+              placeholder="Cari upacara adat..."
+              aria-label="Cari upacara adat"
+            />
+          </div>
+
+          <!-- Stats Display -->
+          <div id="filterStats" class="tradisi-filter__stats">Menampilkan 5 item</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADISI SHOWCASE GRID -->
+    <section class="tradisi-showcase">
+      <div class="container">
+        <div class="tradisi-grid">
+          
+          <!-- CARD 1: PASOLA -->
+          <article class="tradisi-card" 
+                   data-id="pasola" 
+                   data-region="sumba" 
+                   data-tags="pasola perang tombak berkuda sumba ritual kesuburan marapu">
+            
+            <button class="tradisi-card__bookmark" aria-label="Bookmark Pasola" data-id="pasola">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            
+            <div class="tradisi-card__img-wrapper">
+              <img src="../../assets/img/tradisi/pasola1.jpg" 
+                   alt="Ritual Pasola - Perang tombak berkuda di Sumba Barat" 
+                   class="tradisi-card__img">
+              <div class="tradisi-card__badge">Sumba</div>
+            </div>
+            
+            <div class="tradisi-card__body">
+              <h3 class="tradisi-card__title">Pasola</h3>
+              <p class="tradisi-card__location">Sumba Barat</p>
+              <p class="tradisi-card__desc">
+                Perang tombak berkuda yang sakral untuk memohon kesuburan tanah, 
+                di mana darah yang tertumpah diyakini menyuburkan bumi Sumba.
+              </p>
+              <a href="pasola.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- CARD 2: PENTI -->
+          <article class="tradisi-card" 
+                   data-id="penti" 
+                   data-region="flores" 
+                   data-tags="penti ritual syukuran manggarai compang todo leluhur">
+            
+            <button class="tradisi-card__bookmark" aria-label="Bookmark Penti" data-id="penti">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            
+            <div class="tradisi-card__img-wrapper">
+              <img src="../../assets/img/tradisi/penti1.jpg" 
+                   alt="Upacara Penti - Ritual syukuran panen di compang Manggarai" 
+                   class="tradisi-card__img">
+              <div class="tradisi-card__badge">Flores</div>
+            </div>
+            
+            <div class="tradisi-card__body">
+              <h3 class="tradisi-card__title">Penti</h3>
+              <p class="tradisi-card__location">Manggarai, Flores Barat</p>
+              <p class="tradisi-card__desc">
+                Ritual syukuran panen di compang (altar batu) sebagai persembahan 
+                kepada Mori Kraeng dan leluhur Manggarai.
+              </p>
+              <a href="penti.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- CARD 3: REBA -->
+          <article class="tradisi-card" 
+                   data-id="reba" 
+                   data-region="flores" 
+                   data-tags="reba upacara pemujaan ngada mori karaeng leluhur">
+            
+            <button class="tradisi-card__bookmark" aria-label="Bookmark Reba" data-id="reba">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            
+            <div class="tradisi-card__img-wrapper">
+              <img src="../../assets/img/tradisi/reba1.webp" 
+                   alt="Upacara Reba - Ritual pemujaan leluhur suku Ngada di Bajawa" 
+                   class="tradisi-card__img">
+              <div class="tradisi-card__badge">Flores</div>
+            </div>
+            
+            <div class="tradisi-card__body">
+              <h3 class="tradisi-card__title">Reba</h3>
+              <p class="tradisi-card__location">Bajawa, Ngada</p>
+              <p class="tradisi-card__desc">
+                Upacara pemujaan leluhur (Mori Karaeng) suku Ngada dengan 
+                tarian melingkari ngadhu dan bhaga.
+              </p>
+              <a href="reba.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- CARD 4: WULLA PODDU -->
+          <article class="tradisi-card" 
+                   data-id="wulla-poddu" 
+                   data-region="sumba" 
+                   data-tags="wulla poddu bulan suci sumba marapu ritual megalit">
+            
+            <button class="tradisi-card__bookmark" aria-label="Bookmark Wulla Poddu" data-id="wulla-poddu">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            
+            <div class="tradisi-card__img-wrapper">
+              <img src="../../assets/img/tradisi/wulla1.jpg" 
+                   alt="Wulla Poddu - Bulan suci ritual kuburan megalitik Sumba" 
+                   class="tradisi-card__img">
+              <div class="tradisi-card__badge">Sumba</div>
+            </div>
+            
+            <div class="tradisi-card__body">
+              <h3 class="tradisi-card__title">Wulla Poddu</h3>
+              <p class="tradisi-card__location">Sumba Timur & Barat</p>
+              <p class="tradisi-card__desc">
+                Bulan suci di Sumba untuk ritual di kuburan megalitik, 
+                memperkuat hubungan dengan leluhur Marapu.
+              </p>
+              <a href="wulla.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- CARD 5: NYALE -->
+          <article class="tradisi-card" 
+                   data-id="nyale" 
+                   data-region="sumba" 
+                   data-tags="nyale ritual tangkap cacing laut sumba ramalan panen">
+            
+            <button class="tradisi-card__bookmark" aria-label="Bookmark Nyale" data-id="nyale">
+              <span class="bookmark-icon">☆</span>
+            </button>
+            
+            <div class="tradisi-card__img-wrapper">
+              <img src="../../assets/img/tradisi/nyale.jpg" 
+                   alt="Ritual Nyale - Tangkap cacing laut untuk ramalan panen di Sumba" 
+                   class="tradisi-card__img">
+              <div class="tradisi-card__badge">Sumba</div>
+            </div>
+            
+            <div class="tradisi-card__body">
+              <h3 class="tradisi-card__title">Nyale</h3>
+              <p class="tradisi-card__location">Sumba</p>
+              <p class="tradisi-card__desc">
+                Ritual tangkap cacing laut (nyale) untuk ramalan panen, 
+                jika banyak nyale maka panen akan melimpah.
+              </p>
+              <a href="nyale.html" class="btn btn--primary">Selengkapnya</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- NO RESULTS MESSAGE -->
+        <div id="noResults" class="tradisi-showcase__no-results">
+          <p>Tidak ada tradisi yang sesuai dengan pencarian Anda.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 East Nusa Tenggara Cultural Heritage</p>
+      <a href="#top" class="footer__back" id="backToTop" aria-label="Kembali ke atas">↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script src="../../assets/js/bookmark-manager.js"></script>
+  <script src="../../assets/js/localStorage.js"></script>
+  <script src="../../assets/js/search.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

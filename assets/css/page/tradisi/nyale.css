@@ -1,0 +1,552 @@
+/* =====================================================
+   NYALE DETAIL PAGE - MAGAZINE EDITORIAL STYLE
+   ===================================================== */
+
+/* =====================================================
+   HERO SECTION - SPLIT LAYOUT
+   ===================================================== */
+
+.nyale-hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: flex-end;
+  background: #0a0705;
+  overflow: hidden;
+}
+
+.nyale-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.nyale-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.1) saturate(1.2);
+}
+
+.nyale-hero__gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(10,7,5,0.3) 40%,
+    rgba(10,7,5,0.85) 70%,
+    rgba(10,7,5,0.95) 100%
+  );
+}
+
+.nyale-hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-2xl) var(--space-2xl);
+  width: 100%;
+}
+
+.nyale-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nyale-breadcrumb a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nyale-breadcrumb a:hover {
+  color: #d4a574;
+}
+
+.nyale-breadcrumb__sep {
+  color: rgba(255,255,255,0.3);
+}
+
+.nyale-breadcrumb span:last-child {
+  color: #d4a574;
+  font-weight: 700;
+}
+
+.nyale-hero__badge {
+  display: inline-block;
+  background: #d4a574;
+  color: #000;
+  padding: 6px 16px;
+  font-size: 0.65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  margin-bottom: var(--space-md);
+}
+
+.nyale-hero__title {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: var(--space-md);
+  letter-spacing: -3px;
+}
+
+.nyale-hero__subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: var(--space-xl);
+}
+
+.nyale-hero__meta {
+  display: flex;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.nyale-hero__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nyale-hero__meta-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.nyale-hero__meta-value {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.nyale-main {
+  background: linear-gradient(
+    to bottom,
+    #0a0705 0%,
+    #12100d 30%,
+    #1a1612 100%
+  );
+}
+
+/* =====================================================
+   INTRO SECTION
+   ===================================================== */
+
+.nyale-intro {
+  padding: calc(var(--space-2xl) * 2) 0;
+}
+
+.nyale-intro__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nyale-intro__lead {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: var(--space-xl);
+  font-weight: 300;
+}
+
+.nyale-intro__text p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.9;
+  color: rgba(255,255,255,0.75);
+}
+
+.nyale-intro__highlight {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: rgba(212,165,116,0.08);
+  border-left: 4px solid #d4a574;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.nyale-intro__icon {
+  color: #d4a574;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.nyale-intro__highlight p {
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+}
+
+.nyale-intro__visual {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.nyale-quote {
+  background: linear-gradient(
+    135deg,
+    rgba(212,165,116,0.15) 0%,
+    rgba(212,165,116,0.08) 100%
+  );
+  padding: var(--space-2xl);
+  border-radius: 12px;
+  border: 1px solid rgba(212,165,116,0.2);
+  position: relative;
+}
+
+.nyale-quote__mark {
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(212,165,116,0.3);
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.nyale-quote__text {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #fff;
+  font-style: italic;
+  font-weight: 300;
+  margin: 60px 0 var(--space-lg) 0;
+}
+
+.nyale-quote__author {
+  font-size: 0.9rem;
+  color: #d4a574;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   SECTION HEADERS
+   ===================================================== */
+
+.nyale-section-header {
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.nyale-section-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #d4a574;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+  margin-bottom: var(--space-md);
+}
+
+.nyale-section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* =====================================================
+   LEGEND SECTION
+   ===================================================== */
+
+.nyale-legend {
+  padding: calc(var(--space-2xl) * 2) 0;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(212,165,116,0.05) 0%,
+    transparent 60%
+  );
+}
+
+.nyale-legend__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nyale-legend__story {
+  background: rgba(255,255,255,0.02);
+  padding: var(--space-2xl);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: var(--space-xl);
+}
+
+.nyale-legend__story p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.9;
+  color: rgba(255,255,255,0.8);
+}
+
+.nyale-legend__story p:last-child {
+  margin-bottom: 0;
+}
+
+.nyale-legend__science {
+  padding: var(--space-xl);
+  background: linear-gradient(
+    135deg,
+    rgba(212,165,116,0.1) 0%,
+    rgba(212,165,116,0.05) 100%
+  );
+  border-radius: 12px;
+  border-left: 4px solid #d4a574;
+}
+
+.nyale-legend__subtitle {
+  font-size: 1.3rem;
+  color: #d4a574;
+  margin-bottom: var(--space-md);
+  font-weight: 800;
+}
+
+.nyale-legend__science p {
+  margin: 0;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+}
+
+/* =====================================================
+   TIMELINE SECTION
+   ===================================================== */
+
+.nyale-prosesi {
+  padding: calc(var(--space-2xl) * 2) 0;
+}
+
+.nyale-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nyale-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #d4a574 0%,
+    rgba(212,165,116,0.3) 100%
+  );
+}
+
+.nyale-timeline__item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: var(--space-2xl);
+}
+
+.nyale-timeline__marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.nyale-timeline__dot {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(
+    135deg,
+    #d4a574 0%,
+    #b8925f 100%
+  );
+  border-radius: 50%;
+  border: 4px solid #0a0705;
+  box-shadow: 0 0 0 2px rgba(212,165,116,0.3);
+  position: relative;
+}
+
+.nyale-timeline__dot::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  background: #0a0705;
+  border-radius: 50%;
+}
+
+.nyale-timeline__content {
+  background: rgba(255,255,255,0.03);
+  padding: var(--space-xl);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+}
+
+.nyale-timeline__item:hover .nyale-timeline__content {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(212,165,116,0.3);
+  transform: translateX(8px);
+}
+
+.nyale-timeline__title {
+  font-size: 1.3rem;
+  color: #d4a574;
+  margin-bottom: var(--space-sm);
+  font-weight: 800;
+}
+
+.nyale-timeline__desc {
+  margin: 0;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+}
+
+/* =====================================================
+   INTERPRETATION SECTION
+   ===================================================== */
+
+.nyale-interpret {
+  padding: calc(var(--space-2xl) * 2) 0;
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(212,165,116,0.05) 0%,
+    transparent 60%
+  );
+}
+
+.nyale-interpret__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   CARD COMPONENTS
+   ===================================================== */
+
+.nyale-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04) 0%,
+    rgba(255,255,255,0.02) 100%
+  );
+  padding: var(--space-2xl);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.4s ease;
+}
+
+.nyale-card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(212,165,116,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.nyale-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.nyale-card__title {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: var(--space-lg);
+  font-weight: 800;
+}
+
+.nyale-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nyale-card__list li {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+  position: relative;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.75);
+}
+
+.nyale-card__list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #d4a574;
+  font-weight: 900;
+}
+
+.nyale-card__list li:last-child {
+  margin-bottom: 0;
+}
+
+.nyale-card__text {
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+}
+
+.nyale-card__text:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================================
+   BACK BUTTON SECTION
+   ===================================================== */
+
+.nyale-back {
+  padding: var(--space-2xl) 0 calc(var(--space-2xl) * 2);
+}
+
+.nyale-back__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 14px 28px;
+  background: rgba(212,165,116,0.1);
+  border: 2px solid rgba(212,165,116,0.3);
+  border-radius: 8px;
+  color: #d4a574;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nyale-back__btn:hover {
+  background: rgba(212,165,116,0.2);
+  border-color: #d4a574;
+  transform: translateX(-4px);
+}
+
+.nyale-back__btn svg {
+  transition: transform 0.3s ease;
+}
+
+.nyale-back__btn:hover svg {
+  transform: translateX(-4px);
+}
