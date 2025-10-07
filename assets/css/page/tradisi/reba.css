@@ -170,34 +170,7 @@
 }
 
 /* SECTION HEADERS */
-.reba-section-label {
-  display: block;
-  font-size: 0.7rem;
-  color: #d4a574;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-weight: 900;
-  margin-bottom: var(--space-sm);
-}
 
-.reba-section-title {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.1;
-  margin-bottom: var(--space-sm);
-}
-
-.reba-section-desc {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.6);
-  margin: 0;
-}
-
-.reba-section-header {
-  margin-bottom: var(--space-2xl);
-  text-align: center;
-}
 
 /* HISTORY STORY */
 .reba-history {
@@ -397,4 +370,18 @@
 
 .reba-back__btn:hover svg {
   transform: translateX(-4px);
+}
+
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+/* ==================== TRADISI DETAIL: REBA ==================== */
+@media (max-width: 991px) {
+  .reba-intro__split {
+    grid-template-columns: 1fr;
+  }
+  .reba-process__timeline {
+    gap: var(--space-lg);
+  }
 }

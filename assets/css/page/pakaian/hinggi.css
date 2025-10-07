@@ -1,92 +1,78 @@
-/* =====================================================
-   HINGGI.CSS - Sacred Textile Heritage
-   For: hinggi.html
-   Theme: Elegant, artistic, museum-quality
-   ===================================================== */
-
-/* ===================== HINGGI MAIN WRAPPER ===================== */
 .hinggi-main {
-  background: #0a0b0e;
+  background: #0a0608;
   color: rgba(255, 255, 255, 0.92);
   min-height: 100vh;
 }
 
 .hinggi-section {
-  padding: 110px 0;
-  background: 
-    radial-gradient(ellipse at 15% 25%, rgba(75, 85, 120, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 85% 75%, rgba(60, 70, 100, 0.04) 0%, transparent 50%);
+  padding: 120px 0;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(155, 89, 182, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(142, 68, 173, 0.06) 0%, transparent 50%);
 }
 
 /* ===================== HEADING ===================== */
 .hinggi-heading {
-  font-size: clamp(3.2rem, 6vw, 5rem);
-  color: #6b7eb8;
-  margin-bottom: 90px;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  color: #9b59b6;
+  margin-bottom: 100px;
   text-align: center;
   font-weight: 900;
-  letter-spacing: -1px;
-  line-height: 1.15;
+  letter-spacing: -2px;
+  line-height: 1;
   position: relative;
-  padding: 0 40px;
-}
-
-.hinggi-heading::before,
-.hinggi-heading::after {
-  content: '◆';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgba(107, 126, 184, 0.3);
-  font-size: 1.5rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .hinggi-heading::before {
-  left: 0;
-}
-
-.hinggi-heading::after {
-  right: 0;
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, #9b59b6);
 }
 
 .hinggi-location {
   display: block;
-  color: rgba(107, 126, 184, 0.55);
-  font-size: 0.32em;
+  color: rgba(155, 89, 182, 0.5);
+  font-size: 0.25em;
   font-weight: 600;
-  text-transform: none;
-  letter-spacing: 3px;
-  margin-top: 20px;
-  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-top: 24px;
 }
 
-/* ===================== HERO SPREAD ===================== */
+/* ===================== HERO LAYOUT ===================== */
 .hinggi-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 88px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
   margin-bottom: 120px;
-  align-items: center;
+  align-items: start;
 }
 
 .hinggi-hero-image {
   position: relative;
-  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 
-    0 30px 90px rgba(0, 0, 0, 0.6),
-    inset 0 0 0 1px rgba(107, 126, 184, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
 
 .hinggi-hero-image img {
   width: 100%;
+  height: auto;
   display: block;
-  filter: brightness(0.88) contrast(1.12) saturate(1.05);
-  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.12) saturate(1.1);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hinggi-hero-image:hover img {
-  transform: scale(1.06);
+.hinggi-hero:hover .hinggi-hero-image img {
+  transform: scale(1.08);
 }
 
 .hinggi-hero-image figcaption {
@@ -94,160 +80,197 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 28px 32px;
-  background: linear-gradient(to top,
-    rgba(0, 0, 0, 0.95),
-    rgba(0, 0, 0, 0.7),
-    transparent);
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.95rem;
-  font-weight: 500;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
   font-style: italic;
 }
 
-/* ===================== TEXT CONTENT ===================== */
-.hinggi-text p {
-  font-size: 1.16rem;
-  line-height: 2.05;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 32px;
+.hinggi-text {
+  padding: 40px 0;
 }
 
-.hinggi-text p:first-of-type::first-letter {
-  float: left;
-  font-size: 6.5rem;
-  line-height: 0.8;
-  font-weight: 900;
-  margin: 0.05em 0.12em 0 0;
-  color: #6b7eb8;
-  font-family: Georgia, serif;
+.hinggi-text p {
+  font-size: 1.15rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+.hinggi-text p:last-child {
+  margin-bottom: 0;
 }
 
 .hinggi-text strong {
-  color: #6b7eb8;
+  color: #9b59b6;
   font-weight: 700;
 }
 
 .hinggi-text em {
-  color: #8a9cd4;
+  color: #b370cf;
   font-style: italic;
 }
 
-/* ===================== QUOTE SACRED ===================== */
+/* ===================== QUOTE ===================== */
 .hinggi-quote {
-  margin: 120px auto;
-  padding: 64px 88px;
   max-width: 1100px;
+  margin: 120px auto;
+  padding: 60px 80px;
   background: linear-gradient(135deg,
-    rgba(107, 126, 184, 0.08) 0%,
-    rgba(75, 85, 120, 0.04) 100%);
-  border: 1px solid rgba(107, 126, 184, 0.2);
-  border-radius: 12px;
-  font-size: 1.4rem;
-  line-height: 2.1;
-  color: rgba(255, 255, 255, 0.95);
-  font-style: italic;
+    rgba(155, 89, 182, 0.12) 0%,
+    rgba(155, 89, 182, 0.04) 100%);
+  border-left: 6px solid #9b59b6;
+  border-radius: 0 16px 16px 0;
   text-align: center;
   position: relative;
-  box-shadow: 
-    0 20px 70px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(107, 126, 184, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .hinggi-quote::before {
-  content: '◆';
+  content: '"';
   position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.8rem;
-  color: #6b7eb8;
-  background: #0a0b0e;
-  padding: 0 20px;
+  top: -10px;
+  left: 60px;
+  font-size: 10rem;
+  color: rgba(155, 89, 182, 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
 }
 
 .hinggi-quote-highlight {
-  color: #6b7eb8;
+  color: #9b59b6;
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
 }
 
 /* ===================== CONTENT SECTION ===================== */
 .hinggi-content {
-  margin-bottom: 100px;
+  max-width: 1100px;
+  margin: 0 auto 100px;
   padding: 72px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(107, 126, 184, 0.15);
-  border-radius: 12px;
-  transition: all 0.4s ease;
-}
-
-.hinggi-content:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(107, 126, 184, 0.25);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.01) 100%);
+  border-top: 2px solid rgba(155, 89, 182, 0.2);
+  border-bottom: 2px solid rgba(155, 89, 182, 0.2);
+  border-radius: 8px;
 }
 
 .hinggi-content h3 {
-  font-size: 2.3rem;
-  color: #6b7eb8;
+  font-size: 2.5rem;
+  color: #9b59b6;
   font-weight: 900;
-  margin-bottom: 44px;
-  padding-bottom: 24px;
-  border-bottom: 2px solid rgba(107, 126, 184, 0.2);
-  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
   text-align: center;
 }
 
 .hinggi-content h4 {
-  font-size: 1.4rem;
-  color: #8a9cd4;
+  font-size: 1.6rem;
+  color: #b370cf;
   font-weight: 700;
-  margin: 48px 0 24px 0;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
 }
 
 .hinggi-content p {
-  font-size: 1.16rem;
-  line-height: 2.05;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.08rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
   margin-bottom: 28px;
   text-align: justify;
 }
 
+.hinggi-content p:last-of-type {
+  margin-bottom: 0;
+}
+
 .hinggi-content strong {
-  color: #6b7eb8;
+  color: #9b59b6;
   font-weight: 700;
 }
 
 .hinggi-content em {
-  color: #8a9cd4;
+  color: #b370cf;
   font-style: italic;
 }
 
-/* ===================== SPLIT WITH IMAGE ===================== */
+.hinggi-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.hinggi-content ul li {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 20px;
+  padding-left: 32px;
+  position: relative;
+}
+
+.hinggi-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 16px;
+  height: 2px;
+  background: #9b59b6;
+  box-shadow: 0 0 8px rgba(155, 89, 182, 0.5);
+}
+
+.hinggi-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.hinggi-content ul li strong {
+  color: #9b59b6;
+}
+
+/* ===================== SPLIT LAYOUT ===================== */
 .hinggi-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  margin-top: 56px;
-  align-items: start;
+  gap: 60px;
+  align-items: center;
+  margin: 48px 0;
+}
+
+.hinggi-split:first-child {
+  margin-top: 0;
+}
+
+.hinggi-split p {
+  margin-bottom: 20px;
+}
+
+.hinggi-split p:last-child {
+  margin-bottom: 0;
 }
 
 .hinggi-split-image {
-  border-radius: 8px;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  margin: 0;
 }
 
 .hinggi-split-image img {
   width: 100%;
+  height: auto;
   display: block;
-  filter: brightness(0.88) contrast(1.1);
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.1) saturate(1.05);
   transition: transform 0.8s ease;
 }
 
 .hinggi-split-image:hover img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .hinggi-split-image figcaption {
@@ -255,132 +278,250 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 24px 28px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.9rem;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.85rem;
   font-style: italic;
-}
-
-/* ===================== LIST STYLE ===================== */
-.hinggi-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 32px 0;
-}
-
-.hinggi-content ul li {
-  padding: 16px 0 16px 48px;
-  margin-bottom: 16px;
-  position: relative;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.95;
-  border-left: 2px solid rgba(107, 126, 184, 0.2);
-  transition: all 0.25s ease;
-}
-
-.hinggi-content ul li:hover {
-  border-left-color: rgba(107, 126, 184, 0.5);
-  padding-left: 56px;
-  background: rgba(107, 126, 184, 0.04);
-}
-
-.hinggi-content ul li::before {
-  content: '◆';
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  color: #6b7eb8;
-  font-size: 1rem;
-}
-
-.hinggi-content ul li strong {
-  color: #6b7eb8;
-  font-weight: 700;
 }
 
 /* ===================== BACK CTA ===================== */
 .hinggi-back-cta {
   text-align: center;
-  margin-top: 120px;
-  padding-top: 80px;
-  border-top: 1px solid rgba(107, 126, 184, 0.2);
+  margin-top: 140px;
+  padding-top: 100px;
+  border-top: 1px solid rgba(155, 89, 182, 0.15);
 }
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 991px) {
-  .hinggi-hero,
-  .hinggi-split {
-    grid-template-columns: 1fr;
-    gap: 56px;
-  }
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
 
-  .hinggi-heading {
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
-    margin-bottom: 72px;
-    padding: 0 56px;
-  }
-
-  .hinggi-quote {
-    font-size: 1.25rem;
-    padding: 56px 56px;
-  }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .hinggi-section {
     padding: 80px 0;
   }
 
   .hinggi-heading {
-    margin-bottom: 56px;
-    padding: 0 48px;
-  }
-
-  .hinggi-heading::before,
-  .hinggi-heading::after {
-    font-size: 1.2rem;
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 80px;
   }
 
   .hinggi-hero {
-    margin-bottom: 88px;
+    gap: 48px;
+    margin-bottom: 100px;
   }
 
-  .hinggi-text p:first-of-type::first-letter {
-    font-size: 5rem;
+  .hinggi-text p {
+    font-size: 1.08rem;
+  }
+
+  .hinggi-quote {
+    margin: 100px auto;
+    padding: 48px 60px;
   }
 
   .hinggi-content {
-    padding: 44px 36px;
-    margin-bottom: 72px;
+    padding: 56px;
+    margin-bottom: 80px;
+  }
+
+  .hinggi-content h3 {
+    font-size: 2.2rem;
+  }
+
+  .hinggi-split {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hinggi-section {
+    padding: 60px 0;
+  }
+
+  .hinggi-heading {
+    margin-bottom: 60px;
+  }
+
+  .hinggi-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  .hinggi-text {
+    padding: 0;
+  }
+
+  .hinggi-text p {
+    font-size: 1.05rem;
+  }
+
+  .hinggi-quote {
+    margin: 80px auto;
+    padding: 40px 48px;
+  }
+
+  .hinggi-quote::before {
+    font-size: 8rem;
+    left: 40px;
+  }
+
+  .hinggi-content {
+    padding: 48px;
+    margin-bottom: 60px;
   }
 
   .hinggi-content h3 {
     font-size: 2rem;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
 
   .hinggi-content h4 {
-    font-size: 1.25rem;
-    margin: 36px 0 20px 0;
+    font-size: 1.4rem;
   }
 
-  .hinggi-quote {
-    font-size: 1.15rem;
-    padding: 44px 32px;
-    margin: 88px auto;
+  .hinggi-content p {
+    font-size: 1.05rem;
   }
 
-  .hinggi-content ul li {
-    padding-left: 40px;
-  }
-
-  .hinggi-content ul li:hover {
-    padding-left: 48px;
+  .hinggi-split {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
 
   .hinggi-back-cta {
-    margin-top: 88px;
-    padding-top: 64px;
+    margin-top: 100px;
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hinggi-section {
+    padding: 40px 0;
+  }
+
+  .hinggi-heading {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    margin-bottom: 40px;
+  }
+
+  .hinggi-heading::before {
+    height: 40px;
+    top: -30px;
+  }
+
+  .hinggi-hero {
+    margin-bottom: 60px;
+  }
+
+  .hinggi-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .hinggi-quote {
+    margin: 60px auto;
+    padding: 32px 28px;
+    font-size: 1.1rem;
+  }
+
+  .hinggi-quote::before {
+    font-size: 6rem;
+    top: -5px;
+    left: 20px;
+  }
+
+  .hinggi-content {
+    padding: 36px 28px;
+    margin-bottom: 48px;
+  }
+
+  .hinggi-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .hinggi-content h4 {
+    font-size: 1.2rem;
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+
+  .hinggi-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .hinggi-content ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    padding-left: 28px;
+  }
+
+  .hinggi-content ul li::before {
+    width: 12px;
+    top: 10px;
+  }
+
+  .hinggi-back-cta {
+    margin-top: 80px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hinggi-section {
+    padding: 32px 0;
+  }
+
+  .hinggi-heading {
+    margin-bottom: 32px;
+  }
+
+  .hinggi-hero {
+    gap: 32px;
+  }
+
+  .hinggi-text p {
+    margin-bottom: 16px;
+  }
+
+  .hinggi-quote {
+    margin: 48px auto;
+    padding: 24px 20px;
+    font-size: 1rem;
+  }
+
+  .hinggi-quote::before {
+    font-size: 4.5rem;
+    top: 0;
+    left: 12px;
+  }
+
+  .hinggi-content {
+    padding: 28px 20px;
+  }
+
+  .hinggi-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .hinggi-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .hinggi-split {
+    gap: 28px;
+  }
+
+  .hinggi-back-cta {
+    margin-top: 60px;
+    padding-top: 48px;
   }
 }

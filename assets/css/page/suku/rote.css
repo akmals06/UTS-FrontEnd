@@ -1,0 +1,643 @@
+/* ===================== MAIN WRAPPER ===================== */
+.suku-rote-main {
+  background: #0a0e10;
+  color: rgba(255, 255, 255, 0.92);
+  min-height: 100vh;
+}
+
+/* =====================================================
+   HERO 
+   ===================================================== */
+.suku-rote-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0a0e10;
+}
+
+.suku-rote-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: url('../../assets/img/suku/suku-rote.jpg') center/cover;
+  filter: brightness(0.35) contrast(1.15);
+}
+
+.suku-rote-hero__pattern {
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      rgba(20, 184, 166, 0.05) 50px,
+      transparent 100px
+    );
+  animation: patternSlide 20s linear infinite;
+}
+
+@keyframes patternSlide {
+  from { background-position: 0 0; }
+  to { background-position: 100px 0; }
+}
+
+.suku-rote-hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0,60 C300,100 400,40 600,60 C800,80 900,30 1200,60 L1200,120 L0,120 Z' fill='%230a0e10'/%3E%3C/svg%3E")
+    bottom center/100% 100% no-repeat;
+  z-index: 2;
+}
+
+.suku-rote-hero__content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 40px;
+}
+
+.suku-rote-hero__label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #5eead4;
+  padding: 10px 28px;
+  background: rgba(20, 184, 166, 0.15);
+  border-radius: 30px;
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
+}
+
+.suku-rote-hero__title {
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 900;
+  letter-spacing: -5px;
+  color: #fff;
+  margin-bottom: 32px;
+  line-height: 0.9;
+  text-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(135deg, #fff 0%, #5eead4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.suku-rote-hero__subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 48px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.suku-rote-hero__meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.suku-rote-hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #5eead4;
+  backdrop-filter: blur(8px);
+}
+
+.suku-rote-hero__badge-icon {
+  font-size: 1.2rem;
+}
+
+/* =====================================================
+   INTRO 
+   ===================================================== */
+.suku-rote-intro {
+  padding: 150px 0;
+  background: #0a0e10;
+  position: relative;
+}
+
+.suku-rote-intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0,60 C300,20 400,100 600,60 C800,20 900,100 1200,60 L1200,0 L0,0 Z' fill='%230a0e10'/%3E%3C/svg%3E")
+    top center/100% 100% no-repeat;
+}
+
+.suku-rote-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.suku-rote-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.suku-rote-text p {
+  font-size: 1.15rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 32px;
+}
+
+.suku-rote-text p:last-child {
+  margin-bottom: 0;
+}
+
+.suku-rote-text strong {
+  color: #5eead4;
+  font-weight: 700;
+}
+
+.suku-rote-text em {
+  color: #2dd4bf;
+  font-style: italic;
+}
+
+.suku-rote-image figure {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+.suku-rote-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.85) contrast(1.1);
+}
+
+.suku-rote-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    transparent 100%);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* =====================================================
+   QUOTE 
+   ===================================================== */
+.suku-rote-quote {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 80px;
+  background: linear-gradient(135deg,
+    rgba(20, 184, 166, 0.1) 0%,
+    rgba(20, 184, 166, 0.03) 100%);
+  border-radius: 30px;
+  border: 2px solid rgba(20, 184, 166, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.suku-rote-quote::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.1), transparent);
+  border-radius: 50%;
+}
+
+.suku-rote-quote p {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.suku-rote-philosophy-highlight {
+  color: #5eead4;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* =====================================================
+   SECTION STYLING
+   ===================================================== */
+.suku-rote-section {
+  padding: 120px 0;
+  background: #0a0e10;
+  position: relative;
+}
+
+.suku-rote-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0,60 C300,20 400,100 600,60 C800,20 900,100 1200,60 L1200,0 L0,0 Z' fill='rgba(20, 184, 166, 0.03)'/%3E%3C/svg%3E")
+    top center/100% 100% no-repeat;
+}
+
+.suku-rote-section-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.suku-rote-section-number {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #5eead4;
+  background: linear-gradient(135deg,
+    rgba(20, 184, 166, 0.15) 0%,
+    rgba(20, 184, 166, 0.05) 100%);
+  border: 3px solid rgba(20, 184, 166, 0.3);
+  border-radius: 50%;
+  position: relative;
+}
+
+.suku-rote-section-number::before {
+  content: attr(data-number);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #5eead4, #2dd4bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.suku-rote-section-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #14b8a6;
+  margin-bottom: 8px;
+  letter-spacing: -2px;
+}
+
+.suku-rote-section-tagline {
+  font-size: 1.1rem;
+  color: rgba(94, 234, 212, 0.7);
+  font-style: italic;
+}
+
+/* =====================================================
+   CONTENT BLOCKS
+   ===================================================== */
+.suku-rote-block {
+  padding: 56px;
+  background: linear-gradient(135deg,
+    rgba(20, 184, 166, 0.05) 0%,
+    rgba(20, 184, 166, 0.01) 100%);
+  border-left: 4px solid rgba(20, 184, 166, 0.3);
+  border-radius: 0 20px 20px 0;
+  margin-bottom: 48px;
+  transition: all 0.3s ease;
+}
+
+.suku-rote-block:last-child {
+  margin-bottom: 0;
+}
+
+.suku-rote-block:hover {
+  background: rgba(20, 184, 166, 0.08);
+  border-left-color: #14b8a6;
+  transform: translateX(8px);
+}
+
+.suku-rote-block h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #14b8a6;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.suku-rote-block p {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 28px;
+}
+
+.suku-rote-block p:last-of-type {
+  margin-bottom: 0;
+}
+
+.suku-rote-block strong {
+  color: #5eead4;
+  font-weight: 700;
+}
+
+.suku-rote-block em {
+  color: #2dd4bf;
+  font-style: italic;
+}
+
+/* =====================================================
+   LIST STYLING
+   ===================================================== */
+.suku-rote-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.suku-rote-list li {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.suku-rote-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(to right, #14b8a6, #5eead4);
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
+}
+
+.suku-rote-list li:last-child {
+  margin-bottom: 0;
+}
+
+.suku-rote-list strong {
+  color: #5eead4;
+}
+
+.suku-rote-list em {
+  color: #2dd4bf;
+  font-style: italic;
+}
+
+/* =====================================================
+   BACK 
+   ===================================================== */
+.suku-rote-back-cta {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.btn--rote-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 48px;
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--rote-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #5eead4, #2dd4bf);
+  transform: translateX(-100%);
+  transition: all 0.4s ease;
+}
+
+.btn--rote-primary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn--rote-primary:hover {
+  transform: translateX(-8px);
+  box-shadow: 0 12px 40px rgba(20, 184, 166, 0.6);
+}
+
+.btn--rote-primary:hover::before {
+  transform: translateX(0);
+}
+
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+@media (max-width: 1199px) {
+  .suku-rote-container {
+    padding: 0 60px;
+  }
+
+  .suku-rote-row {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .suku-rote-section-header {
+    gap: 32px;
+  }
+
+  .suku-rote-section-number {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+
+  .suku-rote-block {
+    padding: 48px;
+  }
+}
+
+@media (max-width: 991px) {
+  .suku-rote-hero {
+    min-height: 70vh;
+  }
+
+  .suku-rote-intro,
+  .suku-rote-section {
+    padding: 100px 0;
+  }
+
+  .suku-rote-container {
+    padding: 0 40px;
+  }
+
+  .suku-rote-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+
+  .suku-rote-section-number {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  .suku-rote-section-title {
+    font-size: 2.5rem;
+  }
+
+  .suku-rote-block {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .suku-rote-hero__content {
+    padding: 0 28px;
+  }
+
+  .suku-rote-hero__title {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .suku-rote-hero__meta {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .suku-rote-intro,
+  .suku-rote-section {
+    padding: 80px 0;
+  }
+
+  .suku-rote-container {
+    padding: 0 28px;
+  }
+
+  .suku-rote-text p,
+  .suku-rote-block p {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .suku-rote-quote {
+    padding: 40px 32px;
+  }
+
+  .suku-rote-quote p {
+    font-size: 1.2rem;
+  }
+
+  .suku-rote-section-header {
+    margin-bottom: 48px;
+  }
+
+  .suku-rote-section-number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+
+  .suku-rote-section-title {
+    font-size: 2rem;
+  }
+
+  .suku-rote-section-tagline {
+    font-size: 1rem;
+  }
+
+  .suku-rote-block {
+    padding: 32px;
+  }
+
+  .suku-rote-block h3 {
+    font-size: 1.5rem;
+  }
+
+  .suku-rote-list li {
+    font-size: 1rem;
+    padding-left: 32px;
+  }
+
+  .suku-rote-list li::before {
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .suku-rote-container {
+    padding: 0 24px;
+  }
+
+  .suku-rote-hero__label {
+    font-size: 0.7rem;
+    padding: 8px 20px;
+  }
+
+  .suku-rote-quote {
+    padding: 32px 24px;
+  }
+
+  .suku-rote-quote p {
+    font-size: 1.1rem;
+  }
+
+  .suku-rote-block {
+    padding: 28px;
+  }
+
+  .suku-rote-section-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .btn--rote-primary {
+    font-size: 1rem;
+    padding: 16px 36px;
+  }
+}

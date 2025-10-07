@@ -1,10 +1,3 @@
-/* =====================================================
-   ALAM-KELIMUTU.CSS - 2-Column Sidebar Layout
-   For: danau-kelimutu.html
-   Theme: Three-lake mystery, volcanic cyan
-   ===================================================== */
-
-/* ===================== DETAIL HERO ===================== */
 .alam-detail-hero {
   position: relative;
   height: 65vh;
@@ -33,7 +26,7 @@
 .alam-detail-hero__overlay {
   position: absolute;
   inset: 0;
-  background: 
+  background:
     radial-gradient(ellipse at 30% 60%, rgba(77, 208, 225, 0.1) 0%, transparent 60%),
     linear-gradient(to bottom,
       transparent 0%,
@@ -107,10 +100,12 @@
   letter-spacing: 3px;
 }
 
-/* ===================== DETAIL MAIN ===================== */
+/* =============================================
+   KONTEN UTAMA
+   ============================================= */
 .alam-detail-main {
   padding: calc(var(--space-2xl) * 2.5) 0;
-  background: 
+  background:
     radial-gradient(ellipse at 50% 0%, rgba(77, 208, 225, 0.05) 0%, transparent 60%),
     linear-gradient(to bottom,
       rgba(0, 0, 0, 0.98) 0%,
@@ -119,14 +114,9 @@
       rgba(15, 20, 25, 0.85) 100%);
 }
 
-/* Container Wide */
-.container-wide {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 var(--space-2xl);
-}
-
-/* ===================== 2-COLUMN LAYOUT ===================== */
+/* =============================================
+   LAYOUT 2 KOLOM
+   ============================================= */
 .alam-detail-layout {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -134,7 +124,9 @@
   align-items: start;
 }
 
-/* ===================== SIDEBAR (STICKY) ===================== */
+/* =============================================
+  SIDEBAR 
+   ============================================= */
 .alam-detail-sidebar {
   position: sticky;
   top: calc(var(--space-2xl) + 20px);
@@ -143,11 +135,8 @@
   gap: var(--space-xl);
 }
 
-/* Navigation Card */
 .alam-detail-nav {
-  background: linear-gradient(135deg,
-    rgba(77, 208, 225, 0.08) 0%,
-    rgba(38, 198, 218, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(77, 208, 225, 0.08) 0%, rgba(38, 198, 218, 0.05) 100%);
   border: 1px solid rgba(77, 208, 225, 0.2);
   border-radius: 16px;
   padding: var(--space-lg);
@@ -189,11 +178,8 @@
   transform: translateX(4px);
 }
 
-/* Quick Info Card */
 .alam-detail-info {
-  background: linear-gradient(135deg,
-    rgba(10, 20, 30, 0.6) 0%,
-    rgba(15, 25, 35, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(10, 20, 30, 0.6) 0%, rgba(15, 25, 35, 0.5) 100%);
   border: 1px solid rgba(77, 208, 225, 0.15);
   border-radius: 16px;
   padding: var(--space-lg);
@@ -223,9 +209,12 @@
   border-bottom: none;
 }
 
-.alam-detail-info__item .icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
+.alam-detail-info__item > .fa {
+  font-size: 1.2rem;
+  color: #4dd0e1;
+  margin-top: 4px;
+  text-align: center;
+  width: 20px;
 }
 
 .alam-detail-info__item strong {
@@ -242,7 +231,9 @@
   margin: 0;
 }
 
-/* ===================== CONTENT AREA ===================== */
+/* =============================================
+   AREA KONTEN ARTIKEL
+   ============================================= */
 .alam-detail-content {
   max-width: 1000px;
 }
@@ -251,27 +242,7 @@
   margin-bottom: calc(var(--space-2xl) * 2);
 }
 
-.section-title {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: calc(var(--space-2xl) * 1.5);
-  letter-spacing: -1px;
-  position: relative;
-  padding-bottom: var(--space-md);
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #4dd0e1 0%, transparent 100%);
-}
-
-/* Grid Layout (text + image) */
+/* Komponen Artikel */
 .alam-detail-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -287,24 +258,6 @@
   margin-bottom: var(--space-lg);
 }
 
-.lead-text {
-  font-size: 1.2rem;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.dropcap {
-  float: left;
-  font-size: 4rem;
-  line-height: 1;
-  font-weight: 900;
-  margin: 0 0.5rem 0 0;
-  background: linear-gradient(135deg, #4dd0e1 0%, #26c6da 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .alam-detail-text strong {
   color: #4dd0e1;
   font-weight: 700;
@@ -315,7 +268,6 @@
   font-style: italic;
 }
 
-/* Image dengan figcaption */
 .alam-detail-image {
   position: relative;
   border-radius: 16px;
@@ -340,38 +292,22 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
   padding: var(--space-lg);
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.85rem;
   line-height: 1.6;
 }
 
-/* Quote */
 .alam-detail-quote {
   position: relative;
   margin: calc(var(--space-2xl) * 2) 0;
   padding: calc(var(--space-xl) * 1.5) var(--space-2xl);
-  background: linear-gradient(135deg,
-    rgba(77, 208, 225, 0.12) 0%,
-    rgba(38, 198, 218, 0.08) 50%,
-    rgba(77, 208, 225, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(77, 208, 225, 0.12) 0%, rgba(38, 198, 218, 0.08) 50%, rgba(77, 208, 225, 0.05) 100%);
   border-left: 4px solid #4dd0e1;
   border-radius: 0 16px 16px 0;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.quote-mark {
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  font-size: 5rem;
-  color: rgba(77, 208, 225, 0.2);
-  font-family: Georgia, serif;
-  line-height: 1;
 }
 
 .alam-detail-quote p {
@@ -387,83 +323,9 @@
   font-weight: 700;
 }
 
-/* ===================== TIMELINE ===================== */
-.timeline {
-  position: relative;
-  padding-left: 40px;
-  margin: var(--space-2xl) 0;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 10px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom,
-    #4dd0e1 0%,
-    rgba(77, 208, 225, 0.3) 100%);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: calc(var(--space-2xl) * 1.5);
-}
-
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
-
-.timeline-marker {
-  position: absolute;
-  left: -40px;
-  top: 0;
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, #4dd0e1 0%, #26c6da 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 900;
-  color: #000;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.9), 0 0 20px rgba(77, 208, 225, 0.4);
-  z-index: 2;
-}
-
-.timeline-content {
-  background: linear-gradient(135deg,
-    rgba(10, 20, 30, 0.6) 0%,
-    rgba(15, 25, 35, 0.4) 100%);
-  border: 1px solid rgba(77, 208, 225, 0.2);
-  border-radius: 12px;
-  padding: var(--space-lg);
-  transition: all 0.3s ease;
-}
-
-.timeline-content:hover {
-  border-color: #4dd0e1;
-  transform: translateX(8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.timeline-content h3 {
-  font-size: 1.2rem;
-  color: #4dd0e1;
-  font-weight: 700;
-  margin-bottom: var(--space-sm);
-}
-
-.timeline-content p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0;
-}
-
-/* ===================== KAWAH CARDS GRID ===================== */
+/* =============================================
+   KOMPONEN SPESIFIK
+   ============================================= */
 .kawah-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -472,9 +334,7 @@
 }
 
 .kawah-card {
-  background: linear-gradient(135deg,
-    rgba(10, 20, 30, 0.7) 0%,
-    rgba(15, 25, 35, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(10, 20, 30, 0.7) 0%, rgba(15, 25, 35, 0.5) 100%);
   border: 1px solid rgba(77, 208, 225, 0.2);
   border-radius: 16px;
   overflow: hidden;
@@ -485,27 +345,14 @@
 .kawah-card:hover {
   transform: translateY(-8px);
   border-color: #4dd0e1;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6),
-              0 0 30px rgba(77, 208, 225, 0.2);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(77, 208, 225, 0.2);
 }
 
 .kawah-card__header {
   padding: var(--space-lg);
-  background: linear-gradient(135deg,
-    rgba(77, 208, 225, 0.15) 0%,
-    rgba(38, 198, 218, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(77, 208, 225, 0.15) 0%, rgba(38, 198, 218, 0.08) 100%);
   border-bottom: 1px solid rgba(77, 208, 225, 0.2);
   position: relative;
-}
-
-.kawah-number {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 3rem;
-  font-weight: 900;
-  color: rgba(77, 208, 225, 0.15);
-  line-height: 1;
 }
 
 .kawah-card__header h3 {
@@ -539,7 +386,9 @@
 }
 
 .kawah-stat:last-of-type {
-  margin-bottom: var(--space-lg);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .kawah-label {
@@ -564,23 +413,22 @@
   margin: 0;
 }
 
-/* ===================== BACK BUTTON ===================== */
+/* =============================================
+   TOMBOL KEMBALI
+   ============================================= */
 .alam-detail-back {
   margin-top: calc(var(--space-2xl) * 2);
   text-align: center;
 }
 
-.btn--large {
-  padding: 16px 40px;
-  font-size: 1rem;
-}
-
-/* ===================== RESPONSIVE ===================== */
+/* =============================================
+   RESPONSIVE
+   ============================================= */
 @media (max-width: 1199px) {
   .alam-detail-layout {
     grid-template-columns: 1fr;
   }
-  
+
   .alam-detail-sidebar {
     position: static;
     display: grid;
@@ -588,7 +436,7 @@
     gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
   }
-  
+
   .kawah-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -605,16 +453,5 @@
   
   .kawah-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .timeline {
-    padding-left: 30px;
-  }
-  
-  .timeline-marker {
-    left: -30px;
-    width: 20px;
-    height: 20px;
-    font-size: 0.6rem;
   }
 }

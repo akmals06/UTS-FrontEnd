@@ -1,92 +1,76 @@
-/* =====================================================
-   JAGUNG.CSS - Golden Corn Theme
-   For: jagung-bose.html
-   Theme: Warm, appetizing, homey comfort food
-   ===================================================== */
-
-/* ===================== JAGUNG MAIN WRAPPER ===================== */
 .jagung-main {
-  background: linear-gradient(to bottom,
-    #1a1510 0%,
-    #0f0c08 100%);
-  color: rgba(255, 255, 255, 0.9);
+  background: #0a0908;
+  color: rgba(255, 255, 255, 0.92);
   min-height: 100vh;
 }
 
 .jagung-section {
-  padding: 100px 0;
-  background: radial-gradient(ellipse at center, rgba(244, 196, 48, 0.05) 0%, transparent 60%);
+  padding: 120px 0;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(218, 165, 32, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(184, 134, 11, 0.06) 0%, transparent 50%);
 }
 
 /* ===================== HEADING ===================== */
 .jagung-heading {
-  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
-  color: #f4c430;
-  margin-bottom: 72px;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  color: #daa520;
+  margin-bottom: 100px;
   text-align: center;
   font-weight: 900;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
+  line-height: 1;
   position: relative;
-  padding-bottom: 28px;
 }
 
-.jagung-heading::after {
+.jagung-heading::before {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #f4c430, transparent);
-  border-radius: 2px;
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, #daa520);
 }
 
 .jagung-location {
   display: block;
-  color: rgba(244, 196, 48, 0.55);
-  font-size: 0.32em;
+  color: rgba(218, 165, 32, 0.5);
+  font-size: 0.25em;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  margin-top: 16px;
+  letter-spacing: 8px;
+  margin-top: 24px;
 }
 
-/* ===================== HERO SECTION ===================== */
+/* ===================== HERO LAYOUT ===================== */
 .jagung-hero {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 72px;
-  margin-bottom: 100px;
-  align-items: center;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 64px;
+  margin-bottom: 120px;
+  align-items: start;
 }
 
 .jagung-hero-image {
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 
-    0 25px 80px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(244, 196, 48, 0.15);
   position: relative;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.jagung-hero-image:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 
-    0 35px 100px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(244, 196, 48, 0.3);
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .jagung-hero-image img {
   width: 100%;
+  height: auto;
   display: block;
-  filter: brightness(0.92) contrast(1.08) saturate(1.15);
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.12) saturate(1.05);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.jagung-hero-image:hover img {
-  transform: scale(1.05);
+.jagung-hero:hover .jagung-hero-image img {
+  transform: scale(1.08);
 }
 
 .jagung-hero-image figcaption {
@@ -94,152 +78,135 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 24px 28px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5), transparent);
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.95rem;
-  font-weight: 500;
-  backdrop-filter: blur(6px);
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
-/* ===================== TEXT CONTENT ===================== */
+.jagung-text {
+  padding: 40px 0;
+}
+
 .jagung-text p {
   font-size: 1.15rem;
   line-height: 2;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
-.jagung-text p:first-of-type::first-letter {
-  float: left;
-  font-size: 6rem;
-  line-height: 0.82;
-  font-weight: 900;
-  margin: 0.08em 0.12em 0 0;
-  color: #f4c430;
-  font-family: Georgia, serif;
-  text-shadow: 0 4px 20px rgba(244, 196, 48, 0.4);
+.jagung-text p:last-child {
+  margin-bottom: 0;
 }
 
 .jagung-text strong {
-  color: #f4c430;
+  color: #daa520;
   font-weight: 700;
-}
-
-.jagung-text em {
-  color: #e6b32d;
-  font-style: italic;
 }
 
 /* ===================== QUOTE ===================== */
 .jagung-quote {
-  margin: 100px auto;
-  padding: 56px 64px;
-  max-width: 1000px;
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 60px 80px;
   background: linear-gradient(135deg,
-    rgba(244, 196, 48, 0.1) 0%,
-    rgba(244, 196, 48, 0.04) 100%);
-  border: 2px solid rgba(244, 196, 48, 0.2);
-  border-radius: 16px;
-  font-size: 1.5rem;
-  line-height: 1.9;
-  color: rgba(255, 255, 255, 0.95);
-  font-style: italic;
+    rgba(218, 165, 32, 0.1) 0%,
+    rgba(218, 165, 32, 0.04) 100%);
+  border-left: 6px solid #daa520;
+  border-radius: 0 16px 16px 0;
   text-align: center;
   position: relative;
-  box-shadow: 
-    0 15px 60px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(244, 196, 48, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .jagung-quote::before {
   content: '"';
   position: absolute;
-  top: -15px;
-  left: 40px;
-  font-size: 7rem;
-  color: rgba(244, 196, 48, 0.15);
+  top: -10px;
+  left: 60px;
+  font-size: 10rem;
+  color: rgba(218, 165, 32, 0.1);
   font-family: Georgia, serif;
   line-height: 1;
 }
 
 .jagung-quote-highlight {
-  color: #f4c430;
+  color: #daa520;
   font-weight: 700;
-  font-style: normal;
-  text-shadow: 0 0 25px rgba(244, 196, 48, 0.25);
+  font-style: italic;
 }
 
-/* ===================== CONTENT CARD ===================== */
+/* ===================== CONTENT CARDS ===================== */
 .jagung-card {
-  margin-bottom: 88px;
-  padding: 56px;
+  max-width: 1100px;
+  margin: 0 auto 100px;
+  padding: 72px;
   background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.02) 0%,
     rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(244, 196, 48, 0.15);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  transition: all 0.4s ease;
-}
-
-.jagung-card:hover {
-  background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.06) 0%,
-    rgba(255, 255, 255, 0.02) 100%);
-  border-color: rgba(244, 196, 48, 0.3);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  border-top: 2px solid rgba(218, 165, 32, 0.2);
+  border-bottom: 2px solid rgba(218, 165, 32, 0.2);
+  border-radius: 8px;
 }
 
 .jagung-card h3 {
-  font-size: 2.2rem;
-  color: #f4c430;
+  font-size: 2.5rem;
+  color: #daa520;
   font-weight: 900;
-  margin-bottom: 36px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid rgba(244, 196, 48, 0.2);
-  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+  text-align: center;
 }
 
 .jagung-card p {
-  font-size: 1.14rem;
+  font-size: 1.15rem;
   line-height: 2;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.88);
   margin-bottom: 28px;
+  text-align: justify;
+}
+
+.jagung-card p:last-of-type {
+  margin-bottom: 0;
+}
+
+.jagung-card strong {
+  color: #daa520;
+  font-weight: 700;
 }
 
 /* ===================== SPLIT LAYOUT ===================== */
 .jagung-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  margin-bottom: 88px;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
   align-items: center;
-  padding: 56px;
-  background: rgba(244, 196, 48, 0.03);
-  border: 1px solid rgba(244, 196, 48, 0.12);
-  border-radius: 20px;
+  margin-top: 48px;
 }
 
 .jagung-split-text p {
-  font-size: 1.14rem;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+}
+
+.jagung-split-text p:last-child {
+  margin-bottom: 0;
 }
 
 .jagung-split-image {
-  border-radius: 16px;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
 }
 
 .jagung-split-image img {
   width: 100%;
+  height: auto;
   display: block;
-  filter: brightness(0.92) contrast(1.08);
-  transition: transform 0.6s ease;
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.1);
+  transition: transform 0.8s ease;
 }
 
 .jagung-split-image:hover img {
@@ -251,82 +218,224 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px 24px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.92), transparent);
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
-/* ===================== BACK CTA ===================== */
+/* ===================== BACK  ===================== */
 .jagung-back-cta {
   text-align: center;
-  margin-top: 100px;
-  padding-top: 72px;
-  border-top: 2px solid rgba(244, 196, 48, 0.15);
+  margin-top: 140px;
+  padding-top: 100px;
+  border-top: 1px solid rgba(218, 165, 32, 0.15);
 }
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 991px) {
-  .jagung-hero,
-  .jagung-split {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
 
-  .jagung-heading {
-    font-size: clamp(2.2rem, 6vw, 3.5rem);
-  }
-
-  .jagung-quote {
-    font-size: 1.25rem;
-    padding: 48px;
-  }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .jagung-section {
     padding: 80px 0;
   }
 
   .jagung-heading {
-    margin-bottom: 56px;
-    padding-bottom: 20px;
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 80px;
   }
 
   .jagung-hero {
-    margin-bottom: 72px;
+    gap: 48px;
+    margin-bottom: 100px;
   }
 
-  .jagung-text p:first-of-type::first-letter {
-    font-size: 4.5rem;
-  }
-
-  .jagung-card,
-  .jagung-split {
-    padding: 36px;
-    margin-bottom: 64px;
-  }
-
-  .jagung-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 28px;
+  .jagung-text p {
+    font-size: 1.08rem;
   }
 
   .jagung-quote {
-    font-size: 1.15rem;
-    padding: 36px;
-    margin: 72px auto;
+    margin: 100px auto;
+    padding: 48px 60px;
+  }
+
+  .jagung-card {
+    padding: 56px;
+    margin-bottom: 80px;
+  }
+
+  .jagung-card h3 {
+    font-size: 2.2rem;
+  }
+
+  .jagung-split {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 991px) {
+  .jagung-section {
+    padding: 60px 0;
+  }
+
+  .jagung-heading {
+    margin-bottom: 60px;
+  }
+
+  .jagung-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  .jagung-text {
+    padding: 0;
+  }
+
+  .jagung-text p {
+    font-size: 1.05rem;
+  }
+
+  .jagung-quote {
+    margin: 80px auto;
+    padding: 40px 48px;
   }
 
   .jagung-quote::before {
-    font-size: 5rem;
-    top: -10px;
-    left: 24px;
+    font-size: 8rem;
+    left: 40px;
+  }
+
+  .jagung-card {
+    padding: 48px;
+    margin-bottom: 60px;
+  }
+
+  .jagung-card h3 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .jagung-card p {
+    font-size: 1.08rem;
+  }
+
+  .jagung-split {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
 
   .jagung-back-cta {
-    margin-top: 72px;
-    padding-top: 56px;
+    margin-top: 100px;
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .jagung-section {
+    padding: 40px 0;
+  }
+
+  .jagung-heading {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    margin-bottom: 40px;
+  }
+
+  .jagung-heading::before {
+    height: 40px;
+    top: -30px;
+  }
+
+  .jagung-hero {
+    margin-bottom: 60px;
+  }
+
+  .jagung-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .jagung-quote {
+    margin: 60px auto;
+    padding: 32px 28px;
+    font-size: 1.1rem;
+  }
+
+  .jagung-quote::before {
+    font-size: 6rem;
+    top: -5px;
+    left: 20px;
+  }
+
+  .jagung-card {
+    padding: 36px 28px;
+    margin-bottom: 48px;
+  }
+
+  .jagung-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .jagung-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .jagung-back-cta {
+    margin-top: 80px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jagung-section {
+    padding: 32px 0;
+  }
+
+  .jagung-heading {
+    margin-bottom: 32px;
+  }
+
+  .jagung-hero {
+    gap: 32px;
+  }
+
+  .jagung-text p {
+    margin-bottom: 16px;
+  }
+
+  .jagung-quote {
+    margin: 48px auto;
+    padding: 24px 20px;
+    font-size: 1rem;
+  }
+
+  .jagung-quote::before {
+    font-size: 4.5rem;
+    top: 0;
+    left: 12px;
+  }
+
+  .jagung-card {
+    padding: 28px 20px;
+  }
+
+  .jagung-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .jagung-split {
+    gap: 28px;
+  }
+
+  .jagung-back-cta {
+    margin-top: 60px;
+    padding-top: 48px;
   }
 }

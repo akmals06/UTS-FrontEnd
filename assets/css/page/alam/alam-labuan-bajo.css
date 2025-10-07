@@ -1,19 +1,14 @@
-/* =====================================================
-   ALAM-LABUAN-BAJO.CSS - Magazine Editorial Layout
-   For: labuan-bajo.html
-   Theme: Premium travel destination
-   ===================================================== */
-
-/* ===================== FULLSCREEN HERO ===================== */
 .labuan-hero-full {
   position: relative;
   height: 100vh;
   min-height: 700px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   overflow: hidden;
-  background: #000;
+  background: #050a0f;
 }
 
 .labuan-hero-full__bg {
@@ -21,9 +16,10 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  z-index: 1;
-  filter: brightness(0.7) saturate(1.2);
-  transition: transform 15s ease;
+  opacity: 0.45;
+  filter: brightness(0.7) saturate(1.1);
+  transform: scale(1.05);
+  transition: transform 15s ease-out;
 }
 
 .labuan-hero-full:hover .labuan-hero-full__bg {
@@ -33,393 +29,283 @@
 .labuan-hero-full__overlay {
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(ellipse at 50% 50%, rgba(77, 208, 225, 0.1) 0%, transparent 60%),
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(26, 159, 196, 0.15) 0%, transparent 50%),
     linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.7) 100%);
-  z-index: 2;
+      transparent 0%,
+      rgba(5, 10, 15, 0.6) 50%,
+      rgba(5, 10, 15, 0.95) 100%);
 }
 
 .labuan-hero-full__content {
   position: relative;
   z-index: 3;
-  text-align: center;
-  max-width: 900px;
-  padding: 0 var(--space-2xl);
+  padding: 0 var(--space-lg);
+  color: var(--white);
 }
 
 .labuan-hero-full__tag {
   display: inline-block;
-  font-size: 0.75rem;
-  letter-spacing: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #4dd0e1;
-  padding: 8px 20px;
-  border: 1px solid rgba(77, 208, 225, 0.4);
-  border-radius: 20px;
-  margin-bottom: var(--space-xl);
-  backdrop-filter: blur(10px);
-  background: rgba(77, 208, 225, 0.1);
+  letter-spacing: 2px;
+  color: #26c6da;
+  margin-bottom: var(--space-md);
 }
 
 .labuan-hero-full__title {
-  font-size: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(3rem, 7vw, 6rem);
   font-weight: 900;
-  line-height: 0.9;
-  color: #fff;
-  margin-bottom: var(--space-lg);
-  letter-spacing: -4px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  letter-spacing: -3px;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+  margin-bottom: var(--space-sm);
 }
 
 .labuan-hero-full__subtitle {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin-bottom: calc(var(--space-2xl) * 2);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-light);
+  opacity: 0.9;
 }
 
 .labuan-hero-full__scroll {
-  display: inline-block;
-  color: #4dd0e1;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 12px 24px;
-  border-radius: 30px;
-  border: 2px solid rgba(77, 208, 225, 0.4);
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  font-weight: 700;
+  opacity: 0.8;
   transition: all 0.3s ease;
-  animation: pulse 2s infinite;
 }
 
 .labuan-hero-full__scroll:hover {
-  background: rgba(77, 208, 225, 0.2);
-  border-color: #4dd0e1;
-  transform: translateY(-4px);
+  opacity: 1;
+  transform: translateX(-50%) translateY(5px);
 }
 
-/* ===================== MAIN CONTENT ===================== */
+/* =============================================
+   KONTEN UTAMA
+   ============================================= */
 .labuan-main {
   background: linear-gradient(to bottom,
-    rgba(0, 0, 0, 0.98) 0%,
-    rgba(5, 10, 15, 0.95) 50%,
-    rgba(10, 15, 20, 0.9) 100%);
-  padding: calc(var(--space-2xl) * 3) 0;
+      rgba(5, 10, 15, 0.98) 0%,
+      rgba(10, 15, 20, 0.95) 50%,
+      rgba(15, 20, 25, 0.9) 100%);
+  padding: calc(var(--space-2xl) * 2) 0;
 }
 
-/* ===================== ARTICLE CONTAINER ===================== */
 .labuan-article {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 var(--space-2xl);
+  color: var(--text);
 }
 
-/* Lead Section */
 .labuan-article__lead {
-  max-width: 800px;
-  margin: 0 auto calc(var(--space-2xl) * 2);
   text-align: center;
+  margin-bottom: var(--space-2xl);
+  padding: 0 var(--space-lg);
 }
 
 .labuan-article__lead h2 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: var(--space-xl);
-  line-height: 1.2;
-  letter-spacing: -1px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+  color: var(--white);
 }
 
 .lead-large {
-  font-size: 1.3rem;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-light);
 }
 
-/* Full Width Image */
+/* =============================================
+   KOMPONEN KONTEN
+   ============================================= */
+
+/* Gambar Lebar */
 .labuan-figure-wide {
-  width: 100%;
-  max-width: 1400px;
-  margin: calc(var(--space-2xl) * 2) auto;
-  border-radius: 20px;
+  margin: calc(var(--space-2xl) * 1.5) 0;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(77, 208, 225, 0.2);
+  border: 1px solid rgba(38, 198, 218, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .labuan-figure-wide img {
   width: 100%;
   display: block;
-  filter: brightness(0.9) saturate(1.1);
-  transition: transform 0.6s ease;
-}
-
-.labuan-figure-wide:hover img {
-  transform: scale(1.03);
 }
 
 .labuan-figure-wide figcaption {
-  padding: var(--space-lg);
-  background: rgba(0, 0, 0, 0.8);
-  color: rgba(255, 255, 255, 0.8);
+  padding: var(--space-md);
+  background: rgba(5, 10, 15, 0.8);
   font-size: 0.9rem;
   text-align: center;
-  font-style: italic;
+  color: var(--text-muted);
 }
 
-/* Text Block */
+/* Blok Teks */
 .labuan-text-block {
-  max-width: 750px;
-  margin: calc(var(--space-2xl) * 2) auto;
-}
-
-.labuan-text-block p {
-  font-size: 1.1rem;
+  padding: 0 var(--space-lg);
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: var(--space-xl);
+  font-size: 1.05rem;
 }
 
 .labuan-text-block strong {
-  color: #4dd0e1;
-  font-weight: 600;
+  color: #26c6da;
 }
 
-/* Highlight Box */
 .labuan-highlight-box {
   display: flex;
+  align-items: flex-start;
   gap: var(--space-lg);
+  margin-top: var(--space-xl);
   padding: var(--space-xl);
-  background: linear-gradient(135deg,
-    rgba(77, 208, 225, 0.12) 0%,
-    rgba(38, 198, 218, 0.06) 100%);
-  border-left: 4px solid #4dd0e1;
-  border-radius: 0 12px 12px 0;
-  margin: var(--space-2xl) 0;
-}
-
-.labuan-highlight-icon {
-  font-size: 2.5rem;
-  flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(38, 198, 218, 0.1) 0%, rgba(38, 198, 218, 0.05) 100%);
+  border: 1px solid rgba(38, 198, 218, 0.2);
+  border-radius: 12px;
 }
 
 .labuan-highlight-box strong {
   display: block;
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: var(--space-sm);
+  color: var(--white);
+  margin-bottom: var(--space-xs);
 }
 
 .labuan-highlight-box p {
-  color: rgba(255, 255, 255, 0.8);
   margin: 0;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  color: var(--text-light);
 }
 
-/* ===================== SPLIT GRID ===================== */
 .labuan-split-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: calc(var(--space-2xl) * 2);
-  margin: calc(var(--space-2xl) * 2) 0;
+  gap: var(--space-xl);
   align-items: center;
+  margin: calc(var(--space-2xl) * 2) 0;
 }
 
 .labuan-split-content h3 {
-  font-size: 2rem;
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: var(--space-xl);
-}
-
-/* Simple Timeline */
-.labuan-timeline-simple {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xl);
-}
-
-.timeline-dot {
-  display: inline-block;
-  padding: 6px 16px;
-  background: linear-gradient(135deg, #4dd0e1 0%, #26c6da 100%);
-  color: #000;
-  font-weight: 900;
-  font-size: 0.85rem;
-  border-radius: 20px;
-  margin-bottom: var(--space-sm);
-}
-
-.labuan-timeline-simple p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.8;
+  font-size: 1.5rem;
+  color: var(--white);
   margin-bottom: var(--space-lg);
-}
-
-.labuan-split-image {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(77, 208, 225, 0.2);
 }
 
 .labuan-split-image img {
   width: 100%;
-  display: block;
-  filter: brightness(0.9) saturate(1.1);
+  border-radius: 12px;
 }
 
-/* ===================== HIGHLIGHTS SECTION ===================== */
+.labuan-timeline-simple {
+  border-left: 2px solid rgba(38, 198, 218, 0.3);
+  padding-left: var(--space-lg);
+}
+
+.labuan-timeline-simple > div {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.3rem;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background: #26c6da;
+  border-radius: 50%;
+  border: 3px solid var(--bg-dark);
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* =============================================
+   KARTU FITUR
+   ============================================= */
 .labuan-highlights {
-  margin: calc(var(--space-2xl) * 3) 0;
-}
-
-.labuan-section-title {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 900;
-  color: #fff;
+  margin-top: calc(var(--space-2xl) * 2);
   text-align: center;
-  margin-bottom: calc(var(--space-2xl) * 1.5);
-  letter-spacing: -1px;
 }
 
 .labuan-cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--space-xl);
-  max-width: 900px;
-  margin: 0 auto;
+  margin-top: var(--space-xl);
 }
 
 .labuan-feature-card {
-  padding: var(--space-2xl);
-  background: linear-gradient(135deg,
-    rgba(10, 20, 30, 0.7) 0%,
-    rgba(15, 25, 35, 0.5) 100%);
-  border: 1px solid rgba(77, 208, 225, 0.2);
+  background: linear-gradient(135deg, rgba(10, 20, 30, 0.7) 0%, rgba(15, 25, 35, 0.5) 100%);
+  border: 1px solid rgba(38, 198, 218, 0.2);
   border-radius: 16px;
-  transition: all 0.4s ease;
+  padding: var(--space-xl);
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .labuan-feature-card:hover {
   transform: translateY(-8px);
-  border-color: #4dd0e1;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-  background: linear-gradient(135deg,
-    rgba(15, 25, 35, 0.8) 0%,
-    rgba(20, 30, 40, 0.6) 100%);
-}
-
-.labuan-feature-card__icon {
-  font-size: 3rem;
-  margin-bottom: var(--space-md);
+  border-color: #26c6da;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .labuan-feature-card h4 {
-  font-size: 1.4rem;
-  color: #fff;
-  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--white);
   margin-bottom: var(--space-sm);
 }
 
 .labuan-feature-card p {
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  color: var(--text-light);
   line-height: 1.7;
-  margin: 0;
 }
 
-/* ===================== LARGE QUOTE ===================== */
 .labuan-quote-large {
-  max-width: 900px;
-  margin: calc(var(--space-2xl) * 3) auto;
-  padding: calc(var(--space-2xl) * 2);
-  background: linear-gradient(135deg,
-    rgba(77, 208, 225, 0.15) 0%,
-    rgba(38, 198, 218, 0.08) 100%);
-  border-left: 6px solid #4dd0e1;
-  border-radius: 0 20px 20px 0;
-  position: relative;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  margin: calc(var(--space-2xl) * 2) 0;
+  text-align: center;
+  padding: var(--space-xl) 0;
+  border-top: 1px solid rgba(38, 198, 218, 0.2);
+  border-bottom: 1px solid rgba(38, 198, 218, 0.2);
 }
 
-.labuan-quote-mark {
-  position: absolute;
-  top: -30px;
-  left: 30px;
-  font-size: 8rem;
-  color: rgba(77, 208, 225, 0.15);
-  font-family: Georgia, serif;
+.labuan-quote-large .labuan-quote-mark {
+  font-size: 4rem;
+  color: #26c6da;
   line-height: 1;
 }
 
 .labuan-quote-large p {
-  font-size: 1.4rem;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
   font-style: italic;
-  font-weight: 300;
-  margin: 0;
-  position: relative;
-  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-light);
 }
 
-/* ===================== BACK CTA ===================== */
+/* Tombol Kembali */
 .labuan-back-cta {
   text-align: center;
-  margin-top: calc(var(--space-2xl) * 3);
-  padding-top: calc(var(--space-2xl) * 2);
-  border-top: 1px solid rgba(77, 208, 225, 0.1);
+  margin-top: var(--space-2xl);
 }
 
-/* ===================== ANIMATIONS ===================== */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 991px) {
+/* =============================================
+    RESPONSIVE
+   ============================================= */
+@media (max-width: 767px) {
   .labuan-split-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
-  
-  .labuan-cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
-@media (max-width: 767px) {
-  .labuan-hero-full__title {
-    font-size: clamp(3rem, 10vw, 5rem);
-  }
-  
-  .labuan-text-block,
-  .labuan-article__lead {
-    padding: 0 var(--space-lg);
-  }
-  
-  .labuan-highlight-box {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .labuan-quote-mark {
-    font-size: 5rem;
-    top: -20px;
-    left: 20px;
-  }
-  
-  .labuan-quote-large p {
-    font-size: 1.1rem;
+  .labuan-split-image {
+    order: -1; 
   }
 }

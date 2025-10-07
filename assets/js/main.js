@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  // ==================== CACHE DOM ====================
+  // ==================== DOM ====================
   const DOM = {
     navToggle: document.getElementById('navToggle'),
     navLinks: document.getElementById('navLinks'),
@@ -12,7 +12,7 @@
     filterStats: document.getElementById('filterStats')
   };
 
-  // ==================== CHECK IF INDEX OR DETAIL PAGE ====================
+  // ==================== DETAIL PAGE ====================
   const isIndexPage = document.querySelector('.category-grid, .rumahadat-grid, .alam-grid, .makanan-grid, .pakaian-grid, .seni-grid, .tradisi-grid, .suku-grid') !== null;
 
   // ==================== NAVBAR SCROLL ====================
@@ -132,140 +132,9 @@
     });
   }
 
-  // ==================== FILTER SYSTEM (INDEX PAGES ONLY) ====================
-  function initFilters() {
-    // SKIP if not index page
-    if (!isIndexPage) return;
+  
 
-    const cards = document.querySelectorAll(
-      '.rumahadat-card, .category-card, .alam-card, .makanan-card, ' +
-      '.pakaian-card, .seni-card, .tradisi-card, .suku-card'
-    );
-    
-    if (cards.length === 0) return;
-
-    let currentRegion = 'all';
-    let currentSearch = '';
-
-    function filterCards() {
-      let visibleCount = 0;
-      
-      cards.forEach(card => {
-        const region = card.getAttribute('data-region') || '';
-        const tags = (card.getAttribute('data-tags') || '').toLowerCase();
-        
-        const titleEl = card.querySelector(
-          '.rumahadat-card__title, .category-card__title, .alam-card__title, ' +
-          '.makanan-card__title, .pakaian-card__title, .seni-card__title, ' +
-          '.tradisi-card__title, .suku-card__title'
-        );
-        const descEl = card.querySelector(
-          '.rumahadat-card__desc, .category-card__desc, .alam-card__desc, ' +
-          '.makanan-card__desc, .pakaian-card__desc, .seni-card__desc, ' +
-          '.tradisi-card__desc, .suku-card__desc'
-        );
-        const locationEl = card.querySelector(
-          '.rumahadat-card__location, .alam-card__location, .makanan-card__location, ' +
-          '.pakaian-card__location, .seni-card__location, .tradisi-card__location, ' +
-          '.suku-card__location'
-        );
-        
-        const title = titleEl ? titleEl.textContent.toLowerCase() : '';
-        const desc = descEl ? descEl.textContent.toLowerCase() : '';
-        const location = locationEl ? locationEl.textContent.toLowerCase() : '';
-        
-        const matchesRegion = currentRegion === 'all' || region === currentRegion;
-        const matchesSearch = currentSearch === '' || 
-                             title.includes(currentSearch) ||
-                             desc.includes(currentSearch) ||
-                             location.includes(currentSearch) ||
-                             tags.includes(currentSearch);
-        
-        if (matchesRegion && matchesSearch) {
-          card.style.display = '';
-          card.classList.remove('hidden');
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-          card.classList.add('hidden');
-        }
-      });
-
-      updateStats(visibleCount, cards.length);
-      toggleNoResults(visibleCount === 0);
-      
-      if (typeof FilterSystem !== 'undefined' && currentRegion !== 'all') {
-        FilterSystem.saveFilterPreference(currentRegion);
-      }
-    }
-
-    if (DOM.regionFilter) {
-      if (typeof FilterSystem !== 'undefined') {
-        const saved = FilterSystem.getFilterPreference();
-        DOM.regionFilter.value = saved;
-        currentRegion = saved;
-      }
-      
-      DOM.regionFilter.addEventListener('change', (e) => {
-        currentRegion = e.target.value;
-        filterCards();
-      });
-    }
-
-    if (DOM.pageSearch) {
-      let timeout;
-      DOM.pageSearch.addEventListener('input', (e) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-          currentSearch = e.target.value.toLowerCase().trim();
-          filterCards();
-        }, 300);
-      });
-      
-      DOM.pageSearch.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-          clearTimeout(timeout);
-          currentSearch = e.target.value.toLowerCase().trim();
-          filterCards();
-        }
-      });
-    }
-
-    filterCards();
-  }
-
-  function updateStats(visible, total) {
-    if (!DOM.filterStats) return;
-    
-    DOM.filterStats.textContent = visible === total 
-      ? `Menampilkan ${total} item`
-      : `Menampilkan ${visible} dari ${total} item`;
-  }
-
-  function toggleNoResults(show) {
-    let noResults = document.getElementById('noResults');
-    
-    if (!noResults && show) {
-      const container = document.querySelector(
-        '.rumahadat-grid, .alam-grid, .makanan-grid, .pakaian-grid, ' +
-        '.seni-grid, .tradisi-grid, .suku-grid, .category-grid'
-      );
-      
-      if (container) {
-        noResults = document.createElement('div');
-        noResults.id = 'noResults';
-        noResults.className = 'no-results';
-        noResults.textContent = 'Tidak ada hasil yang ditemukan';
-        container.appendChild(noResults);
-      }
-    }
-    
-    if (noResults) {
-      noResults.style.display = show ? 'block' : 'none';
-    }
-  }
-
-  // ==================== BOOKMARK SYSTEM (INDEX PAGES ONLY) ====================
+  // ==================== BOOKMARK SYSTEM ====================
   function initBookmarks() {
     const bookmarkButtons = document.querySelectorAll(
       '.category-card__bookmark, .rumahadat-card__bookmark, .alam-card__bookmark, ' +
@@ -313,30 +182,14 @@
     });
   }
 
-  function showNotification(message) {
-    const notification = document.createElement('div');
-    notification.className = 'notification-toast';
-    notification.textContent = message;
-    notification.style.cssText = `
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--primary);
-      color: #000;
-      padding: 16px 28px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      z-index: 99999;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      animation: slideInRight 0.3s ease, slideOutRight 0.3s ease 2.3s;
-    `;
-    
-    document.body.appendChild(notification);
-    setTimeout(() => notification.remove(), 2600);
-  }
+window.showNotification = function(message) {
+  const notification = document.createElement('div');
+  notification.className = 'notification-toast';
+  notification.textContent = message;
+  document.body.appendChild(notification);
+  setTimeout(() => notification.remove(), 2600);
+}
 
-  // ==================== BACK TO TOP ====================
   function initBackToTop() {
     if (!DOM.backBtn) return;
 
@@ -354,13 +207,11 @@
     });
   }
 
-  // ==================== INIT ALL ====================
   function init() {
     initNavbarScroll();
     initMobileMenu();
     initDropdowns();
     initScrollAnimations();
-    initFilters();
     initBookmarks();
     initBackToTop();
     
@@ -368,7 +219,7 @@
       document.body.classList.add('loaded');
     }, 100);
     
-    console.log('✅ Main.js initialized - Page type:', isIndexPage ? 'INDEX' : 'DETAIL');
+    console.log(' Main.js initialized - Page type:', isIndexPage ? 'INDEX' : 'DETAIL');
   }
 
   // ==================== START ====================
@@ -377,32 +228,4 @@
   } else {
     init();
   }
-
-  // ==================== CSS ANIMATIONS ====================
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes slideInRight {
-      from { transform: translateX(400px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    
-    @keyframes slideOutRight {
-      from { transform: translateX(0); opacity: 1; }
-      to { transform: translateX(400px); opacity: 0; }
-    }
-    
-    .hidden { display: none !important; }
-    
-    .is-visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-  `;
-  document.head.appendChild(style);
-
 })();

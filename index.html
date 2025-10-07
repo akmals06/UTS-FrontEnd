@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nusa Tenggara Timur– Cultural Heritage</title>
+  <title>East Nusa Tenggara – Cultural Heritage</title>
   <meta name="description" content="Eksplorasi budaya NTT: rumah adat, tenun ikat, ritual adat, musik tradisional, makanan khas, dan keindahan alam Nusantara.">
-
-  <!-- CSS FILES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/beranda.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body id="top">
 
@@ -17,13 +15,11 @@
   <nav class="nav" id="mainNav">
     <div class="nav__inner">
       
-      <!-- Brand -->
       <a href="index.html" class="nav__brand">
-        <span class="nav__brand-text">NUSA TENGGARA TIMUR</span>
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
         <span class="nav__brand-subtitle">Warisan Nusantara</span>
       </a>
 
-      <!-- Menu -->
       <ul class="nav__links" id="navLinks">
         <li><a class="nav__link nav__link--active" href="index.html">Beranda</a></li>
         <li class="nav__dropdown">
@@ -41,13 +37,11 @@
         <li><a class="nav__link" href="#bookmarks">Koleksi Saya</a></li>
       </ul>
 
-      <!-- Search -->
       <div class="search">
         <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT..." aria-label="Pencarian global">
         <div class="search__panel hidden" id="searchPanel"></div>
       </div>
 
-      <!-- Toggle Mobile -->
       <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -58,12 +52,12 @@
 
   <!-- ===================== HERO ===================== -->
   <header class="beranda-hero">
-    <div class="beranda-hero__bg" style="background-image: url('assets/img/Padar Island, Indonesia.jpg');" role="img" aria-label="Pemandangan Pulau Padar"></div>
+    <div class="beranda-hero__bg" style="background-image: url('assets/img/padar-island.jpg');" role="img" aria-label="Pemandangan Pulau Padar"></div>
     <div class="beranda-hero__overlay"></div>
 
     <div class="beranda-hero__content">
       <p class="beranda-hero__eyebrow">NUSA TENGGARA TIMUR</p>
-      <h1 class="beranda-hero__title">Nusa Tenggara Timur</h1>
+      <h1 class="beranda-hero__title">East Nusa Tenggara</h1>
       <p class="beranda-hero__subtitle">
         Jelajahi warisan budaya megalitikum, tenun ikat pusaka, 
         dan keindahan alam yang membentang dari Flores hingga Sumba
@@ -73,14 +67,13 @@
 
     <div class="beranda-hero__scroll">
       <span>Scroll untuk menjelajah</span>
-      <div class="beranda-hero__arrow">↓</div>
+      <div class="beranda-hero__arrow"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
     </div>
   </header>
 
   <!-- ===================== MAIN CONTENT ===================== -->
   <main id="content">
 
-    <!-- INTRODUCTION -->
     <section class="beranda-intro">
       <div class="container">
         <h2 class="heading-secondary">
@@ -107,7 +100,6 @@
       </div>
     </section>
 
-    <!-- MAP SECTION -->
     <section class="beranda-map">
       <div class="container">
         <h2 class="heading-secondary">Peta Budaya NTT</h2>
@@ -142,7 +134,6 @@
       </div>
     </section>
 
-    <!-- CATEGORY SECTION -->
     <section id="categories" class="beranda-categories">
       <div class="container">
         <h2 class="heading-secondary">Kategori Budaya</h2>
@@ -151,7 +142,7 @@
         <div class="category-grid">
           <a href="pages/alam/index.html" class="category-card" data-category="alam" data-id="alam" data-tags="wisata alam pantai gunung danau kelimutu komodo wae rebo labuan bajo">
             <button class="category-card__bookmark" aria-label="Bookmark Wisata Alam" data-id="alam">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="category-card__number">01</div>
             <h3 class="category-card__title">Wisata Alam</h3>
@@ -161,7 +152,7 @@
 
           <a href="pages/rumah-adat/index.html" class="category-card" data-category="rumah-adat" data-id="rumah-adat" data-tags="arsitektur rumah adat mbaru niang lopo sao gendang">
             <button class="category-card__bookmark" aria-label="Bookmark Rumah Adat" data-id="rumah-adat">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="category-card__number">02</div>
             <h3 class="category-card__title">Rumah Adat</h3>
@@ -171,7 +162,7 @@
 
           <a href="pages/pakaian/index.html" class="category-card" data-category="pakaian" data-id="pakaian" data-tags="tenun ikat kain hinggi lau pahudu sarung sabu tekstil">
             <button class="category-card__bookmark" aria-label="Bookmark Tenun & Kain Adat" data-id="pakaian">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="category-card__number">03</div>
             <h3 class="category-card__title">Tenun & Kain Adat</h3>
@@ -181,7 +172,7 @@
 
           <a href="pages/makanan/index.html" class="category-card" data-category="makanan" data-id="makanan" data-tags="kuliner makanan sei jagung bose kolo masakan tradisional">
             <button class="category-card__bookmark" aria-label="Bookmark Kuliner Khas" data-id="makanan">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="category-card__number">04</div>
             <h3 class="category-card__title">Kuliner Khas</h3>
@@ -191,7 +182,7 @@
 
           <a href="pages/seni/index.html" class="category-card" data-category="seni" data-id="seni" data-tags="seni musik tari sasando caci likurai gong waning padoa">
             <button class="category-card__bookmark" aria-label="Bookmark Seni Tradisional" data-id="seni">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="category-card__number">05</div>
             <h3 class="category-card__title">Seni Tradisional</h3>
@@ -201,7 +192,7 @@
 
           <a href="pages/suku/index.html" class="category-card" data-category="suku" data-id="suku" data-tags="suku adat manggarai sumba ngada atoni rote etnis">
             <button class="category-card__bookmark" aria-label="Bookmark Suku & Adat" data-id="suku">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="category-card__number">06</div>
             <h3 class="category-card__title">Suku & Adat</h3>
@@ -211,7 +202,7 @@
 
           <a href="pages/tradisi/index.html" class="category-card" data-category="tradisi" data-id="tradisi" data-tags="tradisi ritual upacara pasola penti reba wulla nyale">
             <button class="category-card__bookmark" aria-label="Bookmark Tradisi & Ritual" data-id="tradisi">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="category-card__number">07</div>
             <h3 class="category-card__title">Tradisi & Ritual</h3>
@@ -222,7 +213,6 @@
       </div>
     </section>
 
-    <!-- BOOKMARK MANAGER SECTION (NEW) -->
     <section id="bookmarks" class="beranda-bookmarks">
       <div class="container">
         <h2 class="heading-secondary">Koleksi Saya</h2>
@@ -230,7 +220,6 @@
           Kelola destinasi dan budaya favorit Anda
         </p>
 
-        <!-- Filter Bar for Bookmarks -->
         <div class="bookmark-controls">
           <div class="filter-bar">
             <div class="filter-group">
@@ -261,7 +250,6 @@
             </div>
           </div>
 
-          <!-- Action Buttons -->
           <div class="bookmark-actions">
             <button id="clearAllBookmarks" class="btn btn--secondary">
               Hapus Semua
@@ -269,15 +257,13 @@
           </div>
         </div>
 
-        <!-- Bookmark List Container -->
         <div id="bookmarkList" class="bookmark-list">
           <div class="bookmark-empty">
-            <div class="bookmark-empty__icon">📌</div>
             <p class="bookmark-empty__text">
               Belum ada bookmark tersimpan
             </p>
             <p class="bookmark-empty__hint">
-              Klik tombol <span class="bookmark-icon">☆</span> pada kategori di atas untuk menyimpan
+              Klik tombol <i class="fa fa-heart-o" aria-hidden="true"></i> pada kategori di atas untuk menyimpan
             </p>
           </div>
         </div>
@@ -289,7 +275,7 @@
   <footer class="footer">
     <div class="footer__inner">
       <p class="footer__text">&copy; 2025 East Nusa Tenggara Cultural Heritage</p>
-      <a href="#top" class="footer__back" id="backToTop" aria-label="Kembali ke atas">↑</a>
+      <a href="#top" class="footer__back" id="backToTop" aria-label="Kembali ke atas"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
 
@@ -297,6 +283,6 @@
   <script src="assets/js/localStorage.js"></script>
   <script src="assets/js/search.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/bookmark-manager.js"></script>
+  <script src="assets/js/bookmark.js"></script>
 </body>
 </html>

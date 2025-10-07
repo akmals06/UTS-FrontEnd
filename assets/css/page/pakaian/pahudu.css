@@ -1,104 +1,68 @@
-/* =====================================================
-   PAHUDU.CSS - Feminine Textile Elegance
-   For: lau-pahudu.html
-   Theme: Graceful, artistic, woven patterns
-   ===================================================== */
-
-/* ===================== PAHUDU MAIN WRAPPER ===================== */
 .pahudu-main {
-  background: #080608;
+  background: #0a0608;
   color: rgba(255, 255, 255, 0.92);
   min-height: 100vh;
-  position: relative;
-}
-
-.pahudu-main::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(160, 90, 140, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(140, 80, 120, 0.04) 0%, transparent 40%);
-  pointer-events: none;
-  z-index: 0;
 }
 
 .pahudu-section {
-  padding: 100px 0;
-  position: relative;
-  z-index: 1;
+  padding: 120px 0;
+  background:
+    radial-gradient(ellipse at 40% 30%, rgba(155, 89, 182, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 70%, rgba(142, 68, 173, 0.06) 0%, transparent 50%);
 }
 
-/* ===================== DECORATIVE HEADER ===================== */
+/* ===================== HEADER ===================== */
 .pahudu-header {
   text-align: center;
   margin-bottom: 100px;
-  position: relative;
-}
-
-.pahudu-header::before {
-  content: '';
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 100px;
-  background: linear-gradient(to bottom,
-    transparent,
-    rgba(160, 90, 140, 0.4),
-    transparent);
 }
 
 .pahudu-heading {
-  font-size: clamp(3.5rem, 6.5vw, 5.5rem);
-  color: #a05a8c;
-  margin-bottom: 24px;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  color: #9b59b6;
   font-weight: 900;
-  letter-spacing: -1.5px;
-  line-height: 1.1;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: var(--space-lg);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .pahudu-subtitle {
-  font-size: 1.1rem;
-  color: rgba(160, 90, 140, 0.7);
-  font-weight: 500;
-  letter-spacing: 4px;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(155, 89, 182, 0.7);
+  font-weight: 600;
   text-transform: uppercase;
-  font-style: italic;
+  letter-spacing: 4px;
 }
 
-/* ===================== FEATURED SHOWCASE ===================== */
+/* ===================== SHOWCASE SECTION ===================== */
 .pahudu-showcase {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
   margin-bottom: 120px;
-  background: linear-gradient(135deg,
-    rgba(160, 90, 140, 0.04) 0%,
-    rgba(140, 80, 120, 0.02) 100%);
-  border: 1px solid rgba(160, 90, 140, 0.15);
-  overflow: hidden;
+  align-items: start;
 }
 
 .pahudu-showcase-image {
   position: relative;
-  min-height: 600px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
 
 .pahudu-showcase-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
-  filter: brightness(0.88) contrast(1.12) saturate(1.08);
-  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.85) contrast(1.12) saturate(1.1);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pahudu-showcase:hover .pahudu-showcase-image img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .pahudu-showcase-image figcaption {
@@ -106,166 +70,191 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 32px;
-  background: linear-gradient(to top,
-    rgba(0, 0, 0, 0.95),
-    rgba(0, 0, 0, 0.6),
-    transparent);
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.95rem;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
   font-style: italic;
 }
 
 .pahudu-showcase-content {
-  padding: 80px 72px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 40px 0;
 }
 
 .pahudu-showcase-content p {
-  font-size: 1.2rem;
-  line-height: 2.1;
+  font-size: 1.08rem;
+  line-height: 2;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
-.pahudu-showcase-content p:first-of-type::first-letter {
-  float: left;
-  font-size: 7.5rem;
-  line-height: 0.7;
-  font-weight: 900;
-  margin: 0.05em 0.1em 0 0;
-  color: #a05a8c;
-  font-family: Georgia, serif;
+.pahudu-showcase-content p:last-child {
+  margin-bottom: 0;
 }
 
 .pahudu-showcase-content strong {
-  color: #a05a8c;
+  color: #9b59b6;
   font-weight: 700;
 }
 
 .pahudu-showcase-content em {
-  color: #b87aa8;
+  color: #b370cf;
   font-style: italic;
 }
 
-/* ===================== QUOTE ORNAMENTAL ===================== */
+/* ===================== QUOTE ===================== */
 .pahudu-quote {
+  max-width: 1000px;
   margin: 120px auto;
-  max-width: 900px;
+  padding: 60px 80px;
+  background: linear-gradient(135deg,
+    rgba(155, 89, 182, 0.12) 0%,
+    rgba(155, 89, 182, 0.04) 100%);
+  border-left: 6px solid #9b59b6;
+  border-radius: 0 16px 16px 0;
   text-align: center;
   position: relative;
-  padding: 72px 0;
-}
-
-.pahudu-quote::before,
-.pahudu-quote::after {
-  content: '◈';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  color: #a05a8c;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .pahudu-quote::before {
-  top: 0;
-}
-
-.pahudu-quote::after {
-  bottom: 0;
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 60px;
+  font-size: 10rem;
+  color: rgba(155, 89, 182, 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
 }
 
 .pahudu-quote-text {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.95);
-  font-style: italic;
-  font-weight: 300;
-  padding: 0 64px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
 }
 
 .pahudu-quote-highlight {
-  color: #a05a8c;
-  font-weight: 600;
-  font-style: normal;
+  color: #9b59b6;
+  font-weight: 700;
+  font-style: italic;
 }
 
 /* ===================== CONTENT CARD ===================== */
 .pahudu-card {
-  margin-bottom: 100px;
-  padding: 64px;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 72px;
   background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.02) 0%,
     rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(160, 90, 140, 0.2);
-  position: relative;
-}
-
-.pahudu-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right,
-    transparent,
-    rgba(160, 90, 140, 0.5) 50%,
-    transparent);
+  border-top: 2px solid rgba(155, 89, 182, 0.2);
+  border-bottom: 2px solid rgba(155, 89, 182, 0.2);
+  border-radius: 8px;
 }
 
 .pahudu-card h3 {
-  font-size: 2.4rem;
-  color: #a05a8c;
+  font-size: 2.5rem;
+  color: #9b59b6;
   font-weight: 900;
-  margin-bottom: 44px;
-  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
   text-align: center;
 }
 
 .pahudu-card p {
-  font-size: 1.18rem;
-  line-height: 2.1;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 32px;
+  font-size: 1.08rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+.pahudu-card p:last-of-type {
+  margin-bottom: 0;
 }
 
 .pahudu-card strong {
-  color: #a05a8c;
+  color: #9b59b6;
   font-weight: 700;
 }
 
 .pahudu-card em {
-  color: #b87aa8;
+  color: #b370cf;
   font-style: italic;
 }
 
-/* ===================== GRID WITH IMAGE ===================== */
+.pahudu-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pahudu-card ul li {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 20px;
+  padding-left: 32px;
+  position: relative;
+}
+
+.pahudu-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 16px;
+  height: 2px;
+  background: #9b59b6;
+  box-shadow: 0 0 8px rgba(155, 89, 182, 0.5);
+}
+
+.pahudu-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+.pahudu-card ul li strong {
+  color: #9b59b6;
+}
+
+/* ===================== GRID LAYOUT ===================== */
 .pahudu-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  margin-top: 56px;
+  gap: 60px;
   align-items: start;
+  margin-top: 40px;
+}
+
+.pahudu-grid p {
+  margin-bottom: 20px;
+}
+
+.pahudu-grid p:last-child {
+  margin-bottom: 0;
 }
 
 .pahudu-grid-image {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(160, 90, 140, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  margin: 0;
 }
 
 .pahudu-grid-image img {
   width: 100%;
+  height: auto;
   display: block;
-  filter: brightness(0.88) contrast(1.1);
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.1) saturate(1.05);
   transition: transform 0.8s ease;
 }
 
 .pahudu-grid-image:hover img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .pahudu-grid-image figcaption {
@@ -273,160 +262,284 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 24px 28px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.9rem;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.85rem;
   font-style: italic;
-}
-
-/* ===================== LIST ELEGANT ===================== */
-.pahudu-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 40px 0;
-}
-
-.pahudu-card ul li {
-  padding: 18px 0 18px 56px;
-  margin-bottom: 18px;
-  position: relative;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 2;
-  border-left: 2px solid rgba(160, 90, 140, 0.2);
-  transition: all 0.3s ease;
-}
-
-.pahudu-card ul li:hover {
-  border-left-color: rgba(160, 90, 140, 0.6);
-  padding-left: 64px;
-  background: rgba(160, 90, 140, 0.03);
-}
-
-.pahudu-card ul li::before {
-  content: '✦';
-  position: absolute;
-  left: 18px;
-  top: 18px;
-  color: #a05a8c;
-  font-size: 1.1rem;
-}
-
-.pahudu-card ul li strong {
-  color: #a05a8c;
-  font-weight: 700;
 }
 
 /* ===================== DIVIDER ===================== */
 .pahudu-divider {
-  width: 100%;
+  max-width: 1100px;
+  margin: 80px auto;
   height: 1px;
   background: linear-gradient(to right,
     transparent,
-    rgba(160, 90, 140, 0.3) 50%,
+    rgba(155, 89, 182, 0.3) 50%,
     transparent);
-  margin: 100px 0;
 }
 
 /* ===================== BACK CTA ===================== */
 .pahudu-back-cta {
   text-align: center;
-  margin-top: 120px;
-  padding-top: 80px;
-  border-top: 1px solid rgba(160, 90, 140, 0.2);
+  margin-top: 140px;
+  padding-top: 100px;
+  border-top: 1px solid rgba(155, 89, 182, 0.15);
 }
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 991px) {
-  .pahudu-showcase,
-  .pahudu-grid {
-    grid-template-columns: 1fr;
-    gap: 56px;
-  }
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
 
-  .pahudu-showcase-image {
-    min-height: 450px;
-  }
-
-  .pahudu-showcase-content {
-    padding: 56px 48px;
-  }
-
-  .pahudu-heading {
-    font-size: clamp(2.5rem, 6.5vw, 4rem);
-  }
-
-  .pahudu-quote-text {
-    font-size: 1.45rem;
-    padding: 0 48px;
-  }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .pahudu-section {
     padding: 80px 0;
   }
 
   .pahudu-header {
-    margin-bottom: 72px;
+    margin-bottom: 80px;
   }
 
-  .pahudu-header::before {
-    height: 60px;
-    top: -40px;
+  .pahudu-heading {
+    font-size: clamp(3rem, 6vw, 5rem);
   }
 
-  .pahudu-showcase-image {
-    min-height: 400px;
+  .pahudu-showcase {
+    gap: 48px;
+    margin-bottom: 100px;
   }
 
-  .pahudu-showcase-content {
-    padding: 44px 32px;
-  }
-
-  .pahudu-showcase-content p:first-of-type::first-letter {
-    font-size: 5.5rem;
-  }
-
-  .pahudu-card {
-    padding: 44px 36px;
-    margin-bottom: 72px;
-  }
-
-  .pahudu-card h3 {
-    font-size: 2rem;
-    margin-bottom: 36px;
+  .pahudu-showcase-content p {
+    font-size: 1.05rem;
   }
 
   .pahudu-quote {
-    padding: 56px 0;
-    margin: 88px auto;
+    margin: 100px auto;
+    padding: 48px 60px;
   }
 
-  .pahudu-quote::before,
-  .pahudu-quote::after {
-    font-size: 1.5rem;
+  .pahudu-card {
+    padding: 56px;
+    margin-bottom: 60px;
+  }
+
+  .pahudu-card h3 {
+    font-size: 2.2rem;
+  }
+
+  .pahudu-grid {
+    gap: 48px;
+  }
+
+  .pahudu-divider {
+    margin: 60px auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .pahudu-section {
+    padding: 60px 0;
+  }
+
+  .pahudu-header {
+    margin-bottom: 60px;
+  }
+
+  .pahudu-showcase {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  .pahudu-showcase-content {
+    padding: 0;
+  }
+
+  .pahudu-showcase-content p {
+    font-size: 1.05rem;
+  }
+
+  .pahudu-quote {
+    margin: 80px auto;
+    padding: 40px 48px;
+  }
+
+  .pahudu-quote::before {
+    font-size: 8rem;
+    left: 40px;
   }
 
   .pahudu-quote-text {
     font-size: 1.2rem;
-    padding: 0 32px;
+  }
+
+  .pahudu-card {
+    padding: 48px;
+    margin-bottom: 48px;
+  }
+
+  .pahudu-card h3 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .pahudu-card p {
+    font-size: 1.05rem;
   }
 
   .pahudu-card ul li {
-    padding-left: 44px;
+    font-size: 1.05rem;
   }
 
-  .pahudu-card ul li:hover {
-    padding-left: 52px;
+  .pahudu-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
 
   .pahudu-divider {
-    margin: 72px 0;
+    margin: 48px auto;
   }
 
   .pahudu-back-cta {
-    margin-top: 88px;
-    padding-top: 64px;
+    margin-top: 100px;
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pahudu-section {
+    padding: 40px 0;
+  }
+
+  .pahudu-header {
+    margin-bottom: 40px;
+  }
+
+  .pahudu-heading {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .pahudu-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+  }
+
+  .pahudu-showcase {
+    margin-bottom: 60px;
+  }
+
+  .pahudu-showcase-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .pahudu-quote {
+    margin: 60px auto;
+    padding: 32px 28px;
+  }
+
+  .pahudu-quote::before {
+    font-size: 6rem;
+    top: -5px;
+    left: 20px;
+  }
+
+  .pahudu-quote-text {
+    font-size: 1.1rem;
+  }
+
+  .pahudu-card {
+    padding: 36px 28px;
+    margin-bottom: 40px;
+  }
+
+  .pahudu-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .pahudu-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .pahudu-card ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    padding-left: 28px;
+  }
+
+  .pahudu-card ul li::before {
+    width: 12px;
+    top: 10px;
+  }
+
+  .pahudu-divider {
+    margin: 40px auto;
+  }
+
+  .pahudu-back-cta {
+    margin-top: 80px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pahudu-section {
+    padding: 32px 0;
+  }
+
+  .pahudu-header {
+    margin-bottom: 32px;
+  }
+
+  .pahudu-showcase {
+    gap: 32px;
+  }
+
+  .pahudu-showcase-content p {
+    margin-bottom: 16px;
+  }
+
+  .pahudu-quote {
+    margin: 48px auto;
+    padding: 24px 20px;
+    font-size: 1rem;
+  }
+
+  .pahudu-quote::before {
+    font-size: 4.5rem;
+    top: 0;
+    left: 12px;
+  }
+
+  .pahudu-quote-text {
+    font-size: 1rem;
+  }
+
+  .pahudu-card {
+    padding: 28px 20px;
+  }
+
+  .pahudu-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .pahudu-grid {
+    gap: 28px;
+  }
+
+  .pahudu-divider {
+    margin: 32px auto;
+  }
+
+  .pahudu-back-cta {
+    margin-top: 60px;
+    padding-top: 48px;
   }
 }

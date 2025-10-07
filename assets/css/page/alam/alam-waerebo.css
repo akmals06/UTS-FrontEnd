@@ -1,10 +1,3 @@
-/* =====================================================
-   ALAM-WAEREBO.CSS - Cultural Earthy Tones
-   For: wae-rebo.html
-   Theme: Mountain village, warm earth, tradition
-   ===================================================== */
-
-/* ===================== WAEREBO MAIN WRAPPER ===================== */
 .waerebo-main {
   background: linear-gradient(to bottom,
     #0f0805 0%,
@@ -66,7 +59,7 @@
 .waerebo-image figure {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.6),
     0 0 0 1px rgba(255, 157, 92, 0.15);
   position: relative;
@@ -75,7 +68,7 @@
 
 .waerebo-image figure:hover {
   transform: translateY(-8px);
-  box-shadow: 
+  box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.7),
     0 0 0 1px rgba(255, 157, 92, 0.3);
 }
@@ -255,7 +248,7 @@
   border: 1px solid rgba(255, 157, 92, 0.1);
 }
 
-/* ===================== BACK CTA ===================== */
+/* ===================== BACK  ===================== */
 .waerebo-back-cta {
   text-align: center;
   margin-top: 96px;
@@ -263,79 +256,12 @@
   border-top: 1px solid rgba(255, 157, 92, 0.15);
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
 @media (max-width: 991px) {
-  .waerebo-row,
-  .waerebo-filosofi {
+  .waerebo-row {
     grid-template-columns: 1fr;
     gap: 48px;
-  }
-
-  .waerebo-heading {
-    font-size: clamp(2rem, 6vw, 3rem);
-  }
-
-  .waerebo-quote {
-    font-size: 1.2rem;
-    padding: 48px;
-  }
-}
-
-@media (max-width: 767px) {
-  .waerebo-section {
-    padding: 80px 0;
-  }
-
-  .waerebo-heading {
-    margin-bottom: 48px;
-    padding-bottom: 24px;
-  }
-
-  .waerebo-row {
-    margin-bottom: 64px;
-  }
-
-  .waerebo-dropcap {
-    font-size: 4rem;
-    margin: 0.1rem 0.4rem 0 0;
-  }
-  
-  .waerebo-block {
-    padding: 32px;
-    margin-bottom: 64px;
-  }
-
-  .waerebo-block h3 {
-    font-size: 1.6rem;
-    margin-bottom: 32px;
-  }
-
-  .waerebo-quote {
-    font-size: 1.1rem;
-    padding: 32px;
-    margin: 64px auto;
-  }
-
-  .waerebo-quote::before {
-    font-size: 4rem;
-    top: -10px;
-    left: 20px;
-  }
-
-  .waerebo-list li {
-    padding-left: 32px;
-  }
-
-  .waerebo-list li:hover {
-    padding-left: 40px;
-  }
-
-  .waerebo-filosofi {
-    padding: 32px;
-  }
-
-  .waerebo-back-cta {
-    margin-top: 64px;
-    padding-top: 48px;
   }
 }

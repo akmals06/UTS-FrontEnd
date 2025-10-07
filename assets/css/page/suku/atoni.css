@@ -1,17 +1,25 @@
-/* ========================================
-   SUKU ATONI - CIRCULAR ORGANIC (LOPO-INSPIRED)
-   ======================================== */
+/* ===================== MAIN  ===================== */
+.suku-atoni {
+  background: #0d0a08;
+  color: rgba(255, 255, 255, 0.92);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-/* Hero - Circular Radial Design */
+/* =====================================================
+   HERO 
+   ===================================================== */
 .suku-atoni__hero {
   position: relative;
-  height: 100vh;
-  min-height: 700px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, #2d2416 0%, #1a1510 100%);
-  overflow: hidden;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(139, 69, 19, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(160, 82, 45, 0.1) 0%, transparent 60%),
+    #0d0a08;
+  perspective: 1000px;
 }
 
 .suku-atoni__hero-circles {
@@ -20,654 +28,819 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-style: preserve-3d;
 }
 
 .suku-atoni__hero-circle {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(218,165,32,0.15);
+  border: 2px solid;
+  opacity: 0.3;
 }
 
 .suku-atoni__hero-circle--1 {
-  width: 300px;
-  height: 300px;
-  animation: pulse 8s ease-in-out infinite;
+  width: 200px;
+  height: 200px;
+  border-color: #8b4513;
+  animation: spiral1 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .suku-atoni__hero-circle--2 {
-  width: 500px;
-  height: 500px;
-  animation: pulse 10s ease-in-out infinite;
+  width: 400px;
+  height: 400px;
+  border-color: #a0522d;
+  animation: spiral2 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .suku-atoni__hero-circle--3 {
-  width: 700px;
-  height: 700px;
-  animation: pulse 12s ease-in-out infinite;
+  width: 600px;
+  height: 600px;
+  border-color: #cd853f;
+  animation: spiral3 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 0.3; }
-  50% { transform: scale(1.1); opacity: 0.6; }
+@keyframes spiral1 {
+  0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+@keyframes spiral2 {
+  0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  100% { transform: rotate(-360deg) translateX(100px) rotate(360deg); }
+}
+
+@keyframes spiral3 {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
 }
 
 .suku-atoni__hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
-  max-width: 900px;
-  padding: 0 2rem;
+  animation: contentFloat 3s ease-out;
+}
+
+@keyframes contentFloat {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotateX(20deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
 }
 
 .suku-atoni__hero-label {
   display: inline-block;
-  padding: 0.6rem 1.8rem;
-  background: rgba(218,165,32,0.15);
-  border: 1px solid rgba(218,165,32,0.3);
-  border-radius: 50px;
-  color: #daa520;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+  color: #cd853f;
+  padding: 8px 24px;
+  background: rgba(139, 69, 19, 0.2);
+  border-radius: 20px;
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
 }
 
 .suku-atoni__hero-title {
-  font-size: clamp(4rem, 12vw, 7rem);
+  font-size: clamp(5rem, 12vw, 9rem);
   font-weight: 900;
-  color: #fff;
-  margin-bottom: 1.5rem;
-  letter-spacing: -2px;
-  text-shadow: 0 4px 30px rgba(218,165,32,0.3);
+  letter-spacing: -5px;
+  background: linear-gradient(135deg, #8b4513 0%, #cd853f 50%, #daa520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 24px;
+  line-height: 0.9;
+  text-shadow: 0 0 40px rgba(139, 69, 19, 0.3);
 }
 
 .suku-atoni__hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(255,255,255,0.75);
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-/* Intro - Circular Text Wrap */
-.suku-atoni__intro {
-  padding: 8rem 0;
-  background: #f8f5f0;
-}
-
-.suku-atoni__intro-container {
-  max-width: 1300px;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 600px;
   margin: 0 auto;
-  padding: 0 3rem;
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 5rem;
-  align-items: center;
 }
 
-.suku-atoni__intro-circle {
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+/* =====================================================
+   INTRO 
+   ===================================================== */
+.suku-atoni__intro {
+  padding: 0;
+  background: #0d0a08;
   position: relative;
 }
 
-.suku-atoni__intro-image {
-  width: 100%;
-  height: 100%;
-  background-image: url('../../img/rumahadat/lopo2.jpg');
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
+.suku-atoni__intro-container {
+  max-width: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  min-height: 100vh;
 }
 
-.suku-atoni__intro-circle:hover .suku-atoni__intro-image {
-  transform: scale(1.1) rotate(5deg);
+.suku-atoni__intro-circle {
+  position: relative;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.2), rgba(160, 82, 45, 0.1));
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.suku-atoni__intro-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: url('../../assets/img/suku/atoni.jpg') center/cover;
+  filter: brightness(0.85) contrast(1.15) saturate(0.9);
+  border: 8px solid rgba(139, 69, 19, 0.3);
+  box-shadow: 
+    0 0 60px rgba(139, 69, 19, 0.4),
+    inset 0 0 60px rgba(0, 0, 0, 0.3);
+  animation: imageRotate 40s linear infinite;
+}
+
+@keyframes imageRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.suku-atoni__intro-text {
+  padding: 120px 80px 120px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .suku-atoni__intro-text h2 {
   font-size: 3rem;
-  font-weight: 800;
-  color: #2d2416;
-  margin-bottom: 2rem;
-  line-height: 1.2;
+  font-weight: 900;
+  color: #8b4513;
+  margin-bottom: 40px;
+  letter-spacing: -2px;
+  position: relative;
+}
+
+.suku-atoni__intro-text h2::before {
+  content: '';
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #8b4513);
 }
 
 .suku-atoni__intro-text p {
   font-size: 1.15rem;
-  line-height: 1.9;
-  color: #5a4d3e;
-  margin-bottom: 1.5rem;
+  line-height: 2.1;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 32px;
+}
+
+.suku-atoni__intro-text p:last-child {
+  margin-bottom: 0;
 }
 
 .suku-atoni__intro-text strong {
-  color: #8b6f1b;
-  font-weight: 600;
+  color: #cd853f;
+  font-weight: 700;
 }
 
 .suku-atoni__intro-text em {
+  color: #daa520;
   font-style: italic;
-  color: #a67c38;
 }
 
-/* Philosophy Quote - Circular */
+/* =====================================================
+   PHILOSOPHY 
+   ===================================================== */
 .suku-atoni__philosophy {
-  padding: 8rem 0;
-  background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
+  padding: 150px 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(139, 69, 19, 0.1), transparent),
+    #0d0a08;
+  position: relative;
 }
 
 .suku-atoni__philosophy-container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
-  display: flex;
-  justify-content: center;
+  padding: 0 40px;
 }
 
 .suku-atoni__philosophy-circle {
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  border: 3px solid rgba(255,255,255,0.3);
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  clip-path: polygon(
+    50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%
+  );
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.25) 0%,
+    rgba(160, 82, 45, 0.15) 50%,
+    rgba(139, 69, 19, 0.25) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
-  text-align: center;
-  box-shadow: 0 0 60px rgba(0,0,0,0.2);
-  transition: transform 0.5s ease;
+  animation: hexFloat 6s ease-in-out infinite;
 }
 
-.suku-atoni__philosophy-circle:hover {
-  transform: rotate(5deg) scale(1.05);
+@keyframes hexFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+.suku-atoni__philosophy-inner {
+  text-align: center;
+  padding: 100px 80px;
 }
 
 .suku-atoni__philosophy-quote {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b4513, #cd853f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 28px;
+  line-height: 1.2;
   font-style: italic;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
+  letter-spacing: -1px;
 }
 
 .suku-atoni__philosophy-meaning {
   font-size: 1.2rem;
-  color: rgba(255,255,255,0.9);
-  font-weight: 400;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* History - Orbital Timeline */
+/* =====================================================
+   HISTORY 
+   ===================================================== */
 .suku-atoni__history {
-  padding: 10rem 0;
-  background: #2d2416;
+  padding: 150px 0;
+  background: #0d0a08;
   position: relative;
 }
 
 .suku-atoni__history-container {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
-  position: relative;
+  padding: 0 40px;
 }
 
 .suku-atoni__history-center {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #daa520, #b8860b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 .suku-atoni__history-center h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #fff;
-  text-align: center;
-  line-height: 1.3;
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b4513, #cd853f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -2px;
 }
 
 .suku-atoni__history-orbit {
   position: relative;
   width: 100%;
-  height: 700px;
-  margin-top: -125px;
+  height: auto;
+  border: none;
+}
+
+.suku-atoni__history-orbit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(139, 69, 19, 0.5) 20%,
+    rgba(139, 69, 19, 0.5) 80%,
+    transparent);
+  transform: translateX(-50%);
 }
 
 .suku-atoni__history-node {
-  position: absolute;
+  position: relative;
+  width: auto;
+  margin-bottom: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.suku-atoni__history-node--1 {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.suku-atoni__history-node:last-child {
+  margin-bottom: 0;
 }
 
-.suku-atoni__history-node--2 {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+.suku-atoni__history-node--1 .suku-atoni__history-content {
+  grid-column: 1;
+  text-align: right;
 }
 
-.suku-atoni__history-node--3 {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.suku-atoni__history-node--2 .suku-atoni__history-content {
+  grid-column: 2;
+  text-align: left;
 }
 
-.suku-atoni__history-node--4 {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+.suku-atoni__history-node--3 .suku-atoni__history-content {
+  grid-column: 1;
+  text-align: right;
+}
+
+.suku-atoni__history-node--4 .suku-atoni__history-content {
+  grid-column: 2;
+  text-align: left;
 }
 
 .suku-atoni__history-dot {
-  width: 20px;
-  height: 20px;
-  background: #daa520;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  margin: 0 auto 1.5rem;
-  box-shadow: 0 0 20px rgba(218,165,32,0.6);
+  background: linear-gradient(135deg, #8b4513, #cd853f);
+  box-shadow: 
+    0 0 0 8px rgba(139, 69, 19, 0.2),
+    0 0 30px rgba(139, 69, 19, 0.5);
+  z-index: 2;
 }
 
 .suku-atoni__history-content {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(218,165,32,0.3);
-  border-radius: 12px;
-  padding: 2rem;
-  max-width: 250px;
-  text-align: center;
+  padding: 48px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.15) 0%,
+    rgba(139, 69, 19, 0.05) 100%);
+  border: 2px solid rgba(139, 69, 19, 0.3);
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.suku-atoni__history-content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(139, 69, 19, 0.3);
+  border-color: #8b4513;
 }
 
 .suku-atoni__history-content h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #daa520;
-  margin-bottom: 0.8rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #8b4513;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
 }
 
 .suku-atoni__history-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* Social Structure - Concentric Rings */
+/* =====================================================
+   STRUCTURE 
+   ===================================================== */
 .suku-atoni__structure {
-  padding: 10rem 0;
-  background: #f8f5f0;
+  padding: 150px 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(139, 69, 19, 0.1), transparent),
+    #0d0a08;
 }
 
 .suku-atoni__structure-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 40px;
+  text-align: center;
 }
 
 .suku-atoni__structure-container h2 {
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #2d2416;
-  text-align: center;
-  margin-bottom: 5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b4513, #cd853f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 100px;
+  letter-spacing: -2px;
 }
 
 .suku-atoni__structure-rings {
-  position: relative;
-  width: 600px;
-  height: 600px;
+  max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .suku-atoni__structure-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid #daa520;
+  position: relative;
+  height: 150px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.2) 0%,
+    rgba(139, 69, 19, 0.05) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
-}
-
-.suku-atoni__structure-ring--1 {
-  width: 150px;
-  height: 150px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(135deg, #daa520, #b8860b);
-  z-index: 4;
-}
-
-.suku-atoni__structure-ring--2 {
-  width: 300px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(218,165,32,0.15);
-  z-index: 3;
-}
-
-.suku-atoni__structure-ring--3 {
-  width: 450px;
-  height: 450px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(218,165,32,0.1);
-  z-index: 2;
-}
-
-.suku-atoni__structure-ring--4 {
-  width: 600px;
-  height: 600px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(218,165,32,0.05);
-  z-index: 1;
+  border: 2px solid rgba(139, 69, 19, 0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .suku-atoni__structure-ring:hover {
-  transform: translate(-50%, -50%) scale(1.05);
-  border-width: 3px;
+  background: rgba(139, 69, 19, 0.25);
+  transform: scale(1.03);
+  border-color: #8b4513;
 }
 
-.suku-atoni__structure-label {
-  text-align: center;
+.suku-atoni__structure-ring--1 {
+  width: 300px;
+  margin: 0 auto 20px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
 
-.suku-atoni__structure-ring--1 .suku-atoni__structure-label h3 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 0.3rem;
+.suku-atoni__structure-ring--2 {
+  width: 500px;
+  margin: 0 auto 20px;
+  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
 }
 
-.suku-atoni__structure-ring--1 .suku-atoni__structure-label p {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.9);
+.suku-atoni__structure-ring--3 {
+  width: 700px;
+  margin: 0 auto 20px;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
 }
 
-.suku-atoni__structure-ring--2 .suku-atoni__structure-label,
-.suku-atoni__structure-ring--3 .suku-atoni__structure-label,
-.suku-atoni__structure-ring--4 .suku-atoni__structure-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.suku-atoni__structure-ring--2 .suku-atoni__structure-label {
-  top: 20%;
-}
-
-.suku-atoni__structure-ring--3 .suku-atoni__structure-label {
-  top: 10%;
-}
-
-.suku-atoni__structure-ring--4 .suku-atoni__structure-label {
-  top: 5%;
+.suku-atoni__structure-ring--4 {
+  width: 900px;
+  margin: 0 auto;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
 }
 
 .suku-atoni__structure-label h3 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #2d2416;
-  margin-bottom: 0.5rem;
+  color: #8b4513;
+  margin-bottom: 8px;
 }
 
 .suku-atoni__structure-label p {
   font-size: 1rem;
-  color: #8b6f1b;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-/* Culture - Radial Cards */
+/* =====================================================
+   CULTURE 
+   ===================================================== */
 .suku-atoni__culture {
-  padding: 8rem 0;
-  background: #fff;
+  padding: 150px 0;
+  background: #0d0a08;
 }
 
 .suku-atoni__culture-container {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 40px;
 }
 
 .suku-atoni__culture-container h2 {
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #2d2416;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b4513, #cd853f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 100px;
+  letter-spacing: -2px;
 }
 
 .suku-atoni__culture-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 60px 40px;
 }
 
 .suku-atoni__culture-card {
-  background: #f8f5f0;
-  padding: 3rem;
-  border-radius: 20px;
-  text-align: center;
-  transition: all 0.4s ease;
-  border: 2px solid transparent;
+  padding: 60px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.15) 0%,
+    rgba(139, 69, 19, 0.05) 100%);
+  border: 2px solid rgba(139, 69, 19, 0.25);
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.suku-atoni__culture-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(139, 69, 19, 0.2), transparent);
+  transition: all 0.6s ease;
 }
 
 .suku-atoni__culture-card:hover {
-  background: #fff;
-  border-color: #daa520;
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(218,165,32,0.2);
+  transform: translateY(-12px) rotate(-2deg);
+  box-shadow: 0 30px 70px rgba(139, 69, 19, 0.4);
+  border-color: #8b4513;
+}
+
+.suku-atoni__culture-card:hover::before {
+  top: -20%;
+  right: -20%;
+}
+
+.suku-atoni__culture-card:nth-child(even) {
+  transform-origin: right;
+}
+
+.suku-atoni__culture-card:nth-child(even):hover {
+  transform: translateY(-12px) rotate(2deg);
+}
+
+.suku-atoni__culture-card:nth-child(1) {
+  margin-top: 0;
+}
+
+.suku-atoni__culture-card:nth-child(2) {
+  margin-top: 80px;
+}
+
+.suku-atoni__culture-card:nth-child(3) {
+  margin-top: 0;
+}
+
+.suku-atoni__culture-card:nth-child(4) {
+  margin-top: 80px;
 }
 
 .suku-atoni__culture-icon {
   width: 100px;
   height: 100px;
-  margin: 0 auto 2rem;
-  position: relative;
+  margin-bottom: 32px;
 }
 
 .suku-atoni__culture-shape {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #daa520, #b8860b);
-  border-radius: 50%;
-  transition: transform 0.4s ease;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.3), rgba(160, 82, 45, 0.2));
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  animation: shapeFloat 3s ease-in-out infinite;
 }
 
-.suku-atoni__culture-card:hover .suku-atoni__culture-shape {
-  transform: scale(1.2);
+@keyframes shapeFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 .suku-atoni__culture-card h3 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #2d2416;
-  margin-bottom: 1rem;
+  color: #8b4513;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 
 .suku-atoni__culture-card p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #5a4d3e;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .suku-atoni__culture-card em {
+  color: #cd853f;
   font-style: italic;
-  color: #a67c38;
 }
 
 .suku-atoni__culture-card strong {
-  color: #8b6f1b;
-  font-weight: 600;
+  color: #daa520;
 }
 
-/* Language - Flowing Design */
+/* =====================================================
+   LANGUAGE 
+   ===================================================== */
 .suku-atoni__language {
-  padding: 8rem 0;
-  background: linear-gradient(135deg, #2d2416 0%, #1a1510 100%);
+  padding: 150px 0;
+  background: 
+    radial-gradient(ellipse at 30% 50%, rgba(139, 69, 19, 0.1), transparent),
+    radial-gradient(ellipse at 70% 50%, rgba(160, 82, 45, 0.08), transparent),
+    #0d0a08;
+  position: relative;
+}
+
+.suku-atoni__language::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 100px,
+    rgba(139, 69, 19, 0.03) 100px,
+    rgba(139, 69, 19, 0.03) 101px
+  );
 }
 
 .suku-atoni__language-container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 40px;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 5rem;
+  gap: 100px;
   align-items: center;
-}
-
-.suku-atoni__language-content h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #daa520;
-  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .suku-atoni__language-content p {
   font-size: 1.15rem;
-  line-height: 1.9;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 1.5rem;
+  line-height: 2.1;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 32px;
+}
+
+.suku-atoni__language-content p:last-child {
+  margin-bottom: 0;
 }
 
 .suku-atoni__language-content strong {
-  color: #daa520;
-  font-weight: 600;
+  color: #cd853f;
+  font-weight: 700;
 }
 
 .suku-atoni__language-content em {
+  color: #daa520;
   font-style: italic;
-  color: rgba(218,165,32,0.8);
 }
 
 .suku-atoni__language-visual {
   position: relative;
+  width: 100%;
   height: 400px;
 }
 
 .suku-atoni__language-circle {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  border: 3px solid rgba(218,165,32,0.3);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: rotate 20s linear infinite;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(139, 69, 19, 0.2) 0deg 45deg,
+      rgba(160, 82, 45, 0.1) 45deg 90deg
+    );
+  clip-path: polygon(0% 20%, 60% 0%, 100% 20%, 100% 80%, 40% 100%, 0% 80%);
+  animation: visualPulse 4s ease-in-out infinite;
 }
 
-.suku-atoni__language-circle::before,
-.suku-atoni__language-circle::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid rgba(218,165,32,0.2);
+@keyframes visualPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(5deg); }
 }
 
-.suku-atoni__language-circle::before {
-  width: 250px;
-  height: 250px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.suku-atoni__language-circle::after {
-  width: 150px;
-  height: 150px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes rotate {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* Back Link */
+/* =====================================================
+   BACK SECTION
+   ===================================================== */
 .suku-atoni__back {
-  padding: 5rem 0;
-  background: #f8f5f0;
-  text-align: center;
+  padding: 100px 0;
+  background: #0d0a08;
 }
 
 .suku-atoni__back-container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 40px;
+  text-align: center;
 }
 
 .suku-atoni__back-link {
-  display: inline-block;
-  padding: 1.3rem 3.5rem;
-  background: linear-gradient(135deg, #daa520, #b8860b);
-  color: #fff;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.2rem;
   font-weight: 700;
-  font-size: 1.1rem;
+  color: #8b4513;
+  text-decoration: none;
+  padding: 20px 48px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.15) 0%,
+    rgba(139, 69, 19, 0.05) 100%);
+  border: 3px solid #8b4513;
   border-radius: 50px;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(218,165,32,0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.suku-atoni__back-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: #8b4513;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.suku-atoni__back-link:hover::before {
+  width: 300%;
+  height: 300%;
 }
 
 .suku-atoni__back-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(218,165,32,0.4);
+  color: #fff;
+  transform: translateX(-8px);
+  box-shadow: 0 10px 40px rgba(139, 69, 19, 0.4);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+@media (max-width: 1199px) {
   .suku-atoni__intro-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
 
   .suku-atoni__intro-circle {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    clip-path: none;
+    padding: 80px 40px;
+  }
+
+  .suku-atoni__intro-image {
+    width: 400px;
+    height: 400px;
+  }
+
+  .suku-atoni__intro-text {
+    padding: 80px 40px;
+  }
+
+  .suku-atoni__philosophy-circle {
+    width: 500px;
+    height: 500px;
+  }
+
+  .suku-atoni__history-node {
+    gap: 60px;
+  }
+
+  .suku-atoni__structure-ring--1 {
+    width: 250px;
+  }
+
+  .suku-atoni__structure-ring--2 {
+    width: 400px;
+  }
+
+  .suku-atoni__structure-ring--3 {
+    width: 550px;
+  }
+
+  .suku-atoni__structure-ring--4 {
+    width: 700px;
   }
 
   .suku-atoni__language-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .suku-atoni__language-visual {
-    display: none;
+    gap: 60px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .suku-atoni__hero {
-    height: 80vh;
-    min-height: 600px;
-  }
-
-  .suku-atoni__hero-title {
-    font-size: 4rem;
-  }
-
-  .suku-atoni__hero-subtitle {
-    font-size: 1.2rem;
+    min-height: 70vh;
   }
 
   .suku-atoni__intro,
@@ -676,35 +849,140 @@
   .suku-atoni__structure,
   .suku-atoni__culture,
   .suku-atoni__language {
-    padding: 5rem 0;
+    padding: 100px 0;
   }
 
-  .suku-atoni__intro-container,
-  .suku-atoni__philosophy-container,
-  .suku-atoni__history-container,
-  .suku-atoni__structure-container,
-  .suku-atoni__culture-container,
-  .suku-atoni__language-container,
-  .suku-atoni__back-container {
-    padding: 0 2rem;
+  .suku-atoni__intro-image {
+    width: 350px;
+    height: 350px;
   }
 
-  .suku-atoni__intro-circle {
-    width: 300px;
-    height: 300px;
+  .suku-atoni__intro-text {
+    padding: 60px 40px;
   }
 
-  .suku-atoni__intro-text h2,
-  .suku-atoni__structure-container h2,
-  .suku-atoni__culture-container h2,
-  .suku-atoni__language-content h2 {
-    font-size: 2.2rem;
+  .suku-atoni__intro-text h2::before {
+    display: none;
   }
 
   .suku-atoni__philosophy-circle {
-    width: 350px;
-    height: 350px;
-    padding: 3rem;
+    width: 450px;
+    height: 450px;
+  }
+
+  .suku-atoni__history-node {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .suku-atoni__history-node--1 .suku-atoni__history-content,
+  .suku-atoni__history-node--2 .suku-atoni__history-content,
+  .suku-atoni__history-node--3 .suku-atoni__history-content,
+  .suku-atoni__history-node--4 .suku-atoni__history-content {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  .suku-atoni__history-orbit::before {
+    display: none;
+  }
+
+  .suku-atoni__history-dot {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto 20px;
+  }
+
+  .suku-atoni__structure-ring--1 {
+    width: 200px;
+  }
+
+  .suku-atoni__structure-ring--2 {width: 350px;
+  }
+
+  .suku-atoni__structure-ring--3 {
+    width: 500px;
+  }
+
+  .suku-atoni__structure-ring--4 {
+    width: 650px;
+  }
+
+  .suku-atoni__culture-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .suku-atoni__culture-card:nth-child(2),
+  .suku-atoni__culture-card:nth-child(4) {
+    margin-top: 0;
+  }
+
+  .suku-atoni__language-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .suku-atoni__hero-content {
+    padding: 0 24px;
+  }
+
+  .suku-atoni__hero-title {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .suku-atoni__hero-circle--3 {
+    display: none;
+  }
+
+  .suku-atoni__intro,
+  .suku-atoni__philosophy,
+  .suku-atoni__history,
+  .suku-atoni__structure,
+  .suku-atoni__culture,
+  .suku-atoni__language,
+  .suku-atoni__back {
+    padding: 80px 0;
+  }
+
+  .suku-atoni__intro-circle {
+    padding: 60px 24px;
+  }
+
+  .suku-atoni__intro-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .suku-atoni__intro-text {
+    padding: 60px 24px;
+  }
+
+  .suku-atoni__intro-text h2 {
+    font-size: 2rem;
+    margin-bottom: 28px;
+  }
+
+  .suku-atoni__intro-text p {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .suku-atoni__philosophy-container {
+    padding: 0 24px;
+  }
+
+  .suku-atoni__philosophy-circle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .suku-atoni__philosophy-inner {
+    padding: 50px 40px;
   }
 
   .suku-atoni__philosophy-quote {
@@ -715,127 +993,156 @@
     font-size: 1rem;
   }
 
-  .suku-atoni__history-orbit {
-    height: auto;
-    position: static;
-    margin-top: 3rem;
+  .suku-atoni__history-container,
+  .suku-atoni__structure-container,
+  .suku-atoni__culture-container,
+  .suku-atoni__language-container,
+  .suku-atoni__back-container {
+    padding: 0 24px;
+  }
+
+  .suku-atoni__history-center h2,
+  .suku-atoni__structure-container h2,
+  .suku-atoni__culture-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
   }
 
   .suku-atoni__history-node {
-    position: static;
-    transform: none;
-    margin-bottom: 2rem;
+    margin-bottom: 60px;
   }
 
   .suku-atoni__history-content {
-    max-width: 100%;
+    padding: 32px;
   }
 
-  .suku-atoni__structure-rings {
-    width: 100%;
-    max-width: 400px;
-    height: 400px;
+  .suku-atoni__history-content h3 {
+    font-size: 1.5rem;
   }
 
-  .suku-atoni__structure-ring--1 {
-    width: 120px;
+  .suku-atoni__history-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .suku-atoni__structure-ring {
     height: 120px;
   }
 
+  .suku-atoni__structure-ring--1 {
+    width: 180px;
+  }
+
   .suku-atoni__structure-ring--2 {
-    width: 220px;
-    height: 220px;
+    width: 280px;
   }
 
   .suku-atoni__structure-ring--3 {
-    width: 320px;
-    height: 320px;
+    width: 380px;
   }
 
   .suku-atoni__structure-ring--4 {
-    width: 400px;
-    height: 400px;
+    width: 480px;
   }
 
   .suku-atoni__structure-label h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .suku-atoni__structure-label p {
-    font-size: 0.85rem;
-  }
-
-  .suku-atoni__culture-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    font-size: 0.9rem;
   }
 
   .suku-atoni__culture-card {
-    padding: 2.5rem 2rem;
+    padding: 40px;
+  }
+
+  .suku-atoni__culture-card:hover {
+    transform: translateY(-8px) rotate(0deg);
+  }
+
+  .suku-atoni__culture-card:nth-child(even):hover {
+    transform: translateY(-8px) rotate(0deg);
+  }
+
+  .suku-atoni__culture-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .suku-atoni__culture-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .suku-atoni__culture-card p {
+    font-size: 1rem;
+  }
+
+  .suku-atoni__language-content p {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .suku-atoni__language-visual {
+    height: 320px;
   }
 }
 
 @media (max-width: 480px) {
-  .suku-atoni__hero-title {
-    font-size: 3rem;
+  .suku-atoni__hero-circle--2 {
+    display: none;
   }
 
-  .suku-atoni__hero-subtitle {
-    font-size: 1rem;
+  .suku-atoni__hero-label {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    padding: 6px 20px;
   }
 
-  .suku-atoni__intro-circle {
-    width: 250px;
-    height: 250px;
-  }
-
-  .suku-atoni__intro-text h2 {
-    font-size: 1.8rem;
+  .suku-atoni__intro-image {
+    width: 240px;
+    height: 240px;
   }
 
   .suku-atoni__philosophy-circle {
     width: 280px;
     height: 280px;
-    padding: 2rem;
+  }
+
+  .suku-atoni__philosophy-inner {
+    padding: 40px 30px;
   }
 
   .suku-atoni__philosophy-quote {
     font-size: 1.5rem;
   }
 
-  .suku-atoni__structure-container h2,
-  .suku-atoni__culture-container h2,
-  .suku-atoni__language-content h2 {
-    font-size: 2rem;
-  }
-
-  .suku-atoni__structure-rings {
-    max-width: 300px;
-    height: 300px;
-  }
-
   .suku-atoni__structure-ring--1 {
-    width: 100px;
-    height: 100px;
+    width: 150px;
   }
 
   .suku-atoni__structure-ring--2 {
-    width: 170px;
-    height: 170px;
+    width: 230px;
   }
 
   .suku-atoni__structure-ring--3 {
-    width: 240px;
-    height: 240px;
+    width: 310px;
   }
 
   .suku-atoni__structure-ring--4 {
-    width: 300px;
-    height: 300px;
+    width: 390px;
+  }
+
+  .suku-atoni__culture-card {
+    padding: 32px;
+  }
+
+  .suku-atoni__language-visual {
+    height: 280px;
   }
 
   .suku-atoni__back-link {
-    padding: 1.1rem 2.5rem;
     font-size: 1rem;
+    padding: 16px 36px;
   }
 }

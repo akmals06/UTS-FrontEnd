@@ -172,24 +172,7 @@
   margin: 0;
 }
 
-/* SECTION HEADERS */
-.penti-section-header {
-  margin-bottom: var(--space-2xl);
-}
 
-.penti-section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.2;
-  margin-bottom: var(--space-sm);
-}
-
-.penti-section-desc {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.6);
-  margin: 0;
-}
 
 /* HISTORY */
 .penti-history {
@@ -516,4 +499,19 @@
 
 .penti-back__btn:hover svg {
   transform: translateX(-4px);
+}
+
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+/* ==================== TRADISI DETAIL: PENTI ==================== */
+@media (max-width: 991px) {
+  .penti-hero__grid {
+    grid-template-columns: 1fr;
+  }
+  .penti-hero__image {
+    position: static;
+    grid-row: 1;
+  }
 }

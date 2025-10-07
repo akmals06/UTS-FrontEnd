@@ -2,68 +2,129 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Suku Rote – Pulau Rote, NTT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suku Rote – Pulau Rote, NTT | Heritage Lontar Culture</title>
   <meta name="description" content="Suku Rote adalah pengrajin alat musik Sasando dari lontar dengan tradisi maritim dan sistem adat yang unik.">
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../../assets/css/style.css" />
-  <link rel="stylesheet" href="../../assets/css/components.css" />
-  <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../../assets/css/page/suku/rote.css" />
 </head>
-<body>
+<body id="top">
 
-  <nav class="site-nav" id="siteNav">
-    <div class="nav-inner container">
-      <a href="../../index.html" class="brand">BUDAYA NTT</a>
-      
-      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+  <!-- NAVIGATION -->
+  <nav class="nav visible" id="mainNav">
+    <div class="nav__inner">
+      <a href="../../index.html" class="nav__brand">
+        <span class="nav__brand-text">EAST NUSA TENGGARA</span>
+        <span class="nav__brand-subtitle">Warisan Nusantara</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../../index.html" class="nav__link">Beranda</a></li>
+        <li class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-toggle">Explore</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../rumah-adat/index.html">Rumah Adat</a></li>
+            <li><a href="../pakaian/index.html">Tenun & Kain Adat</a></li>
+            <li><a href="../suku/index.html" class="nav__link--active">Suku & Adat</a></li>
+            <li><a href="../tradisi/index.html">Tradisi</a></li>
+            <li><a href="../seni/index.html">Seni Tradisional</a></li>
+            <li><a href="../makanan/index.html">Kuliner</a></li>
+            <li><a href="../alam/index.html">Wisata Alam</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="search">
+        <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT..." aria-label="Pencarian"/>
+        <div class="search__panel hidden" id="searchPanel"></div>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
-      
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../../index.html">Beranda</a></li>
-        <li><a href="../rumah-adat/index.html">Rumah Adat</a></li>
-        <li><a href="../pakaian/index.html">Tenun & Kain Adat</a></li>
-        <li><a href="../makanan/index.html">Makanan Khas</a></li>
-        <li><a href="../seni/index.html">Seni</a></li>
-        <li><a href="../alam/index.html">Alam</a></li>
-        <li><a class="active" href="index.html">Suku</a></li>
-        <li><a href="../tradisi/index.html">Tradisi</a></li>
-      </ul>
-      
-      <div class="site-search">
-        <input id="searchInput" type="text" placeholder="Cari budaya NTT..." aria-label="Pencarian"/>
-        <div class="search-panel hidden" id="searchPanel"></div>
-      </div>
     </div>
   </nav>
 
-  <main id="content">
-    <section class="section">
-      <div class="container">
+  <!-- HERO SECTION -->
+  <header class="suku-rote-hero">
+    <div class="suku-rote-hero__bg"></div>
+    <div class="suku-rote-hero__pattern"></div>
+    
+    <div class="suku-rote-hero__content">
+      <div class="suku-rote-hero__label">BUDAYA LONTAR & TRADISI MARITIM</div>
+      <h1 class="suku-rote-hero__title">Suku Rote</h1>
+      <p class="suku-rote-hero__subtitle">
+        Masyarakat pengrajin Sasando dengan tradisi lontar yang kuat, mendiami pulau paling selatan Indonesia dengan populasi 150.000 jiwa
+      </p>
+      
+      <div class="suku-rote-hero__meta">
+        <div class="suku-rote-hero__badge">
+          <span class="suku-rote-hero__badge-icon">📍</span>
+          <span>Pulau Rote, NTT</span>
+        </div>
+        <div class="suku-rote-hero__badge">
+          <span class="suku-rote-hero__badge-icon">🎵</span>
+          <span>Sasando</span>
+        </div>
+        <div class="suku-rote-hero__badge">
+          <span class="suku-rote-hero__badge-icon">🌴</span>
+          <span>Budaya Lontar</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-        <h2 class="heading-secondary">Suku Rote — <span class="lokasi">Pulau Rote, NTT</span></h2>
+  <!-- MAIN CONTENT -->
+  <main class="suku-rote-main" id="content">
+
+    <!-- INTRO SECTION -->
+    <section class="suku-rote-section suku-rote-intro">
+      <div class="suku-rote-container">
         
-        <div class="row-atas">
-          <div class="gambar-samping">
-            <img src="../../assets/img/suku/suku-rote.jpg" alt="Suku Rote" />
-          </div>
-          <div class="teks-samping">
+        <div class="suku-rote-row">
+          <div class="suku-rote-text">
             <p>
-              <span class="dropcap">S</span>uku Rote atau Rotenese adalah kelompok etnis yang mendiami Pulau Rote, pulau paling selatan Indonesia dengan populasi sekitar <strong>150.000 jiwa</strong>. Mereka terkenal sebagai pengrajin alat musik <em>Sasando</em> yang terbuat dari daun lontar dan memiliki tradisi maritim yang kuat sebagai pelaut ulung.
+              Suku Rote atau Rotenese adalah kelompok etnis yang mendiami Pulau Rote, pulau paling selatan Indonesia dengan populasi sekitar <strong>150.000 jiwa</strong>. Mereka terkenal sebagai pengrajin alat musik <em>Sasando</em> yang terbuat dari daun lontar dan memiliki tradisi maritim yang kuat sebagai pelaut ulung.
             </p>
             <p>
               Masyarakat Rote memiliki sistem adat yang unik dengan tokoh <strong>manek</strong> (raja) dan <strong>fetor</strong> (kepala wilayah). Pulau Rote terkenal dengan pohon lontar yang menjadi sumber kehidupan: makanan, minuman (tuak), dan bahan kerajinan. Budaya literasi Rote sangat tinggi dengan tradisi <em>pantun</em> dan <em>lais</em> (syair lisan) yang kuat.
             </p>
           </div>
+          
+          <div class="suku-rote-image">
+            <figure>
+              <img src="../../assets/img/suku/suku-rote.jpg" alt="Suku Rote dan budaya lontar">
+              <figcaption>Masyarakat Rote dengan pohon lontar yang menjadi simbol kehidupan dan budaya mereka</figcaption>
+            </figure>
+          </div>
         </div>
 
-        <blockquote>
-          Filosofi Rote: <span class="philosophy-highlight">"Lontar adalah pohon kehidupan yang memberi makan, minum, dan musik"</span>.
-        </blockquote>
+      </div>
+    </section>
 
-        <div class="blok-sejarah">
-          <h3>Sejarah dan Kerajaan</h3>
+    <!-- FILOSOFI QUOTE -->
+    <section class="suku-rote-section">
+      <div class="suku-rote-container">
+        <blockquote class="suku-rote-quote">
+          <p>
+            Filosofi Rote: <span class="suku-rote-philosophy-highlight">"Lontar adalah pohon kehidupan yang memberi makan, minum, dan musik"</span>
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- SEJARAH -->
+    <section class="suku-rote-section">
+      <div class="suku-rote-container">
+        
+        <div class="suku-rote-section-header">
+          <div class="suku-rote-section-number" data-number="01">01</div>
+          <div>
+            <h2 class="suku-rote-section-title">Sejarah dan Kerajaan</h2>
+            <div class="suku-rote-section-tagline">Jejak Peradaban Nusak</div>
+          </div>
+        </div>
+
+        <div class="suku-rote-block">
           <p>
             Suku Rote telah mendiami pulau ini sejak <strong>abad ke-14 Masehi</strong>. Menurut legenda, nenek moyang Rote berasal dari <strong>Seram, Maluku</strong> yang bermigrasi ke selatan. Pada <strong>abad ke-17</strong>, terbentuk 18 kerajaan kecil (<em>nusak</em>) di Pulau Rote, masing-masing dipimpin oleh seorang manek (raja).
           </p>
@@ -72,73 +133,126 @@
           </p>
         </div>
 
-        <div class="blok-fungsi">
-          <h3>Sistem Sosial dan Kepemimpinan Adat</h3>
+      </div>
+    </section>
+
+    <!-- SISTEM SOSIAL -->
+    <section class="suku-rote-section">
+      <div class="suku-rote-container">
+        
+        <div class="suku-rote-section-header">
+          <div class="suku-rote-section-number" data-number="02">02</div>
+          <div>
+            <h2 class="suku-rote-section-title">Sistem Sosial dan Kepemimpinan Adat</h2>
+            <div class="suku-rote-section-tagline">Hierarki Tradisional</div>
+          </div>
+        </div>
+
+        <div class="suku-rote-block">
+          <h3>Struktur Kepemimpinan</h3>
           <p>
             Masyarakat Rote menganut sistem <strong>kekerabatan patrilineal</strong> dengan struktur sosial yang hierarkis:
           </p>
-          <ul>
+          <ul class="suku-rote-list">
             <li><strong>Manek</strong> — Raja atau pemimpin tertinggi kerajaan (nusak)</li>
             <li><strong>Fetor</strong> — Kepala wilayah atau distrik di bawah manek</li>
             <li><strong>Temukung</strong> — Kepala kampung yang mengatur kehidupan lokal</li>
             <li><strong>Maneleo</strong> — Rakyat biasa (petani, nelayan, pengrajin)</li>
           </ul>
-          
-          <p><strong>18 Kerajaan (Nusak) Rote:</strong></p>
+        </div>
+
+        <div class="suku-rote-block">
+          <h3>18 Kerajaan (Nusak) Rote</h3>
           <p>
             Pulau Rote terbagi menjadi 18 nusak tradisional seperti: <em>Termanu, Korbaffo, Bokai, Bilba, Diu, Lelenuk, Ringgou, Oepao, Delha, Lelain, Korbafo, Thie, Loleh, Ba'a, Dengka, Oenale, Landu, dan Talae</em>. Setiap nusak memiliki dialek, adat istiadat, dan identitas tersendiri.
           </p>
-          
-          <p><strong>Kepercayaan dan Agama:</strong></p>
+        </div>
+
+        <div class="suku-rote-block">
+          <h3>Kepercayaan dan Agama</h3>
           <p>
             Kepercayaan asli Rote adalah animisme dengan pemujaan kepada <strong>Lamatua</strong> (Tuhan Yang Maha Esa) dan roh leluhur. Sejak abad ke-17, mayoritas masyarakat Rote menganut Kristen Protestan (GMIT - Gereja Masehi Injili di Timor), menjadikan Rote sebagai salah satu basis Kristen tertua di Nusantara. Praktik animisme masih dilakukan dalam upacara adat tertentu.
           </p>
         </div>
+
+      </div>
+    </section>
+
+    <!-- BUDAYA & TRADISI -->
+    <section class="suku-rote-section">
+      <div class="suku-rote-container">
         
-        <div class="blok-material">
-          <h3>Budaya dan Tradisi</h3>
-          
-          <p><strong>Sasando - Alat Musik Ikonik:</strong></p>
+        <div class="suku-rote-section-header">
+          <div class="suku-rote-section-number" data-number="03">03</div>
+          <div>
+            <h2 class="suku-rote-section-title">Budaya dan Tradisi</h2>
+            <div class="suku-rote-section-tagline">Warisan Leluhur</div>
+          </div>
+        </div>
+
+        <div class="suku-rote-block">
+          <h3>Sasando - Alat Musik Ikonik</h3>
           <p>
             <em>Sasando</em> adalah alat musik petik khas Rote yang terbuat dari daun lontar kering yang dirangkai membentuk tabung dengan senar-senar dari kawat halus. Jumlah senar bervariasi dari 28 hingga 56 senar. Suara sasando sangat khas, lembut dan merdu, sering digunakan untuk mengiringi lagu-lagu rohani dan lagu daerah Rote. Pemain sasando terkenal seperti <strong>Zacharias Ndaomanu</strong> telah memperkenalkan sasando ke panggung internasional.
           </p>
+        </div>
 
-          <p><strong>Budaya Lontar:</strong></p>
+        <div class="suku-rote-block">
+          <h3>Budaya Lontar</h3>
           <p>
             Pohon lontar (<em>Borassus flabellifer</em>) adalah sumber kehidupan masyarakat Rote. Dari lontar dihasilkan:
           </p>
-          <ul>
+          <ul class="suku-rote-list">
             <li><strong>Tuak</strong> — Minuman tradisional dari nira lontar yang difermentasi</li>
             <li><strong>Gula lontar</strong> — Pemanis alami dari nira yang dimasak</li>
             <li><strong>Daun lontar</strong> — Bahan atap rumah, anyaman, dan sasando</li>
             <li><strong>Batang lontar</strong> — Bahan konstruksi rumah dan jembatan</li>
           </ul>
+        </div>
 
-          <p><strong>Tenun Ikat Rote:</strong></p>
+        <div class="suku-rote-block">
+          <h3>Tenun Ikat Rote</h3>
           <p>
             Perempuan Rote terampil menenun <em>tais Rote</em> dengan motif khas seperti <em>buna</em> (bunga), <em>ikan</em>, dan <em>geometris</em>. Warna dominan adalah merah, hitam, kuning, dan putih dari pewarna alami. Kain tenun Rote digunakan untuk pakaian adat, upacara pernikahan, dan belis (mas kawin).
           </p>
+        </div>
 
-          <p><strong>Pantun dan Lais:</strong></p>
+        <div class="suku-rote-block">
+          <h3>Pantun dan Lais</h3>
           <p>
             Masyarakat Rote memiliki tradisi sastra lisan yang kaya dengan <em>lais</em> (syair panjang) dan <em>pantun</em> yang disampaikan dalam acara adat. Lais biasanya menceritakan sejarah leluhur, nasihat hidup, dan peristiwa penting. Tradisi ini masih hidup dalam upacara pernikahan dan kematian.
           </p>
+        </div>
 
-          <p><strong>Tarian Tradisional:</strong></p>
+        <div class="suku-rote-block">
+          <h3>Tarian Tradisional</h3>
           <p>
             Tari <em>Kataga</em> adalah tarian lingkaran yang dibawakan saat pesta adat dengan iringan sasando, gendang, dan lagu-lagu tradisional. Tarian ini mencerminkan kegembiraan dan kebersamaan masyarakat Rote.
           </p>
         </div>
 
-        <div class="blok-jenis">
-          <h3>Bahasa dan Mata Pencaharian</h3>
+      </div>
+    </section>
+
+    <!-- BAHASA & MATA PENCARIAN -->
+    <section class="suku-rote-section">
+      <div class="suku-rote-container">
+        
+        <h2 class="heading-secondary">Bahasa dan Mata Pencarian</h2>
+
+        <div class="suku-rote-block">
+          <h3>Bahasa Rote</h3>
           <p>
             Bahasa <strong>Rote</strong> termasuk dalam rumpun Austronesia dengan banyak dialek sesuai dengan 18 nusak yang ada. Dialek utama meliputi: <em>Termanu, Korbafo, Bilba, Ringgou, dan Ba'a</em>. Bahasa Rote memiliki sistem ejaan Latin yang dikembangkan sejak masa misionaris Belanda.
           </p>
+        </div>
+
+        <div class="suku-rote-block">
+          <h3>Mata Pencarian</h3>
           <p>
-            Mata pencaharian utama masyarakat Rote adalah:
+            Mata pencarian utama masyarakat Rote adalah:
           </p>
-          <ul>
+          <ul class="suku-rote-list">
             <li><strong>Pertanian lontar</strong> — Penyadapan nira dan pengolahan produk lontar</li>
             <li><strong>Perikanan laut</strong> — Nelayan tradisional dan budidaya rumput laut</li>
             <li><strong>Pertanian ladang</strong> — Jagung, padi, ubi kayu, dan kacang-kacangan</li>
@@ -149,19 +263,32 @@
 
       </div>
     </section>
+
+    <!-- BACK CTA -->
+    <section class="suku-rote-section">
+      <div class="suku-rote-container">
+        <div class="suku-rote-back-cta">
+          <a href="index.html" class="btn btn--large btn--rote-primary">
+            <span><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali ke Daftar Suku</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner container">
-      <p>&copy; 2025 Budaya NTT – Suku & Adat</p>
-      <a href="#" id="backToTop" class="back-to-top" title="Kembali ke atas">↑</a>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">&copy; 2025 East Nusa Tenggara Cultural Heritage</p>
+      <a href="#top" class="footer__back" id="backToTop" title="Kembali ke atas"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
 
-  <!-- ===================== JS ===================== -->
-  <script src="../../assets/js/bookmark-manager.js"></script>
+  <!-- JS -->
   <script src="../../assets/js/localStorage.js"></script>
   <script src="../../assets/js/search.js"></script>
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/bookmark.js"></script>
 </body>
 </html>

@@ -552,97 +552,17 @@
   box-shadow: 0 12px 35px rgba(212,175,137,0.4);
 }
 
-/* Responsive Design */
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+/* ==================== SENI DETAIL: TARI PADOA ==================== */
 @media (max-width: 1100px) {
   .seni-padoa__intro .seni-padoa__container {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-
   .seni-padoa__feature {
     grid-template-columns: 1fr;
-  }
-
-  .seni-padoa__feature-image {
-    min-height: 400px;
-  }
-
-  .seni-padoa__feature-content {
-    padding: 4rem 3rem;
-  }
-
-  .seni-padoa__preservation-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .seni-padoa__container {
-    padding: 0 1.5rem;
-  }
-
-  .seni-padoa__hero {
-    min-height: 70vh;
-  }
-
-  .seni-padoa__hero-title {
-    font-size: 3.5rem;
-  }
-
-  .seni-padoa__hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .seni-padoa__title {
-    font-size: 2.2rem;
-  }
-
-  .seni-padoa__quote-text {
-    font-size: 1.5rem;
-  }
-
-  .seni-padoa__structure-grid,
-  .seni-padoa__lyrics-types {
-    grid-template-columns: 1fr;
-  }
-
-  .seni-padoa__feature-content {
-    padding: 3rem 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .seni-padoa__hero-title {
-    font-size: 2.5rem;
-  }
-
-  .seni-padoa__hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .seni-padoa__title {
-    font-size: 1.8rem;
-  }
-
-  .seni-padoa__intro,
-  .seni-padoa__history,
-  .seni-padoa__philosophy,
-  .seni-padoa__structure,
-  .seni-padoa__lyrics,
-  .seni-padoa__preservation {
-    padding: 3rem 0;
-  }
-
-  .seni-padoa__quote {
-    padding: 3rem 0;
-  }
-
-  .seni-padoa__blockquote {
-    padding: 2rem 1rem;
-  }
-
-  .seni-padoa__quote-text {
-    font-size: 1.3rem;
   }
 }

@@ -1,7 +1,3 @@
-/* =====================================================
-   LOCALSTORAGE.JS - PURE FRONT-END ONLY
-   ===================================================== */
-
 function save(key, data) {
   try {
     localStorage.setItem(key, JSON.stringify(data));
@@ -100,13 +96,10 @@ const SearchHistory = {
     
     let history = load(this.STORAGE_KEY) || [];
     
-    // Remove duplicate if exists
     history = history.filter(item => item !== query);
     
-    // Add to beginning
     history.unshift(query);
     
-    // Limit to MAX_ITEMS
     if (history.length > this.MAX_ITEMS) {
       history = history.slice(0, this.MAX_ITEMS);
     }
@@ -169,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==================== DEBUG HELPERS ====================
 window.NTTStorage = {
   showData: function() {
-    console.group('📦 NTT Storage Data');
+    console.group('NTT Storage Data');
     console.log('Bookmarks:', BookmarkSystem.getBookmarks());
     console.log('Filter:', FilterSystem.getFilterPreference());
     console.log('Search History:', SearchHistory.getHistory());
@@ -183,20 +176,18 @@ window.NTTStorage = {
       FilterSystem.clearFilter();
       SearchHistory.clearHistory();
       VisitTracker.clearVisits();
-      console.log('✅ All data cleared');
+      console.log('All data cleared');
       location.reload();
     }
   }
 };
 
-// Backward compatibility
 window.showData = window.NTTStorage.showData;
 window.clearData = window.NTTStorage.clearAll;
 
-// Export systems
 window.BookmarkSystem = BookmarkSystem;
 window.FilterSystem = FilterSystem;
 window.SearchHistory = SearchHistory;
 window.VisitTracker = VisitTracker;
 
-console.log('✅ localStorage.js loaded');
+console.log('localStorage.js loaded');

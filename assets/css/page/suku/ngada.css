@@ -1,27 +1,41 @@
-/* ========================================
-   SUKU NGADA - SYMMETRICAL CEREMONIAL
-   ======================================== */
+/* ===================== MAIN WRAPPER ===================== */
+.suku-ngada {
+  background: #0f0d0b;
+  color: rgba(255, 255, 255, 0.92);
+  min-height: 100vh;
+}
 
-/* Hero - Vertical Symmetry with Center Split */
+/* =====================================================
+   HERO 
+   ===================================================== */
 .suku-ngada__hero {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  background: linear-gradient(180deg, #3a2d1f 0%, #2a1f15 100%);
+  align-items: center;
+  background: 
+    linear-gradient(to right,
+      rgba(101, 67, 33, 0.1) 0%,
+      transparent 33%,
+      transparent 67%,
+      rgba(101, 67, 33, 0.1) 100%),
+    #0f0d0b;
   position: relative;
-  overflow: hidden;
 }
 
 .suku-ngada__hero::before {
   content: '';
   position: absolute;
-  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
   width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent 0%, #cd7f32 50%, transparent 100%);
-  opacity: 0.3;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(139, 69, 19, 0.3) 20%,
+    rgba(139, 69, 19, 0.3) 80%,
+    transparent 100%);
+  transform: translateX(-50%);
 }
 
 .suku-ngada__hero-left,
@@ -29,106 +43,157 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 3rem;
+  gap: 32px;
+  padding: 80px 40px;
 }
 
 .suku-ngada__hero-pillar {
   width: 120px;
-  height: 300px;
+  height: 400px;
+  background: linear-gradient(180deg,
+    rgba(139, 69, 19, 0.3) 0%,
+    rgba(139, 69, 19, 0.1) 100%);
   position: relative;
-  margin-bottom: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .suku-ngada__hero-pillar--ngadhu {
-  background: linear-gradient(180deg, #cd7f32 0%, #8b5a3c 100%);
-  clip-path: polygon(40% 0%, 60% 0%, 55% 80%, 50% 100%, 45% 80%);
-  box-shadow: 0 10px 40px rgba(205,127,50,0.3);
+  clip-path: polygon(30% 0%, 70% 0%, 70% 70%, 50% 80%, 30% 70%);
 }
 
 .suku-ngada__hero-pillar--bhaga {
-  background: linear-gradient(180deg, #b8860b 0%, #6d5020 100%);
-  clip-path: polygon(20% 0%, 80% 0%, 90% 60%, 70% 100%, 30% 100%, 10% 60%);
-  box-shadow: 0 10px 40px rgba(184,134,11,0.3);
+  clip-path: polygon(20% 0%, 80% 0%, 90% 100%, 10% 100%);
+}
+
+.suku-ngada__hero-pillar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 20px,
+    rgba(139, 69, 19, 0.1) 20px,
+    rgba(139, 69, 19, 0.1) 21px
+  );
 }
 
 .suku-ngada__hero-label {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #cd7f32;
+  color: #8b4513;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  letter-spacing: 3px;
 }
 
 .suku-ngada__hero-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 3rem;
+  padding: 80px 60px;
 }
 
 .suku-ngada__hero-title {
   font-size: clamp(5rem, 12vw, 9rem);
   font-weight: 900;
+  letter-spacing: -4px;
   color: #fff;
-  margin-bottom: 2rem;
-  letter-spacing: 8px;
-  text-shadow: 0 4px 30px rgba(205,127,50,0.4);
+  margin-bottom: 32px;
+  line-height: 1;
+  text-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.suku-ngada__hero-title::before,
+.suku-ngada__hero-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #8b4513, transparent);
+}
+
+.suku-ngada__hero-title::before {
+  right: calc(100% + 40px);
+}
+
+.suku-ngada__hero-title::after {
+  left: calc(100% + 40px);
 }
 
 .suku-ngada__hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(255,255,255,0.8);
-  font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 24px;
   max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .suku-ngada__hero-location {
   display: inline-block;
-  padding: 0.8rem 2rem;
-  border: 2px solid #cd7f32;
-  border-radius: 50px;
-  color: #cd7f32;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  color: #cd853f;
+  padding: 12px 32px;
+  border: 2px solid rgba(139, 69, 19, 0.3);
+  border-left: none;
+  border-right: none;
 }
 
-/* Intro - Mirror Layout */
+/* =====================================================
+   INTRO 
+   ===================================================== */
 .suku-ngada__intro {
-  padding: 8rem 0;
-  background: #f5f0ea;
+  padding: 150px 0;
+  background: #0f0d0b;
   position: relative;
 }
 
+.suku-ngada__intro::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(139, 69, 19, 0.2) 30%,
+    rgba(139, 69, 19, 0.2) 70%,
+    transparent);
+  transform: translateX(-50%);
+}
+
 .suku-ngada__intro-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
   position: relative;
 }
 
 .suku-ngada__intro-decoration {
   position: absolute;
   top: 0;
-  width: 80px;
+  width: 150px;
   height: 100%;
-  background: linear-gradient(180deg, #cd7f32 0%, transparent 100%);
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 .suku-ngada__intro-decoration--left {
   left: 0;
+  background: linear-gradient(to right,
+    rgba(139, 69, 19, 0.15),
+    transparent);
 }
 
 .suku-ngada__intro-decoration--right {
   right: 0;
-  transform: scaleX(-1);
+  background: linear-gradient(to left,
+    rgba(139, 69, 19, 0.15),
+    transparent);
 }
 
 .suku-ngada__intro-content {
@@ -138,49 +203,61 @@
 }
 
 .suku-ngada__intro-content h2 {
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: #3a2d1f;
-  margin-bottom: 2.5rem;
-  line-height: 1.2;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #8b4513;
+  margin-bottom: 48px;
+  letter-spacing: -2px;
 }
 
 .suku-ngada__intro-content p {
   font-size: 1.15rem;
-  line-height: 1.9;
-  color: #5a4633;
-  margin-bottom: 1.5rem;
+  line-height: 2.1;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 32px;
+  text-align: justify;
+}
+
+.suku-ngada__intro-content p:last-child {
+  margin-bottom: 0;
 }
 
 .suku-ngada__intro-content strong {
-  color: #8b5a3c;
-  font-weight: 600;
+  color: #cd853f;
+  font-weight: 700;
 }
 
 .suku-ngada__intro-content em {
+  color: #daa520;
   font-style: italic;
-  color: #a67c52;
 }
 
-/* Philosophy - Centered Quote with Symmetric Elements */
+/* =====================================================
+   PHILOSOPHY 
+   ===================================================== */
 .suku-ngada__philosophy {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, #cd7f32 0%, #8b5a3c 100%);
+  padding: 120px 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(139, 69, 19, 0.08), transparent),
+    #0f0d0b;
 }
 
 .suku-ngada__philosophy-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
-  display: flex;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 60px;
   align-items: center;
-  gap: 3rem;
 }
 
 .suku-ngada__philosophy-line {
-  flex: 1;
-  height: 2px;
-  background: rgba(255,255,255,0.3);
+  height: 3px;
+  background: linear-gradient(to right,
+    transparent,
+    #8b4513 50%,
+    transparent);
   position: relative;
 }
 
@@ -188,62 +265,80 @@
   content: '';
   position: absolute;
   top: 50%;
-  width: 12px;
-  height: 12px;
-  background: #fff;
-  border-radius: 50%;
-  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #8b4513;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .suku-ngada__philosophy-line--left::before {
-  right: 0;
+  right: -10px;
 }
 
 .suku-ngada__philosophy-line--right::before {
-  left: 0;
+  left: -10px;
 }
 
 .suku-ngada__philosophy-content {
-  text-align: center;
+  max-width: 600px;
 }
 
 .suku-ngada__philosophy-quote {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #8b4513;
+  line-height: 1.6;
+  text-align: center;
   font-style: italic;
-  font-weight: 600;
-  color: #fff;
-  line-height: 1.5;
-  max-width: 700px;
 }
 
-/* Origins - Dual Column */
+/* =====================================================
+   ORIGINS 
+   ===================================================== */
 .suku-ngada__origins {
-  padding: 8rem 0;
-  background: #fff;
+  padding: 150px 0;
+  background: #0f0d0b;
+  position: relative;
+}
+
+.suku-ngada__origins::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(139, 69, 19, 0.3) 20%,
+    rgba(139, 69, 19, 0.3) 80%,
+    transparent);
+  transform: translateX(-50%);
 }
 
 .suku-ngada__origins-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
 }
 
 .suku-ngada__origins-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 100px;
 }
 
 .suku-ngada__origins-header h2 {
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #3a2d1f;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -2px;
 }
 
 .suku-ngada__origins-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 60px;
+  margin-bottom: 60px;
 }
 
 .suku-ngada__origins-grid:last-child {
@@ -251,499 +346,533 @@
 }
 
 .suku-ngada__origins-block {
-  background: #f5f0ea;
-  padding: 3rem;
-  border-radius: 12px;
+  padding: 48px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.08) 0%,
+    rgba(139, 69, 19, 0.02) 100%);
+  border: 1px solid rgba(139, 69, 19, 0.2);
   position: relative;
   transition: all 0.3s ease;
 }
 
+.suku-ngada__origins-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: #8b4513;
+  transition: all 0.3s ease;
+}
+
 .suku-ngada__origins-block:hover {
-  background: #fff;
-  box-shadow: 0 15px 40px rgba(205,127,50,0.15);
-  transform: translateY(-5px);
+  background: rgba(139, 69, 19, 0.12);
+  border-color: #8b4513;
+  transform: translateY(-4px);
+}
+
+.suku-ngada__origins-block:hover::before {
+  height: 100%;
 }
 
 .suku-ngada__origins-marker {
-  width: 40px;
-  height: 4px;
-  background: #cd7f32;
-  margin-bottom: 1.5rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #8b4513, #654321);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(139, 69, 19, 0.3);
 }
 
 .suku-ngada__origins-block h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #3a2d1f;
-  margin-bottom: 1rem;
+  color: #8b4513;
+  margin-bottom: 20px;
 }
 
 .suku-ngada__origins-block p {
   font-size: 1.05rem;
-  line-height: 1.8;
-  color: #5a4633;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .suku-ngada__origins-block strong {
-  color: #8b5a3c;
-  font-weight: 600;
+  color: #cd853f;
 }
 
 .suku-ngada__origins-block em {
+  color: #daa520;
   font-style: italic;
-  color: #a67c52;
 }
 
-/* Ngadhu Bhaga - Visual Split Screen */
+/* =====================================================
+   SYMBOLS 
+   ===================================================== */
 .suku-ngada__symbols {
-  background: #f5f0ea;
+  padding: 0;
+  background: #0f0d0b;
 }
 
 .suku-ngada__symbols-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
 }
 
 .suku-ngada__symbols-item {
   position: relative;
-  min-height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 5rem 4rem;
-}
-
-.suku-ngada__symbols-item--ngadhu {
-  background: linear-gradient(135deg, #cd7f32 0%, #8b5a3c 100%);
-}
-
-.suku-ngada__symbols-item--bhaga {
-  background: linear-gradient(135deg, #b8860b 0%, #6d5020 100%);
+  justify-content: flex-end;
+  padding: 80px;
+  overflow: hidden;
 }
 
 .suku-ngada__symbols-visual {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.1;
+  inset: 0;
   background-size: cover;
   background-position: center;
+  filter: brightness(0.4) contrast(1.15);
+  transition: transform 0.8s ease;
 }
 
 .suku-ngada__symbols-item--ngadhu .suku-ngada__symbols-visual {
-  background-image: url('../../img/suku/ngadhu.jpg');
+  background-image: url('../../assets/img/rumahadat/ngadhu.jpg');
 }
 
 .suku-ngada__symbols-item--bhaga .suku-ngada__symbols-visual {
-  background-image: url('../../img/suku/bhaga.jpg');
+  background-image: url('../../assets/img/rumahadat/bhaga.jpg');
+}
+
+.suku-ngada__symbols-item:hover .suku-ngada__symbols-visual {
+  transform: scale(1.1);
 }
 
 .suku-ngada__symbols-content {
   position: relative;
   z-index: 2;
+  max-width: 500px;
 }
 
 .suku-ngada__symbols-content h2 {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 900;
   color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 .suku-ngada__symbols-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.9;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Structure - Hierarchical Pyramid */
+/* =====================================================
+   STRUCTURE 
+   ===================================================== */
 .suku-ngada__structure {
-  padding: 8rem 0;
-  background: #fff;
+  padding: 150px 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(139, 69, 19, 0.08), transparent),
+    #0f0d0b;
 }
 
 .suku-ngada__structure-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
+  text-align: center;
 }
 
 .suku-ngada__structure-container h2 {
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #3a2d1f;
-  text-align: center;
-  margin-bottom: 5rem;
+  font-weight: 900;
+  color: #8b4513;
+  margin-bottom: 100px;
+  letter-spacing: -2px;
 }
 
 .suku-ngada__structure-pyramid {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  gap: 0;
 }
 
 .suku-ngada__structure-level {
-  background: #f5f0ea;
-  border: 2px solid #cd7f32;
-  padding: 2.5rem;
-  text-align: center;
+  margin: 0 auto 24px;
+  padding: 48px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.15) 0%,
+    rgba(139, 69, 19, 0.05) 100%);
+  border: 2px solid rgba(139, 69, 19, 0.3);
   transition: all 0.3s ease;
-}
-
-.suku-ngada__structure-level--1 {
-  width: 280px;
-  background: linear-gradient(135deg, #cd7f32, #8b5a3c);
-  border: none;
-}
-
-.suku-ngada__structure-level--2 {
-  width: 400px;
-}
-
-.suku-ngada__structure-level--3 {
-  width: 520px;
+  position: relative;
 }
 
 .suku-ngada__structure-level:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(205,127,50,0.2);
+  background: rgba(139, 69, 19, 0.2);
+  border-color: #8b4513;
+  transform: scale(1.02);
 }
 
-.suku-ngada__structure-level--1 h3 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 0.8rem;
+.suku-ngada__structure-level--1 {
+  width: 300px;
+  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
 }
 
-.suku-ngada__structure-level--1 p {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.9);
+.suku-ngada__structure-level--2 {
+  width: 500px;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.suku-ngada__structure-level--3 {
+  width: 700px;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
 }
 
 .suku-ngada__structure-level h3 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #3a2d1f;
-  margin-bottom: 0.8rem;
+  color: #8b4513;
+  margin-bottom: 12px;
 }
 
 .suku-ngada__structure-level p {
   font-size: 1.05rem;
-  color: #5a4633;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-/* Reba Ceremony - Timeline Visual */
 .suku-ngada__reba {
-  padding: 8rem 0;
-  background: #f5f0ea;
+  padding: 150px 0;
+  background: #0f0d0b;
 }
 
 .suku-ngada__reba-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
 }
 
 .suku-ngada__reba-container h2 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #3a2d1f;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 28px;
 }
 
 .suku-ngada__reba-intro {
-  text-align: center;
   font-size: 1.2rem;
-  color: #5a4633;
-  margin-bottom: 5rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 100px;
 }
 
 .suku-ngada__reba-timeline {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0;
+  justify-content: space-between;
+  position: relative;
+}
+
+.suku-ngada__reba-timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  right: 80px;
+  height: 3px;
+  background: linear-gradient(to right,
+    #8b4513,
+    rgba(139, 69, 19, 0.5),
+    rgba(139, 69, 19, 0.5),
+    #8b4513);
+  z-index: 1;
 }
 
 .suku-ngada__reba-step {
-  background: #fff;
-  padding: 2.5rem 2rem;
+  flex: 1;
   text-align: center;
-  width: 220px;
-  border: 2px solid #cd7f32;
-  transition: all 0.3s ease;
-}
-
-.suku-ngada__reba-step:hover {
-  background: #f5f0ea;
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(205,127,50,0.2);
+  position: relative;
+  z-index: 2;
 }
 
 .suku-ngada__reba-number {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #cd7f32, #8b5a3c);
-  color: #fff;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, #8b4513, #654321);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(139, 69, 19, 0.4);
 }
 
 .suku-ngada__reba-step h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #3a2d1f;
-  margin-bottom: 1rem;
+  color: #8b4513;
+  margin-bottom: 12px;
 }
 
 .suku-ngada__reba-step p {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #5a4633;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .suku-ngada__reba-connector {
-  width: 60px;
-  height: 2px;
-  background: #cd7f32;
-  flex-shrink: 0;
+  width: 40px;
+  height: 3px;
+  background: transparent;
+  position: relative;
+  z-index: 0;
 }
 
-/* Culture - Grid Cards */
+/* =====================================================
+   CULTURE 
+   ===================================================== */
 .suku-ngada__culture {
-  padding: 8rem 0;
-  background: #fff;
+  padding: 150px 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(139, 69, 19, 0.08), transparent),
+    #0f0d0b;
 }
 
 .suku-ngada__culture-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
 }
 
 .suku-ngada__culture-container h2 {
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #3a2d1f;
+  font-weight: 900;
+  color: #8b4513;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 100px;
+  letter-spacing: -2px;
 }
 
 .suku-ngada__culture-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 48px;
 }
 
 .suku-ngada__culture-card {
-  background: #f5f0ea;
-  padding: 3rem;
-  border-radius: 12px;
-  text-align: center;
-  border: 2px solid transparent;
+  padding: 56px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.08) 0%,
+    rgba(139, 69, 19, 0.02) 100%);
+  border: 1px solid rgba(139, 69, 19, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.suku-ngada__culture-card::before,
+.suku-ngada__culture-card::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #8b4513;
   transition: all 0.3s ease;
 }
 
+.suku-ngada__culture-card::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.suku-ngada__culture-card::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
 .suku-ngada__culture-card:hover {
-  background: #fff;
-  border-color: #cd7f32;
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(205,127,50,0.15);
+  background: rgba(139, 69, 19, 0.12);
+  border-color: #8b4513;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(139, 69, 19, 0.3);
+}
+
+.suku-ngada__culture-card:hover::before,
+.suku-ngada__culture-card:hover::after {
+  width: 40px;
+  height: 40px;
 }
 
 .suku-ngada__culture-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #cd7f32, #8b5a3c);
-  margin: 0 auto 2rem;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  transition: transform 0.3s ease;
-}
-
-.suku-ngada__culture-card:hover .suku-ngada__culture-icon {
-  transform: rotate(45deg);
+  margin-bottom: 32px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.3) 0%,
+    rgba(139, 69, 19, 0.1) 100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .suku-ngada__culture-card h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #3a2d1f;
-  margin-bottom: 1rem;
+  color: #8b4513;
+  margin-bottom: 20px;
 }
 
 .suku-ngada__culture-card p {
   font-size: 1.05rem;
-  line-height: 1.8;
-  color: #5a4633;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .suku-ngada__culture-card em {
+  color: #cd853f;
   font-style: italic;
-  color: #a67c52;
 }
 
-/* Language - Symmetric Content */
+/* =====================================================
+   LANGUAGE 
+   ===================================================== */
 .suku-ngada__language {
-  padding: 8rem 0;
-  background: linear-gradient(135deg, #3a2d1f 0%, #2a1f15 100%);
+  padding: 150px 0;
+  background: #0f0d0b;
   position: relative;
 }
 
 .suku-ngada__language-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
   position: relative;
 }
 
 .suku-ngada__language-divider {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, transparent 0%, #cd7f32 50%, transparent 100%);
-  margin-bottom: 4rem;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right,
+    transparent,
+    #8b4513,
+    transparent);
+  margin: 0 auto 60px;
 }
 
 .suku-ngada__language-content h2 {
   font-size: 3rem;
-  font-weight: 800;
-  color: #cd7f32;
+  font-weight: 900;
+  color: #8b4513;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 80px;
+  letter-spacing: -2px;
 }
 
 .suku-ngada__language-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-}
-
-.suku-ngada__language-block {
-  background: rgba(255,255,255,0.05);
-  padding: 3rem;
-  border-radius: 12px;
-  border: 1px solid rgba(205,127,50,0.3);
+  gap: 80px;
 }
 
 .suku-ngada__language-block h3 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #cd7f32;
-  margin-bottom: 1.5rem;
+  color: #8b4513;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .suku-ngada__language-block p {
   font-size: 1.1rem;
-  line-height: 1.9;
-  color: rgba(255,255,255,0.85);
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: justify;
 }
 
 .suku-ngada__language-block strong {
-  color: #cd7f32;
-  font-weight: 600;
+  color: #cd853f;
 }
 
-/* Back Link */
+/* =====================================================
+   BACK SECTION
+   ===================================================== */
 .suku-ngada__back {
-  padding: 5rem 0;
-  background: #f5f0ea;
-  text-align: center;
+  padding: 100px 0;
+  background: #0f0d0b;
 }
 
 .suku-ngada__back-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
+  text-align: center;
 }
 
 .suku-ngada__back-link {
-  display: inline-block;
-  padding: 1.3rem 3.5rem;
-  background: linear-gradient(135deg, #cd7f32, #8b5a3c);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
   font-size: 1.1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(205,127,50,0.3);
+  font-weight: 700;
+  color: #8b4513;
+  text-decoration: none;
+  padding: 20px 48px;
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.1) 0%,
+    rgba(139, 69, 19, 0.05) 100%);
+  border: 2px solid #8b4513;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.suku-ngada__back-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #8b4513;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.suku-ngada__back-link:hover::before {
+  width: 150%;
+  height: 400%;
 }
 
 .suku-ngada__back-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(205,127,50,0.4);
+  color: #fff;
+  transform: translateX(-8px);
+  box-shadow: 0 12px 40px rgba(139, 69, 19, 0.4);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+@media (max-width: 1199px) {
   .suku-ngada__hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: 200px 1fr 200px;
   }
 
-  .suku-ngada__hero-left,
-  .suku-ngada__hero-right {
-    display: none;
-  }
-
-  .suku-ngada__symbols-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .suku-ngada__origins-grid,
-  .suku-ngada__culture-grid,
-  .suku-ngada__language-split {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .suku-ngada__reba-timeline {
-    flex-direction: column;
-  }
-
-  .suku-ngada__reba-step {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .suku-ngada__reba-connector {
-    width: 2px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .suku-ngada__hero {
-    min-height: 70vh;
-  }
-
-  .suku-ngada__hero-title {
-    font-size: 4.5rem;
-  }
-
-  .suku-ngada__hero-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .suku-ngada__intro,
-  .suku-ngada__philosophy,
-  .suku-ngada__origins,
-  .suku-ngada__structure,
-  .suku-ngada__reba,
-  .suku-ngada__culture,
-  .suku-ngada__language {
-    padding: 5rem 0;
+  .suku-ngada__hero-pillar {
+    width: 100px;
+    height: 350px;
   }
 
   .suku-ngada__intro-container,
@@ -753,73 +882,424 @@
   .suku-ngada__culture-container,
   .suku-ngada__language-container,
   .suku-ngada__back-container {
-    padding: 0 2rem;
+    padding: 0 60px;
+  }
+
+  .suku-ngada__symbols-item {
+    padding: 60px;
+  }
+
+  .suku-ngada__philosophy-container {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 991px) {
+  .suku-ngada__hero {
+    grid-template-columns: 1fr;
+    min-height: 80vh;
+  }
+
+  .suku-ngada__hero::before {
+    display: none;
+  }
+
+  .suku-ngada__hero-left,
+  .suku-ngada__hero-right {
+    display: none;
+  }
+
+  .suku-ngada__hero-title::before,
+  .suku-ngada__hero-title::after {
+    display: none;
+  }
+
+  .suku-ngada__intro,
+  .suku-ngada__philosophy,
+  .suku-ngada__origins,
+  .suku-ngada__structure,
+  .suku-ngada__reba,
+  .suku-ngada__culture,
+  .suku-ngada__language,
+  .suku-ngada__back {
+    padding: 100px 0;
+  }
+
+  .suku-ngada__intro-container,
+  .suku-ngada__origins-container,
+  .suku-ngada__structure-container,
+  .suku-ngada__reba-container,
+  .suku-ngada__culture-container,
+  .suku-ngada__language-container,
+  .suku-ngada__back-container {
+    padding: 0 40px;
+  }
+
+  .suku-ngada__philosophy-container {
+    grid-template-columns: 1fr;
+    padding: 0 40px;
+  }
+
+  .suku-ngada__philosophy-line {
+    display: none;
+  }
+
+  .suku-ngada__origins-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;}
+
+  .suku-ngada__symbols-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .suku-ngada__symbols-item {
+    min-height: 50vh;
+    padding: 60px 40px;
+  }
+
+  .suku-ngada__structure-level--1 {
+    width: 280px;
+  }
+
+  .suku-ngada__structure-level--2 {
+    width: 420px;
+  }
+
+  .suku-ngada__structure-level--3 {
+    width: 560px;
+  }
+
+  .suku-ngada__reba-timeline {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .suku-ngada__reba-timeline::before {
+    display: none;
+  }
+
+  .suku-ngada__reba-connector {
+    display: none;
+  }
+
+  .suku-ngada__culture-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .suku-ngada__language-split {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .suku-ngada__hero-center {
+    padding: 60px 28px;
+  }
+
+  .suku-ngada__hero-title {
+    font-size: clamp(3rem, 12vw, 5rem);
+    margin-bottom: 24px;
+  }
+
+  .suku-ngada__hero-subtitle {
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
+  }
+
+  .suku-ngada__hero-location {
+    font-size: 0.85rem;
+    padding: 10px 24px;
+  }
+
+  .suku-ngada__intro,
+  .suku-ngada__philosophy,
+  .suku-ngada__origins,
+  .suku-ngada__structure,
+  .suku-ngada__reba,
+  .suku-ngada__culture,
+  .suku-ngada__language,
+  .suku-ngada__back {
+    padding: 80px 0;
+  }
+
+  .suku-ngada__intro-container,
+  .suku-ngada__origins-container,
+  .suku-ngada__structure-container,
+  .suku-ngada__reba-container,
+  .suku-ngada__culture-container,
+  .suku-ngada__language-container,
+  .suku-ngada__back-container {
+    padding: 0 28px;
   }
 
   .suku-ngada__intro-content h2,
   .suku-ngada__origins-header h2,
   .suku-ngada__structure-container h2,
-  .suku-ngada__reba-container h2,
-  .suku-ngada__culture-container h2,
   .suku-ngada__language-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .suku-ngada__intro-content p {
+    font-size: 1rem;
+    line-height: 1.9;
+    text-align: left;
+  }
+
+  .suku-ngada__philosophy-container {
+    padding: 0 28px;
   }
 
   .suku-ngada__philosophy-quote {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .suku-ngada__origins-grid {
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .suku-ngada__origins-block {
+    padding: 36px;
+  }
+
+  .suku-ngada__origins-marker {
+    width: 50px;
+    height: 50px;
+  }
+
+  .suku-ngada__origins-block h3 {
+    font-size: 1.4rem;
+  }
+
+  .suku-ngada__origins-block p {
+    font-size: 1rem;
+    line-height: 1.8;
   }
 
   .suku-ngada__symbols-item {
-    min-height: 400px;
-    padding: 3rem 2rem;
+    min-height: 45vh;
+    padding: 48px 28px;
   }
 
   .suku-ngada__symbols-content h2 {
     font-size: 2.5rem;
   }
 
-  .suku-ngada__structure-level--1 {
-    width: 100%;
+  .suku-ngada__symbols-content p {
+    font-size: 1rem;
   }
 
-  .suku-ngada__structure-level--2,
+  .suku-ngada__structure-container {
+    padding: 0 28px;
+  }
+
+  .suku-ngada__structure-level {
+    padding: 36px;
+    margin-bottom: 20px;
+  }
+
+  .suku-ngada__structure-level--1 {
+    width: 240px;
+  }
+
+  .suku-ngada__structure-level--2 {
+    width: 340px;
+  }
+
   .suku-ngada__structure-level--3 {
-    width: 100%;
+    width: 440px;
+  }
+
+  .suku-ngada__structure-level h3 {
+    font-size: 1.5rem;
+  }
+
+  .suku-ngada__structure-level p {
+    font-size: 0.95rem;
+  }
+
+  .suku-ngada__reba-container {
+    padding: 0 28px;
+  }
+
+  .suku-ngada__reba-intro {
+    font-size: 1.05rem;
+    margin-bottom: 60px;
+  }
+
+  .suku-ngada__reba-timeline {
+    gap: 48px;
+  }
+
+  .suku-ngada__reba-number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .suku-ngada__reba-step h3 {
+    font-size: 1.2rem;
+  }
+
+  .suku-ngada__reba-step p {
+    font-size: 0.95rem;
+  }
+
+  .suku-ngada__culture-container {
+    padding: 0 28px;
+  }
+
+  .suku-ngada__culture-container h2 {
+    margin-bottom: 60px;
+  }
+
+  .suku-ngada__culture-grid {
+    gap: 32px;
+  }
+
+  .suku-ngada__culture-card {
+    padding: 40px;
+  }
+
+  .suku-ngada__culture-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .suku-ngada__culture-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .suku-ngada__culture-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .suku-ngada__language-container {
+    padding: 0 28px;
+  }
+
+  .suku-ngada__language-content h2 {
+    margin-bottom: 60px;
+  }
+
+  .suku-ngada__language-split {
+    gap: 48px;
+  }
+
+  .suku-ngada__language-block h3 {
+    font-size: 1.5rem;
+  }
+
+  .suku-ngada__language-block p {
+    font-size: 1rem;
+    line-height: 1.9;
+    text-align: left;
+  }
+
+  .suku-ngada__back-container {
+    padding: 0 28px;
+  }
+
+  .suku-ngada__back-link {
+    font-size: 1rem;
+    padding: 18px 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .suku-ngada__hero-title {
-    font-size: 3rem;
-    letter-spacing: 4px;
+  .suku-ngada__hero-center {
+    padding: 60px 24px;
   }
 
-  .suku-ngada__hero-subtitle {
+  .suku-ngada__hero-label {
     font-size: 1rem;
+    letter-spacing: 3px;
   }
 
-  .suku-ngada__intro-content h2 {
-    font-size: 2rem;
+  .suku-ngada__intro-container,
+  .suku-ngada__origins-container,
+  .suku-ngada__structure-container,
+  .suku-ngada__reba-container,
+  .suku-ngada__culture-container,
+  .suku-ngada__language-container,
+  .suku-ngada__back-container {
+    padding: 0 24px;
+  }
+
+  .suku-ngada__intro-content h2,
+  .suku-ngada__origins-header h2,
+  .suku-ngada__structure-container h2,
+  .suku-ngada__language-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .suku-ngada__philosophy-container {
+    padding: 0 24px;
   }
 
   .suku-ngada__philosophy-quote {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
-  .suku-ngada__origins-header h2,
-  .suku-ngada__structure-container h2,
-  .suku-ngada__reba-container h2,
-  .suku-ngada__culture-container h2,
-  .suku-ngada__language-content h2 {
-    font-size: 2rem;
+  .suku-ngada__origins-block {
+    padding: 32px;
+  }
+
+  .suku-ngada__origins-marker {
+    width: 45px;
+    height: 45px;
+  }
+
+  .suku-ngada__symbols-item {
+    min-height: 40vh;
+    padding: 40px 24px;
   }
 
   .suku-ngada__symbols-content h2 {
     font-size: 2rem;
   }
 
+  .suku-ngada__structure-level--1 {
+    width: 200px;
+  }
+
+  .suku-ngada__structure-level--2 {
+    width: 280px;
+  }
+
+  .suku-ngada__structure-level--3 {
+    width: 360px;
+  }
+
+  .suku-ngada__structure-level {
+    padding: 32px;
+  }
+
+  .suku-ngada__reba-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .suku-ngada__culture-card {
+    padding: 36px;
+  }
+
+  .suku-ngada__culture-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .suku-ngada__language-divider {
+    width: 80px;
+    margin-bottom: 48px;
+  }
+
   .suku-ngada__back-link {
-    padding: 1.1rem 2.5rem;
-    font-size: 1rem;
+    padding: 16px 36px;
   }
 }

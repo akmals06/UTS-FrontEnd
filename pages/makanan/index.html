@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kuliner NTT — Cita Rasa Nusantara</title>
   <meta name="description" content="Eksplorasi kuliner khas NTT: Jagung Bose, Kolo, Se'i, dan hidangan tradisional lainnya.">
-
-  <!-- CSS FILES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/page/makanan/makanan.css">
-  <link rel="stylesheet" href="../../assets/css/responsive.css">
 </head>
 <body id="top">
 
@@ -17,13 +15,11 @@
   <nav class="nav visible" id="mainNav">
     <div class="nav__inner">
       
-      <!-- Brand -->
       <a href="../../index.html" class="nav__brand">
         <span class="nav__brand-text">EAST NUSA TENGGARA</span>
         <span class="nav__brand-subtitle">Warisan Nusantara</span>
       </a>
 
-      <!-- Menu -->
       <ul class="nav__links" id="navLinks">
         <li><a href="../../index.html" class="nav__link">Beranda</a></li>
         <li class="nav__dropdown">
@@ -40,13 +36,11 @@
         </li>
       </ul>
 
-      <!-- Search -->
       <div class="search">
         <input id="searchInput" type="text" class="search__input" placeholder="Cari budaya NTT...">
         <div class="search__panel hidden" id="searchPanel"></div>
       </div>
 
-      <!-- Toggle Mobile -->
       <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -73,7 +67,6 @@
   <!-- ===================== MAIN CONTENT ===================== -->
   <main id="content">
 
-    <!-- INTRO -->
     <section class="makanan-intro">
       <div class="container">
         <h2 class="heading-secondary">Filosofi Makanan Tradisional NTT</h2>
@@ -129,10 +122,9 @@
       <div class="container">
         <div class="makanan-grid">
           
-          <!-- Jagung Bose -->
           <article class="makanan-card" data-id="jagung-bose" data-region="flores" data-tags="jagung bose makanan ritual manggarai labu">
             <button class="makanan-card__bookmark" aria-label="Bookmark" data-id="jagung-bose">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="makanan-card__img-wrapper">
               <img src="../../assets/img/makanan/jagung_bose1.webp" alt="Jagung Bose" class="makanan-card__img">
@@ -152,7 +144,7 @@
           <!-- Kolo -->
           <article class="makanan-card" data-id="kolo" data-region="flores" data-tags="kolo upacara penti ngada bajawa">
             <button class="makanan-card__bookmark" aria-label="Bookmark" data-id="kolo">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="makanan-card__img-wrapper">
               <img src="../../assets/img/makanan/Kolo1.jpeg" alt="Kolo" class="makanan-card__img">
@@ -172,7 +164,7 @@
           <!-- Se'i -->
           <article class="makanan-card" data-id="sei" data-region="all" data-tags="sei daging asap tradisional ntt">
             <button class="makanan-card__bookmark" aria-label="Bookmark" data-id="sei">
-              <span class="bookmark-icon">☆</span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
             <div class="makanan-card__img-wrapper">
               <img src="../../assets/img/makanan/sei1.jpg" alt="Se'i" class="makanan-card__img">
@@ -188,10 +180,8 @@
               <a href="sei.html" class="btn btn--primary">Selengkapnya</a>
             </div>
           </article>
-
         </div>
 
-        <!-- No Results -->
         <div id="noResults" class="no-results" style="display: none;">
           <p>Tidak ada makanan yang sesuai dengan pencarian Anda.</p>
         </div>
@@ -204,14 +194,14 @@
   <footer class="footer">
     <div class="footer__inner">
       <p class="footer__text">© 2025 East Nusa Tenggara Cultural Heritage</p>
-      <a href="#top" class="footer__back" id="backToTop">↑</a>
+      <a href="#top" class="footer__back" id="backToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
 
   <!-- ===================== JS ===================== -->
-  <script src="../../assets/js/bookmark-manager.js"></script>
   <script src="../../assets/js/localStorage.js"></script>
   <script src="../../assets/js/search.js"></script>
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/bookmark.js"></script>
 </body>
 </html>

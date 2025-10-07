@@ -66,7 +66,7 @@
 .komodo-image figure {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.6),
     0 0 0 1px rgba(212, 165, 116, 0.15);
   position: relative;
@@ -75,7 +75,7 @@
 
 .komodo-image figure:hover {
   transform: translateY(-8px);
-  box-shadow: 
+  box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.7),
     0 0 0 1px rgba(212, 165, 116, 0.3);
 }
@@ -263,79 +263,14 @@
   border-top: 1px solid rgba(212, 165, 116, 0.15);
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+/* ==================== ALAM DETAIL: PULAU KOMODO ==================== */
 @media (max-width: 991px) {
-  .komodo-row,
-  .komodo-filosofi {
+  .komodo-row {
     grid-template-columns: 1fr;
     gap: 48px;
-  }
-
-  .komodo-heading {
-    font-size: clamp(2rem, 6vw, 3rem);
-  }
-
-  .komodo-quote {
-    font-size: 1.2rem;
-    padding: 48px;
-  }
-}
-
-@media (max-width: 767px) {
-  .komodo-section {
-    padding: 80px 0;
-  }
-
-  .komodo-heading {
-    margin-bottom: 48px;
-    padding-bottom: 24px;
-  }
-
-  .komodo-row {
-    margin-bottom: 64px;
-  }
-
-  .komodo-dropcap {
-    font-size: 4rem;
-    margin: 0.1rem 0.4rem 0 0;
-  }
-  
-  .komodo-block {
-    padding: 32px;
-    margin-bottom: 64px;
-  }
-
-  .komodo-block h3 {
-    font-size: 1.6rem;
-    margin-bottom: 32px;
-  }
-
-  .komodo-quote {
-    font-size: 1.1rem;
-    padding: 32px;
-    margin: 64px auto;
-  }
-
-  .komodo-quote::before {
-    font-size: 4rem;
-    top: -10px;
-    left: 20px;
-  }
-
-  .komodo-list li {
-    padding-left: 32px;
-  }
-
-  .komodo-list li:hover {
-    padding-left: 40px;
-  }
-
-  .komodo-filosofi {
-    padding: 32px;
-  }
-
-  .komodo-back-cta {
-    margin-top: 64px;
-    padding-top: 48px;
   }
 }

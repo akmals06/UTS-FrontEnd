@@ -42,7 +42,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: 
+  background:
     radial-gradient(ellipse at 30% 70%, rgba(139, 117, 89, 0.2) 0%, transparent 60%),
     linear-gradient(to top,
       rgba(15, 20, 25, 0.98) 0%,
@@ -153,7 +153,7 @@
 /* ==================== INTRO SECTION ==================== */
 .seni-sasando__intro {
   padding: clamp(5rem, 12vh, 9rem) 0;
-  background: 
+  background:
     radial-gradient(ellipse at 60% 40%, rgba(139, 117, 89, 0.04) 0%, transparent 60%),
     linear-gradient(to bottom,
       rgba(15, 20, 25, 1) 0%,
@@ -183,6 +183,7 @@
   font-size: clamp(1rem, 1.3vw, 1.1rem);
   line-height: 2;
   color: rgba(245, 243, 240, 0.75);
+  margin-bottom: 1.5rem;
   font-weight: 300;
 }
 
@@ -198,7 +199,7 @@
 
 .seni-sasando__intro-highlight {
   padding: 3rem;
-  background: 
+  background:
     linear-gradient(135deg,
       rgba(139, 117, 89, 0.08) 0%,
       rgba(26, 31, 38, 0.4) 100%);
@@ -228,33 +229,12 @@
   font-weight: 700;
 }
 
-/* ==================== SECTION TITLE COMMON ==================== */
-.seni-sasando__section-title {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 4rem;
-  flex-wrap: wrap;
-}
 
-.seni-sasando__section-title-text {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 900;
-  letter-spacing: -2px;
-  color: #f5f3f0;
-}
-
-.seni-sasando__section-title-line {
-  flex: 1;
-  height: 2px;
-  background: linear-gradient(90deg, #8b7559, transparent);
-  min-width: 100px;
-}
 
 /* ==================== SEJARAH SECTION ==================== */
 .seni-sasando__sejarah {
   padding: clamp(4rem, 10vh, 7rem) 0;
-  background: 
+  background:
     linear-gradient(to bottom,
       rgba(10, 14, 19, 0.95) 0%,
       rgba(15, 20, 25, 1) 100%);
@@ -318,7 +298,7 @@
 /* ==================== JENIS SECTION ==================== */
 .seni-sasando__jenis {
   padding: clamp(4rem, 10vh, 7rem) 0;
-  background: 
+  background:
     radial-gradient(ellipse at 30% 60%, rgba(139, 117, 89, 0.03) 0%, transparent 60%),
     linear-gradient(to bottom,
       rgba(15, 20, 25, 1) 0%,
@@ -333,7 +313,7 @@
 
 .seni-sasando__jenis-card {
   padding: 3rem;
-  background: 
+  background:
     linear-gradient(135deg,
       rgba(26, 31, 38, 0.4) 0%,
       rgba(36, 43, 53, 0.2) 100%);
@@ -402,7 +382,7 @@
 /* ==================== KONSTRUKSI SECTION ==================== */
 .seni-sasando__konstruksi {
   padding: clamp(4rem, 10vh, 7rem) 0;
-  background: 
+  background:
     linear-gradient(to bottom,
       rgba(10, 14, 19, 0.95) 0%,
       rgba(15, 20, 25, 1) 100%);
@@ -485,7 +465,7 @@
 /* ==================== TEKNIK SECTION ==================== */
 .seni-sasando__teknik {
   padding: clamp(4rem, 10vh, 7rem) 0;
-  background: 
+  background:
     radial-gradient(ellipse at 50% 50%, rgba(139, 117, 89, 0.04) 0%, transparent 70%),
     linear-gradient(to bottom,
       rgba(15, 20, 25, 1) 0%,
@@ -554,7 +534,7 @@
 /* ==================== FUNGSI SECTION ==================== */
 .seni-sasando__fungsi {
   padding: clamp(4rem, 10vh, 7rem) 0;
-  background: 
+  background:
     linear-gradient(to bottom,
       rgba(10, 14, 19, 0.95) 0%,
       rgba(15, 20, 25, 1) 100%);
@@ -613,7 +593,7 @@
 /* ==================== NAVIGATION ==================== */
 .seni-sasando__nav {
   padding: clamp(4rem, 10vh, 7rem) 0;
-  background: 
+  background:
     linear-gradient(to bottom,
       rgba(15, 20, 25, 1) 0%,
       rgba(10, 14, 19, 1) 100%);
@@ -702,26 +682,20 @@
   transform: translateX(-5px);
 }
 
-/* ==================== ANIMATIONS ==================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
 
-/* ==================== RESPONSIVE ==================== */
+/* ==================== SENI DETAIL: SASANDO ==================== */
 @media (max-width: 1024px) {
-  .seni-sasando__intro-grid,
+  .seni-sasando__intro-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
   .seni-sasando__konstruksi-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-
   .seni-sasando__konstruksi-visual {
     position: static;
   }
@@ -732,38 +706,10 @@
     height: 80vh;
     min-height: 600px;
   }
-
-  .seni-sasando__hero-title {
-    font-size: clamp(4rem, 12vw, 8rem);
-  }
-
-  .seni-sasando__section-title {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .seni-sasando__section-title-line {
-    width: 100%;
-  }
-
-  .seni-sasando__nav-grid {
+  .seni-sasando__jenis-cards {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 480px) {
-  .seni-sasando__hero {
-    height: 70vh;
-    min-height: 500px;
-  }
-
-  .seni-sasando__hero-title {
-    letter-spacing: -3px;
-  }
-
-  .seni-sasando__jenis-card,
-  .seni-sasando__teknik-item,
-  .seni-sasando__nav-card {
-    padding: 2rem;
+  .seni-sasando__nav-grid {
+    grid-template-columns: 1fr;
   }
 }

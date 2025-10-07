@@ -244,31 +244,7 @@
   letter-spacing: 1px;
 }
 
-/* =====================================================
-   SECTION HEADERS
-   ===================================================== */
 
-.nyale-section-header {
-  margin-bottom: var(--space-2xl);
-  text-align: center;
-}
-
-.nyale-section-label {
-  display: block;
-  font-size: 0.75rem;
-  color: #d4a574;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 900;
-  margin-bottom: var(--space-md);
-}
-
-.nyale-section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.2;
-}
 
 /* =====================================================
    LEGEND SECTION
@@ -549,4 +525,18 @@
 
 .nyale-back__btn:hover svg {
   transform: translateX(-4px);
+}
+
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+/* ==================== TRADISI DETAIL: NYALE ==================== */
+@media (max-width: 991px) {
+  .nyale-intro__grid {
+    grid-template-columns: 1fr;
+  }
+  .nyale-interpret__grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

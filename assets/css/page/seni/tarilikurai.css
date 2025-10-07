@@ -249,13 +249,7 @@
   background: #fff;
 }
 
-.seni-tarilikurai__section-title {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #2d3748;
-  margin-bottom: 3rem;
-  text-align: center;
-}
+
 
 .seni-tarilikurai__title-accent {
   background: linear-gradient(135deg, #b8867b, #8b6f5c);
@@ -602,116 +596,19 @@
   font-size: 1.5rem;
 }
 
-/* Animations */
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-/* Responsive Design */
+/* ==================== SENI DETAIL: TARI LIKURAI ==================== */
 @media (max-width: 1100px) {
   .seni-tarilikurai__hero-split {
     grid-template-columns: 1fr;
     gap: 3rem;
     padding: 3rem 2rem;
   }
-
-  .seni-tarilikurai__hero-visual {
-    height: 400px;
-  }
-
   .seni-tarilikurai__costume-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
-  }
-
-  .seni-tarilikurai__costume-visual {
-    position: static;
-  }
-}
-
-@media (max-width: 768px) {
-  .seni-tarilikurai__container {
-    padding: 0 1.5rem;
-  }
-
-  .seni-tarilikurai__hero {
-    min-height: 70vh;
-  }
-
-  .seni-tarilikurai__hero-title {
-    font-size: 3.5rem;
-  }
-
-  .seni-tarilikurai__hero-desc {
-    font-size: 1.1rem;
-  }
-
-  .seni-tarilikurai__section-title {
-    font-size: 2.2rem;
-  }
-
-  .seni-tarilikurai__history-grid,
-  .seni-tarilikurai__philosophy-grid,
-  .seni-tarilikurai__movement-steps,
-  .seni-tarilikurai__music-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .seni-tarilikurai__quote-text {
-    font-size: 1.5rem;
-  }
-
-  .seni-tarilikurai__intro-wrapper {
-    padding: 2.5rem 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .seni-tarilikurai__hero-title {
-    font-size: 2.5rem;
-  }
-
-  .seni-tarilikurai__hero-desc {
-    font-size: 1rem;
-  }
-
-  .seni-tarilikurai__section-title {
-    font-size: 1.8rem;
-  }
-
-  .seni-tarilikurai__movement-step {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .seni-tarilikurai__step-number {
-    margin: 0 auto 1rem;
   }
 }

@@ -19,7 +19,7 @@
 .wulla-hero__stars {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 20% 30%, rgba(212,165,116,0.3), transparent),
     radial-gradient(2px 2px at 60% 70%, rgba(212,165,116,0.2), transparent),
     radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.4), transparent),
@@ -67,11 +67,11 @@
 }
 
 @keyframes wulla-moon-glow {
-  0%, 100% { 
+  0%, 100% {
     opacity: 0.8;
     filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
   }
-  50% { 
+  50% {
     opacity: 1;
     filter: drop-shadow(0 0 40px rgba(255,255,255,0.6));
   }
@@ -192,14 +192,7 @@
 }
 
 /* SECTION TITLE */
-.wulla-section-title {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 900;
-  color: #fff;
-  text-align: center;
-  margin-bottom: var(--space-2xl);
-  line-height: 1.2;
-}
+
 
 /* HISTORY */
 .wulla-history {
@@ -528,4 +521,15 @@
 
 .wulla-back__btn:hover svg {
   transform: translateX(-4px);
+}
+
+/* =====================================================
+   RESPONSIVE STYLES
+   ===================================================== */
+
+/* ==================== TRADISI DETAIL: WULLA ==================== */
+@media (max-width: 991px) {
+  .wulla-megalith__split {
+    grid-template-columns: 1fr;
+  }
 }
