@@ -1,11 +1,6 @@
-/* =====================================================
-   BOOKMARK-MANAGER.JS - REFACTORED & FULLY FUNCTIONAL
-   ===================================================== */
-
 (function() {
   'use strict';
 
-  // Data for all items, ensuring the manager can render any bookmarked item.
   const ALL_ITEMS_DATA = [
     { id: 'rumah-adat', title: 'Rumah Adat NTT', url: 'pages/rumah-adat/index.html', category: 'Arsitektur', desc: 'Mbaru Niang, Lopo, Sao Ata Mosa' },
     { id: 'mbaru-niang', title: 'Mbaru Niang', url: 'pages/rumah-adat/mbaru-niang.html', category: 'Rumah Adat', desc: 'Rumah kerucut ikonik dari Wae Rebo.' },
