@@ -1,12 +1,39 @@
 /* =====================================================
-   PENTI DETAIL PAGE - CLEAN MINIMALIST STYLE
+   MAIN CONTENT
    ===================================================== */
 
 .penti-main {
   background: linear-gradient(to bottom, #0f0c0a 0%, #1a1612 100%);
 }
 
-/* HERO */
+/* =====================================================
+   SECTION HEADERS
+   ===================================================== */
+
+.penti-section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.penti-section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+  margin-bottom: var(--space-md);
+}
+
+.penti-section-desc {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  margin: 0;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
 .penti-hero {
   padding: calc(var(--space-2xl) * 2) 0;
   border-bottom: 1px solid rgba(212,165,116,0.1);
@@ -28,6 +55,8 @@
   margin-bottom: var(--space-xl);
   font-size: 0.75rem;
   color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .penti-breadcrumb a {
@@ -49,6 +78,7 @@
   display: flex;
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
 }
 
 .penti-hero__location,
@@ -91,7 +121,7 @@
   height: 100%;
   object-fit: cover;
   filter: grayscale(0.3) contrast(1.1);
-  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, filter 0.6s ease;
 }
 
 .penti-hero__image:hover img {
@@ -99,7 +129,10 @@
   filter: grayscale(0) contrast(1.15);
 }
 
-/* INTRO */
+/* =====================================================
+   INTRO
+   ===================================================== */
+
 .penti-intro {
   padding: calc(var(--space-2xl) * 2) 0;
 }
@@ -131,7 +164,10 @@
   color: rgba(255,255,255,0.75);
 }
 
-/* PHILOSOPHY */
+/* =====================================================
+   PHILOSOPHY
+   ===================================================== */
+
 .penti-philosophy {
   padding: calc(var(--space-2xl) * 2) 0;
   background: radial-gradient(ellipse at center, rgba(212,165,116,0.08) 0%, transparent 70%);
@@ -154,6 +190,7 @@
   letter-spacing: 4px;
   font-weight: 900;
   margin-bottom: var(--space-lg);
+  display: block;
 }
 
 .penti-philosophy__text {
@@ -172,9 +209,10 @@
   margin: 0;
 }
 
+/* =====================================================
+   HISTORY
+   ===================================================== */
 
-
-/* HISTORY */
 .penti-history {
   padding: calc(var(--space-2xl) * 2) 0;
 }
@@ -218,7 +256,10 @@
   margin-bottom: 0;
 }
 
-/* PROCESS */
+/* =====================================================
+   PROCESS
+   ===================================================== */
+
 .penti-process {
   padding: calc(var(--space-2xl) * 2) 0;
   background: linear-gradient(to bottom, transparent 0%, rgba(212,165,116,0.03) 50%, transparent 100%);
@@ -267,6 +308,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 6px;
+  flex-shrink: 0;
 }
 
 .penti-day__title {
@@ -303,7 +345,10 @@
   margin-bottom: 0;
 }
 
-/* COMPANG */
+/* =====================================================
+   COMPANG
+   ===================================================== */
+
 .penti-compang {
   padding: calc(var(--space-2xl) * 2) 0;
 }
@@ -395,7 +440,10 @@
   font-weight: 700;
 }
 
-/* LOCATIONS */
+/* =====================================================
+   LOCATIONS
+   ===================================================== */
+
 .penti-locations {
   padding: calc(var(--space-2xl) * 2) 0;
   background: radial-gradient(ellipse at top, rgba(212,165,116,0.05) 0%, transparent 60%);
@@ -465,7 +513,10 @@
   color: rgba(255,255,255,0.75);
 }
 
-/* BACK */
+/* =====================================================
+   BACK BUTTON
+   ===================================================== */
+
 .penti-back {
   padding: var(--space-2xl) 0 calc(var(--space-2xl) * 2);
 }
@@ -493,11 +544,11 @@
   transform: translateX(-4px);
 }
 
-.penti-back__btn svg {
+.penti-back__btn i {
   transition: transform 0.3s ease;
 }
 
-.penti-back__btn:hover svg {
+.penti-back__btn:hover i {
   transform: translateX(-4px);
 }
 
@@ -505,13 +556,189 @@
    RESPONSIVE STYLES
    ===================================================== */
 
-/* ==================== TRADISI DETAIL: PENTI ==================== */
 @media (max-width: 991px) {
+  .penti-hero {
+    padding: calc(var(--space-2xl) * 1.5) 0;
+  }
+
   .penti-hero__grid {
     grid-template-columns: 1fr;
   }
+
   .penti-hero__image {
-    position: static;
     grid-row: 1;
+    max-width: 500px;
+    margin: 0 auto var(--space-xl);
+  }
+
+  .penti-intro,
+  .penti-philosophy,
+  .penti-history,
+  .penti-process,
+  .penti-compang,
+  .penti-locations {
+    padding: calc(var(--space-2xl) * 1.5) 0;
+  }
+
+  .penti-intro__columns {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .penti-history__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .penti-compang__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .penti-locations__row {
+    grid-template-columns: 1fr;
+  }
+
+  .penti-locations__cell {
+    padding: var(--space-md) var(--space-lg);
+  }
+}
+
+@media (max-width: 767px) {
+  .penti-hero,
+  .penti-intro,
+  .penti-philosophy,
+  .penti-history,
+  .penti-process,
+  .penti-compang,
+  .penti-locations,
+  .penti-back {
+    padding: var(--space-2xl) 0;
+  }
+
+  .penti-hero__title {
+    font-size: clamp(3rem, 10vw, 5rem);
+  }
+
+  .penti-hero__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .penti-intro__lead {
+    font-size: 1.2rem;
+  }
+
+  .penti-philosophy__box {
+    padding: var(--space-xl);
+  }
+
+  .penti-philosophy__text {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+  }
+
+  .penti-history__item {
+    padding: var(--space-xl);
+  }
+
+  .penti-day__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+  }
+
+  .penti-day__title {
+    font-size: 1.2rem;
+  }
+
+  .penti-day__list {
+    padding: var(--space-lg);
+  }
+
+  .penti-compang__circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .penti-compang__center {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .penti-breadcrumb {
+    font-size: 0.7rem;
+  }
+
+  .penti-hero__meta {
+    gap: var(--space-md);
+  }
+
+  .penti-hero__location,
+  .penti-hero__time {
+    font-size: 0.75rem;
+  }
+
+  .penti-hero__title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .penti-hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .penti-intro__lead {
+    font-size: 1.1rem;
+    padding-left: var(--space-md);
+  }
+
+  .penti-philosophy__box {
+    padding: var(--space-lg);
+  }
+
+  .penti-philosophy__text {
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
+  }
+
+  .penti-philosophy__translation {
+    font-size: 1rem;
+  }
+
+  .penti-history__item {
+    padding: var(--space-lg);
+  }
+
+  .penti-history__subtitle {
+    font-size: 1.3rem;
+  }
+
+  .penti-day__number {
+    min-width: 60px;
+    font-size: 0.8rem;
+  }
+
+  .penti-day__title {
+    font-size: 1.1rem;
+  }
+
+  .penti-compang__circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .penti-compang__center {
+    font-size: 1rem;
+  }
+
+  .penti-compang__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .penti-locations__cell {
+    padding: var(--space-md);
+  }
+
+  .penti-back__btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
   }
 }

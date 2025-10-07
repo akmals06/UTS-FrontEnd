@@ -1,11 +1,3 @@
-/* =====================================================
-   PASOLA DETAIL PAGE - DYNAMIC COMBAT STYLE
-   ===================================================== */
-
-/* =====================================================
-   HERO - ANIMATED BATTLE SCENE
-   ===================================================== */
-
 .pasola-hero {
   position: relative;
   height: 100vh;
@@ -186,6 +178,37 @@
 }
 
 /* =====================================================
+   SECTION HEADERS
+   ===================================================== */
+
+.pasola-section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.pasola-section-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #d4a574;
+  margin-bottom: var(--space-sm);
+}
+
+.pasola-section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+}
+
+.pasola-section-header--light .pasola-section-label,
+.pasola-section-header--light .pasola-section-title {
+  color: #fff;
+}
+
+/* =====================================================
    INTRO - STATS LAYOUT
    ===================================================== */
 
@@ -260,8 +283,7 @@
 
 .pasola-philosophy {
   padding: calc(var(--space-2xl) * 2) 0;
-  background:
-    radial-gradient(ellipse at center, rgba(212,165,116,0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(212,165,116,0.08) 0%, transparent 70%);
 }
 
 .pasola-quote {
@@ -303,8 +325,6 @@
   letter-spacing: 1px;
 }
 
-
-
 /* =====================================================
    ORIGIN SECTION
    ===================================================== */
@@ -333,13 +353,12 @@
 }
 
 /* =====================================================
-   PROCESS SECTION - STEP CARDS
+   PROCESS SECTION 
    ===================================================== */
 
 .pasola-process {
   padding: calc(var(--space-2xl) * 2) 0;
-  background:
-    radial-gradient(ellipse at top, rgba(212,165,116,0.05) 0%, transparent 60%);
+  background: radial-gradient(ellipse at top, rgba(212,165,116,0.05) 0%, transparent 60%);
 }
 
 .pasola-process__grid {
@@ -401,7 +420,7 @@
 }
 
 /* =====================================================
-   RULES SECTION - BATTLE RULES FORMAT
+   RULES SECTION 
    ===================================================== */
 
 .pasola-rules {
@@ -454,7 +473,7 @@
 }
 
 /* =====================================================
-   SIGNIFICANCE SECTION - DARK FEATURE
+   SIGNIFICANCE SECTION 
    ===================================================== */
 
 .pasola-significance {
@@ -545,9 +564,173 @@
    RESPONSIVE STYLES
    ===================================================== */
 
-/* ==================== TRADISI DETAIL: PASOLA ==================== */
 @media (max-width: 991px) {
+  .pasola-hero {
+    min-height: 600px;
+  }
+
+  .pasola-hero__content {
+    padding: 0 var(--space-xl);
+  }
+
+  .pasola-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .pasola-intro,
+  .pasola-philosophy,
+  .pasola-origin,
+  .pasola-process,
+  .pasola-rules,
+  .pasola-significance {
+    padding: calc(var(--space-2xl) * 1.5) 0;
+  }
+
+  .pasola-process__grid {
+    grid-template-columns: 1fr;
+  }
+
   .pasola-rules__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .pasola-hero {
+    min-height: 500px;
+  }
+
+  .pasola-hero__content {
+    padding: 0 var(--space-lg);
+  }
+
+  .pasola-hero__title {
+    font-size: clamp(3rem, 12vw, 6rem);
+  }
+
+  .pasola-intro,
+  .pasola-philosophy,
+  .pasola-origin,
+  .pasola-process,
+  .pasola-rules,
+  .pasola-significance,
+  .pasola-back {
+    padding: var(--space-2xl) 0;
+  }
+
+  .pasola-stat {
+    padding: var(--space-lg);
+  }
+
+  .pasola-intro__lead {
+    font-size: 1.1rem;
+  }
+
+  .pasola-quote {
+    padding: var(--space-xl);
+  }
+
+  .pasola-quote__mark {
+    font-size: 4.5rem;
+  }
+
+  .pasola-quote__text {
+    font-size: 1.3rem;
+  }
+
+  .pasola-origin__story {
+    padding: var(--space-xl);
+  }
+
+  .pasola-step {
+    padding: var(--space-xl);
+  }
+
+  .pasola-step__number {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .pasola-rule {
+    padding: var(--space-lg);
+  }
+
+  .pasola-rule__icon {
+    font-size: 2rem;
+  }
+
+  .pasola-significance {
+    margin: var(--space-2xl) 0;
+  }
+
+  .pasola-significance__content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pasola-breadcrumb {
+    font-size: 0.7rem;
+  }
+
+  .pasola-hero__label {
+    font-size: 0.65rem;
+    padding: 6px 16px;
+  }
+
+  .pasola-hero__subtitle {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+
+  .pasola-stat__value {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .pasola-stat__label {
+    font-size: 0.75rem;
+  }
+
+  .pasola-intro__lead {
+    font-size: 1rem;
+  }
+
+  .pasola-quote {
+    padding: var(--space-lg);
+  }
+
+  .pasola-quote__mark {
+    font-size: 4rem;
+    left: 10px;
+  }
+
+  .pasola-quote__text {
+    font-size: 1.1rem;
+    padding-top: 35px;
+  }
+
+  .pasola-step__number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .pasola-step__title {
+    font-size: 1.2rem;
+  }
+
+  .pasola-rule {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .pasola-rule__icon {
+    font-size: 2.5rem;
+  }
+
+  .pasola-back__btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
   }
 }

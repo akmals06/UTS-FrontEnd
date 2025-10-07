@@ -1,9 +1,5 @@
 /* =====================================================
-   NYALE DETAIL PAGE - MAGAZINE EDITORIAL STYLE
-   ===================================================== */
-
-/* =====================================================
-   HERO SECTION - SPLIT LAYOUT
+   HERO SECTION
    ===================================================== */
 
 .nyale-hero {
@@ -147,6 +143,32 @@
 }
 
 /* =====================================================
+   SECTION HEADERS
+   ===================================================== */
+
+.nyale-section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.nyale-section-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #d4a574;
+  margin-bottom: var(--space-sm);
+}
+
+.nyale-section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+}
+
+/* =====================================================
    INTRO SECTION
    ===================================================== */
 
@@ -244,8 +266,6 @@
   letter-spacing: 1px;
 }
 
-
-
 /* =====================================================
    LEGEND SECTION
    ===================================================== */
@@ -340,6 +360,10 @@
   margin-bottom: var(--space-2xl);
 }
 
+.nyale-timeline__item:last-child {
+  margin-bottom: 0;
+}
+
 .nyale-timeline__marker {
   position: absolute;
   left: 0;
@@ -349,11 +373,7 @@
 .nyale-timeline__dot {
   width: 42px;
   height: 42px;
-  background: linear-gradient(
-    135deg,
-    #d4a574 0%,
-    #b8925f 100%
-  );
+  background: linear-gradient(135deg, #d4a574 0%, #b8925f 100%);
   border-radius: 50%;
   border: 4px solid #0a0705;
   box-shadow: 0 0 0 2px rgba(212,165,116,0.3);
@@ -410,7 +430,7 @@
 
 .nyale-interpret__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
   max-width: 1200px;
   margin: 0 auto;
@@ -443,6 +463,7 @@
   font-size: 2.5rem;
   margin-bottom: var(--space-md);
   display: block;
+  color: #d4a574;
 }
 
 .nyale-card__title {
@@ -519,11 +540,11 @@
   transform: translateX(-4px);
 }
 
-.nyale-back__btn svg {
+.nyale-back__btn i {
   transition: transform 0.3s ease;
 }
 
-.nyale-back__btn:hover svg {
+.nyale-back__btn:hover i {
   transform: translateX(-4px);
 }
 
@@ -531,12 +552,182 @@
    RESPONSIVE STYLES
    ===================================================== */
 
-/* ==================== TRADISI DETAIL: NYALE ==================== */
 @media (max-width: 991px) {
+  .nyale-hero {
+    min-height: 70vh;
+  }
+
+  .nyale-hero__content {
+    padding: 0 var(--space-xl) var(--space-xl);
+  }
+
+  .nyale-intro,
+  .nyale-legend,
+  .nyale-prosesi,
+  .nyale-interpret {
+    padding: calc(var(--space-2xl) * 1.5) 0;
+  }
+
   .nyale-intro__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
+
+  .nyale-intro__visual {
+    position: static;
+  }
+
   .nyale-interpret__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .nyale-timeline::before {
+    left: 16px;
+  }
+
+  .nyale-timeline__item {
+    padding-left: 70px;
+  }
+
+  .nyale-timeline__dot {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nyale-hero {
+    min-height: 60vh;
+  }
+
+  .nyale-hero__content {
+    padding: 0 var(--space-lg) var(--space-lg);
+  }
+
+  .nyale-hero__title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .nyale-hero__meta {
+    gap: var(--space-lg);
+  }
+
+  .nyale-intro,
+  .nyale-legend,
+  .nyale-prosesi,
+  .nyale-interpret,
+  .nyale-back {
+    padding: var(--space-2xl) 0;
+  }
+
+  .nyale-intro__lead {
+    font-size: 1.1rem;
+  }
+
+  .nyale-quote {
+    padding: var(--space-xl);
+  }
+
+  .nyale-quote__mark {
+    font-size: 4rem;
+  }
+
+  .nyale-quote__text {
+    font-size: 1.2rem;
+    margin: 50px 0 var(--space-md) 0;
+  }
+
+  .nyale-legend__story,
+  .nyale-legend__science {
+    padding: var(--space-lg);
+  }
+
+  .nyale-timeline__item {
+    padding-left: 60px;
+    margin-bottom: var(--space-xl);
+  }
+
+  .nyale-timeline__dot {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nyale-timeline__content {
+    padding: var(--space-lg);
+  }
+
+  .nyale-interpret__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nyale-card {
+    padding: var(--space-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .nyale-breadcrumb {
+    font-size: 0.7rem;
+  }
+
+  .nyale-hero__badge {
+    font-size: 0.6rem;
+    padding: 5px 12px;
+  }
+
+  .nyale-hero__meta {
+    gap: var(--space-md);
+  }
+
+  .nyale-hero__meta-value {
+    font-size: 0.9rem;
+  }
+
+  .nyale-intro__lead {
+    font-size: 1rem;
+  }
+
+  .nyale-quote {
+    padding: var(--space-lg);
+  }
+
+  .nyale-quote__text {
+    font-size: 1.1rem;
+  }
+
+  .nyale-timeline::before {
+    left: 12px;
+  }
+
+  .nyale-timeline__item {
+    padding-left: 50px;
+  }
+
+  .nyale-timeline__dot {
+    width: 28px;
+    height: 28px;
+    border-width: 3px;
+  }
+
+  .nyale-timeline__title {
+    font-size: 1.1rem;
+  }
+
+  .nyale-card {
+    padding: var(--space-lg);
+  }
+
+  .nyale-card__icon {
+    font-size: 2rem;
+  }
+
+  .nyale-card__title {
+    font-size: 1.2rem;
+  }
+
+  .nyale-back__btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
   }
 }

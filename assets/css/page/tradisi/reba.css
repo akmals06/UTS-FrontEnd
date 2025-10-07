@@ -1,12 +1,49 @@
 /* =====================================================
-   REBA DETAIL PAGE - SPLIT STORY LAYOUT
+   MAIN CONTENT
    ===================================================== */
 
 .reba-main {
   background: linear-gradient(to bottom, #0a0705 0%, #1a1612 100%);
 }
 
-/* HERO VERTICAL */
+/* =====================================================
+   SECTION HEADERS
+   ===================================================== */
+
+.reba-section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.reba-section-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #d4a574;
+  margin-bottom: var(--space-sm);
+}
+
+.reba-section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+  margin-bottom: var(--space-md);
+}
+
+.reba-section-desc {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  margin: 0;
+}
+
+/* =====================================================
+   HERO 
+   ===================================================== */
+
 .reba-hero {
   position: relative;
   min-height: 90vh;
@@ -54,6 +91,8 @@
   margin-bottom: var(--space-lg);
   font-size: 0.75rem;
   color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .reba-breadcrumb a {
@@ -104,7 +143,10 @@
   font-weight: 600;
 }
 
-/* INTRO SPLIT */
+/* =====================================================
+   INTRO SPLIT
+   ===================================================== */
+
 .reba-intro {
   padding: calc(var(--space-2xl) * 2) 0;
   border-bottom: 1px solid rgba(212,165,116,0.1);
@@ -137,7 +179,10 @@
   margin-bottom: 0;
 }
 
-/* QUOTE */
+/* =====================================================
+   QUOTE
+   ===================================================== */
+
 .reba-quote {
   padding: calc(var(--space-2xl) * 2) 0;
   background: radial-gradient(ellipse at center, rgba(212,165,116,0.08) 0%, transparent 70%);
@@ -169,15 +214,16 @@
   font-weight: 900;
 }
 
-/* SECTION HEADERS */
+/* =====================================================
+   HISTORY STORY
+   ===================================================== */
 
-
-/* HISTORY STORY */
 .reba-history {
   padding: calc(var(--space-2xl) * 2) 0;
 }
 
 .reba-history__header {
+  text-align: center;
   margin-bottom: var(--space-2xl);
 }
 
@@ -197,7 +243,10 @@
   margin-bottom: 0;
 }
 
-/* PROCESS TIMELINE */
+/* =====================================================
+   PROCESS TIMELINE
+   ===================================================== */
+
 .reba-process {
   padding: calc(var(--space-2xl) * 2) 0;
   background: linear-gradient(to bottom, transparent 0%, rgba(212,165,116,0.03) 50%, transparent 100%);
@@ -246,6 +295,7 @@
   box-shadow: 0 8px 20px rgba(212,165,116,0.3);
   position: relative;
   z-index: 2;
+  flex-shrink: 0;
 }
 
 .reba-phase__content {
@@ -280,7 +330,10 @@
   color: rgba(255,255,255,0.75);
 }
 
-/* SYMBOLS GRID */
+/* =====================================================
+   SYMBOLS GRID
+   ===================================================== */
+
 .reba-symbols {
   padding: calc(var(--space-2xl) * 2) 0;
 }
@@ -312,6 +365,7 @@
   font-size: 3rem;
   margin-bottom: var(--space-md);
   display: block;
+  color: #d4a574;
 }
 
 .reba-symbol__title {
@@ -336,7 +390,10 @@
   color: rgba(255,255,255,0.75);
 }
 
-/* BACK */
+/* =====================================================
+   BACK BUTTON
+   ===================================================== */
+
 .reba-back {
   padding: var(--space-2xl) 0 calc(var(--space-2xl) * 2);
 }
@@ -364,11 +421,11 @@
   transform: translateX(-4px);
 }
 
-.reba-back__btn svg {
+.reba-back__btn i {
   transition: transform 0.3s ease;
 }
 
-.reba-back__btn:hover svg {
+.reba-back__btn:hover i {
   transform: translateX(-4px);
 }
 
@@ -376,12 +433,194 @@
    RESPONSIVE STYLES
    ===================================================== */
 
-/* ==================== TRADISI DETAIL: REBA ==================== */
 @media (max-width: 991px) {
+  .reba-hero {
+    min-height: 75vh;
+  }
+
+  .reba-hero__content {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .reba-intro,
+  .reba-quote,
+  .reba-history,
+  .reba-process,
+  .reba-symbols {
+    padding: calc(var(--space-2xl) * 1.5) 0;
+  }
+
   .reba-intro__split {
     grid-template-columns: 1fr;
+    gap: var(--space-2xl);
   }
+
+  .reba-intro__heading {
+    position: static;
+  }
+
   .reba-process__timeline {
+    gap: var(--space-xl);
+  }
+
+  .reba-phase {
+    grid-template-columns: 70px 1fr;
     gap: var(--space-lg);
+  }
+
+  .reba-phase::before {
+    left: 35px;
+    top: 80px;
+  }
+
+  .reba-phase__number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+
+  .reba-symbols__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .reba-hero {
+    min-height: 65vh;
+  }
+
+  .reba-hero__title {
+    font-size: clamp(3rem, 12vw, 6rem);
+  }
+
+  .reba-intro,
+  .reba-quote,
+  .reba-history,
+  .reba-process,
+  .reba-symbols,
+  .reba-back {
+    padding: var(--space-2xl) 0;
+  }
+
+  .reba-intro__heading {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .reba-quote__text {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+  }
+
+  .reba-history__content p {
+    font-size: 1rem;
+  }
+
+  .reba-phase {
+    grid-template-columns: 60px 1fr;
+    gap: var(--space-md);
+  }
+
+  .reba-phase::before {
+    left: 30px;
+    top: 70px;
+  }
+
+  .reba-phase__number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+  }
+
+  .reba-phase__content {
+    padding: var(--space-lg);
+  }
+
+  .reba-phase__title {
+    font-size: 1.3rem;
+  }
+
+  .reba-symbol {
+    padding: var(--space-xl);
+  }
+
+  .reba-symbol__icon {
+    font-size: 2.5rem;
+  }
+
+  .reba-symbol__title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reba-breadcrumb {
+    font-size: 0.7rem;
+  }
+
+  .reba-hero__location {
+    font-size: 0.8rem;
+  }
+
+  .reba-hero__title {
+    font-size: clamp(2.5rem, 14vw, 4.5rem);
+  }
+
+  .reba-hero__subtitle {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+
+  .reba-hero__timing {
+    font-size: 0.85rem;
+  }
+
+  .reba-intro__heading {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .reba-quote__text {
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+  }
+
+  .reba-phase {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .reba-phase::before {
+    left: 25px;
+    top: 60px;
+  }
+
+  .reba-phase__number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .reba-phase__content {
+    padding: var(--space-md);
+  }
+
+  .reba-phase__title {
+    font-size: 1.2rem;
+  }
+
+  .reba-symbol {
+    padding: var(--space-lg);
+  }
+
+  .reba-symbol__icon {
+    font-size: 2.2rem;
+  }
+
+  .reba-symbol__title {
+    font-size: 1.3rem;
+  }
+
+  .reba-symbol__subtitle {
+    font-size: 0.8rem;
+  }
+
+  .reba-back__btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
   }
 }

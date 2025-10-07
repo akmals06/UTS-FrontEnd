@@ -1,12 +1,28 @@
 /* =====================================================
-   WULLA PODDU - DARK MYSTICAL SACRED STYLE
+   MAIN CONTENT
    ===================================================== */
 
 .wulla-main {
   background: #000;
 }
 
-/* HERO DARK WITH STARS */
+/* =====================================================
+   SECTION TITLE
+   ===================================================== */
+
+.wulla-section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  letter-spacing: -2px;
+  margin-bottom: var(--space-2xl);
+}
+
+/* =====================================================
+   HERO 
+   ===================================================== */
+
 .wulla-hero {
   position: relative;
   min-height: 85vh;
@@ -42,6 +58,8 @@
   margin-bottom: var(--space-xl);
   font-size: 0.75rem;
   color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .wulla-breadcrumb a {
@@ -115,7 +133,10 @@
   font-weight: 600;
 }
 
-/* INTRO CENTERED */
+/* =====================================================
+   INTRO 
+   ===================================================== */
+
 .wulla-intro {
   padding: calc(var(--space-2xl) * 2) 0;
   background: linear-gradient(to bottom, #000 0%, #0a0705 100%);
@@ -148,7 +169,10 @@
   margin: 0;
 }
 
-/* PHILOSOPHY DARK BOX */
+/* =====================================================
+   PHILOSOPHY 
+   ===================================================== */
+
 .wulla-philosophy {
   padding: calc(var(--space-2xl) * 2) 0;
   background: radial-gradient(ellipse at center, rgba(212,165,116,0.1) 0%, transparent 70%);
@@ -191,10 +215,10 @@
   margin: 0;
 }
 
-/* SECTION TITLE */
+/* =====================================================
+   HISTORY
+   ===================================================== */
 
-
-/* HISTORY */
 .wulla-history {
   padding: calc(var(--space-2xl) * 2) 0;
   background: linear-gradient(to bottom, #0a0705 0%, #000 100%);
@@ -218,7 +242,10 @@
   margin-bottom: 0;
 }
 
-/* CALENDAR TIMELINE */
+/* =====================================================
+   CALENDAR TIMELINE
+   ===================================================== */
+
 .wulla-calendar {
   padding: calc(var(--space-2xl) * 3) 0;
   background: radial-gradient(ellipse at center, #0d0a08 0%, #000 100%);
@@ -304,6 +331,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: var(--space-md);
+  display: block;
 }
 
 .wulla-week__list {
@@ -332,7 +360,10 @@
   margin-bottom: 0;
 }
 
-/* PROHIBITIONS */
+/* =====================================================
+   PROHIBITIONS
+   ===================================================== */
+
 .wulla-prohibitions {
   padding: calc(var(--space-2xl) * 2) 0;
   background: linear-gradient(to bottom, #000 0%, #0a0705 100%);
@@ -362,6 +393,11 @@
   font-size: 3rem;
   text-align: center;
   margin-bottom: var(--space-md);
+  color: rgba(139,0,0,0.8);
+}
+
+.wulla-prohibition--allowed .wulla-prohibition__icon {
+  color: rgba(0,139,0,0.9);
 }
 
 .wulla-prohibition__title {
@@ -384,6 +420,10 @@
   position: relative;
   line-height: 1.7;
   color: rgba(255,255,255,0.75);
+}
+
+.wulla-prohibition__list li:last-child {
+  margin-bottom: 0;
 }
 
 .wulla-prohibition__list li::before {
@@ -414,7 +454,7 @@
   color: rgba(255,255,255,0.8);
 }
 
-/* MEGALITH */
+
 .wulla-megalith {
   padding: calc(var(--space-2xl) * 2) 0;
   background: radial-gradient(ellipse at bottom, #0d0a08 0%, #000 100%);
@@ -464,6 +504,10 @@
   color: rgba(255,255,255,0.75);
 }
 
+.wulla-megalith__structure li:last-child {
+  margin-bottom: 0;
+}
+
 .wulla-megalith__structure li::before {
   content: '▪';
   position: absolute;
@@ -484,9 +528,17 @@
   height: auto;
   display: block;
   filter: grayscale(0.3) contrast(1.1);
+  transition: filter 0.6s ease;
 }
 
-/* BACK */
+.wulla-megalith__visual:hover img {
+  filter: grayscale(0) contrast(1.15);
+}
+
+/* =====================================================
+   BACK BUTTON
+   ===================================================== */
+
 .wulla-back {
   padding: var(--space-2xl) 0 calc(var(--space-2xl) * 2);
   background: #000;
@@ -515,11 +567,11 @@
   transform: translateX(-4px);
 }
 
-.wulla-back__btn svg {
+.wulla-back__btn i {
   transition: transform 0.3s ease;
 }
 
-.wulla-back__btn:hover svg {
+.wulla-back__btn:hover i {
   transform: translateX(-4px);
 }
 
@@ -527,9 +579,189 @@
    RESPONSIVE STYLES
    ===================================================== */
 
-/* ==================== TRADISI DETAIL: WULLA ==================== */
 @media (max-width: 991px) {
+  .wulla-hero {
+    min-height: 75vh;
+  }
+
+  .wulla-intro,
+  .wulla-philosophy,
+  .wulla-history,
+  .wulla-calendar,
+  .wulla-prohibitions,
+  .wulla-megalith {
+    padding: calc(var(--space-2xl) * 1.5) 0;
+  }
+
+  .wulla-history__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wulla-week {
+    grid-template-columns: 120px 1fr;
+    gap: var(--space-xl);
+  }
+
+  .wulla-week::before {
+    left: 60px;
+  }
+
+  .wulla-week__moon {
+    font-size: 3.5rem;
+  }
+
+  .wulla-prohibitions__grid {
+    grid-template-columns: 1fr;
+  }
+
   .wulla-megalith__split {
     grid-template-columns: 1fr;
+  }
+
+  .wulla-megalith__visual {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .wulla-hero {
+    min-height: 65vh;
+  }
+
+  .wulla-hero__moon {
+    font-size: 4rem;
+  }
+
+  .wulla-hero__title {
+    font-size: clamp(3rem, 12vw, 7rem);
+  }
+
+  .wulla-intro,
+  .wulla-philosophy,
+  .wulla-history,
+  .wulla-calendar,
+  .wulla-prohibitions,
+  .wulla-megalith,
+  .wulla-back {
+    padding: var(--space-2xl) 0;
+  }
+
+  .wulla-intro__lead {
+    font-size: 1.2rem;
+  }
+
+  .wulla-philosophy__box {
+    padding: var(--space-2xl);
+  }
+
+  .wulla-philosophy__text {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+  }
+
+  .wulla-week {
+    grid-template-columns: 100px 1fr;
+    gap: var(--space-lg);
+  }
+
+  .wulla-week::before {
+    left: 50px;
+    top: 100px;
+  }
+
+  .wulla-week__moon {
+    font-size: 3rem;
+  }
+
+  .wulla-week__content {
+    padding: var(--space-lg);
+  }
+
+  .wulla-week__title {
+    font-size: 1.4rem;
+  }
+
+  .wulla-prohibition {
+    padding: var(--space-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .wulla-breadcrumb {
+    font-size: 0.7rem;
+  }
+
+  .wulla-hero__moon {
+    font-size: 3.5rem;
+  }
+
+  .wulla-hero__label {
+    font-size: 0.7rem;
+  }
+
+  .wulla-hero__title {
+    font-size: clamp(2.5rem, 14vw, 5rem);
+  }
+
+  .wulla-hero__subtitle {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+
+  .wulla-intro__lead {
+    font-size: 1.1rem;
+  }
+
+  .wulla-philosophy__box {
+    padding: var(--space-xl);
+  }
+
+  .wulla-philosophy__icon {
+    font-size: 2.5rem;
+  }
+
+  .wulla-week {
+    grid-template-columns: 80px 1fr;
+    gap: var(--space-md);
+  }
+
+  .wulla-week::before {
+    left: 40px;
+    top: 90px;
+  }
+
+  .wulla-week__moon {
+    font-size: 2.5rem;
+  }
+
+  .wulla-week__label {
+    font-size: 0.75rem;
+  }
+
+  .wulla-week__content {
+    padding: var(--space-md);
+  }
+
+  .wulla-week__title {
+    font-size: 1.3rem;
+  }
+
+  .wulla-prohibition {
+    padding: var(--space-lg);
+  }
+
+  .wulla-prohibition__icon {
+    font-size: 2.5rem;
+  }
+
+  .wulla-prohibition__title {
+    font-size: 1.3rem;
+  }
+
+  .wulla-megalith__structure {
+    padding: var(--space-lg);
+  }
+
+  .wulla-back__btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
   }
 }

@@ -1,126 +1,196 @@
-/* ========================================
-   SUKU SUMBA - MYSTICAL MEGALITHIC
-   ======================================== */
+/* ===================== MAIN WRAPPER ===================== */
+.suku-sumba {
+  background: #0b0a09;
+  color: rgba(255, 255, 255, 0.92);
+  min-height: 100vh;
+}
 
-/* Hero - Monumental Stone Effect */
+/* =====================================================
+   HERO 
+   ===================================================== */
 .suku-sumba__hero {
   position: relative;
-  height: 100vh;
-  min-height: 700px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1a1612;
   overflow: hidden;
+  background: 
+    radial-gradient(ellipse at center, rgba(88, 83, 78, 0.15), transparent),
+    #0b0a09;
 }
 
 .suku-sumba__hero-texture {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(26,22,18,0.85), rgba(26,22,18,0.85)),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><filter id="n"><feTurbulence baseFrequency="0.9"/></filter><rect width="400" height="400" filter="url(%23n)" opacity="0.1"/></svg>');
-  opacity: 0.3;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(88, 83, 78, 0.03) 2px,
+      rgba(88, 83, 78, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(88, 83, 78, 0.03) 2px,
+      rgba(88, 83, 78, 0.03) 4px
+    );
+  opacity: 0.5;
 }
 
 .suku-sumba__hero-stones {
   position: absolute;
   inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
 }
 
 .suku-sumba__hero-stone {
+  width: 150px;
+  height: 400px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.3) 0%,
+    rgba(88, 83, 78, 0.1) 100%);
+  box-shadow: 
+    inset 0 2px 10px rgba(0, 0, 0, 0.5),
+    0 20px 60px rgba(0, 0, 0, 0.6);
+  position: relative;
+  opacity: 0.4;
+}
+
+.suku-sumba__hero-stone::before {
+  content: '';
   position: absolute;
-  background: rgba(139,119,101,0.1);
-  border: 2px solid rgba(139,119,101,0.3);
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 0, 0, 0.1) 10px,
+      rgba(0, 0, 0, 0.1) 11px
+    );
 }
 
 .suku-sumba__hero-stone--1 {
-  width: 300px;
-  height: 400px;
-  top: 10%;
-  left: 5%;
-  transform: rotate(-5deg);
+  clip-path: polygon(10% 0, 90% 0, 95% 100%, 5% 100%);
+  transform: rotate(-3deg);
 }
 
 .suku-sumba__hero-stone--2 {
-  width: 250px;
-  height: 350px;
-  bottom: 15%;
-  right: 8%;
-  transform: rotate(8deg);
+  width: 200px;
+  height: 500px;
+  clip-path: polygon(8% 0, 92% 0, 96% 100%, 4% 100%);
+  opacity: 0.6;
 }
 
 .suku-sumba__hero-stone--3 {
-  width: 200px;
-  height: 280px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-3deg);
-  opacity: 0.3;
+  clip-path: polygon(12% 0, 88% 0, 94% 100%, 6% 100%);
+  transform: rotate(3deg);
 }
 
 .suku-sumba__hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
-  max-width: 900px;
-  padding: 0 2rem;
+  padding: 0 40px;
 }
 
 .suku-sumba__hero-label {
   display: inline-block;
-  padding: 0.6rem 1.8rem;
-  background: rgba(139,119,101,0.2);
-  border: 2px solid rgba(139,119,101,0.4);
-  color: #8b7765;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 2rem;
+  color: #a8a29e;
+  padding: 10px 32px;
+  background: rgba(88, 83, 78, 0.2);
+  clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
 }
 
 .suku-sumba__hero-title {
-  font-size: clamp(6rem, 15vw, 11rem);
+  font-size: clamp(6rem, 14vw, 11rem);
   font-weight: 900;
-  color: #d4c4b0;
-  margin-bottom: 2rem;
-  letter-spacing: 12px;
-  text-shadow:
-    4px 4px 0 rgba(0,0,0,0.5),
-    8px 8px 0 rgba(0,0,0,0.3);
-  line-height: 0.9;
-}
-
-.suku-sumba__hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(212,196,176,0.8);
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-/* Intro - Stone Block Layout */
-.suku-sumba__intro {
-  padding: 8rem 0;
-  background: linear-gradient(180deg, #2a2520 0%, #1f1b18 100%);
+  letter-spacing: -8px;
+  color: #fff;
+  margin-bottom: 32px;
+  line-height: 0.85;
+  text-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.8),
+    0 0 60px rgba(168, 162, 158, 0.3);
   position: relative;
 }
 
-.suku-sumba__intro-container {
-  max-width: 1200px;
+.suku-sumba__hero-title::before {
+  content: 'SUMBA';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #78716c 0%, #57534e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  z-index: -1;
+  filter: blur(2px);
+  transform: translateY(4px);
+}
+
+.suku-sumba__hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 700px;
   margin: 0 auto;
-  padding: 0 3rem;
+}
+
+/* =====================================================
+   INTRO 
+   ===================================================== */
+.suku-sumba__intro {
+  padding: 150px 0;
+  background: #0b0a09;
+  position: relative;
+}
+
+.suku-sumba__intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: 
+    linear-gradient(to bottom,
+      rgba(88, 83, 78, 0.1) 0%,
+      transparent 100%);
+}
+
+.suku-sumba__intro-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 5rem;
+  grid-template-columns: 400px 1fr;
+  gap: 100px;
   align-items: center;
 }
 
 .suku-sumba__intro-stone {
-  width: 100%;
-  height: 400px;
-  background: rgba(139,119,101,0.15);
-  border: 3px solid rgba(139,119,101,0.3);
+  width: 400px;
+  height: 500px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.25) 0%,
+    rgba(88, 83, 78, 0.1) 100%);
+  clip-path: polygon(5% 0, 95% 0, 98% 100%, 2% 100%);
+  box-shadow: 
+    inset 0 2px 20px rgba(0, 0, 0, 0.5),
+    0 30px 80px rgba(0, 0, 0, 0.7);
   position: relative;
 }
 
@@ -128,161 +198,237 @@
   content: '';
   position: absolute;
   inset: 20px;
-  border: 1px solid rgba(139,119,101,0.2);
+  border: 2px solid rgba(168, 162, 158, 0.2);
+  clip-path: polygon(3% 0, 97% 0, 99% 100%, 1% 100%);
+}
+
+.suku-sumba__intro-stone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 20px,
+      rgba(0, 0, 0, 0.1) 20px,
+      rgba(0, 0, 0, 0.1) 21px
+    );
 }
 
 .suku-sumba__intro-content h2 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #d4c4b0;
-  margin-bottom: 2.5rem;
-  line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-size: 3rem;
+  font-weight: 900;
+  color: #78716c;
+  margin-bottom: 40px;
+  letter-spacing: -2px;
 }
 
 .suku-sumba__intro-content p {
   font-size: 1.15rem;
-  line-height: 1.9;
-  color: rgba(212,196,176,0.85);
-  margin-bottom: 1.5rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 32px;
+}
+
+.suku-sumba__intro-content p:last-child {
+  margin-bottom: 0;
 }
 
 .suku-sumba__intro-content strong {
-  color: #8b7765;
-  font-weight: 600;
+  color: #a8a29e;
+  font-weight: 700;
 }
 
 .suku-sumba__intro-content em {
+  color: #d6d3d1;
   font-style: italic;
-  color: rgba(139,119,101,0.9);
 }
 
-/* Philosophy - Stone Engraving Style */
+/* =====================================================
+   PHILOSOPHY 
+   ===================================================== */
 .suku-sumba__philosophy {
-  padding: 6rem 0;
-  background: #8b7765;
+  padding: 120px 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(88, 83, 78, 0.1), transparent),
+    #0b0a09;
 }
 
 .suku-sumba__philosophy-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
 }
 
 .suku-sumba__philosophy-stone {
-  background: rgba(0,0,0,0.3);
-  padding: 4rem;
-  border: 4px solid rgba(0,0,0,0.4);
-  box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
-  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 100px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.2) 0%,
+    rgba(88, 83, 78, 0.08) 100%);
+  clip-path: polygon(2% 0, 98% 0, 100% 100%, 0 100%);
+  box-shadow: 
+    inset 0 2px 20px rgba(0, 0, 0, 0.5),
+    0 30px 70px rgba(0, 0, 0, 0.6);
+  position: relative;
+  border: 3px solid rgba(88, 83, 78, 0.3);
+}
+
+.suku-sumba__philosophy-stone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.05) 3px,
+      rgba(0, 0, 0, 0.05) 4px
+    );
 }
 
 .suku-sumba__philosophy-text {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #1a1612;
-  line-height: 1.5;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.1);
+  color: #a8a29e;
+  line-height: 1.7;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 28px;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .suku-sumba__philosophy-mark {
+  text-align: center;
   font-size: 1.1rem;
-  color: rgba(26,22,18,0.7);
-  font-style: italic;
-  text-transform: uppercase;
+  font-weight: 600;
+  color: #78716c;
   letter-spacing: 2px;
+  position: relative;
 }
 
-/* History - Stone Tablets */
+/* =====================================================
+   HISTORY 
+   ===================================================== */
 .suku-sumba__history {
-  padding: 8rem 0;
-  background: #1f1b18;
+  padding: 150px 0;
+  background: #0b0a09;
 }
 
 .suku-sumba__history-container {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
 }
 
 .suku-sumba__history-container h2 {
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #d4c4b0;
+  font-weight: 900;
+  color: #78716c;
   text-align: center;
-  margin-bottom: 5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 100px;
+  letter-spacing: -2px;
 }
 
 .suku-sumba__history-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 60px;
 }
 
 .suku-sumba__history-tablet {
-  background: rgba(139,119,101,0.12);
-  border: 3px solid rgba(139,119,101,0.3);
-  padding: 3rem;
+  padding: 56px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.15) 0%,
+    rgba(88, 83, 78, 0.05) 100%);
+  clip-path: polygon(3% 0, 97% 0, 100% 100%, 0 100%);
+  border: 2px solid rgba(88, 83, 78, 0.3);
+  box-shadow: 
+    inset 0 2px 10px rgba(0, 0, 0, 0.3),
+    0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
   position: relative;
-  transition: all 0.3s ease;
 }
 
 .suku-sumba__history-tablet::before {
   content: '';
   position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border: 1px solid rgba(139,119,101,0.2);
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right,
+    transparent,
+    rgba(168, 162, 158, 0.5) 50%,
+    transparent);
 }
 
 .suku-sumba__history-tablet:hover {
-  background: rgba(139,119,101,0.18);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background: rgba(88, 83, 78, 0.2);
+  border-color: #78716c;
+  transform: translateY(-8px);
+  box-shadow: 
+    inset 0 2px 10px rgba(0, 0, 0, 0.3),
+    0 30px 70px rgba(0, 0, 0, 0.7);
 }
 
 .suku-sumba__history-era {
   display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background: rgba(139,119,101,0.3);
-  color: #d4c4b0;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
   font-size: 0.9rem;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #a8a29e;
+  padding: 8px 20px;
+  background: rgba(88, 83, 78, 0.3);
+  margin-bottom: 24px;
 }
 
 .suku-sumba__history-tablet h3 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #d4c4b0;
-  margin-bottom: 1rem;
+  color: #78716c;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 
 .suku-sumba__history-tablet p {
   font-size: 1.05rem;
-  line-height: 1.8;
-  color: rgba(212,196,176,0.8);
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* Caste - Stacked Stone Layers */
+/* =====================================================
+   CASTE 
+   ===================================================== */
 .suku-sumba__caste {
-  padding: 8rem 0;
-  background: linear-gradient(180deg, #2a2520 0%, #1f1b18 100%);
+  padding: 150px 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(88, 83, 78, 0.1), transparent),
+    #0b0a09;
 }
 
 .suku-sumba__caste-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
+  text-align: center;
 }
 
-
+.suku-sumba__caste-container h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #78716c;
+  margin-bottom: 100px;
+  letter-spacing: -2px;
+}
 
 .suku-sumba__caste-pyramid {
   display: flex;
@@ -291,370 +437,798 @@
 }
 
 .suku-sumba__caste-block {
-  border: 3px solid rgba(139,119,101,0.4);
-  padding: 3rem;
-  text-align: center;
+  margin: 0 auto 28px;
+  padding: 56px 60px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.2) 0%,
+    rgba(88, 83, 78, 0.08) 100%);
+  border: 3px solid rgba(88, 83, 78, 0.3);
+  box-shadow: 
+    inset 0 2px 20px rgba(0, 0, 0, 0.4),
+    0 20px 50px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
   position: relative;
 }
 
-.suku-sumba__caste-block--top {
-  background: linear-gradient(135deg, rgba(139,119,101,0.4), rgba(139,119,101,0.3));
-  width: 70%;
-  margin: 0 auto;
-}
-
-.suku-sumba__caste-block--mid {
-  background: rgba(139,119,101,0.25);
-  width: 85%;
-  margin: 0 auto;
-}
-
-.suku-sumba__caste-block--base {
-  background: rgba(139,119,101,0.15);
-  width: 100%;
+.suku-sumba__caste-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 15px,
+      rgba(0, 0, 0, 0.05) 15px,
+      rgba(0, 0, 0, 0.05) 16px
+    );
 }
 
 .suku-sumba__caste-block:hover {
-  background: rgba(139,119,101,0.3);
+  background: rgba(88, 83, 78, 0.25);
+  border-color: #78716c;
   transform: scale(1.02);
+}
+
+.suku-sumba__caste-block--top {
+  width: 400px;
+  clip-path: polygon(10% 0, 90% 0, 95% 100%, 5% 100%);
+}
+
+.suku-sumba__caste-block--mid {
+  width: 600px;
+  clip-path: polygon(7% 0, 93% 0, 97% 100%, 3% 100%);
+}
+
+.suku-sumba__caste-block--base {
+  width: 800px;
+  clip-path: polygon(4% 0, 96% 0, 99% 100%, 1% 100%);
+  margin-bottom: 0;
 }
 
 .suku-sumba__caste-block h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: #d4c4b0;
-  margin-bottom: 1rem;
+  color: #a8a29e;
+  margin-bottom: 16px;
+  position: relative;
 }
 
 .suku-sumba__caste-block p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: rgba(212,196,176,0.8);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
 }
 
-/* Pasola - Epic Visual Feature */
+/* =====================================================
+   PASOLA 
+   ===================================================== */
 .suku-sumba__pasola {
   position: relative;
-  min-height: 700px;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  background: #1a1612;
+  background: #0b0a09;
   overflow: hidden;
 }
 
 .suku-sumba__pasola-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../../img/tradisi/pasola.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2;
-  filter: grayscale(50%);
+  background: url('../../assets/img/tradisi/pasola.jpg') center/cover;
+  filter: brightness(0.35) contrast(1.2) grayscale(0.3);
+}
+
+.suku-sumba__pasola-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(88, 83, 78, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%);
 }
 
 .suku-sumba__pasola-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 80px;
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 3rem;
 }
 
 .suku-sumba__pasola-content {
-  background: rgba(26,22,18,0.9);
+  max-width: 700px;
+  padding: 60px;
+  background: rgba(88, 83, 78, 0.15);
+  border-left: 6px solid #78716c;
   backdrop-filter: blur(10px);
-  padding: 5rem 4rem;
-  border: 4px solid rgba(139,119,101,0.4);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
 }
 
 .suku-sumba__pasola-label {
   display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background: rgba(139,119,101,0.3);
-  color: #8b7765;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+  color: #d6d3d1;
+  margin-bottom: 20px;
 }
 
 .suku-sumba__pasola-content h2 {
   font-size: 4rem;
   font-weight: 900;
-  color: #d4c4b0;
-  margin-bottom: 1rem;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 .suku-sumba__pasola-content h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #8b7765;
-  margin-bottom: 2rem;
+  color: #a8a29e;
+  margin-bottom: 32px;
 }
 
 .suku-sumba__pasola-content p {
   font-size: 1.15rem;
-  line-height: 1.9;
-  color: rgba(212,196,176,0.85);
-  margin-bottom: 1.5rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+.suku-sumba__pasola-content p:last-child {
+  margin-bottom: 0;
 }
 
 .suku-sumba__pasola-content em {
+  color: #d6d3d1;
   font-style: italic;
-  color: #8b7765;
 }
 
-/* Culture - Monolithic Cards */
+/* =====================================================
+   CULTURE 
+   ===================================================== */
 .suku-sumba__culture {
-  padding: 8rem 0;
-  background: #1f1b18;
+  padding: 150px 0;
+  background: #0b0a09;
 }
 
 .suku-sumba__culture-container {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
 }
 
 .suku-sumba__culture-container h2 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #d4c4b0;
   text-align: center;
-  margin-bottom: 5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 100px;
 }
 
 .suku-sumba__culture-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 60px;
 }
 
 .suku-sumba__culture-stone {
-  background: rgba(139,119,101,0.12);
-  border: 4px solid rgba(139,119,101,0.3);
-  padding: 3.5rem 3rem;
+  padding: 60px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.15) 0%,
+    rgba(88, 83, 78, 0.05) 100%);
+  clip-path: polygon(4% 0, 96% 0, 100% 100%, 0 100%);
+  border: 2px solid rgba(88, 83, 78, 0.3);
+  box-shadow: 
+    inset 0 2px 15px rgba(0, 0, 0, 0.4),
+    0 25px 60px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
   position: relative;
-  transition: all 0.3s ease;
 }
 
 .suku-sumba__culture-stone::before {
   content: '';
   position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border: 1px solid rgba(139,119,101,0.2);
-  pointer-events: none;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(0, 0, 0, 0.03) 20px,
+      rgba(0, 0, 0, 0.03) 21px
+    );
 }
 
 .suku-sumba__culture-stone:hover {
-  background: rgba(139,119,101,0.2);
+  background: rgba(88, 83, 78, 0.2);
+  border-color: #78716c;
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  box-shadow: 
+    inset 0 2px 15px rgba(0, 0, 0, 0.4),
+    0 35px 80px rgba(0, 0, 0, 0.7);
 }
 
 .suku-sumba__culture-icon {
-  width: 60px;
-  height: 60px;
-  background: rgba(139,119,101,0.3);
-  margin-bottom: 2rem;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 32px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.4) 0%,
+    rgba(88, 83, 78, 0.2) 100%);
+  clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .suku-sumba__culture-stone h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #d4c4b0;
-  margin-bottom: 1.5rem;
+  color: #78716c;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+  position: relative;
 }
 
 .suku-sumba__culture-stone p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: rgba(212,196,176,0.8);
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
 }
 
-/* Marapu - Spiritual Section */
+/* =====================================================
+   MARAPU 
+   ===================================================== */
 .suku-sumba__marapu {
-  padding: 8rem 0;
-  background: linear-gradient(135deg, #2a2520 0%, #1a1612 100%);
+  padding: 150px 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(88, 83, 78, 0.12), transparent),
+    #0b0a09;
 }
 
 .suku-sumba__marapu-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 5rem;
+  grid-template-columns: 350px 1fr;
+  gap: 100px;
   align-items: center;
 }
 
 .suku-sumba__marapu-symbol {
-  width: 100%;
-  height: 400px;
-  background: rgba(139,119,101,0.15);
-  border: 4px solid rgba(139,119,101,0.3);
+  width: 350px;
+  height: 450px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.25) 0%,
+    rgba(88, 83, 78, 0.1) 100%);
+  clip-path: polygon(8% 0, 92% 0, 96% 100%, 4% 100%);
+  box-shadow: 
+    inset 0 2px 20px rgba(0, 0, 0, 0.5),
+    0 30px 70px rgba(0, 0, 0, 0.7);
   position: relative;
 }
 
-.suku-sumba__marapu-symbol::before,
-.suku-sumba__marapu-symbol::after {
+.suku-sumba__marapu-symbol::before {
   content: '';
   position: absolute;
-  background: rgba(139,119,101,0.3);
-}
-
-.suku-sumba__marapu-symbol::before {
-  width: 60%;
-  height: 3px;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-}
-
-.suku-sumba__marapu-symbol::after {
-  width: 3px;
-  height: 60%;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  inset: 30px;
+  border: 3px solid rgba(168, 162, 158, 0.2);
+  clip-path: polygon(5% 0, 95% 0, 98% 100%, 2% 100%);
 }
 
 .suku-sumba__marapu-content h2 {
   font-size: 3rem;
-  font-weight: 800;
-  color: #d4c4b0;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-weight: 900;
+  color: #78716c;
+  margin-bottom: 40px;
+  letter-spacing: -2px;
 }
 
 .suku-sumba__marapu-content p {
   font-size: 1.15rem;
-  line-height: 1.9;
-  color: rgba(212,196,176,0.85);
-  margin-bottom: 1.5rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 32px;
+}
+
+.suku-sumba__marapu-content p:last-child {
+  margin-bottom: 0;
 }
 
 .suku-sumba__marapu-content em {
+  color: #a8a29e;
   font-style: italic;
-  color: #8b7765;
 }
 
-/* Language - Stone Inscription Style */
+/* =====================================================
+   LANGUAGE 
+   ===================================================== */
 .suku-sumba__language {
-  padding: 8rem 0;
-  background: #8b7765;
+  padding: 150px 0;
+  background: #0b0a09;
 }
 
 .suku-sumba__language-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
 }
 
 .suku-sumba__language-container h2 {
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #1a1612;
+  font-weight: 900;
+  color: #78716c;
   text-align: center;
-  margin-bottom: 5rem;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.1);
+  margin-bottom: 100px;
+  letter-spacing: -2px;
 }
 
 .suku-sumba__language-blocks {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
 }
 
 .suku-sumba__language-block {
-  background: rgba(0,0,0,0.25);
-  border: 3px solid rgba(0,0,0,0.4);
-  padding: 3.5rem 3rem;
-  box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
+  padding: 56px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.15) 0%,
+    rgba(88, 83, 78, 0.05) 100%);
+  clip-path: polygon(3% 0, 97% 0, 100% 100%, 0 100%);
+  border: 2px solid rgba(88, 83, 78, 0.3);
+  box-shadow: 
+    inset 0 2px 15px rgba(0, 0, 0, 0.4),
+    0 25px 60px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.suku-sumba__language-block:hover {
+  background: rgba(88, 83, 78, 0.2);
+  border-color: #78716c;
+  transform: translateY(-6px);
 }
 
 .suku-sumba__language-block h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #1a1612;
-  margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.05);
+  color: #78716c;
+  margin-bottom: 24px;
 }
 
 .suku-sumba__language-block p {
   font-size: 1.1rem;
-  line-height: 1.9;
-  color: rgba(26,22,18,0.8);
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .suku-sumba__language-block em {
+  color: #a8a29e;
   font-style: italic;
-  color: rgba(26,22,18,0.6);
 }
 
-/* Back Link */
+/* =====================================================
+   BACK SECTION
+   ===================================================== */
 .suku-sumba__back {
-  padding: 5rem 0;
-  background: #1f1b18;
-  text-align: center;
+  padding: 100px 0;
+  background: #0b0a09;
 }
 
 .suku-sumba__back-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 80px;
+  text-align: center;
 }
 
 .suku-sumba__back-link {
-  display: inline-block;
-  padding: 1.3rem 3.5rem;
-  background: rgba(139,119,101,0.3);
-  border: 3px solid rgba(139,119,101,0.5);
-  color: #d4c4b0;
-  text-decoration: none;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
   font-size: 1.1rem;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-weight: 700;
+  color: #a8a29e;
+  text-decoration: none;
+  padding: 20px 56px;
+  background: linear-gradient(135deg,
+    rgba(88, 83, 78, 0.2) 0%,
+    rgba(88, 83, 78, 0.08) 100%);
+  clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
+  border: 3px solid rgba(88, 83, 78, 0.4);
+  box-shadow: 
+    inset 0 2px 10px rgba(0, 0, 0, 0.3),
+    0 15px 40px rgba(0, 0, 0, 0.5);
+transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.suku-sumba__back-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #78716c, #57534e);
+  clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
+  transform: scale(0);
+  transition: all 0.4s ease;
+  z-index: -1;
 }
 
 .suku-sumba__back-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 
+    inset 0 2px 10px rgba(0, 0, 0, 0.3),
+    0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.suku-sumba__back-link:hover::before {
+  transform: scale(1);
 }
 
 /* =====================================================
    RESPONSIVE STYLES
    ===================================================== */
 
-/* ==================== SUKU DETAIL: SUMBA ==================== */
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
+  .suku-sumba__intro-container {
+    grid-template-columns: 350px 1fr;
+    gap: 80px;
+  }
+
+  .suku-sumba__intro-stone {
+    width: 350px;
+    height: 450px;
+  }
+
+  .suku-sumba__marapu-container {
+    grid-template-columns: 300px 1fr;
+    gap: 80px;
+  }
+
+  .suku-sumba__marapu-symbol {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 991px) {
+  .suku-sumba__hero {
+    min-height: 70vh;
+  }
+
+  .suku-sumba__hero-stones {
+    gap: 50px;
+  }
+
+  .suku-sumba__hero-stone {
+    width: 120px;
+    height: 350px;
+  }
+
+  .suku-sumba__hero-stone--2 {
+    width: 150px;
+    height: 400px;
+  }
+
+  .suku-sumba__intro,
+  .suku-sumba__philosophy,
+  .suku-sumba__history,
+  .suku-sumba__caste,
+  .suku-sumba__pasola,
+  .suku-sumba__culture,
+  .suku-sumba__marapu,
+  .suku-sumba__language,
+  .suku-sumba__back {
+    padding: 100px 0;
+  }
+
   .suku-sumba__intro-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 60px;
+    justify-items: center;
   }
-  .suku-sumba__marapu-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+
+  .suku-sumba__intro-stone {
+    width: 320px;
+    height: 400px;
   }
+
+  .suku-sumba__philosophy-stone {
+    padding: 60px 80px;
+  }
+
   .suku-sumba__history-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 48px;
   }
+
+  .suku-sumba__caste-block--top {
+    width: 350px;
+  }
+
+  .suku-sumba__caste-block--mid {
+    width: 500px;
+  }
+
+  .suku-sumba__caste-block--base {
+    width: 650px;
+  }
+
   .suku-sumba__culture-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 48px;
   }
+
+  .suku-sumba__marapu-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    justify-items: center;
+  }
+
+  .suku-sumba__marapu-symbol {
+    width: 280px;
+    height: 380px;
+  }
+
   .suku-sumba__language-blocks {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .suku-sumba__hero-content {
+    padding: 0 28px;
+  }
+
+  .suku-sumba__hero-title {
+    font-size: clamp(4rem, 14vw, 7rem);
+  }
+
+  .suku-sumba__hero-stones {
+    gap: 30px;
+  }
+
+  .suku-sumba__hero-stone {
+    width: 80px;
+    height: 250px;
+  }
+
+  .suku-sumba__hero-stone--2 {
+    width: 100px;
+    height: 300px;
+  }
+
+  .suku-sumba__intro,
+  .suku-sumba__philosophy,
+  .suku-sumba__history,
+  .suku-sumba__caste,
+  .suku-sumba__pasola,
+  .suku-sumba__culture,
+  .suku-sumba__marapu,
+  .suku-sumba__language,
+  .suku-sumba__back {
+    padding: 80px 0;
+  }
+
+  .suku-sumba__intro-container,
+  .suku-sumba__philosophy-container,
+  .suku-sumba__history-container,
+  .suku-sumba__caste-container,
+  .suku-sumba__pasola-container,
+  .suku-sumba__culture-container,
+  .suku-sumba__marapu-container,
+  .suku-sumba__language-container,
+  .suku-sumba__back-container {
+    padding: 0 28px;
+  }
+
+  .suku-sumba__intro-stone {
+    width: 280px;
+    height: 360px;
+  }
+
+  .suku-sumba__intro-content h2,
+  .suku-sumba__history-container h2,
+  .suku-sumba__caste-container h2,
+  .suku-sumba__culture-container h2,
+  .suku-sumba__marapu-content h2,
+  .suku-sumba__language-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+  }
+
+  .suku-sumba__intro-content p,
+  .suku-sumba__marapu-content p,
+  .suku-sumba__language-block p {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .suku-sumba__philosophy-stone {
+    padding: 48px 40px;
+  }
+
+  .suku-sumba__philosophy-text {
+    font-size: 1.5rem;
+  }
+
+  .suku-sumba__philosophy-mark {
+    font-size: 1rem;
+  }
+
+  .suku-sumba__history-tablet {
+    padding: 40px;
+  }
+
+  .suku-sumba__history-tablet h3 {
+    font-size: 1.5rem;
+  }
+
+  .suku-sumba__history-tablet p {
+    font-size: 1rem;
+  }
+
+  .suku-sumba__caste-block {
+    padding: 40px 48px;
+  }
+
+  .suku-sumba__caste-block--top {
+    width: 280px;
+  }
+
+  .suku-sumba__caste-block--mid {
+    width: 380px;
+  }
+
+  .suku-sumba__caste-block--base {
+    width: 480px;
+  }
+
+  .suku-sumba__caste-block h3 {
+    font-size: 1.6rem;
+  }
+
+  .suku-sumba__caste-block p {
+    font-size: 1rem;
+  }
+
+  .suku-sumba__pasola-content {
+    padding: 48px 40px;
+  }
+
+  .suku-sumba__pasola-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .suku-sumba__pasola-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .suku-sumba__pasola-content p {
+    font-size: 1rem;
+  }
+
+  .suku-sumba__culture-stone {
+    padding: 48px;
+  }
+
+  .suku-sumba__culture-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .suku-sumba__culture-stone h3 {
+    font-size: 1.5rem;
+  }
+
+  .suku-sumba__culture-stone p {
+    font-size: 1rem;
+  }
+
+  .suku-sumba__marapu-symbol {
+    width: 260px;
+    height: 340px;
+  }
+
+  .suku-sumba__language-block {
+    padding: 40px;
+  }
+
+  .suku-sumba__language-block h3 {
+    font-size: 1.5rem;
+  }
+
+  .suku-sumba__back-link {
+    font-size: 1rem;
+    padding: 18px 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .suku-sumba__hero-label {
+    font-size: 0.7rem;
+    padding: 8px 24px;
+  }
+
+  .suku-sumba__hero-stone--3 {
+    display: none;
+  }
+
+  .suku-sumba__intro-stone {
+    width: 240px;
+    height: 320px;
+  }
+
+  .suku-sumba__intro-content h2,
+  .suku-sumba__history-container h2,
+  .suku-sumba__caste-container h2,
+  .suku-sumba__culture-container h2,
+  .suku-sumba__marapu-content h2,
+  .suku-sumba__language-container h2 {
+    font-size: 1.9rem;
+  }
+
+  .suku-sumba__philosophy-stone {
+    padding: 40px 32px;
+  }
+
+  .suku-sumba__philosophy-text {
+    font-size: 1.3rem;
+  }
+
+  .suku-sumba__history-tablet {
+    padding: 32px;
+  }
+
+  .suku-sumba__caste-block {
+    padding: 36px 40px;
+  }
+
+  .suku-sumba__caste-block--top {
+    width: 240px;
+  }
+
+  .suku-sumba__caste-block--mid {
+    width: 320px;
+  }
+
+  .suku-sumba__caste-block--base {
+    width: 400px;
+  }
+
+  .suku-sumba__pasola-content {
+    padding: 40px 32px;
+  }
+
+  .suku-sumba__pasola-content h2 {
+    font-size: 2rem;
+  }
+
+  .suku-sumba__culture-stone {
+    padding: 40px;
+  }
+
+  .suku-sumba__culture-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .suku-sumba__marapu-symbol {
+    width: 240px;
+    height: 320px;
+  }
+
+  .suku-sumba__language-block {
+    padding: 36px;
+  }
+
+  .suku-sumba__back-link {
+    padding: 16px 40px;
   }
 }
