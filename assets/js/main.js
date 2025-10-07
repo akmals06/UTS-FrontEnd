@@ -48,12 +48,17 @@
       e.stopPropagation();
       DOM.navLinks.classList.toggle('is-open');
       DOM.navToggle.classList.toggle('active');
+      DOM.mainNav.classList.toggle('menu-active');
     });
 
     DOM.navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        DOM.navLinks.classList.remove('is-open');
-        DOM.navToggle.classList.remove('active');
+      link.addEventListener('click', (e) => {
+
+        if (!link.classList.contains('nav__dropdown-toggle')) {
+          DOM.navLinks.classList.remove('is-open');
+          DOM.navToggle.classList.remove('active');
+          DOM.mainNav.classList.remove('menu-active');
+        }
       });
     });
 
@@ -61,6 +66,7 @@
       if (!DOM.navToggle.contains(e.target) && !DOM.navLinks.contains(e.target)) {
         DOM.navLinks.classList.remove('is-open');
         DOM.navToggle.classList.remove('active');
+        DOM.mainNav.classList.remove('menu-active');
       }
     });
   }
